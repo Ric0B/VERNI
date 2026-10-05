@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Weekly VERNI</title>
+<meta name="description" content="Exhibitions, openings and events at galleries, museums and art spaces across Switzerland. Listings gathered from the venues' own websites.">
+<meta property="og:title" content="Weekly VERNI">
+<meta property="og:description" content="What is on in contemporary art in Switzerland, from Basel to Lugano.">
+<meta property="og:type" content="website">
+<meta name="theme-color" content="#f1f0f4" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0e0d13" media="(prefers-color-scheme: dark)">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" type="image/png" href="assets/icons/icon-192.png">
+<link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+<link rel="preload" href="assets/fonts/Geist-latin.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/fonts.css">
+<link rel="stylesheet" href="assets/vendor/leaflet.css">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top" id="top">
+  <a class="brand" href="#" id="brand" aria-label="Weekly VERNI, home">VERNI</a>
+  <button class="scope-btn" id="scope-btn" type="button" aria-haspopup="dialog"></button>
+  <nav class="tabs" id="tabs" aria-label="Main"></nav>
+  <div class="tools">
+    <a class="iconbtn" id="saved-link" href="#" aria-label="Saved shows">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 20.5s-7.5-4.6-7.5-10.2A4.3 4.3 0 0 1 12 7.8a4.3 4.3 0 0 1 7.5 2.5C19.5 15.9 12 20.5 12 20.5z"/></svg>
+      <span class="badge" id="saved-count" hidden>0</span>
+    </a>
+    <button class="iconbtn" id="menu-btn" type="button" aria-label="Menu" aria-haspopup="dialog">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main id="main" tabindex="-1">
+  <noscript><p class="page">Weekly VERNI needs JavaScript to show the listings.</p></noscript>
+  <p class="page loading" id="loading">Loading listings…</p>
+</main>
+<footer id="foot" class="page"></footer>
+
+<nav class="bottom" id="bottom" aria-label="Main"></nav>
+<dialog id="dlg" aria-label="Dialog"></dialog>
+<div id="toast" role="status" aria-live="polite"></div>
+
+<script src="assets/vendor/leaflet.js"></script>
+<script type="module" src="assets/app.js"></script>
+</body>
+</html>
