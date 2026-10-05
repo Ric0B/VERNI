@@ -1,6 +1,6 @@
 import {
   REGIONS, CITIES, TYPES, TYPE_ORDER, EVENT_TYPES, cityOf, cityLabel,
-  TODAY, addDays, diffDays, fDate, fDateY, fWeekday, fDayLong,
+  TODAY, addDays, diffDays, fDate, fWeekday, fDayLong,
   loadListings, buildModel, status, isVisible, isCurrent, closingSoon, dateRange, isOpenNow, hoursText, walkKm,
 } from "./data.js";
 import { createMap } from "./map.js";
@@ -206,10 +206,10 @@ viewFns.exhibitions = () => ({
     if (mountMap({ wheel: true })) map.setPins(showsPins(), { click: onShowsPin });
   },
 });
-function updateShows() {
+function updateShows({ pins = true } = {}) {
   $("#chips").innerHTML = chipsHTML();
   $("#results").innerHTML = resultsHTML();
-  if (map) map.setPins(showsPins(), { click: onShowsPin });
+  if (pins && map) map.setPins(showsPins(), { click: onShowsPin });
 }
 function onShowsPin(id) {
   const card = $(`#results .card[data-venue="${id}"]`);
@@ -255,7 +255,9 @@ function eventLine(e) {
 /* ----- events ----- */
 viewFns.events = () => {
   const monday = addDays(TODAY, -((TODAY.getDay() + 6) % 7));
-  const evs = M.events.filter((e) => inScope(e.venue) && (state.evType === "all" || e.typeId === state.evType) && diffDays(e.date, TODAY) >= 0 && e.date < addDays(monday, 28));
+  const nowHM = new Date().toTimeString().slice(0, 5);
+  const evs = M.events.filter((e) => inScope(e.venue) && (state.evType === "all" || e.typeId === state.evType) && diffDays(e.date, TODAY) >= 0 && e.date < addDays(monday, 28)
+    && !(diffDays(e.date, TODAY) === 0 && e.time && e.time < nowHM));
   let h = `<div class="page"><div class="detail wide"><div class="page-h"><div class="kicker">${esc(scopeName())}</div><h1>Events</h1></div>
     ${staleNotice()}
     <div class="chips" role="group" aria-label="Event type"><button class="chip" type="button" data-action="evtype" data-type="all" aria-pressed="${state.evType === "all"}">All</button>
@@ -289,7 +291,7 @@ viewFns.events = () => {
 };
 
 /* ----- map ----- */
-viewFns.map = () => {
+function mapModel() {
   const list = filteredShows();
   const venues = [...new Set(list.map((x) => x.venue))].map((id) => M.venues[id]).sort((a, b) => a.name.localeCompare(b.name, "de"));
   if (!venues.some((v) => v.id === state.mapSel)) state.mapSel = venues[0] ? venues[0].id : null;
@@ -297,6 +299,10 @@ viewFns.map = () => {
   const idx = sel ? venues.indexOf(sel) + 1 : 0;
   const shows = sel ? list.filter((x) => x.venue === sel.id).sort((a, b) => a.start - b.start) : [];
   const dir = sel ? "https://www.google.com/maps/dir/?api=1&travelmode=walking&destination=" + encodeURIComponent(sel.name + ", " + sel.address) : "";
+  return { list, venues, sel, idx, shows, dir };
+}
+viewFns.map = () => {
+  const { list, venues, sel, idx, shows, dir } = mapModel();
   return {
     html: `<div class="page"><div class="split map-first-m">
       <section class="listcol" aria-label="Venues">
@@ -328,7 +334,12 @@ function legendHTML(venues, list) {
 }
 function selectVenue(id) {
   state.mapSel = id;
-  render();
+  const { list, venues, sel, idx, shows, dir } = mapModel();
+  const sheet = $("#vsheet");
+  if (!sheet || !sel) { render(); return; }
+  sheet.innerHTML = vsheetHTML(sel, idx, shows, dir);
+  $("#legend").innerHTML = legendHTML(venues, list);
+  if (map) map.select(id);
 }
 
 /* ----- tourplan ----- */
@@ -500,6 +511,7 @@ function updateChrome() {
   if (state.view === "venue") t = M.venues[state.param].name + " · ";
   if (state.view === "artist") t = M.artists[state.param].name + " · ";
   document.title = t + "Weekly VERNI";
+  document.documentElement.style.setProperty("--header-h", $("#top").offsetHeight + "px");
   $("#foot").innerHTML = `<nav aria-label="Footer"><a href="${hashFor("venues")}">Venues</a><a href="${hashFor("artists")}">Artists</a><a href="${hashFor("about")}">About</a></nav>
     <span>Listings gathered from the venues' own websites, updated ${M.generatedAt.toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. Confirm dates and hours with the venue. Map © OpenStreetMap contributors. English only for now.</span>`;
 }
@@ -551,6 +563,27 @@ function menuDialog() {
 }
 
 /* ================= interaction ================= */
+const LIST_VIEWS = ["exhibitions", "venue", "artist"];
+/* Update the Plan and heart buttons of a card in place, so keyboard focus stays where it was.
+   Pages where the list itself changes (Tourplan, Favourites, detail pages) are redrawn instead. */
+function syncButtons(id, clicked) {
+  updateChrome();
+  const card = clicked.closest(".card");
+  if (!card || !LIST_VIEWS.includes(state.view)) { render(); return; }
+  document.querySelectorAll(`.card [data-id="${id}"]`).forEach((b) => {
+    if (b.dataset.action === "tour") {
+      const on = state.tour.includes(id);
+      b.setAttribute("aria-pressed", on);
+      b.setAttribute("aria-label", on ? "Remove from Tourplan" : "Add to Tourplan");
+      b.innerHTML = (on ? I.check : I.plus) + "Plan";
+    } else if (b.dataset.action === "fav") {
+      const on = state.favs.includes(id);
+      b.setAttribute("aria-pressed", on);
+      b.setAttribute("aria-label", on ? "Remove from favourites" : "Save to favourites");
+      b.innerHTML = on ? I.heartFill : I.heart;
+    }
+  });
+}
 function refresh() { state.view === "exhibitions" ? (updateShows(), updateChrome()) : render(); }
 const persist = () => { store.set("tour", state.tour); store.set("favs", state.favs); store.set("tourOrder", state.tourOrder); };
 
@@ -571,8 +604,8 @@ document.addEventListener("click", (e) => {
     }
     case "q-open": state.openNow = !state.openNow; refresh(); break;
     case "type": state.type = a.dataset.type; refresh(); break;
-    case "tour": { const added = toggle(state.tour, id); persist(); refresh(); toast(added ? `Added to Tourplan (${state.tour.length})` : "Removed from Tourplan"); break; }
-    case "fav": { const added = toggle(state.favs, id); persist(); refresh(); toast(added ? "Saved to Favourites" : "Removed from Favourites"); break; }
+    case "tour": { const added = toggle(state.tour, id); persist(); syncButtons(id, a); toast(added ? `Added to Tourplan (${state.tour.length})` : "Removed from Tourplan"); break; }
+    case "fav": { const added = toggle(state.favs, id); persist(); syncButtons(id, a); toast(added ? "Saved to Favourites" : "Removed from Favourites"); break; }
     case "up": case "down": {
       const ids = state.tour.filter((t) => M.shows[t]);
       const i = ids.indexOf(id), j = act === "up" ? i - 1 : i + 1;
@@ -592,9 +625,10 @@ document.addEventListener("click", (e) => {
 });
 $("#scope-btn").addEventListener("click", scopeDialog);
 $("#menu-btn").addEventListener("click", menuDialog);
+let searchTimer;
 document.addEventListener("input", (e) => {
   const t = e.target;
-  if (t.id === "q") { state.q = t.value; if (state.view === "exhibitions") updateShows(); }
+  if (t.id === "q") { state.q = t.value; clearTimeout(searchTimer); searchTimer = setTimeout(() => { if (state.view === "exhibitions") updateShows(); }, 140); }
   if (t.id === "vq") { state.venueQ = t.value; $("#vlist").innerHTML = venueListHTML(Object.values(M.venues).filter((v) => inScope(v.id) && (!state.venueQ || (v.name + " " + v.address).toLowerCase().includes(state.venueQ.toLowerCase())) && (state.venueType === "all" || v.type === state.venueType) && (!state.venueOpen || isOpenNow(v) === true))); }
   if (t.id === "aq") { state.artistQ = t.value; const keep = t.selectionStart; render(); const el = $("#aq"); el.focus(); el.setSelectionRange(keep, keep); }
   if (t.id === "sc-q") filterScope(t.value);
@@ -603,7 +637,7 @@ document.addEventListener("input", (e) => {
 document.addEventListener("mouseover", (e) => {
   if (!map || state.view !== "exhibitions") return;
   const c = e.target.closest(".card[data-venue]");
-  if (c) map.select(c.dataset.venue);
+  if (c) map.select(c.dataset.venue, { pan: false });
 });
 window.addEventListener("hashchange", () => {
   const prev = state.view + state.param;
@@ -611,6 +645,14 @@ window.addEventListener("hashchange", () => {
   if (prev !== state.view + state.param) window.scrollTo(0, 0);
 });
 desktop.addEventListener("change", () => { if (M) render(); });
+
+/* A tab left open for hours would show yesterday's "today". Reload the listings when it comes back after a long idle. */
+let hiddenAt = 0;
+document.addEventListener("visibilitychange", () => {
+  if (document.hidden) { hiddenAt = Date.now(); return; }
+  if (hiddenAt && Date.now() - hiddenAt > 3 * 3600e3) location.reload();
+});
+window.addEventListener("resize", () => { if (M) document.documentElement.style.setProperty("--header-h", $("#top").offsetHeight + "px"); });
 
 /* ================= start ================= */
 async function start() {

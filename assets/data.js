@@ -58,6 +58,8 @@ export const fDate = (d) => fmt(d, { day: "numeric", month: "short" });
 export const fDateY = (d) => fmt(d, { day: "numeric", month: "short", year: "numeric" });
 export const fWeekday = (d) => fmt(d, { weekday: "short" });
 export const fDayLong = (d) => fmt(d, { weekday: "short", day: "numeric", month: "short" });
+// Links come from scraped data, so only plain web addresses are allowed through.
+export const safeUrl = (u) => { try { const x = new URL(u); return x.protocol === "https:" || x.protocol === "http:" ? x.href : ""; } catch { return ""; } };
 const isoDay = (s) => { const [y, m, d] = s.split("-").map(Number); return new Date(y, m - 1, d); };
 
 // ---- loading ----
@@ -100,14 +102,14 @@ export function buildModel(set) {
     try { host = new URL(v.website).hostname.replace(/^www\./, ""); } catch { /* no website */ }
     venues[v.id] = {
       id: v.id, name: v.name, type: v.type, city: v.city, address: v.address,
-      site: v.website || "", web: host, lat: v.lat, lon: v.lon, approx: !!v.geoApprox,
-      hours: (v.hours || []).map((h) => ({ d: h.days, o: h.open, c: h.close })), source: v.sourceURL || v.website || "",
+      site: safeUrl(v.website), web: host, lat: v.lat, lon: v.lon, approx: !!v.geoApprox,
+      hours: (v.hours || []).map((h) => ({ d: h.days, o: h.open, c: h.close })), source: safeUrl(v.sourceURL || v.website),
     };
   }
   const artists = {};
   const shows = {};
   for (const s of set.shows) {
-    if (!venues[s.venue]) continue;
+    if (!venues[s.venue] || !s.end || !Array.isArray(s.artists)) continue;
     const ids = s.artists.map((name) => {
       const id = slug(name);
       if (!artists[id]) artists[id] = { id, name, sort: sortKey(name) };
@@ -117,12 +119,12 @@ export function buildModel(set) {
     shows[s.id] = {
       id: s.id, venue: s.venue, artists: ids,
       title: ids.length && !sameAsArtist ? s.title : "", headline: s.title,
-      start: s.start ? isoDay(s.start) : addDays(TODAY, -1), noStart: !s.start, end: isoDay(s.end), url: s.url || "",
+      start: s.start ? isoDay(s.start) : addDays(TODAY, -1), noStart: !s.start, end: isoDay(s.end), url: safeUrl(s.url),
     };
   }
   const events = set.events.filter((e) => venues[e.venue]).map((e) => ({
     id: e.id, date: isoDay(e.date), time: e.time || "", type: EVENT_LABEL[e.type] || "Talk", typeId: e.type,
-    title: e.title, venue: e.venue, show: e.show && shows[e.show] ? e.show : null, url: e.url || "",
+    title: e.title, venue: e.venue, show: e.show && shows[e.show] ? e.show : null, url: safeUrl(e.url),
   }));
   return { venues, artists, shows, events, generatedAt: new Date(set.generatedAt) };
 }

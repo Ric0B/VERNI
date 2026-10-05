@@ -27,6 +27,8 @@ for v in d["venues"]:
     if v["type"] not in TYPES: errors.append(f"{v['id']}: bad type")
     if v["city"] not in CITIES: errors.append(f"{v['id']}: unknown city {v['city']}")
     if not (45.7 < v["lat"] < 48.0 and 5.9 < v["lon"] < 10.6) and v["city"] not in {"weil","stlouis","loerrach"}: errors.append(f"{v['id']}: coordinates outside Switzerland")
+    for key in ("website", "sourceURL"):
+        if v.get(key) and not re.match(r"https?://", v[key]): errors.append(f"{v['id']}: {key} must be an http(s) address")
     for h in v.get("hours") or []:
         if not (0 <= h["open"] < h["close"] <= 24) or not h["days"] or any(x < 1 or x > 7 for x in h["days"]): errors.append(f"{v['id']}: bad hours {h}")
 
