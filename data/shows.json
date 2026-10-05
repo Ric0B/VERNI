@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-05T22:14:26Z",
+ "generatedAt": "2026-10-05T22:16:11Z",
  "note": "Facts gathered from each venue's own website. Hours and dates should be confirmed with the venue. Descriptions and images are not copied; every record links to its source.",
  "venues": [
   {
@@ -445,7 +445,28 @@
    "address": "Limmatstrasse 270, 8005 Zürich",
    "website": "https://kunsthallezurich.ch",
    "lat": 47.3892,
-   "lon": 8.5208
+   "lon": 8.5208,
+   "sourceURL": "http://www.kunsthallezurich.ch/",
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 11,
+     "close": 20
+    }
+   ]
   },
   {
    "id": "migros",
@@ -1870,6 +1891,28 @@
    "start": "2026-10-24",
    "end": "2026-12-19",
    "url": "https://kunsthalle-luzern.ch"
+  },
+  {
+   "id": "khz-ayo-akingbade-crossing",
+   "venue": "khz",
+   "artists": [
+    "Ayo Akingbade"
+   ],
+   "title": "Crossing",
+   "start": "2026-09-26",
+   "end": "2027-01-10",
+   "url": "http://www.kunsthallezurich.ch/"
+  },
+  {
+   "id": "khz-caspar-heinemann-tempting-fate",
+   "venue": "khz",
+   "artists": [
+    "Caspar Heinemann"
+   ],
+   "title": "Tempting Fate",
+   "start": "2026-09-26",
+   "end": "2027-01-10",
+   "url": "http://www.kunsthallezurich.ch/"
   }
  ],
  "events": [
