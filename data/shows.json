@@ -1,0 +1,2186 @@
+{
+ "schemaVersion": 1,
+ "generatedAt": "2026-10-05T12:00:00Z",
+ "note": "Facts gathered from each venue's own website. Hours and dates should be confirmed with the venue. Descriptions and images are not copied; every record links to its source.",
+ "venues": [
+  {
+   "id": "vonbartha",
+   "name": "von Bartha",
+   "type": "gallery",
+   "city": "basel",
+   "address": "Kannenfeldplatz 6, 4056 Basel",
+   "website": "https://vonbartha.com",
+   "lat": 47.565,
+   "lon": 7.57,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": 14,
+     "close": 18
+    },
+    {
+     "days": [
+      6
+     ],
+     "open": 11,
+     "close": 16
+    }
+   ],
+   "sourceURL": "https://vonbartha.com/exhibitions/"
+  },
+  {
+   "id": "stampa",
+   "name": "Galerie Stampa",
+   "type": "gallery",
+   "city": "basel",
+   "address": "Spalenberg 2, 4051 Basel",
+   "website": "https://www.stampa-galerie.ch",
+   "lat": 47.5575,
+   "lon": 7.586,
+   "sourceURL": "https://www.stampa-galerie.ch/"
+  },
+  {
+   "id": "krupp",
+   "name": "Galerie Nicolas Krupp",
+   "type": "gallery",
+   "city": "basel",
+   "address": "Riehentorstrasse 33, 4058 Basel",
+   "website": "https://www.nicolaskrupp.com",
+   "lat": 47.564,
+   "lon": 7.594,
+   "hours": [
+    {
+     "days": [
+      4,
+      5
+     ],
+     "open": 14,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.nicolaskrupp.com/exhibitions",
+   "geoApprox": true
+  },
+  {
+   "id": "weissfalk",
+   "name": "Weiss Falk",
+   "type": "gallery",
+   "city": "basel",
+   "address": "Rebgasse 27, 4058 Basel",
+   "website": "https://weissfalk.com",
+   "lat": 47.5605,
+   "lon": 7.5945
+  },
+  {
+   "id": "linder",
+   "name": "Galerie Gisèle Linder",
+   "type": "gallery",
+   "city": "basel",
+   "address": "Elisabethenstrasse 54, 4051 Basel",
+   "lat": 47.5505,
+   "lon": 7.5912
+  },
+  {
+   "id": "khbasel",
+   "name": "Kunsthalle Basel",
+   "type": "institution",
+   "city": "basel",
+   "address": "Steinenberg 7, 4051 Basel",
+   "website": "https://kunsthallebasel.ch",
+   "lat": 47.5541,
+   "lon": 7.5903
+  },
+  {
+   "id": "kmbasel",
+   "name": "Kunstmuseum Basel | Gegenwart",
+   "type": "institution",
+   "city": "basel",
+   "address": "St. Alban-Rheinweg 60, 4052 Basel",
+   "website": "https://kunstmuseumbasel.ch",
+   "lat": 47.5553,
+   "lon": 7.6003,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://kunstmuseumbasel.ch/en/exhibitions"
+  },
+  {
+   "id": "tinguely",
+   "name": "Museum Tinguely",
+   "type": "institution",
+   "city": "basel",
+   "address": "Paul Sacher-Anlage 2, 4058 Basel",
+   "website": "https://tinguely.ch",
+   "lat": 47.5591,
+   "lon": 7.6124,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 11,
+     "close": 21
+    }
+   ],
+   "sourceURL": "https://www.tinguely.ch/en/exhibitions.html"
+  },
+  {
+   "id": "khbl",
+   "name": "Kunsthaus Baselland",
+   "type": "institution",
+   "city": "muenchenstein",
+   "address": "Helsinki-Strasse 5, 4142 Münchenstein",
+   "website": "https://kunsthausbaselland.ch",
+   "lat": 47.5329,
+   "lon": 7.6152,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 11,
+     "close": 20
+    },
+    {
+     "days": [
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 17
+    }
+   ],
+   "sourceURL": "https://kunsthausbaselland.ch/"
+  },
+  {
+   "id": "hek",
+   "name": "HEK (Haus der Elektronischen Künste)",
+   "type": "institution",
+   "city": "muenchenstein",
+   "address": "Freilager-Platz 9, 4142 Münchenstein",
+   "website": "https://hek.ch",
+   "lat": 47.5337,
+   "lon": 7.6134,
+   "sourceURL": "https://hek.ch/"
+  },
+  {
+   "id": "palazzo",
+   "name": "Kunsthalle Palazzo",
+   "type": "institution",
+   "city": "liestal",
+   "address": "Poststrasse 2, 4410 Liestal",
+   "lat": 47.4843,
+   "lon": 7.7337
+  },
+  {
+   "id": "vitra",
+   "name": "Vitra Design Museum",
+   "type": "institution",
+   "city": "weil",
+   "address": "Charles-Eames-Strasse 2, 79576 Weil am Rhein",
+   "website": "https://design-museum.de",
+   "lat": 47.6026,
+   "lon": 7.6187,
+   "hours": [
+    {
+     "days": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.design-museum.de/en/exhibitions.html"
+  },
+  {
+   "id": "kunstraumriehen",
+   "name": "Kunst Raum Riehen",
+   "type": "institution",
+   "city": "riehen",
+   "address": "Baselstrasse 71, 4125 Riehen",
+   "website": "https://www.kunstraumriehen.ch",
+   "lat": 47.5838,
+   "lon": 7.6495,
+   "hours": [
+    {
+     "days": [
+      3,
+      4,
+      5
+     ],
+     "open": 13,
+     "close": 18
+    },
+    {
+     "days": [
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.kunstraumriehen.ch/"
+  },
+  {
+   "id": "dreilaender",
+   "name": "Dreiländermuseum",
+   "type": "institution",
+   "city": "loerrach",
+   "address": "Basler Strasse 143, 79540 Lörrach",
+   "website": "https://www.dreilaendermuseum.eu",
+   "lat": 47.6123,
+   "lon": 7.6608,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.dreilaendermuseum.eu/"
+  },
+  {
+   "id": "beyeler",
+   "name": "Fondation Beyeler",
+   "type": "foundation",
+   "city": "riehen",
+   "address": "Baselstrasse 101, 4125 Riehen",
+   "website": "https://fondationbeyeler.ch",
+   "lat": 47.5876,
+   "lon": 7.6532,
+   "hours": [
+    {
+     "days": [
+      3
+     ],
+     "open": 10,
+     "close": 20
+    },
+    {
+     "days": [
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.fondationbeyeler.ch/en/visit"
+  },
+  {
+   "id": "schaulager",
+   "name": "Schaulager",
+   "type": "foundation",
+   "city": "muenchenstein",
+   "address": "Ruchfeldstrasse 19, 4142 Münchenstein",
+   "website": "https://schaulager.org",
+   "lat": 47.5277,
+   "lon": 7.6225
+  },
+  {
+   "id": "fernet",
+   "name": "Fondation Fernet-Branca",
+   "type": "foundation",
+   "city": "stlouis",
+   "address": "2 rue du Ballon, 68300 Saint-Louis",
+   "website": "https://www.fondationfernet-branca.org",
+   "lat": 47.589,
+   "lon": 7.556,
+   "hours": [
+    {
+     "days": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 13,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.fondationfernet-branca.org/en/"
+  },
+  {
+   "id": "klingental",
+   "name": "Ausstellungsraum Klingental",
+   "type": "offspace",
+   "city": "basel",
+   "address": "Kasernenstrasse 23, 4058 Basel",
+   "website": "https://ausstellungsraum.ch",
+   "lat": 47.5634,
+   "lon": 7.5898
+  },
+  {
+   "id": "oslo10",
+   "name": "Oslo10",
+   "type": "offspace",
+   "city": "muenchenstein",
+   "address": "Oslo-Strasse 10, 4142 Münchenstein",
+   "website": "https://oslo10.ch",
+   "lat": 47.5325,
+   "lon": 7.612
+  },
+  {
+   "id": "hwz",
+   "name": "Hauser & Wirth Zürich",
+   "type": "gallery",
+   "city": "zurich",
+   "address": "Limmatstrasse 270, 8005 Zürich",
+   "website": "https://hauserwirth.com",
+   "lat": 47.389,
+   "lon": 8.5212
+  },
+  {
+   "id": "presenhuber",
+   "name": "Galerie Eva Presenhuber",
+   "type": "gallery",
+   "city": "zurich",
+   "address": "Zahnradstrasse 21, 8005 Zürich",
+   "website": "https://www.presenhuber.com",
+   "lat": 47.3903,
+   "lon": 8.5129,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": 11,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.presenhuber.com/"
+  },
+  {
+   "id": "kilchmann",
+   "name": "Galerie Peter Kilchmann",
+   "type": "gallery",
+   "city": "zurich",
+   "address": "Zahnradstrasse 21, 8005 Zürich",
+   "website": "https://kilchmanngallery.com",
+   "lat": 47.3901,
+   "lon": 8.5133
+  },
+  {
+   "id": "mai36",
+   "name": "Mai 36 Galerie",
+   "type": "gallery",
+   "city": "zurich",
+   "address": "Rämistrasse 37, 8001 Zürich",
+   "website": "https://www.mai36.com",
+   "lat": 47.3709,
+   "lon": 8.5476,
+   "sourceURL": "https://www.mai36.com/"
+  },
+  {
+   "id": "pia",
+   "name": "Galerie Francesca Pia",
+   "type": "gallery",
+   "city": "zurich",
+   "address": "Limmatstrasse 268, 8005 Zürich",
+   "website": "https://francescapia.com",
+   "lat": 47.3888,
+   "lon": 8.5216
+  },
+  {
+   "id": "khz",
+   "name": "Kunsthalle Zürich",
+   "type": "institution",
+   "city": "zurich",
+   "address": "Limmatstrasse 270, 8005 Zürich",
+   "website": "https://kunsthallezurich.ch",
+   "lat": 47.3892,
+   "lon": 8.5208
+  },
+  {
+   "id": "migros",
+   "name": "Migros Museum für Gegenwartskunst",
+   "type": "institution",
+   "city": "zurich",
+   "address": "Limmatstrasse 270, 8005 Zürich",
+   "website": "https://migrosmuseum.ch",
+   "lat": 47.3891,
+   "lon": 8.5206,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 11,
+     "close": 20
+    }
+   ],
+   "sourceURL": "https://www.migrosmuseum.ch/en"
+  },
+  {
+   "id": "kunsthaus",
+   "name": "Kunsthaus Zürich",
+   "type": "institution",
+   "city": "zurich",
+   "address": "Heimplatz 1, 8001 Zürich",
+   "website": "https://kunsthaus.ch",
+   "lat": 47.3703,
+   "lon": 8.5481,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5,
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 10,
+     "close": 20
+    }
+   ],
+   "sourceURL": "https://www.kunsthaus.ch/en/"
+  },
+  {
+   "id": "helmhaus",
+   "name": "Helmhaus Zürich",
+   "type": "institution",
+   "city": "zurich",
+   "address": "Limmatquai 31, 8001 Zürich",
+   "website": "https://helmhaus.org",
+   "lat": 47.3712,
+   "lon": 8.543
+  },
+  {
+   "id": "konstruktiv",
+   "name": "Museum Haus Konstruktiv",
+   "type": "institution",
+   "city": "zurich",
+   "address": "Limmatstrasse 268, 8005 Zürich",
+   "website": "https://hauskonstruktiv.ch",
+   "lat": 47.37,
+   "lon": 8.531,
+   "sourceURL": "https://www.hauskonstruktiv.ch/en",
+   "geoApprox": true
+  },
+  {
+   "id": "kmw",
+   "name": "Kunstmuseum Winterthur",
+   "type": "institution",
+   "city": "winterthur",
+   "address": "Museumstrasse 52, 8400 Winterthur",
+   "website": "https://kmw.ch",
+   "lat": 47.5003,
+   "lon": 8.7321,
+   "hours": [
+    {
+     "days": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 17
+    },
+    {
+     "days": [
+      2
+     ],
+     "open": 10,
+     "close": 20
+    }
+   ],
+   "sourceURL": "https://www.kmw.ch/en"
+  },
+  {
+   "id": "fotomuseum",
+   "name": "Fotomuseum Winterthur",
+   "type": "institution",
+   "city": "winterthur",
+   "address": "Grüzenstrasse 44, 8400 Winterthur",
+   "website": "https://fotomuseum.ch",
+   "lat": 47.4932,
+   "lon": 8.7462,
+   "hours": [
+    {
+     "days": [
+      2,
+      4,
+      5
+     ],
+     "open": 11,
+     "close": 17
+    },
+    {
+     "days": [
+      3
+     ],
+     "open": 11,
+     "close": 20
+    },
+    {
+     "days": [
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.fotomuseum.ch/en"
+  },
+  {
+   "id": "khw",
+   "name": "Kunsthalle Winterthur",
+   "type": "institution",
+   "city": "winterthur",
+   "address": "Marktgasse 25, 8400 Winterthur",
+   "website": "https://kunsthallewinterthur.ch",
+   "lat": 47.4993,
+   "lon": 8.7285
+  },
+  {
+   "id": "luma",
+   "name": "LUMA Westbau",
+   "type": "foundation",
+   "city": "zurich",
+   "address": "Limmatstrasse 270, 8005 Zürich",
+   "website": "https://luma-westbau.com",
+   "lat": 47.3893,
+   "lon": 8.5204
+  },
+  {
+   "id": "roemerholz",
+   "name": "Sammlung Oskar Reinhart am Römerholz",
+   "type": "foundation",
+   "city": "winterthur",
+   "address": "Haldenstrasse 95, 8400 Winterthur",
+   "website": "https://roemerholz.ch",
+   "lat": 47.5091,
+   "lon": 8.7389
+  },
+  {
+   "id": "walcheturm",
+   "name": "Kunstraum Walcheturm",
+   "type": "offspace",
+   "city": "zurich",
+   "address": "Kanonengasse 20, 8004 Zürich",
+   "website": "https://walcheturm.ch",
+   "lat": 47.3791,
+   "lon": 8.5327,
+   "sourceURL": "https://walcheturm.ch/"
+  },
+  {
+   "id": "cabaret",
+   "name": "Cabaret Voltaire",
+   "type": "offspace",
+   "city": "zurich",
+   "address": "Spiegelgasse 1, 8001 Zürich",
+   "website": "https://www.cabaretvoltaire.ch",
+   "lat": 47.3721,
+   "lon": 8.544,
+   "sourceURL": "https://www.cabaretvoltaire.ch/"
+  },
+  {
+   "id": "coalmine",
+   "name": "Coalmine",
+   "type": "offspace",
+   "city": "winterthur",
+   "address": "Turnerstrasse 1, 8400 Winterthur",
+   "website": "https://www.coalmine.ch",
+   "lat": 47.4988,
+   "lon": 8.724,
+   "hours": [
+    {
+     "days": [
+      2,
+      3
+     ],
+     "open": 9,
+     "close": 17
+    },
+    {
+     "days": [
+      4,
+      5
+     ],
+     "open": 9,
+     "close": 21
+    },
+    {
+     "days": [
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 16
+    }
+   ],
+   "sourceURL": "https://www.coalmine.ch/"
+  },
+  {
+   "id": "andata",
+   "name": "Andata Ritorno",
+   "type": "gallery",
+   "city": "geneva",
+   "address": "Rue du Stand 37, 1204 Genève",
+   "lat": 46.201,
+   "lon": 6.1375
+  },
+  {
+   "id": "skopia",
+   "name": "Skopia",
+   "type": "gallery",
+   "city": "geneva",
+   "address": "Rue des Vieux-Grenadiers 9, 1205 Genève",
+   "website": "https://www.skopia.ch",
+   "lat": 46.1993,
+   "lon": 6.1343,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      4,
+      5
+     ],
+     "open": 11,
+     "close": 18.5
+    },
+    {
+     "days": [
+      6
+     ],
+     "open": 11,
+     "close": 17
+    }
+   ],
+   "sourceURL": "https://www.skopia.ch/"
+  },
+  {
+   "id": "mezzanin",
+   "name": "Galerie Mezzanin",
+   "type": "gallery",
+   "city": "geneva",
+   "address": "Rue des Maraîchers 63, 1205 Genève",
+   "lat": 46.1985,
+   "lon": 6.133
+  },
+  {
+   "id": "mamco",
+   "name": "MAMCO Genève",
+   "type": "institution",
+   "city": "geneva",
+   "address": "Rue des Granges 13, 1204 Genève",
+   "website": "https://www.mamco.ch",
+   "lat": 46.2012,
+   "lon": 6.148,
+   "sourceURL": "https://www.mamco.ch/en",
+   "geoApprox": true
+  },
+  {
+   "id": "cac",
+   "name": "Centre d'Art Contemporain Genève",
+   "type": "institution",
+   "city": "geneva",
+   "address": "Rue des Vieux-Grenadiers 10, 1205 Genève",
+   "website": "https://centre.ch",
+   "lat": 46.1988,
+   "lon": 6.1353
+  },
+  {
+   "id": "mah",
+   "name": "Musée d'art et d'histoire",
+   "type": "institution",
+   "city": "geneva",
+   "address": "Rue Charles-Galland 2, 1206 Genève",
+   "website": "https://mahmah.ch",
+   "lat": 46.1995,
+   "lon": 6.1517
+  },
+  {
+   "id": "cpg",
+   "name": "Centre de la photographie Genève",
+   "type": "institution",
+   "city": "geneva",
+   "address": "Promenade des Bastions 8, 1205 Genève",
+   "website": "https://www.centrephotogeneve.ch",
+   "lat": 46.1994,
+   "lon": 6.1368,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 11,
+     "close": 20
+    },
+    {
+     "days": [
+      6
+     ],
+     "open": 11,
+     "close": 16.75
+    }
+   ],
+   "sourceURL": "https://www.centrephotogeneve.ch/en"
+  },
+  {
+   "id": "mcba",
+   "name": "MCBA Musée cantonal des Beaux-Arts",
+   "type": "institution",
+   "city": "lausanne",
+   "address": "Place de la Gare 16, 1003 Lausanne",
+   "website": "https://www.mcba.ch",
+   "lat": 46.5172,
+   "lon": 6.6268,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5,
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 10,
+     "close": 20
+    }
+   ],
+   "sourceURL": "https://www.mcba.ch/en/"
+  },
+  {
+   "id": "jenisch",
+   "name": "Musée Jenisch Vevey",
+   "type": "institution",
+   "city": "vevey",
+   "address": "Avenue de la Gare 2, 1800 Vevey",
+   "website": "https://museejenisch.ch",
+   "lat": 46.463,
+   "lon": 6.8425,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 11,
+     "close": 20
+    }
+   ],
+   "sourceURL": "https://museejenisch.ch/"
+  },
+  {
+   "id": "artbrut",
+   "name": "Collection de l'Art Brut",
+   "type": "foundation",
+   "city": "lausanne",
+   "address": "Avenue des Bergières 11, 1004 Lausanne",
+   "website": "https://www.artbrut.ch",
+   "lat": 46.5275,
+   "lon": 6.6235,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    }
+   ],
+   "sourceURL": "https://www.artbrut.ch/en/"
+  },
+  {
+   "id": "forde",
+   "name": "Forde",
+   "type": "offspace",
+   "city": "geneva",
+   "address": "Rue de la Coulouvrenière 11, 1204 Genève",
+   "website": "https://forde.ch",
+   "lat": 46.204,
+   "lon": 6.1395
+  },
+  {
+   "id": "circuit",
+   "name": "Circuit",
+   "type": "offspace",
+   "city": "lausanne",
+   "address": "Avenue de Montchoisi 9, 1006 Lausanne",
+   "website": "https://circuit.li",
+   "lat": 46.511,
+   "lon": 6.64
+  },
+  {
+   "id": "khbern",
+   "name": "Kunsthalle Bern",
+   "type": "institution",
+   "city": "bern",
+   "address": "Helvetiaplatz 1, 3005 Bern",
+   "website": "https://kunsthallebern.ch",
+   "lat": 46.9418,
+   "lon": 7.4497,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 11,
+     "close": 20
+    }
+   ],
+   "sourceURL": "https://kunsthallebern.ch/en/"
+  },
+  {
+   "id": "kmbern",
+   "name": "Kunstmuseum Bern",
+   "type": "institution",
+   "city": "bern",
+   "address": "Hodlerstrasse 8–12, 3011 Bern",
+   "website": "https://kunstmuseumbern.ch",
+   "lat": 46.951,
+   "lon": 7.443,
+   "hours": [
+    {
+     "days": [
+      2
+     ],
+     "open": 10,
+     "close": 20
+    },
+    {
+     "days": [
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 17
+    }
+   ],
+   "sourceURL": "https://www.kunstmuseumbern.ch/en"
+  },
+  {
+   "id": "zpk",
+   "name": "Zentrum Paul Klee",
+   "type": "institution",
+   "city": "bern",
+   "address": "Monument im Fruchtland 3, 3006 Bern",
+   "website": "https://zpk.org",
+   "lat": 46.9489,
+   "lon": 7.4745,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 17
+    }
+   ],
+   "sourceURL": "https://www.zpk.org/en/"
+  },
+  {
+   "id": "kmluzern",
+   "name": "Kunstmuseum Luzern",
+   "type": "institution",
+   "city": "lucerne",
+   "address": "Europaplatz 1, 6002 Luzern",
+   "website": "https://kunstmuseumluzern.ch",
+   "lat": 47.0503,
+   "lon": 8.3117,
+   "hours": [
+    {
+     "days": [
+      2,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      3
+     ],
+     "open": 11,
+     "close": 19
+    }
+   ],
+   "sourceURL": "https://www.kunstmuseumluzern.ch/en/"
+  },
+  {
+   "id": "khluzern",
+   "name": "Kunsthalle Luzern",
+   "type": "institution",
+   "city": "lucerne",
+   "address": "Löwenplatz 11, 6004 Luzern",
+   "website": "https://kunsthalleluzern.ch",
+   "lat": 47.057,
+   "lon": 8.3107
+  },
+  {
+   "id": "masi",
+   "name": "MASI Lugano (LAC)",
+   "type": "institution",
+   "city": "lugano",
+   "address": "Piazza Bernardino Luini 6, 6900 Lugano",
+   "website": "https://masilugano.ch",
+   "lat": 46.0034,
+   "lon": 8.9507
+  },
+  {
+   "id": "kasko",
+   "name": "Kasko",
+   "type": "offspace",
+   "city": "basel",
+   "address": "Burgweg 7, 4058 Basel",
+   "website": "https://www.kasko.ch",
+   "lat": 47.5612,
+   "lon": 7.601
+  },
+  {
+   "id": "kmbasel_main",
+   "name": "Kunstmuseum Basel | Hauptbau & Neubau",
+   "type": "institution",
+   "city": "basel",
+   "address": "St. Alban-Graben 16, 4051 Basel",
+   "website": "https://kunstmuseumbasel.ch",
+   "lat": 47.5547,
+   "lon": 7.5963,
+   "geoApprox": true,
+   "hours": [
+    {
+     "days": [
+      2,
+      4,
+      5,
+      6,
+      7
+     ],
+     "open": 10,
+     "close": 18
+    },
+    {
+     "days": [
+      3
+     ],
+     "open": 10,
+     "close": 20
+    }
+   ],
+   "sourceURL": "https://kunstmuseumbasel.ch/en/exhibitions"
+  }
+ ],
+ "shows": [
+  {
+   "venue": "vonbartha",
+   "artists": [
+    "Francisco Sierra"
+   ],
+   "title": "Bijna een vlinder",
+   "start": "2026-08-27",
+   "end": "2026-10-23",
+   "url": "https://vonbartha.com/exhibitions/francisco-sierra-bijna-een-vlinder/",
+   "id": "vonbartha-bijna-een-vlinder"
+  },
+  {
+   "venue": "vonbartha",
+   "artists": [
+    "Christian Andersson"
+   ],
+   "title": "Mother Tongue",
+   "start": "2026-08-27",
+   "end": "2026-10-23",
+   "url": "https://vonbartha.com/exhibitions/christian-andersson-mother-tongue/",
+   "id": "vonbartha-mother-tongue"
+  },
+  {
+   "venue": "vonbartha",
+   "artists": [],
+   "title": "Headroom",
+   "start": "2026-11-05",
+   "end": "2027-01-08",
+   "url": "https://vonbartha.com/exhibitions/headroom/",
+   "id": "vonbartha-headroom"
+  },
+  {
+   "venue": "vonbartha",
+   "artists": [
+    "Landon Metz"
+   ],
+   "title": "2026",
+   "start": "2026-11-05",
+   "end": "2027-01-08",
+   "url": "https://vonbartha.com/exhibitions/landon-metz-2026/",
+   "id": "vonbartha-2026"
+  },
+  {
+   "venue": "krupp",
+   "artists": [
+    "Kaspar Müller"
+   ],
+   "title": "Maintenance 3",
+   "start": "2026-08-28",
+   "end": "2026-10-31",
+   "url": "https://www.nicolaskrupp.com/exhibitions/2026-08-kaspar-müller",
+   "id": "krupp-maintenance-3"
+  },
+  {
+   "venue": "stampa",
+   "artists": [
+    "Jonas Burkhalter"
+   ],
+   "title": "Space Bee Freedom",
+   "start": "2026-09-10",
+   "end": "2026-11-07",
+   "url": "https://www.stampa-galerie.ch/",
+   "id": "stampa-space-bee-freedom"
+  },
+  {
+   "venue": "beyeler",
+   "artists": [],
+   "title": "Constellations",
+   "start": "2026-09-26",
+   "end": "2027-09-05",
+   "url": "https://www.fondationbeyeler.ch/en/exhibitions",
+   "id": "beyeler-constellations"
+  },
+  {
+   "venue": "beyeler",
+   "artists": [
+    "Ruth Asawa"
+   ],
+   "title": "Ruth Asawa",
+   "start": "2026-10-18",
+   "end": "2027-01-10",
+   "url": "https://www.fondationbeyeler.ch/en/exhibitions",
+   "id": "beyeler-ruth-asawa"
+  },
+  {
+   "venue": "tinguely",
+   "artists": [
+    "Nicolas Darrot"
+   ],
+   "title": "Fuzzy Logic",
+   "start": "2026-03-05",
+   "end": "2027-03-07",
+   "url": "https://www.tinguely.ch/en/exhibitions.html",
+   "id": "tinguely-fuzzy-logic"
+  },
+  {
+   "venue": "tinguely",
+   "artists": [],
+   "title": "Labouring Bodies",
+   "start": "2026-06-10",
+   "end": "2026-11-08",
+   "url": "https://www.tinguely.ch/en/exhibitions.html",
+   "id": "tinguely-labouring-bodies"
+  },
+  {
+   "venue": "tinguely",
+   "artists": [
+    "Zilla Leutenegger"
+   ],
+   "title": "SPACES BETWEEN",
+   "start": "2026-09-23",
+   "end": "2027-03-07",
+   "url": "https://www.tinguely.ch/en/exhibitions.html",
+   "id": "tinguely-spaces-between"
+  },
+  {
+   "venue": "tinguely",
+   "artists": [],
+   "title": "Les témoins oculistes. The sense of sight in art",
+   "start": "2026-12-02",
+   "end": "2027-05-09",
+   "url": "https://www.tinguely.ch/en/exhibitions.html",
+   "id": "tinguely-les-temoins-oculistes-the-sense-of-sight-in-art"
+  },
+  {
+   "venue": "kmbasel",
+   "artists": [
+    "Cao Fei"
+   ],
+   "title": "Testimonies to the Near Future",
+   "start": "2026-05-30",
+   "end": "2026-10-11",
+   "url": "https://kunstmuseumbasel.ch/en/exhibitions/2026/cao-fei",
+   "id": "kmbasel-testimonies-to-the-near-future"
+  },
+  {
+   "venue": "kmbasel_main",
+   "artists": [
+    "Renée Levi"
+   ],
+   "title": "Mira",
+   "start": "2025-08-30",
+   "end": "2029-01-01",
+   "url": "https://kunstmuseumbasel.ch/en/exhibitions/2025/renee-levi",
+   "id": "kmbasel_main-mira"
+  },
+  {
+   "venue": "kmbasel_main",
+   "artists": [
+    "Marc Bauer"
+   ],
+   "title": "Fear Rage Desire, Still Standing",
+   "start": "2026-03-07",
+   "end": "2027-05-02",
+   "url": "https://kunstmuseumbasel.ch/en/exhibitions/2026/marc-bauer",
+   "id": "kmbasel_main-fear-rage-desire-still-standing"
+  },
+  {
+   "venue": "kmbasel_main",
+   "artists": [
+    "Roy Lichtenstein"
+   ],
+   "title": "Sweet Dreams, Baby!",
+   "start": "2026-08-22",
+   "end": "2027-03-14",
+   "url": "https://kunstmuseumbasel.ch/en/exhibitions/2026/roy-lichtenstein-sweet-dreams-baby",
+   "id": "kmbasel_main-sweet-dreams-baby"
+  },
+  {
+   "venue": "kmbasel_main",
+   "artists": [],
+   "title": "Van Gogh, Hodler, and a Cabriolet. The Collector and Pioneer Gertrud Dübi-Müller",
+   "start": "2026-09-19",
+   "end": "2027-02-07",
+   "url": "https://kunstmuseumbasel.ch/en/exhibitions/2026/van-gogh-hodler-und-ein-cabriolet",
+   "id": "kmbasel_main-van-gogh-hodler-and-a-cabriolet-the-collector-an"
+  },
+  {
+   "venue": "kmbasel_main",
+   "artists": [],
+   "title": "Friendship, Collecting, Connoisseurship. Karl and Marianne Im Obersteg-Buess",
+   "start": "2026-09-01",
+   "end": "2027-02-07",
+   "url": "https://kunstmuseumbasel.ch/en/exhibitions/2026/friendship-collecting-connoisseurship-karl-and-marianne-im-obersteg",
+   "id": "kmbasel_main-friendship-collecting-connoisseurship-karl-and-m"
+  },
+  {
+   "venue": "kmbasel_main",
+   "artists": [],
+   "title": "Boundless Printmaking. The Schweizerische Graphische Gesellschaft",
+   "start": "2026-08-04",
+   "end": "2026-11-29",
+   "url": "https://kunstmuseumbasel.ch/en/exhibitions/2026/boundless-printmaking-the-schweizerische-graphische-gesellschaft",
+   "id": "kmbasel_main-boundless-printmaking-the-schweizerische-graphis"
+  },
+  {
+   "venue": "khbl",
+   "artists": [
+    "Monira Al Qadiri"
+   ],
+   "title": "Benzene Float",
+   "start": "2026-02-06",
+   "end": "2027-01-24",
+   "url": "https://kunsthausbaselland.ch/ausstellungen/monira-al-qadiri",
+   "id": "khbl-benzene-float"
+  },
+  {
+   "venue": "khbl",
+   "artists": [
+    "Yanik Soland"
+   ],
+   "title": "Walking on Rubber Eggshells",
+   "start": "2026-09-25",
+   "end": "2026-11-15",
+   "url": "https://kunsthausbaselland.ch/ausstellungen/yanik-soland",
+   "id": "khbl-walking-on-rubber-eggshells"
+  },
+  {
+   "venue": "khbl",
+   "artists": [],
+   "title": "Sinnesumschmeichelungen",
+   "start": "2026-09-25",
+   "end": "2027-04-04",
+   "url": "https://kunsthausbaselland.ch/ausstellungen/sinnesumschmeichelungen",
+   "id": "khbl-sinnesumschmeichelungen"
+  },
+  {
+   "venue": "hek",
+   "artists": [
+    "Studio Lemercier"
+   ],
+   "title": "",
+   "start": "2026-08-22",
+   "end": "2026-11-15",
+   "url": "https://hek.ch/programm/ausstellungen/studio-lemercier",
+   "id": "hek-studio-lemercier"
+  },
+  {
+   "venue": "vitra",
+   "artists": [
+    "Geoffrey Bawa"
+   ],
+   "title": "Architecture for the Senses",
+   "start": "2026-09-26",
+   "end": "2027-02-28",
+   "url": "https://www.design-museum.de/en/exhibitions/detailpages/geoffrey-bawa.html",
+   "id": "vitra-architecture-for-the-senses"
+  },
+  {
+   "venue": "vitra",
+   "artists": [
+    "Verner Panton"
+   ],
+   "title": "Form, Colour, Space",
+   "start": "2026-05-23",
+   "end": "2027-05-09",
+   "url": "https://www.design-museum.de/en/exhibitions/detailpages/verner-panton-form-colour-space.html",
+   "id": "vitra-form-colour-space"
+  },
+  {
+   "venue": "kunstraumriehen",
+   "artists": [
+    "Jahic/Roethlisberger"
+   ],
+   "title": "La Maison des Heures Perdues",
+   "start": "2026-09-12",
+   "end": "2026-11-08",
+   "url": "https://www.kunstraumriehen.ch/de/page/jahicroethlisberger-la-maison-des-heures-perdues",
+   "id": "kunstraumriehen-la-maison-des-heures-perdues"
+  },
+  {
+   "venue": "kunstraumriehen",
+   "artists": [],
+   "title": "Regionale 27. Geteilte Sicht",
+   "start": "2026-11-28",
+   "end": "2027-01-31",
+   "url": "https://www.kunstraumriehen.ch/de/page/regionale-27-geteilte-sicht",
+   "id": "kunstraumriehen-regionale-27-geteilte-sicht"
+  },
+  {
+   "venue": "dreilaender",
+   "artists": [],
+   "title": "Zuhause – unterwegs",
+   "start": "2026-09-19",
+   "end": "2027-04-18",
+   "url": "https://www.dreilaendermuseum.eu/anschauen/sonderausstellungen/",
+   "id": "dreilaender-zuhause-unterwegs"
+  },
+  {
+   "venue": "dreilaender",
+   "artists": [],
+   "title": "100 Jahr Motettenchor",
+   "start": "2026-06-20",
+   "end": "2026-11-08",
+   "url": "https://www.dreilaendermuseum.eu/anschauen/sonderausstellungen/",
+   "id": "dreilaender-100-jahr-motettenchor"
+  },
+  {
+   "venue": "fernet",
+   "artists": [
+    "Aurora Király"
+   ],
+   "title": "Parcours de regards",
+   "start": "2026-10-10",
+   "end": "2027-03-07",
+   "url": "https://www.fondationfernet-branca.org/en/exhibitions/aurora-kiraly-practices-looking",
+   "id": "fernet-parcours-de-regards"
+  },
+  {
+   "venue": "presenhuber",
+   "artists": [
+    "Angela Bulloch"
+   ],
+   "title": "Entropy, 2026",
+   "start": "2026-09-12",
+   "end": "2026-10-23",
+   "url": "https://www.presenhuber.com/exhibitions/angela-bulloch4",
+   "id": "presenhuber-entropy-2026"
+  },
+  {
+   "venue": "presenhuber",
+   "artists": [
+    "Liam Gillick"
+   ],
+   "title": "The Case is Altered or Die Sache ist anders",
+   "start": "2026-09-18",
+   "end": "2026-10-31",
+   "url": "https://www.presenhuber.com/exhibitions/liam-gillick5",
+   "id": "presenhuber-the-case-is-altered-or-die-sache-ist-anders"
+  },
+  {
+   "venue": "presenhuber",
+   "artists": [
+    "Josh Smith"
+   ],
+   "title": "Mind Child",
+   "start": "2026-09-25",
+   "end": "2026-12-11",
+   "url": "https://www.presenhuber.com/exhibitions/josh-smith7",
+   "id": "presenhuber-mind-child"
+  },
+  {
+   "venue": "presenhuber",
+   "artists": [
+    "Dieter Roth"
+   ],
+   "title": "Curated by Josh Smith",
+   "start": "2026-09-25",
+   "end": "2026-12-11",
+   "url": "https://www.presenhuber.com/exhibitions/dieter-roth2",
+   "id": "presenhuber-curated-by-josh-smith"
+  },
+  {
+   "venue": "migros",
+   "artists": [
+    "Nicole L'Huillier"
+   ],
+   "title": "Canción de Amor",
+   "start": "2026-09-26",
+   "end": "2027-01-17",
+   "url": "https://migrosmuseum.ch/en/exhibitions/nicole-lhuillier-2",
+   "id": "migros-cancion-de-amor"
+  },
+  {
+   "venue": "migros",
+   "artists": [
+    "Sylvie Fleury",
+    "Shamiran Istifan"
+   ],
+   "title": "She-Devils on Wheels, Angels on Heels",
+   "start": "2026-09-26",
+   "end": "2027-01-17",
+   "url": "https://migrosmuseum.ch/en/exhibitions/she-devils-on-wheels-angels-on-heels",
+   "id": "migros-she-devils-on-wheels-angels-on-heels"
+  },
+  {
+   "venue": "kunsthaus",
+   "artists": [
+    "Maria Lassnig",
+    "Edvard Munch"
+   ],
+   "title": "Maria Lassnig and Edvard Munch",
+   "start": null,
+   "end": "2027-02-21",
+   "url": "https://www.kunsthaus.ch/en/besuch-planen/ausstellungen/maria-lassnig-und-edvard-munch/",
+   "id": "kunsthaus-maria-lassnig-and-edvard-munch"
+  },
+  {
+   "venue": "kunsthaus",
+   "artists": [
+    "Vilhelm Hammershøi"
+   ],
+   "title": "The Eye That Listens",
+   "start": null,
+   "end": "2026-10-25",
+   "url": "https://www.kunsthaus.ch/en/besuch-planen/ausstellungen/vilhelm-hammershoi/",
+   "id": "kunsthaus-the-eye-that-listens"
+  },
+  {
+   "venue": "kunsthaus",
+   "artists": [],
+   "title": "Evergreens. Selected Works from the Collection",
+   "start": null,
+   "end": "2027-01-10",
+   "url": "https://www.kunsthaus.ch/en/besuch-planen/ausstellungen/ikonen/",
+   "id": "kunsthaus-evergreens-selected-works-from-the-collection"
+  },
+  {
+   "venue": "konstruktiv",
+   "artists": [],
+   "title": "The Body Within Abstraction",
+   "start": "2026-09-26",
+   "end": "2027-01-10",
+   "url": "https://hauskonstruktiv.ch/en/exhibitions/the-body-within-abstraction",
+   "id": "konstruktiv-the-body-within-abstraction"
+  },
+  {
+   "venue": "kmw",
+   "artists": [
+    "Mona Hatoum"
+   ],
+   "title": "Routes of Dissonance",
+   "start": "2026-10-03",
+   "end": "2027-01-31",
+   "url": "https://www.kmw.ch/en/exhibition/mona-hatoum/",
+   "id": "kmw-routes-of-dissonance"
+  },
+  {
+   "venue": "kmw",
+   "artists": [],
+   "title": "Monet to Mondrian – Bailly to Baer",
+   "start": "2026-09-19",
+   "end": "2026-12-31",
+   "url": "https://www.kmw.ch/en/exhibition/moderne-reloaded/",
+   "id": "kmw-monet-to-mondrian-bailly-to-baer"
+  },
+  {
+   "venue": "kmw",
+   "artists": [
+    "Jutta Koether"
+   ],
+   "title": "Jutta Koether",
+   "start": "2026-09-12",
+   "end": "2027-01-17",
+   "url": "https://www.kmw.ch/en/exhibition/jutta-koether/",
+   "id": "kmw-jutta-koether"
+  },
+  {
+   "venue": "kmw",
+   "artists": [],
+   "title": "Paths of Plein-Air Painting Around 1800",
+   "start": "2026-07-04",
+   "end": "2026-10-25",
+   "url": "https://www.kmw.ch/en/exhibition/zur-sonne-zur-freiheit/",
+   "id": "kmw-paths-of-plein-air-painting-around-1800"
+  },
+  {
+   "venue": "kmw",
+   "artists": [
+    "Heidi Bucher",
+    "Liesl Raff"
+   ],
+   "title": "Closer",
+   "start": "2026-06-13",
+   "end": "2026-11-08",
+   "url": "https://www.kmw.ch/en/exhibition/heidi-bucher-liesl-raff/",
+   "id": "kmw-closer"
+  },
+  {
+   "venue": "fotomuseum",
+   "artists": [],
+   "title": "Shadow Creatures – From Spirit Photography to the Ghosts of the Algorithm",
+   "start": "2026-06-27",
+   "end": "2026-10-11",
+   "url": "https://www.fotomuseum.ch/en/exhibitions-post/schattenwesen-von-der-geisterfotografie-zu-den-phantomen-des-algorithmus/",
+   "id": "fotomuseum-shadow-creatures-from-spirit-photography-to-the-"
+  },
+  {
+   "venue": "fotomuseum",
+   "artists": [
+    "Nhu Xuan Hua"
+   ],
+   "title": "One Another – Nhu Xuan Hua and the Collection of Fotomuseum Winterthur",
+   "start": "2026-06-27",
+   "end": "2026-10-11",
+   "url": "https://www.fotomuseum.ch/en/exhibitions-post/miteinander-nhu-xuan-hua-und-die-sammlung-des-fotomuseum-winterthur/",
+   "id": "fotomuseum-one-another-nhu-xuan-hua-and-the-collection-of-f"
+  },
+  {
+   "venue": "mai36",
+   "artists": [
+    "Markus Saile"
+   ],
+   "title": "False Horizon",
+   "start": "2026-09-10",
+   "end": "2026-11-07",
+   "url": "https://www.mai36.com/exhibitions/markus-saile",
+   "id": "mai36-false-horizon"
+  },
+  {
+   "venue": "mai36",
+   "artists": [
+    "Hiroki Tsukuda"
+   ],
+   "title": "Inferno",
+   "start": "2026-09-10",
+   "end": "2026-11-07",
+   "url": "https://www.mai36.com/exhibitions/hiroki-tsukuda",
+   "id": "mai36-inferno"
+  },
+  {
+   "venue": "mai36",
+   "artists": [],
+   "title": "flowers",
+   "start": "2026-09-11",
+   "end": "2026-11-07",
+   "url": "https://www.mai36.com/exhibitions/flowers",
+   "id": "mai36-flowers"
+  },
+  {
+   "venue": "cabaret",
+   "artists": [],
+   "title": "DadaZwischenSprachen",
+   "start": "2026-06-06",
+   "end": "2027-01-10",
+   "url": "https://www.cabaretvoltaire.ch/programme/dadazwischensprachen",
+   "id": "cabaret-dadazwischensprachen"
+  },
+  {
+   "venue": "cabaret",
+   "artists": [
+    "Katalin Ladik",
+    "Babi Badalov"
+   ],
+   "title": "Artists' Bar (Künstler*innenkneipe)",
+   "start": "2026-06-06",
+   "end": "2027-01-10",
+   "url": "https://www.cabaretvoltaire.ch/programme/dadazwischensprachen-2",
+   "id": "cabaret-artists-bar-kunstler-innenkneipe"
+  },
+  {
+   "venue": "coalmine",
+   "artists": [],
+   "title": "ALLES ECHT!",
+   "start": "2026-10-30",
+   "end": "2027-01-24",
+   "url": "https://www.coalmine.ch/event/alles-echt/",
+   "id": "coalmine-alles-echt"
+  },
+  {
+   "venue": "skopia",
+   "artists": [
+    "Pierre André Ferrand"
+   ],
+   "title": "Pierre André Ferrand",
+   "start": "2026-09-18",
+   "end": "2026-10-31",
+   "url": "https://www.skopia.ch/exhibitions-all/pierre-andre-ferrand-2026",
+   "id": "skopia-pierre-andre-ferrand"
+  },
+  {
+   "venue": "mamco",
+   "artists": [
+    "Joana Hadjithomas",
+    "Khalil Joreige"
+   ],
+   "title": "MAMCO x SaSA",
+   "start": "2026-09-05",
+   "end": "2026-11-15",
+   "url": "https://www.mamco.ch/en/2329/MAMCO-x-SaSA",
+   "id": "mamco-mamco-x-sasa"
+  },
+  {
+   "venue": "mamco",
+   "artists": [
+    "Sylvia Sleigh"
+   ],
+   "title": "Sylvia Sleigh and Re-Collection: An Exhibition in Two Parts",
+   "start": "2026-06-05",
+   "end": "2026-10-25",
+   "url": "https://www.mamco.ch/en/2330/MAMCO-x-MAH",
+   "id": "mamco-sylvia-sleigh-and-re-collection-an-exhibition-in"
+  },
+  {
+   "venue": "cpg",
+   "artists": [
+    "Sarah Jade Sullivan"
+   ],
+   "title": "Minor Tides",
+   "start": "2026-07-02",
+   "end": "2026-10-10",
+   "url": "https://www.centrephotogeneve.ch/exhibitions/marees-mineures",
+   "id": "cpg-minor-tides"
+  },
+  {
+   "venue": "cpg",
+   "artists": [
+    "Louise Desnos"
+   ],
+   "title": "Acedia",
+   "start": "2026-10-12",
+   "end": "2027-01-08",
+   "url": "https://www.centrephotogeneve.ch/exhibitions/louise-desnos-acedia",
+   "id": "cpg-acedia"
+  },
+  {
+   "venue": "cpg",
+   "artists": [
+    "Edmund Clark",
+    "Crofton Black"
+   ],
+   "title": "Cosmopolemos",
+   "start": "2026-10-29",
+   "end": "2027-02-20",
+   "url": "https://www.centrephotogeneve.ch/exhibitions/edmund-clark-et-crofton-black-cosmopolemos",
+   "id": "cpg-cosmopolemos"
+  },
+  {
+   "venue": "mcba",
+   "artists": [
+    "Lucas Erin"
+   ],
+   "title": "La ronde (Manor Art Prize 2026 Vaud)",
+   "start": "2026-08-28",
+   "end": "2027-02-14",
+   "url": "https://www.mcba.ch/en/exhibitions/lucas-erin/",
+   "id": "mcba-la-ronde-manor-art-prize-2026-vaud"
+  },
+  {
+   "venue": "mcba",
+   "artists": [
+    "Charles Blanc-Gatti"
+   ],
+   "title": "The Colours of Sound",
+   "start": "2026-09-25",
+   "end": "2027-01-17",
+   "url": "https://www.mcba.ch/en/exhibitions/blanc-gatti/",
+   "id": "mcba-the-colours-of-sound"
+  },
+  {
+   "venue": "artbrut",
+   "artists": [
+    "Armand Schulthess"
+   ],
+   "title": "The World of Armand Schulthess",
+   "start": "2026-11-27",
+   "end": "2027-04-25",
+   "url": "https://www.artbrut.ch/en/events/the-world-of-armand-schulthess",
+   "id": "artbrut-the-world-of-armand-schulthess"
+  },
+  {
+   "venue": "khbern",
+   "artists": [
+    "Saodat Ismailova"
+   ],
+   "title": "Amanat – As We Sleep",
+   "start": "2026-09-11",
+   "end": "2026-11-22",
+   "url": "https://kunsthallebern.ch/en/exhibitions/2026-saodat-ismailova-amanat-as-we-sleep",
+   "id": "khbern-amanat-as-we-sleep"
+  },
+  {
+   "venue": "kmbern",
+   "artists": [
+    "Franz Gertsch"
+   ],
+   "title": "Blow-Up (Part I)",
+   "start": "2026-08-14",
+   "end": "2027-01-17",
+   "url": "https://kunstmuseumbern.ch/en/node/9770",
+   "id": "kmbern-blow-up-part-i"
+  },
+  {
+   "venue": "kmbern",
+   "artists": [],
+   "title": "Journey into Freedom. Capri – Skagen – Monte Verità",
+   "start": "2026-10-30",
+   "end": "2027-01-31",
+   "url": "https://kunstmuseumbern.ch/en/node/11397",
+   "id": "kmbern-journey-into-freedom-capri-skagen-monte-verita"
+  },
+  {
+   "venue": "zpk",
+   "artists": [
+    "Florence Henri"
+   ],
+   "title": "Fokus. Florence Henri (1893–1982)",
+   "start": "2026-08-29",
+   "end": "2027-01-10",
+   "url": "https://zpk.org/en/node/11353",
+   "id": "zpk-fokus-florence-henri-18931982"
+  },
+  {
+   "venue": "zpk",
+   "artists": [
+    "Roberto Burle Marx"
+   ],
+   "title": "Modernismo tropical",
+   "start": "2026-10-17",
+   "end": "2027-02-07",
+   "url": "https://zpk.org/en/node/11349",
+   "id": "zpk-modernismo-tropical"
+  },
+  {
+   "venue": "kmluzern",
+   "artists": [
+    "Shirana Shahbazi"
+   ],
+   "title": "All at Once. An Interplay with Li Tavor",
+   "start": "2026-07-04",
+   "end": "2026-10-18",
+   "url": "https://kunstmuseumluzern.ch/en/exhibitions/shirana-shahbazi/",
+   "id": "kmluzern-all-at-once-an-interplay-with-li-tavor"
+  },
+  {
+   "venue": "kmluzern",
+   "artists": [
+    "Andreas Brunner"
+   ],
+   "title": "spot on Andreas Brunner",
+   "start": "2026-07-04",
+   "end": "2026-10-11",
+   "url": "https://kunstmuseumluzern.ch/en/exhibitions/andreas-brunner/",
+   "id": "kmluzern-spot-on-andreas-brunner"
+  },
+  {
+   "venue": "kmluzern",
+   "artists": [
+    "Dominik Zietlow"
+   ],
+   "title": "Nur die Berge begegnen sich nie",
+   "start": "2026-10-24",
+   "end": "2027-01-31",
+   "url": "https://kunstmuseumluzern.ch/en/exhibitions/dominik-zietlow-manor/",
+   "id": "kmluzern-nur-die-berge-begegnen-sich-nie"
+  },
+  {
+   "venue": "kmluzern",
+   "artists": [
+    "Noemi Pfister"
+   ],
+   "title": "hier & jetzt",
+   "start": "2026-11-14",
+   "end": "2027-01-31",
+   "url": "https://kunstmuseumluzern.ch/en/exhibitions/hier-jetzt-vdg/",
+   "id": "kmluzern-hier-jetzt"
+  }
+ ],
+ "events": [
+  {
+   "venue": "khbl",
+   "type": "tour",
+   "title": "Kunst über Mittag mit Lunch",
+   "date": "2026-10-06",
+   "time": "12:15",
+   "url": "https://kunsthausbaselland.ch/",
+   "show": null,
+   "id": "e001"
+  },
+  {
+   "venue": "khbl",
+   "type": "tour",
+   "title": "Abendführung",
+   "date": "2026-10-08",
+   "time": "18:30",
+   "url": "https://kunsthausbaselland.ch/",
+   "show": null,
+   "id": "e002"
+  },
+  {
+   "venue": "khbl",
+   "type": "talk",
+   "title": "Performance und Künstlergespräch: Yanik Soland",
+   "date": "2026-11-07",
+   "time": "16:00",
+   "url": "https://kunsthausbaselland.ch/",
+   "show": "khbl-walking-on-rubber-eggshells",
+   "id": "e003"
+  },
+  {
+   "venue": "hek",
+   "type": "performance",
+   "title": "Open Decks",
+   "date": "2026-10-15",
+   "time": "17:00",
+   "url": "https://hek.ch/programm/veranstaltungen/open-decks",
+   "show": null,
+   "id": "e004"
+  },
+  {
+   "venue": "fernet",
+   "type": "opening",
+   "title": "Opening of Aurora Király exhibition",
+   "date": "2026-10-10",
+   "time": "16:00",
+   "url": "https://www.fondationfernet-branca.org/en/exhibitions/aurora-kiraly-practices-looking",
+   "show": "fernet-parcours-de-regards",
+   "id": "e005"
+  },
+  {
+   "venue": "migros",
+   "type": "tour",
+   "title": "Guided tour: Collection Insights with Kamilla Ødegård",
+   "date": "2026-10-18",
+   "time": "15:00",
+   "url": "https://migrosmuseum.ch/en",
+   "show": null,
+   "id": "e006"
+  },
+  {
+   "venue": "konstruktiv",
+   "type": "tour",
+   "title": "Public guided tour",
+   "date": "2026-10-11",
+   "time": "11:45",
+   "url": "https://hauskonstruktiv.ch/en/events/534149",
+   "show": "konstruktiv-the-body-within-abstraction",
+   "id": "e007"
+  },
+  {
+   "venue": "konstruktiv",
+   "type": "tour",
+   "title": "Public guided tour",
+   "date": "2026-10-14",
+   "time": "18:15",
+   "url": "https://hauskonstruktiv.ch/en/events/536189",
+   "show": "konstruktiv-the-body-within-abstraction",
+   "id": "e008"
+  },
+  {
+   "venue": "konstruktiv",
+   "type": "tour",
+   "title": "Public guided tour",
+   "date": "2026-10-18",
+   "time": "11:45",
+   "url": "https://hauskonstruktiv.ch/en/events/534152",
+   "show": "konstruktiv-the-body-within-abstraction",
+   "id": "e009"
+  },
+  {
+   "venue": "fotomuseum",
+   "type": "talk",
+   "title": "Shadow Creatures in Photography, Psychology and AI (lecture)",
+   "date": "2026-10-10",
+   "time": "13:00",
+   "url": "https://fotomuseum.ch/en",
+   "show": null,
+   "id": "e010"
+  },
+  {
+   "venue": "fotomuseum",
+   "type": "opening",
+   "title": "Opening: Helen Levitt – City at Play",
+   "date": "2026-10-23",
+   "time": "18:00",
+   "url": "https://fotomuseum.ch/en",
+   "show": null,
+   "id": "e011"
+  },
+  {
+   "venue": "fotomuseum",
+   "type": "talk",
+   "title": "Curator's talk with Joshua Chuang and Alessandra Nappo",
+   "date": "2026-10-24",
+   "time": "15:00",
+   "url": "https://fotomuseum.ch/en",
+   "show": null,
+   "id": "e012"
+  },
+  {
+   "venue": "fotomuseum",
+   "type": "tour",
+   "title": "Guided tour: Helen Levitt – City at Play",
+   "date": "2026-10-25",
+   "time": "11:30",
+   "url": "https://fotomuseum.ch/en",
+   "show": null,
+   "id": "e013"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "IGNM Konzert: Galina Ustwolskaja «Grand Duet»",
+   "date": "2026-10-08",
+   "time": "20:30",
+   "url": "https://walcheturm.ch/agenda",
+   "show": null,
+   "id": "e014"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "Zhao Ziyi & Manfred Werder",
+   "date": "2026-10-19",
+   "time": "20:00",
+   "url": "https://walcheturm.ch/agenda",
+   "show": null,
+   "id": "e015"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "Stepmother: Album Presentation",
+   "date": "2026-10-20",
+   "time": "20:00",
+   "url": "https://walcheturm.ch/agenda",
+   "show": null,
+   "id": "e016"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "Glenn Jones, Liam Grant, Son of Buzzi",
+   "date": "2026-10-21",
+   "time": "20:00",
+   "url": "https://walcheturm.ch/agenda",
+   "show": null,
+   "id": "e017"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "FRANCE",
+   "date": "2026-10-22",
+   "time": "21:00",
+   "url": "https://walcheturm.ch/agenda",
+   "show": null,
+   "id": "e018"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "Ensemble Tzara #1: Jannik Giger",
+   "date": "2026-10-24",
+   "time": "20:00",
+   "url": "https://walcheturm.ch/agenda",
+   "show": null,
+   "id": "e019"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "hiddenbell Percussion Night",
+   "date": "2026-10-25",
+   "time": "19:00",
+   "url": "https://walcheturm.ch/agenda",
+   "show": null,
+   "id": "e020"
+  },
+  {
+   "venue": "cabaret",
+   "type": "talk",
+   "title": "Michael Taussig: Postcards for Mia",
+   "date": "2026-10-27",
+   "time": "18:00",
+   "url": "https://www.cabaretvoltaire.ch/programme/michael-taussig-postcards-for-mia",
+   "show": null,
+   "id": "e021"
+  },
+  {
+   "venue": "cabaret",
+   "type": "talk",
+   "title": "dears, write",
+   "date": "2026-10-28",
+   "time": "19:00",
+   "url": "https://www.cabaretvoltaire.ch/programme/dears-write-21-2",
+   "show": null,
+   "id": "e022"
+  },
+  {
+   "venue": "mamco",
+   "type": "tour",
+   "title": "Family activities (SaSA)",
+   "date": "2026-10-07",
+   "time": "16:00",
+   "url": "https://www.mamco.ch/en",
+   "show": null,
+   "id": "e023"
+  },
+  {
+   "venue": "mamco",
+   "type": "tour",
+   "title": "Free tour (Joana Hadjithomas & Khalil Joreige)",
+   "date": "2026-10-13",
+   "time": "15:00",
+   "url": "https://www.mamco.ch/en",
+   "show": null,
+   "id": "e024"
+  },
+  {
+   "venue": "mamco",
+   "type": "talk",
+   "title": "Panel: Male gaze / Female gaze",
+   "date": "2026-10-11",
+   "time": "14:00",
+   "url": "https://www.mamco.ch/en",
+   "show": null,
+   "id": "e025"
+  },
+  {
+   "venue": "mamco",
+   "type": "finissage",
+   "title": "Closing event: Sylvia Sleigh and Re-Collection",
+   "date": "2026-10-25",
+   "time": "11:00",
+   "url": "https://www.mamco.ch/en",
+   "show": "mamco-sylvia-sleigh-and-re-collection-an-exhibition-in",
+   "id": "e026"
+  },
+  {
+   "venue": "kmbern",
+   "type": "talk",
+   "title": "Erzählcafé: Franz Gertsch. Blow-Up (Part I)",
+   "date": "2026-10-10",
+   "time": "11:00",
+   "url": "https://kunstmuseumbern.ch/en",
+   "show": "kmbern-blow-up-part-i",
+   "id": "e027"
+  },
+  {
+   "venue": "kmbern",
+   "type": "talk",
+   "title": "Zwischen Realität und Wahrheit: Fotografie und Malerei",
+   "date": "2026-10-20",
+   "time": "18:30",
+   "url": "https://kunstmuseumbern.ch/en",
+   "show": null,
+   "id": "e028"
+  },
+  {
+   "venue": "kmbern",
+   "type": "opening",
+   "title": "Vernissage: Journey into Freedom",
+   "date": "2026-10-29",
+   "time": "18:30",
+   "url": "https://kunstmuseumbern.ch/en/node/11397",
+   "show": "kmbern-journey-into-freedom-capri-skagen-monte-verita",
+   "id": "e029"
+  },
+  {
+   "venue": "zpk",
+   "type": "tour",
+   "title": "Guided tour: Kosmos Klee",
+   "date": "2026-10-11",
+   "time": "15:00",
+   "url": "https://zpk.org/en/",
+   "show": null,
+   "id": "e030"
+  },
+  {
+   "venue": "khbern",
+   "type": "tour",
+   "title": "Exhibition visit & guided relaxation",
+   "date": "2026-10-10",
+   "time": "17:30",
+   "url": "https://kunsthallebern.ch/en/",
+   "show": null,
+   "id": "e031"
+  },
+  {
+   "venue": "khbern",
+   "type": "talk",
+   "title": "Walk & Talk",
+   "date": "2026-10-29",
+   "time": "17:30",
+   "url": "https://kunsthallebern.ch/en/",
+   "show": null,
+   "id": "e032"
+  },
+  {
+   "venue": "coalmine",
+   "type": "talk",
+   "title": "Yael Inokai: Die Auster",
+   "date": "2026-10-27",
+   "time": "19:30",
+   "url": "https://www.coalmine.ch/event/yael-inokai-die-auster/",
+   "show": null,
+   "id": "e033"
+  },
+  {
+   "venue": "coalmine",
+   "type": "opening",
+   "title": "Vernissage: ALLES ECHT!",
+   "date": "2026-10-29",
+   "time": "18:30",
+   "url": "https://www.coalmine.ch/event/vernissage-zur-ausstellung-alles-echt/",
+   "show": "coalmine-alles-echt",
+   "id": "e034"
+  }
+ ]
+}
