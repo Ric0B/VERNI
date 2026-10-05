@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-05T22:16:11Z",
+ "generatedAt": "2026-10-05T22:17:56Z",
  "note": "Facts gathered from each venue's own website. Hours and dates should be confirmed with the venue. Descriptions and images are not copied; every record links to its source.",
  "venues": [
   {
@@ -538,7 +538,27 @@
    "address": "Limmatquai 31, 8001 Zürich",
    "website": "https://helmhaus.org",
    "lat": 47.3712,
-   "lon": 8.543
+   "lon": 8.543,
+   "hours": [
+    {
+     "days": [
+      2,
+      3,
+      5,
+      6,
+      7
+     ],
+     "open": 11,
+     "close": 18
+    },
+    {
+     "days": [
+      4
+     ],
+     "open": 11,
+     "close": 20
+    }
+   ]
   },
   {
    "id": "konstruktiv",
@@ -1913,6 +1933,70 @@
    "start": "2026-09-26",
    "end": "2027-01-10",
    "url": "http://www.kunsthallezurich.ch/"
+  },
+  {
+   "id": "helmhaus-in-der-sonne-sitzen",
+   "venue": "helmhaus",
+   "artists": [],
+   "title": "In der Sonne sitzen",
+   "start": "2026-10-02",
+   "end": "2027-01-03",
+   "url": "https://helmhaus.org"
+  },
+  {
+   "id": "luma-hans-ulrich-obrist-archives-maria-lassnig",
+   "venue": "luma",
+   "artists": [
+    "Maria Lassnig"
+   ],
+   "title": "Hans Ulrich Obrist Archives: Maria Lassnig",
+   "start": "2026-06-13",
+   "end": "2026-12-20",
+   "url": "https://westbau.com/en/program/maria-lassnig"
+  },
+  {
+   "id": "mah-john-m-armleder-carte-blanche",
+   "venue": "mah",
+   "artists": [
+    "John M Armleder"
+   ],
+   "title": "Carte Blanche",
+   "start": "2026-01-29",
+   "end": "2026-10-25",
+   "url": "https://www.mahmah.ch"
+  },
+  {
+   "id": "masi-kaari-upson-dollhouse",
+   "venue": "masi",
+   "artists": [
+    "Kaari Upson"
+   ],
+   "title": "Dollhouse – A Retrospective",
+   "start": "2026-09-06",
+   "end": "2027-01-10",
+   "url": "https://www.masilugano.ch"
+  },
+  {
+   "id": "masi-jannis-kounellis-io-sono-un-pittore",
+   "venue": "masi",
+   "artists": [
+    "Jannis Kounellis"
+   ],
+   "title": "Io sono un pittore",
+   "start": "2026-09-20",
+   "end": "2027-01-17",
+   "url": "https://www.masilugano.ch"
+  },
+  {
+   "id": "masi-kaspar-ludwig-unlimited",
+   "venue": "masi",
+   "artists": [
+    "Kaspar Ludwig"
+   ],
+   "title": "unlimited, abstract, almost future (Manor Art Prize Ticino 2026)",
+   "start": "2026-10-17",
+   "end": "2027-04-04",
+   "url": "https://www.masilugano.ch"
   }
  ],
  "events": [
@@ -2295,6 +2379,36 @@
    "date": "2026-12-19",
    "time": "14:00",
    "url": "https://kunsthalle-luzern.ch"
+  },
+  {
+   "id": "e039",
+   "venue": "helmhaus",
+   "show": "helmhaus-in-der-sonne-sitzen",
+   "type": "tour",
+   "title": "Tour and Shared Impressions",
+   "date": "2026-10-08",
+   "time": "18:30",
+   "url": "https://helmhaus.org"
+  },
+  {
+   "id": "e040",
+   "venue": "helmhaus",
+   "show": "helmhaus-in-der-sonne-sitzen",
+   "type": "talk",
+   "title": "Five O'Clock Thesis with Charlotte Matter",
+   "date": "2026-10-14",
+   "time": "17:00",
+   "url": "https://helmhaus.org"
+  },
+  {
+   "id": "e041",
+   "venue": "helmhaus",
+   "show": "helmhaus-in-der-sonne-sitzen",
+   "type": "talk",
+   "title": "Forget Me Not! lecture",
+   "date": "2026-10-22",
+   "time": "18:00",
+   "url": "https://helmhaus.org"
   }
  ]
 }
