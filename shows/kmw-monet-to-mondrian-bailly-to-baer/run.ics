@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Monet to Mondrian – Bailly to Baer
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmw-monet-to-mondrian-bailly-to-baer-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260919
+DTEND;VALUE=DATE:20270101
+SUMMARY:Monet to Mondrian – Bailly to Baer · Kunstmuseum Winterthur
+LOCATION:Kunstmuseum Winterthur\, Museumstrasse 52\, 8400 Winterthur
+GEO:47.5003;8.7321
+TRANSP:TRANSPARENT
+URL:https://www.kmw.ch/en/exhibition/moderne-reloaded/
+DESCRIPTION:Monet to Mondrian – Bailly to Baer at Kunstmuseum Winterthur
+ . 19 Sep – 31 Dec 2026. Listed by Weekly VERNI\; confirm dates and hour
+ s with the venue. Details: https://www.kmw.ch/en/exhibition/moderne-reloa
+ ded/
+END:VEVENT
+END:VCALENDAR

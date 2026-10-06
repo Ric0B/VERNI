@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Walk & Talk
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e032@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261029T163000Z
+DTEND:20261029T173000Z
+SUMMARY:Talk: Walk & Talk · Kunsthalle Bern
+LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
+GEO:46.9418;7.4497
+URL:https://kunsthallebern.ch/en/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Walk & Talk starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

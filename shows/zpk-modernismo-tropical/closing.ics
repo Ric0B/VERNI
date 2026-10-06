@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-zpk-modernismo-tropical-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:Last days: Roberto Burle Marx: Modernismo tropical closes 7 Feb
+LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
+GEO:46.9489;7.4745
+TRANSP:TRANSPARENT
+URL:https://zpk.org/en/node/11349
+DESCRIPTION:Roberto Burle Marx: Modernismo tropical at Zentrum Paul Klee i
+ s on until 7 Feb 2027. Opening hours: Tue–Sun 10–17.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Roberto Burle Marx: Modernismo tropical closes 7 Fe
+ b
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Opening: Helen Levitt – City at Play
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e011@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261023T160000Z
+DTEND:20261023T170000Z
+SUMMARY:Opening: Opening: Helen Levitt – City at Play · Fotomuseum Wint
+ erthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+URL:https://fotomuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Opening: Helen Levitt – City at Play starts in 1 ho
+ ur
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

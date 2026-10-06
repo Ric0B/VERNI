@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Armand Schulthess: The World of Armand Schulthess
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-artbrut-the-world-of-armand-schulthess-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261127
+DTEND;VALUE=DATE:20270426
+SUMMARY:Armand Schulthess: The World of Armand Schulthess · Collection de
+  l'Art Brut
+LOCATION:Collection de l'Art Brut\, Avenue des Bergières 11\, 1004 Lausan
+ ne
+GEO:46.5275;6.6235
+TRANSP:TRANSPARENT
+URL:https://www.artbrut.ch/en/events/the-world-of-armand-schulthess
+DESCRIPTION:Armand Schulthess: The World of Armand Schulthess at Collectio
+ n de l'Art Brut. 27 Nov 2026 – 25 Apr 2027. Listed by Weekly VERNI\; co
+ nfirm dates and hours with the venue. Details: https://www.artbrut.ch/en/
+ events/the-world-of-armand-schulthess
+END:VEVENT
+END:VCALENDAR

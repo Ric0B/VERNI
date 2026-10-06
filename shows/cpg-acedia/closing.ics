@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cpg-acedia-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270105
+DTEND;VALUE=DATE:20270106
+SUMMARY:Last days: Louise Desnos: Acedia closes 8 Jan
+LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
+ 05 Genève
+GEO:46.1994;6.1368
+TRANSP:TRANSPARENT
+URL:https://www.centrephotogeneve.ch/exhibitions/louise-desnos-acedia
+DESCRIPTION:Louise Desnos: Acedia at Centre de la photographie Genève is 
+ on until 8 Jan 2027. Opening hours: Tue–Wed\, Fri 11–18 · Thu 11–2
+ 0 · Sat 11–16:45.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Louise Desnos: Acedia closes 8 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

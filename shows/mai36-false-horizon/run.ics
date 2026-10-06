@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Markus Saile: False Horizon
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mai36-false-horizon-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20261108
+SUMMARY:Markus Saile: False Horizon · Mai 36 Galerie
+LOCATION:Mai 36 Galerie\, Rämistrasse 37\, 8001 Zürich
+GEO:47.3709;8.5476
+TRANSP:TRANSPARENT
+URL:https://www.mai36.com/exhibitions/markus-saile
+DESCRIPTION:Markus Saile: False Horizon at Mai 36 Galerie. 10 Sep – 7 No
+ v 2026. Listed by Weekly VERNI\; confirm dates and hours with the venue. 
+ Details: https://www.mai36.com/exhibitions/markus-saile
+END:VEVENT
+END:VCALENDAR

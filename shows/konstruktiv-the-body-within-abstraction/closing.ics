@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-konstruktiv-the-body-within-abstraction-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Last days: The Body Within Abstraction closes 10 Jan
+LOCATION:Museum Haus Konstruktiv\, Limmatstrasse 268\, 8005 Zürich
+GEO:47.37;8.531
+TRANSP:TRANSPARENT
+URL:https://hauskonstruktiv.ch/en/exhibitions/the-body-within-abstraction
+DESCRIPTION:The Body Within Abstraction at Museum Haus Konstruktiv is on u
+ ntil 10 Jan 2027. Opening hours: See the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: The Body Within Abstraction closes 10 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

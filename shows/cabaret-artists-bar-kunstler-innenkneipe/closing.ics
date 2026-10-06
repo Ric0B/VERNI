@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cabaret-artists-bar-kunstler-innenkneipe-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Last days: Katalin Ladik\, Babi Badalov: Artists' Bar (Künstler*i
+ nnenkneipe) closes 10 Jan
+LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
+GEO:47.3721;8.544
+TRANSP:TRANSPARENT
+URL:https://www.cabaretvoltaire.ch/programme/dadazwischensprachen-2
+DESCRIPTION:Katalin Ladik\, Babi Badalov: Artists' Bar (Künstler*innenkne
+ ipe) at Cabaret Voltaire is on until 10 Jan 2027. Opening hours: See the 
+ venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Katalin Ladik\, Babi Badalov: Artists' Bar (Künstl
+ er*innenkneipe) closes 10 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

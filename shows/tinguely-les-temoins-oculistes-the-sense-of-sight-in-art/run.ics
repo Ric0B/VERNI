@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Les témoins oculistes. The sense of sight in art
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-tinguely-les-temoins-oculistes-the-sense-of-sight-in-art-run@vern
+ i
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261202
+DTEND;VALUE=DATE:20270510
+SUMMARY:Les témoins oculistes. The sense of sight in art · Museum Tingue
+ ly
+LOCATION:Museum Tinguely\, Paul Sacher-Anlage 2\, 4058 Basel
+GEO:47.5591;7.6124
+TRANSP:TRANSPARENT
+URL:https://www.tinguely.ch/en/exhibitions.html
+DESCRIPTION:Les témoins oculistes. The sense of sight in art at Museum Ti
+ nguely. 2 Dec 2026 – 9 May 2027. Listed by Weekly VERNI\; confirm dates
+  and hours with the venue. Details: https://www.tinguely.ch/en/exhibition
+ s.html
+END:VEVENT
+END:VCALENDAR

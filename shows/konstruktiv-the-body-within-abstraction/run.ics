@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:The Body Within Abstraction
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-konstruktiv-the-body-within-abstraction-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20270111
+SUMMARY:The Body Within Abstraction · Museum Haus Konstruktiv
+LOCATION:Museum Haus Konstruktiv\, Limmatstrasse 268\, 8005 Zürich
+GEO:47.37;8.531
+TRANSP:TRANSPARENT
+URL:https://hauskonstruktiv.ch/en/exhibitions/the-body-within-abstraction
+DESCRIPTION:The Body Within Abstraction at Museum Haus Konstruktiv. 26 Sep
+  2026 – 10 Jan 2027. Listed by Weekly VERNI\; confirm dates and hours w
+ ith the venue. Details: https://hauskonstruktiv.ch/en/exhibitions/the-bod
+ y-within-abstraction
+END:VEVENT
+END:VCALENDAR

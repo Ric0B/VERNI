@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Jahic/Roethlisberger: La Maison des Heures Perdues
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kunstraumriehen-la-maison-des-heures-perdues-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20261109
+SUMMARY:Jahic/Roethlisberger: La Maison des Heures Perdues · Kunst Raum R
+ iehen
+LOCATION:Kunst Raum Riehen\, Baselstrasse 71\, 4125 Riehen
+GEO:47.5838;7.6495
+TRANSP:TRANSPARENT
+URL:https://www.kunstraumriehen.ch/de/page/jahicroethlisberger-la-maison-d
+ es-heures-perdues
+DESCRIPTION:Jahic/Roethlisberger: La Maison des Heures Perdues at Kunst Ra
+ um Riehen. 12 Sep – 8 Nov 2026. Listed by Weekly VERNI\; confirm dates 
+ and hours with the venue. Details: https://www.kunstraumriehen.ch/de/page
+ /jahicroethlisberger-la-maison-des-heures-perdues
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Andreas Brunner: spot on Andreas Brunner
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmluzern-spot-on-andreas-brunner-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20261012
+SUMMARY:Andreas Brunner: spot on Andreas Brunner · Kunstmuseum Luzern
+LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
+GEO:47.0503;8.3117
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumluzern.ch/en/exhibitions/andreas-brunner/
+DESCRIPTION:Andreas Brunner: spot on Andreas Brunner at Kunstmuseum Luzern
+ . 4 Jul – 11 Oct 2026. Listed by Weekly VERNI\; confirm dates and hours
+  with the venue. Details: https://kunstmuseumluzern.ch/en/exhibitions/and
+ reas-brunner/
+END:VEVENT
+END:VCALENDAR

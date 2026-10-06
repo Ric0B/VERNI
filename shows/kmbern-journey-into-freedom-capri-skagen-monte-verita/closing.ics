@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbern-journey-into-freedom-capri-skagen-monte-verita-closing@ver
+ ni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270129
+SUMMARY:Last days: Journey into Freedom. Capri – Skagen – Monte Verit
+ à closes 31 Jan
+LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
+GEO:46.951;7.443
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbern.ch/en/node/11397
+DESCRIPTION:Journey into Freedom. Capri – Skagen – Monte Verità at Ku
+ nstmuseum Bern is on until 31 Jan 2027. Opening hours: Tue 10–20 · Wed
+ –Sun 10–17.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Journey into Freedom. Capri – Skagen – Monte Ve
+ rità closes 31 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

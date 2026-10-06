@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nicole L'Huillier: Canción de Amor
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-migros-cancion-de-amor-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20270118
+SUMMARY:Nicole L'Huillier: Canción de Amor · Migros Museum für Gegenwar
+ tskunst
+LOCATION:Migros Museum für Gegenwartskunst\, Limmatstrasse 270\, 8005 Zü
+ rich
+GEO:47.3891;8.5206
+TRANSP:TRANSPARENT
+URL:https://migrosmuseum.ch/en/exhibitions/nicole-lhuillier-2
+DESCRIPTION:Nicole L'Huillier: Canción de Amor at Migros Museum für Gege
+ nwartskunst. 26 Sep 2026 – 17 Jan 2027. Listed by Weekly VERNI\; confir
+ m dates and hours with the venue. Details: https://migrosmuseum.ch/en/exh
+ ibitions/nicole-lhuillier-2
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kunstraumriehen-regionale-27-geteilte-sicht-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270129
+SUMMARY:Last days: Regionale 27. Geteilte Sicht closes 31 Jan
+LOCATION:Kunst Raum Riehen\, Baselstrasse 71\, 4125 Riehen
+GEO:47.5838;7.6495
+TRANSP:TRANSPARENT
+URL:https://www.kunstraumriehen.ch/de/page/regionale-27-geteilte-sicht
+DESCRIPTION:Regionale 27. Geteilte Sicht at Kunst Raum Riehen is on until 
+ 31 Jan 2027. Opening hours: Wed–Fri 13–18 · Sat–Sun 11–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Regionale 27. Geteilte Sicht closes 31 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

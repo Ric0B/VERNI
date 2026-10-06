@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Jannis Kounellis: Io sono un pittore
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-masi-jannis-kounellis-io-sono-un-pittore-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260920
+DTEND;VALUE=DATE:20270118
+SUMMARY:Jannis Kounellis: Io sono un pittore · MASI Lugano (LAC)
+LOCATION:MASI Lugano (LAC)\, Piazza Bernardino Luini 6\, 6900 Lugano
+GEO:46.0034;8.9507
+TRANSP:TRANSPARENT
+URL:https://www.masilugano.ch
+DESCRIPTION:Jannis Kounellis: Io sono un pittore at MASI Lugano (LAC). 20 
+ Sep 2026 – 17 Jan 2027. Listed by Weekly VERNI\; confirm dates and hour
+ s with the venue. Details: https://www.masilugano.ch
+END:VEVENT
+END:VCALENDAR

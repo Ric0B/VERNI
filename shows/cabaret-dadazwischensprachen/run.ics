@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:DadaZwischenSprachen
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cabaret-dadazwischensprachen-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260606
+DTEND;VALUE=DATE:20270111
+SUMMARY:DadaZwischenSprachen · Cabaret Voltaire
+LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
+GEO:47.3721;8.544
+TRANSP:TRANSPARENT
+URL:https://www.cabaretvoltaire.ch/programme/dadazwischensprachen
+DESCRIPTION:DadaZwischenSprachen at Cabaret Voltaire. 6 Jun 2026 – 10 Ja
+ n 2027. Listed by Weekly VERNI\; confirm dates and hours with the venue. 
+ Details: https://www.cabaretvoltaire.ch/programme/dadazwischensprachen
+END:VEVENT
+END:VCALENDAR

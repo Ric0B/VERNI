@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Aurora Király: Parcours de regards
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-fernet-parcours-de-regards-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20270308
+SUMMARY:Aurora Király: Parcours de regards · Fondation Fernet-Branca
+LOCATION:Fondation Fernet-Branca\, 2 rue du Ballon\, 68300 Saint-Louis
+GEO:47.589;7.556
+TRANSP:TRANSPARENT
+URL:https://www.fondationfernet-branca.org/en/exhibitions/aurora-kiraly-pr
+ actices-looking
+DESCRIPTION:Aurora Király: Parcours de regards at Fondation Fernet-Branca
+ . 10 Oct 2026 – 7 Mar 2027. Listed by Weekly VERNI\; confirm dates and 
+ hours with the venue. Details: https://www.fondationfernet-branca.org/en/
+ exhibitions/aurora-kiraly-practices-looking
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Guided tour: Kosmos Klee
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e030@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261011T130000Z
+DTEND:20261011T140000Z
+SUMMARY:Tour: Guided tour: Kosmos Klee · Zentrum Paul Klee
+LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
+GEO:46.9489;7.4745
+URL:https://zpk.org/en/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Guided tour: Kosmos Klee starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

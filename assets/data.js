@@ -140,7 +140,7 @@ export function status(x) {
 export const isVisible = (x) => diffDays(x.end, TODAY) >= 0 && diffDays(x.start, TODAY) <= 35;
 export const isCurrent = (x) => diffDays(x.start, TODAY) <= 0 && diffDays(x.end, TODAY) >= 0;
 export const closingSoon = (x) => isCurrent(x) && diffDays(x.end, TODAY) <= 7;
-export const dateRange = (x) => (x.noStart ? "until " + fDateY(x.end) : fDate(x.start) + " – " + fDateY(x.end));
+export const dateRange = (x) => (x.noStart ? "until " + fDateY(x.end) : (x.start.getFullYear() === x.end.getFullYear() ? fDate(x.start) : fDateY(x.start)) + " – " + fDateY(x.end));
 
 // ---- opening hours, in Swiss time. null when the venue's page did not state any ----
 function zurichNow() {

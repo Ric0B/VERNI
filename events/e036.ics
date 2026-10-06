@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Tour with Timo Ullmann and Marius Geschinske
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e036@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261105T180000Z
+DTEND:20261105T190000Z
+SUMMARY:Tour: Tour with Timo Ullmann and Marius Geschinske · Kunsthalle L
+ uzern
+LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
+GEO:47.057;8.3107
+URL:https://kunsthalle-luzern.ch
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Tour with Timo Ullmann and Marius Geschinske starts in 1
+  hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

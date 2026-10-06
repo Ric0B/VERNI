@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:dears\, write
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e022@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261028T180000Z
+DTEND:20261028T190000Z
+SUMMARY:Talk: dears\, write · Cabaret Voltaire
+LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
+GEO:47.3721;8.544
+URL:https://www.cabaretvoltaire.ch/programme/dears-write-21-2
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: dears\, write starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

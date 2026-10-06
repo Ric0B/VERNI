@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Charles Blanc-Gatti: The Colours of Sound
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mcba-the-colours-of-sound-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20270118
+SUMMARY:Charles Blanc-Gatti: The Colours of Sound · MCBA Musée cantonal 
+ des Beaux-Arts
+LOCATION:MCBA Musée cantonal des Beaux-Arts\, Place de la Gare 16\, 1003 
+ Lausanne
+GEO:46.5172;6.6268
+TRANSP:TRANSPARENT
+URL:https://www.mcba.ch/en/exhibitions/blanc-gatti/
+DESCRIPTION:Charles Blanc-Gatti: The Colours of Sound at MCBA Musée canto
+ nal des Beaux-Arts. 25 Sep 2026 – 17 Jan 2027. Listed by Weekly VERNI\;
+  confirm dates and hours with the venue. Details: https://www.mcba.ch/en/
+ exhibitions/blanc-gatti/
+END:VEVENT
+END:VCALENDAR

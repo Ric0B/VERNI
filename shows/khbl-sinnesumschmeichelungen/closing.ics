@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khbl-sinnesumschmeichelungen-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270401
+DTEND;VALUE=DATE:20270402
+SUMMARY:Last days: Sinnesumschmeichelungen closes 4 Apr
+LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
+GEO:47.5329;7.6152
+TRANSP:TRANSPARENT
+URL:https://kunsthausbaselland.ch/ausstellungen/sinnesumschmeichelungen
+DESCRIPTION:Sinnesumschmeichelungen at Kunsthaus Baselland is on until 4 A
+ pr 2027. Opening hours: Tue–Wed\, Fri 11–18 · Thu 11–20 · Sat–S
+ un 11–17.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Sinnesumschmeichelungen closes 4 Apr
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-presenhuber-curated-by-josh-smith-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:Last days: Dieter Roth: Curated by Josh Smith closes 11 Dec
+LOCATION:Galerie Eva Presenhuber\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3903;8.5129
+TRANSP:TRANSPARENT
+URL:https://www.presenhuber.com/exhibitions/dieter-roth2
+DESCRIPTION:Dieter Roth: Curated by Josh Smith at Galerie Eva Presenhuber 
+ is on until 11 Dec 2026. Opening hours: Tue–Fri 11–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Dieter Roth: Curated by Josh Smith closes 11 Dec
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

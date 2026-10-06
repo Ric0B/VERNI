@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-artbrut-the-world-of-armand-schulthess-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270422
+DTEND;VALUE=DATE:20270423
+SUMMARY:Last days: Armand Schulthess: The World of Armand Schulthess close
+ s 25 Apr
+LOCATION:Collection de l'Art Brut\, Avenue des Bergières 11\, 1004 Lausan
+ ne
+GEO:46.5275;6.6235
+TRANSP:TRANSPARENT
+URL:https://www.artbrut.ch/en/events/the-world-of-armand-schulthess
+DESCRIPTION:Armand Schulthess: The World of Armand Schulthess at Collectio
+ n de l'Art Brut is on until 25 Apr 2027. Opening hours: Tue–Sun 11–18
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Armand Schulthess: The World of Armand Schulthess c
+ loses 25 Apr
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Panel: Male gaze / Female gaze
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e025@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261011T120000Z
+DTEND:20261011T130000Z
+SUMMARY:Talk: Panel: Male gaze / Female gaze · MAMCO Genève
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+URL:https://www.mamco.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Panel: Male gaze / Female gaze starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

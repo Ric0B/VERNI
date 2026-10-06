@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Hiroki Tsukuda: Inferno
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mai36-inferno-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20261108
+SUMMARY:Hiroki Tsukuda: Inferno · Mai 36 Galerie
+LOCATION:Mai 36 Galerie\, Rämistrasse 37\, 8001 Zürich
+GEO:47.3709;8.5476
+TRANSP:TRANSPARENT
+URL:https://www.mai36.com/exhibitions/hiroki-tsukuda
+DESCRIPTION:Hiroki Tsukuda: Inferno at Mai 36 Galerie. 10 Sep – 7 Nov 20
+ 26. Listed by Weekly VERNI\; confirm dates and hours with the venue. Deta
+ ils: https://www.mai36.com/exhibitions/hiroki-tsukuda
+END:VEVENT
+END:VCALENDAR

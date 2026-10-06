@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Headroom
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-vonbartha-headroom-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20270109
+SUMMARY:Headroom · von Bartha
+LOCATION:von Bartha\, Kannenfeldplatz 6\, 4056 Basel
+GEO:47.565;7.57
+TRANSP:TRANSPARENT
+URL:https://vonbartha.com/exhibitions/headroom/
+DESCRIPTION:Headroom at von Bartha. 5 Nov 2026 – 8 Jan 2027. Listed by W
+ eekly VERNI\; confirm dates and hours with the venue. Details: https://vo
+ nbartha.com/exhibitions/headroom/
+END:VEVENT
+END:VCALENDAR

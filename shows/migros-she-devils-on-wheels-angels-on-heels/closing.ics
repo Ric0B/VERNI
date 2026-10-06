@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-migros-she-devils-on-wheels-angels-on-heels-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:Last days: Sylvie Fleury\, Shamiran Istifan: She-Devils on Wheels\
+ , Angels on Heels closes 17 Jan
+LOCATION:Migros Museum für Gegenwartskunst\, Limmatstrasse 270\, 8005 Zü
+ rich
+GEO:47.3891;8.5206
+TRANSP:TRANSPARENT
+URL:https://migrosmuseum.ch/en/exhibitions/she-devils-on-wheels-angels-on-
+ heels
+DESCRIPTION:Sylvie Fleury\, Shamiran Istifan: She-Devils on Wheels\, Angel
+ s on Heels at Migros Museum für Gegenwartskunst is on until 17 Jan 2027.
+  Opening hours: Tue–Wed\, Fri–Sun 11–18 · Thu 11–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Sylvie Fleury\, Shamiran Istifan: She-Devils on Whe
+ els\, Angels on Heels closes 17 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

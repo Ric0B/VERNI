@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Yael Inokai: Die Auster
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e033@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261027T183000Z
+DTEND:20261027T193000Z
+SUMMARY:Talk: Yael Inokai: Die Auster · Coalmine
+LOCATION:Coalmine\, Turnerstrasse 1\, 8400 Winterthur
+GEO:47.4988;8.724
+URL:https://www.coalmine.ch/event/yael-inokai-die-auster/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Yael Inokai: Die Auster starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

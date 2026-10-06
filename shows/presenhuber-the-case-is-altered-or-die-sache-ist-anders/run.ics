@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Liam Gillick: The Case is Altered or Die Sache ist anders
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-presenhuber-the-case-is-altered-or-die-sache-ist-anders-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20261101
+SUMMARY:Liam Gillick: The Case is Altered or Die Sache ist anders · Galer
+ ie Eva Presenhuber
+LOCATION:Galerie Eva Presenhuber\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3903;8.5129
+TRANSP:TRANSPARENT
+URL:https://www.presenhuber.com/exhibitions/liam-gillick5
+DESCRIPTION:Liam Gillick: The Case is Altered or Die Sache ist anders at G
+ alerie Eva Presenhuber. 18 Sep – 31 Oct 2026. Listed by Weekly VERNI\; 
+ confirm dates and hours with the venue. Details: https://www.presenhuber.
+ com/exhibitions/liam-gillick5
+END:VEVENT
+END:VCALENDAR

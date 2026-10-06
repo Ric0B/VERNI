@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Jutta Koether
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmw-jutta-koether-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20270118
+SUMMARY:Jutta Koether · Kunstmuseum Winterthur
+LOCATION:Kunstmuseum Winterthur\, Museumstrasse 52\, 8400 Winterthur
+GEO:47.5003;8.7321
+TRANSP:TRANSPARENT
+URL:https://www.kmw.ch/en/exhibition/jutta-koether/
+DESCRIPTION:Jutta Koether at Kunstmuseum Winterthur. 12 Sep 2026 – 17 Ja
+ n 2027. Listed by Weekly VERNI\; confirm dates and hours with the venue. 
+ Details: https://www.kmw.ch/en/exhibition/jutta-koether/
+END:VEVENT
+END:VCALENDAR

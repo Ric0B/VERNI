@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-masi-jannis-kounellis-io-sono-un-pittore-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:Last days: Jannis Kounellis: Io sono un pittore closes 17 Jan
+LOCATION:MASI Lugano (LAC)\, Piazza Bernardino Luini 6\, 6900 Lugano
+GEO:46.0034;8.9507
+TRANSP:TRANSPARENT
+URL:https://www.masilugano.ch
+DESCRIPTION:Jannis Kounellis: Io sono un pittore at MASI Lugano (LAC) is o
+ n until 17 Jan 2027. Opening hours: See the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Jannis Kounellis: Io sono un pittore closes 17 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

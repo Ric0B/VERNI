@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Kaspar Ludwig: unlimited\, abstract\, almost future (Manor Ar
+ t Prize Ticino 2026)
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-masi-kaspar-ludwig-unlimited-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261017
+DTEND;VALUE=DATE:20270405
+SUMMARY:Kaspar Ludwig: unlimited\, abstract\, almost future (Manor Art Pri
+ ze Ticino 2026) · MASI Lugano (LAC)
+LOCATION:MASI Lugano (LAC)\, Piazza Bernardino Luini 6\, 6900 Lugano
+GEO:46.0034;8.9507
+TRANSP:TRANSPARENT
+URL:https://www.masilugano.ch
+DESCRIPTION:Kaspar Ludwig: unlimited\, abstract\, almost future (Manor Art
+  Prize Ticino 2026) at MASI Lugano (LAC). 17 Oct 2026 – 4 Apr 2027. Lis
+ ted by Weekly VERNI\; confirm dates and hours with the venue. Details: ht
+ tps://www.masilugano.ch
+END:VEVENT
+END:VCALENDAR

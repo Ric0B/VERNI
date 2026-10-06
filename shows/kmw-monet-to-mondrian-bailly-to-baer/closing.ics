@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmw-monet-to-mondrian-bailly-to-baer-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261228
+DTEND;VALUE=DATE:20261229
+SUMMARY:Last days: Monet to Mondrian – Bailly to Baer closes 31 Dec
+LOCATION:Kunstmuseum Winterthur\, Museumstrasse 52\, 8400 Winterthur
+GEO:47.5003;8.7321
+TRANSP:TRANSPARENT
+URL:https://www.kmw.ch/en/exhibition/moderne-reloaded/
+DESCRIPTION:Monet to Mondrian – Bailly to Baer at Kunstmuseum Winterthur
+  is on until 31 Dec 2026. Opening hours: Wed–Sun 10–17 · Tue 10–20
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Monet to Mondrian – Bailly to Baer closes 31 Dec
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

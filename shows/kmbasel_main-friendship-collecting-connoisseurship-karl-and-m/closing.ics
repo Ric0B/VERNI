@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbasel_main-friendship-collecting-connoisseurship-karl-and-m-clo
+ sing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:Last days: Friendship\, Collecting\, Connoisseurship. Karl and Mar
+ ianne Im Obersteg-Buess closes 7 Feb
+LOCATION:Kunstmuseum Basel | Hauptbau & Neubau\, St. Alban-Graben 16\, 405
+ 1 Basel
+GEO:47.5547;7.5963
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbasel.ch/en/exhibitions/2026/friendship-collecting-
+ connoisseurship-karl-and-marianne-im-obersteg
+DESCRIPTION:Friendship\, Collecting\, Connoisseurship. Karl and Marianne I
+ m Obersteg-Buess at Kunstmuseum Basel | Hauptbau & Neubau is on until 7 F
+ eb 2027. Opening hours: Tue\, Thu–Sun 10–18 · Wed 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Friendship\, Collecting\, Connoisseurship. Karl and
+  Marianne Im Obersteg-Buess closes 7 Feb
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

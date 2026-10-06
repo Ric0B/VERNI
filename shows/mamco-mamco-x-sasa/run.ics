@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Joana Hadjithomas\, Khalil Joreige: MAMCO x SaSA
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mamco-mamco-x-sasa-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20261116
+SUMMARY:Joana Hadjithomas\, Khalil Joreige: MAMCO x SaSA · MAMCO Genève
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+TRANSP:TRANSPARENT
+URL:https://www.mamco.ch/en/2329/MAMCO-x-SaSA
+DESCRIPTION:Joana Hadjithomas\, Khalil Joreige: MAMCO x SaSA at MAMCO Gen
+ ève. 5 Sep – 15 Nov 2026. Listed by Weekly VERNI\; confirm dates and h
+ ours with the venue. Details: https://www.mamco.ch/en/2329/MAMCO-x-SaSA
+END:VEVENT
+END:VCALENDAR

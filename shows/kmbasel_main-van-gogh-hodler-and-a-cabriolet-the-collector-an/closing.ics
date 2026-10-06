@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbasel_main-van-gogh-hodler-and-a-cabriolet-the-collector-an-clo
+ sing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270204
+DTEND;VALUE=DATE:20270205
+SUMMARY:Last days: Van Gogh\, Hodler\, and a Cabriolet. The Collector and 
+ Pioneer Gertrud Dübi-Müller closes 7 Feb
+LOCATION:Kunstmuseum Basel | Hauptbau & Neubau\, St. Alban-Graben 16\, 405
+ 1 Basel
+GEO:47.5547;7.5963
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbasel.ch/en/exhibitions/2026/van-gogh-hodler-und-ei
+ n-cabriolet
+DESCRIPTION:Van Gogh\, Hodler\, and a Cabriolet. The Collector and Pioneer
+  Gertrud Dübi-Müller at Kunstmuseum Basel | Hauptbau & Neubau is on unt
+ il 7 Feb 2027. Opening hours: Tue\, Thu–Sun 10–18 · Wed 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Van Gogh\, Hodler\, and a Cabriolet. The Collector 
+ and Pioneer Gertrud Dübi-Müller closes 7 Feb
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

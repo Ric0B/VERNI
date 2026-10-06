@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khz-caspar-heinemann-tempting-fate-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Last days: Caspar Heinemann: Tempting Fate closes 10 Jan
+LOCATION:Kunsthalle Zürich\, Limmatstrasse 270\, 8005 Zürich
+GEO:47.3892;8.5208
+TRANSP:TRANSPARENT
+URL:http://www.kunsthallezurich.ch/
+DESCRIPTION:Caspar Heinemann: Tempting Fate at Kunsthalle Zürich is on un
+ til 10 Jan 2027. Opening hours: Tue–Wed\, Fri–Sun 11–18 · Thu 11
+ –20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Caspar Heinemann: Tempting Fate closes 10 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

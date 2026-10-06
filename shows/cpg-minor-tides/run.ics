@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sarah Jade Sullivan: Minor Tides
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cpg-minor-tides-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260702
+DTEND;VALUE=DATE:20261011
+SUMMARY:Sarah Jade Sullivan: Minor Tides · Centre de la photographie Gen
+ ève
+LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
+ 05 Genève
+GEO:46.1994;6.1368
+TRANSP:TRANSPARENT
+URL:https://www.centrephotogeneve.ch/exhibitions/marees-mineures
+DESCRIPTION:Sarah Jade Sullivan: Minor Tides at Centre de la photographie 
+ Genève. 2 Jul – 10 Oct 2026. Listed by Weekly VERNI\; confirm dates an
+ d hours with the venue. Details: https://www.centrephotogeneve.ch/exhibit
+ ions/marees-mineures
+END:VEVENT
+END:VCALENDAR

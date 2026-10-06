@@ -1,0 +1,31 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cpg-cosmopolemos-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270217
+DTEND;VALUE=DATE:20270218
+SUMMARY:Last days: Edmund Clark\, Crofton Black: Cosmopolemos closes 20 Fe
+ b
+LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
+ 05 Genève
+GEO:46.1994;6.1368
+TRANSP:TRANSPARENT
+URL:https://www.centrephotogeneve.ch/exhibitions/edmund-clark-et-crofton-b
+ lack-cosmopolemos
+DESCRIPTION:Edmund Clark\, Crofton Black: Cosmopolemos at Centre de la pho
+ tographie Genève is on until 20 Feb 2027. Opening hours: Tue–Wed\, Fri
+  11–18 · Thu 11–20 · Sat 11–16:45.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Edmund Clark\, Crofton Black: Cosmopolemos closes 2
+ 0 Feb
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

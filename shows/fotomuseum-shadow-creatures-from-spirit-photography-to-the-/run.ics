@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Shadow Creatures – From Spirit Photography to the Ghosts of
+  the Algorithm
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-fotomuseum-shadow-creatures-from-spirit-photography-to-the--run@v
+ erni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260627
+DTEND;VALUE=DATE:20261012
+SUMMARY:Shadow Creatures – From Spirit Photography to the Ghosts of the 
+ Algorithm · Fotomuseum Winterthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+TRANSP:TRANSPARENT
+URL:https://www.fotomuseum.ch/en/exhibitions-post/schattenwesen-von-der-ge
+ isterfotografie-zu-den-phantomen-des-algorithmus/
+DESCRIPTION:Shadow Creatures – From Spirit Photography to the Ghosts of 
+ the Algorithm at Fotomuseum Winterthur. 27 Jun – 11 Oct 2026. Listed by
+  Weekly VERNI\; confirm dates and hours with the venue. Details: https://
+ www.fotomuseum.ch/en/exhibitions-post/schattenwesen-von-der-geisterfotogr
+ afie-zu-den-phantomen-des-algorithmus/
+END:VEVENT
+END:VCALENDAR

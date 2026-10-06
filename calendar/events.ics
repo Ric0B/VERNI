@@ -1,0 +1,739 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Weekly VERNI: openings and events
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e001@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261006T101500Z
+DTEND:20261006T111500Z
+SUMMARY:Tour: Kunst über Mittag mit Lunch · Kunsthaus Baselland
+LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
+GEO:47.5329;7.6152
+URL:https://kunsthausbaselland.ch/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Kunst über Mittag mit Lunch starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e002@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261008T163000Z
+DTEND:20261008T173000Z
+SUMMARY:Tour: Abendführung · Kunsthaus Baselland
+LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
+GEO:47.5329;7.6152
+URL:https://kunsthausbaselland.ch/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Abendführung starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e003@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261107T150000Z
+DTEND:20261107T160000Z
+SUMMARY:Talk: Performance und Künstlergespräch: Yanik Soland · Kunsthau
+ s Baselland
+LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
+GEO:47.5329;7.6152
+URL:https://kunsthausbaselland.ch/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Performance und Künstlergespräch: Yanik Soland starts 
+ in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e004@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261015T150000Z
+DTEND:20261015T160000Z
+SUMMARY:Performance: Open Decks · HEK (Haus der Elektronischen Künste)
+LOCATION:HEK (Haus der Elektronischen Künste)\, Freilager-Platz 9\, 4142 
+ Münchenstein
+GEO:47.5337;7.6134
+URL:https://hek.ch/programm/veranstaltungen/open-decks
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Open Decks starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e005@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261010T140000Z
+DTEND:20261010T150000Z
+SUMMARY:Opening: Aurora Király · Fondation Fernet-Branca
+LOCATION:Fondation Fernet-Branca\, 2 rue du Ballon\, 68300 Saint-Louis
+GEO:47.589;7.556
+URL:https://www.fondationfernet-branca.org/en/exhibitions/aurora-kiraly-pr
+ actices-looking
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Aurora Király starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e006@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261018T130000Z
+DTEND:20261018T140000Z
+SUMMARY:Tour: Guided tour: Collection Insights with Kamilla Ødegård · M
+ igros Museum für Gegenwartskunst
+LOCATION:Migros Museum für Gegenwartskunst\, Limmatstrasse 270\, 8005 Zü
+ rich
+GEO:47.3891;8.5206
+URL:https://migrosmuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Guided tour: Collection Insights with Kamilla Ødegård 
+ starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e007@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261011T094500Z
+DTEND:20261011T104500Z
+SUMMARY:Tour: Public guided tour · Museum Haus Konstruktiv
+LOCATION:Museum Haus Konstruktiv\, Limmatstrasse 268\, 8005 Zürich
+GEO:47.37;8.531
+URL:https://hauskonstruktiv.ch/en/events/534149
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Public guided tour starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e008@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261014T161500Z
+DTEND:20261014T171500Z
+SUMMARY:Tour: Public guided tour · Museum Haus Konstruktiv
+LOCATION:Museum Haus Konstruktiv\, Limmatstrasse 268\, 8005 Zürich
+GEO:47.37;8.531
+URL:https://hauskonstruktiv.ch/en/events/536189
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Public guided tour starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e009@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261018T094500Z
+DTEND:20261018T104500Z
+SUMMARY:Tour: Public guided tour · Museum Haus Konstruktiv
+LOCATION:Museum Haus Konstruktiv\, Limmatstrasse 268\, 8005 Zürich
+GEO:47.37;8.531
+URL:https://hauskonstruktiv.ch/en/events/534152
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Public guided tour starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e010@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261010T110000Z
+DTEND:20261010T120000Z
+SUMMARY:Talk: Shadow Creatures in Photography\, Psychology and AI (lecture
+ ) · Fotomuseum Winterthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+URL:https://fotomuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Shadow Creatures in Photography\, Psychology and AI (lec
+ ture) starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e011@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261023T160000Z
+DTEND:20261023T170000Z
+SUMMARY:Opening: Opening: Helen Levitt – City at Play · Fotomuseum Wint
+ erthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+URL:https://fotomuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Opening: Helen Levitt – City at Play starts in 1 ho
+ ur
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e012@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261024T130000Z
+DTEND:20261024T140000Z
+SUMMARY:Talk: Curator's talk with Joshua Chuang and Alessandra Nappo · Fo
+ tomuseum Winterthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+URL:https://fotomuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Curator's talk with Joshua Chuang and Alessandra Nappo s
+ tarts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e013@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261025T103000Z
+DTEND:20261025T113000Z
+SUMMARY:Tour: Guided tour: Helen Levitt – City at Play · Fotomuseum Win
+ terthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+URL:https://fotomuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Guided tour: Helen Levitt – City at Play starts in 1 h
+ our
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e014@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261008T183000Z
+DTEND:20261008T193000Z
+SUMMARY:Performance: IGNM Konzert: Galina Ustwolskaja «Grand Duet» · Ku
+ nstraum Walcheturm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: IGNM Konzert: Galina Ustwolskaja «Grand Duet» s
+ tarts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e015@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261019T180000Z
+DTEND:20261019T190000Z
+SUMMARY:Performance: Zhao Ziyi & Manfred Werder · Kunstraum Walcheturm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Zhao Ziyi & Manfred Werder starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e016@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261020T180000Z
+DTEND:20261020T190000Z
+SUMMARY:Performance: Stepmother: Album Presentation · Kunstraum Walchetur
+ m
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Stepmother: Album Presentation starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e017@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261021T180000Z
+DTEND:20261021T190000Z
+SUMMARY:Performance: Glenn Jones\, Liam Grant\, Son of Buzzi · Kunstraum 
+ Walcheturm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Glenn Jones\, Liam Grant\, Son of Buzzi starts in
+  1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e018@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261022T190000Z
+DTEND:20261022T200000Z
+SUMMARY:Performance: FRANCE · Kunstraum Walcheturm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: FRANCE starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e019@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261024T180000Z
+DTEND:20261024T190000Z
+SUMMARY:Performance: Ensemble Tzara #1: Jannik Giger · Kunstraum Walchetu
+ rm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Ensemble Tzara #1: Jannik Giger starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e020@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261025T180000Z
+DTEND:20261025T190000Z
+SUMMARY:Performance: hiddenbell Percussion Night · Kunstraum Walcheturm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: hiddenbell Percussion Night starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e021@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261027T170000Z
+DTEND:20261027T180000Z
+SUMMARY:Talk: Michael Taussig: Postcards for Mia · Cabaret Voltaire
+LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
+GEO:47.3721;8.544
+URL:https://www.cabaretvoltaire.ch/programme/michael-taussig-postcards-for
+ -mia
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Michael Taussig: Postcards for Mia starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e022@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261028T180000Z
+DTEND:20261028T190000Z
+SUMMARY:Talk: dears\, write · Cabaret Voltaire
+LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
+GEO:47.3721;8.544
+URL:https://www.cabaretvoltaire.ch/programme/dears-write-21-2
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: dears\, write starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e023@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261007T140000Z
+DTEND:20261007T150000Z
+SUMMARY:Tour: Family activities (SaSA) · MAMCO Genève
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+URL:https://www.mamco.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Family activities (SaSA) starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e024@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261013T130000Z
+DTEND:20261013T140000Z
+SUMMARY:Tour: Free tour (Joana Hadjithomas & Khalil Joreige) · MAMCO Gen
+ ève
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+URL:https://www.mamco.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Free tour (Joana Hadjithomas & Khalil Joreige) starts in
+  1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e025@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261011T120000Z
+DTEND:20261011T130000Z
+SUMMARY:Talk: Panel: Male gaze / Female gaze · MAMCO Genève
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+URL:https://www.mamco.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Panel: Male gaze / Female gaze starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e026@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261025T100000Z
+DTEND:20261025T110000Z
+SUMMARY:Finissage: Sylvia Sleigh · MAMCO Genève
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+URL:https://www.mamco.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Finissage: Sylvia Sleigh starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e027@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261010T090000Z
+DTEND:20261010T100000Z
+SUMMARY:Talk: Erzählcafé: Franz Gertsch. Blow-Up (Part I) · Kunstmuseum
+  Bern
+LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
+GEO:46.951;7.443
+URL:https://kunstmuseumbern.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Erzählcafé: Franz Gertsch. Blow-Up (Part I) starts in 
+ 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e028@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261020T163000Z
+DTEND:20261020T173000Z
+SUMMARY:Talk: Zwischen Realität und Wahrheit: Fotografie und Malerei · K
+ unstmuseum Bern
+LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
+GEO:46.951;7.443
+URL:https://kunstmuseumbern.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Zwischen Realität und Wahrheit: Fotografie und Malerei 
+ starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e029@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261029T173000Z
+DTEND:20261029T183000Z
+SUMMARY:Opening: Journey into Freedom. Capri – Skagen – Monte Verità 
+ · Kunstmuseum Bern
+LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
+GEO:46.951;7.443
+URL:https://kunstmuseumbern.ch/en/node/11397
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Journey into Freedom. Capri – Skagen – Monte Veri
+ tà starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e030@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261011T130000Z
+DTEND:20261011T140000Z
+SUMMARY:Tour: Guided tour: Kosmos Klee · Zentrum Paul Klee
+LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
+GEO:46.9489;7.4745
+URL:https://zpk.org/en/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Guided tour: Kosmos Klee starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e031@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261010T153000Z
+DTEND:20261010T163000Z
+SUMMARY:Tour: Exhibition visit & guided relaxation · Kunsthalle Bern
+LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
+GEO:46.9418;7.4497
+URL:https://kunsthallebern.ch/en/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Exhibition visit & guided relaxation starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e032@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261029T163000Z
+DTEND:20261029T173000Z
+SUMMARY:Talk: Walk & Talk · Kunsthalle Bern
+LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
+GEO:46.9418;7.4497
+URL:https://kunsthallebern.ch/en/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Walk & Talk starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e033@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261027T183000Z
+DTEND:20261027T193000Z
+SUMMARY:Talk: Yael Inokai: Die Auster · Coalmine
+LOCATION:Coalmine\, Turnerstrasse 1\, 8400 Winterthur
+GEO:47.4988;8.724
+URL:https://www.coalmine.ch/event/yael-inokai-die-auster/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Yael Inokai: Die Auster starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e034@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261029T173000Z
+DTEND:20261029T183000Z
+SUMMARY:Opening: ALLES ECHT! · Coalmine
+LOCATION:Coalmine\, Turnerstrasse 1\, 8400 Winterthur
+GEO:47.4988;8.724
+URL:https://www.coalmine.ch/event/vernissage-zur-ausstellung-alles-echt/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: ALLES ECHT! starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e035@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261023T170000Z
+DTEND:20261023T180000Z
+SUMMARY:Opening: Timo Ullmann · Kunsthalle Luzern
+LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
+GEO:47.057;8.3107
+URL:https://kunsthalle-luzern.ch
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Timo Ullmann starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e036@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261105T180000Z
+DTEND:20261105T190000Z
+SUMMARY:Tour: Tour with Timo Ullmann and Marius Geschinske · Kunsthalle L
+ uzern
+LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
+GEO:47.057;8.3107
+URL:https://kunsthalle-luzern.ch
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Tour with Timo Ullmann and Marius Geschinske starts in 1
+  hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e037@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261203T163000Z
+DTEND:20261203T173000Z
+SUMMARY:Tour: Tour and screening at stattkino Luzern · Kunsthalle Luzern
+LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
+GEO:47.057;8.3107
+URL:https://kunsthalle-luzern.ch
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Tour and screening at stattkino Luzern starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e038@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261219T130000Z
+DTEND:20261219T140000Z
+SUMMARY:Finissage: Timo Ullmann · Kunsthalle Luzern
+LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
+GEO:47.057;8.3107
+URL:https://kunsthalle-luzern.ch
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Finissage: Timo Ullmann starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e039@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261008T163000Z
+DTEND:20261008T173000Z
+SUMMARY:Tour: Tour and Shared Impressions · Helmhaus Zürich
+LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
+GEO:47.3712;8.543
+URL:https://helmhaus.org
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Tour and Shared Impressions starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e040@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261014T150000Z
+DTEND:20261014T160000Z
+SUMMARY:Talk: Five O'Clock Thesis with Charlotte Matter · Helmhaus Züric
+ h
+LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
+GEO:47.3712;8.543
+URL:https://helmhaus.org
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Five O'Clock Thesis with Charlotte Matter starts in 1 ho
+ ur
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:event-e041@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261022T160000Z
+DTEND:20261022T170000Z
+SUMMARY:Talk: Forget Me Not! lecture · Helmhaus Zürich
+LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
+GEO:47.3712;8.543
+URL:https://helmhaus.org
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Forget Me Not! lecture starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

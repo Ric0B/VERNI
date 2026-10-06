@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-zpk-fokus-florence-henri-18931982-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Last days: Florence Henri: Fokus. Florence Henri (1893–1982) clo
+ ses 10 Jan
+LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
+GEO:46.9489;7.4745
+TRANSP:TRANSPARENT
+URL:https://zpk.org/en/node/11353
+DESCRIPTION:Florence Henri: Fokus. Florence Henri (1893–1982) at Zentrum
+  Paul Klee is on until 10 Jan 2027. Opening hours: Tue–Sun 10–17.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Florence Henri: Fokus. Florence Henri (1893–1982)
+  closes 10 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

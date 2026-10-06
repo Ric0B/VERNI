@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-vitra-architecture-for-the-senses-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270225
+DTEND;VALUE=DATE:20270226
+SUMMARY:Last days: Geoffrey Bawa: Architecture for the Senses closes 28 Fe
+ b
+LOCATION:Vitra Design Museum\, Charles-Eames-Strasse 2\, 79576 Weil am Rhe
+ in
+GEO:47.6026;7.6187
+TRANSP:TRANSPARENT
+URL:https://www.design-museum.de/en/exhibitions/detailpages/geoffrey-bawa.
+ html
+DESCRIPTION:Geoffrey Bawa: Architecture for the Senses at Vitra Design Mus
+ eum is on until 28 Feb 2027. Opening hours: Mon–Sun 10–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Geoffrey Bawa: Architecture for the Senses closes 2
+ 8 Feb
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

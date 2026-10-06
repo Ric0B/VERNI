@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbasel_main-fear-rage-desire-still-standing-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270429
+DTEND;VALUE=DATE:20270430
+SUMMARY:Last days: Marc Bauer: Fear Rage Desire\, Still Standing closes 2 
+ May
+LOCATION:Kunstmuseum Basel | Hauptbau & Neubau\, St. Alban-Graben 16\, 405
+ 1 Basel
+GEO:47.5547;7.5963
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbasel.ch/en/exhibitions/2026/marc-bauer
+DESCRIPTION:Marc Bauer: Fear Rage Desire\, Still Standing at Kunstmuseum B
+ asel | Hauptbau & Neubau is on until 2 May 2027. Opening hours: Tue\, Thu
+ –Sun 10–18 · Wed 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Marc Bauer: Fear Rage Desire\, Still Standing close
+ s 2 May
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

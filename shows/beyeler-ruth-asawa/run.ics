@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ruth Asawa
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-beyeler-ruth-asawa-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261018
+DTEND;VALUE=DATE:20270111
+SUMMARY:Ruth Asawa · Fondation Beyeler
+LOCATION:Fondation Beyeler\, Baselstrasse 101\, 4125 Riehen
+GEO:47.5876;7.6532
+TRANSP:TRANSPARENT
+URL:https://www.fondationbeyeler.ch/en/exhibitions
+DESCRIPTION:Ruth Asawa at Fondation Beyeler. 18 Oct 2026 – 10 Jan 2027. 
+ Listed by Weekly VERNI\; confirm dates and hours with the venue. Details:
+  https://www.fondationbeyeler.ch/en/exhibitions
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Zwischen Realität und Wahrheit: Fotografie und Malerei
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e028@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261020T163000Z
+DTEND:20261020T173000Z
+SUMMARY:Talk: Zwischen Realität und Wahrheit: Fotografie und Malerei · K
+ unstmuseum Bern
+LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
+GEO:46.951;7.443
+URL:https://kunstmuseumbern.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Zwischen Realität und Wahrheit: Fotografie und Malerei 
+ starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

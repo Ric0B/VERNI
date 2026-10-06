@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-vonbartha-mother-tongue-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Last days: Christian Andersson: Mother Tongue closes 23 Oct
+LOCATION:von Bartha\, Kannenfeldplatz 6\, 4056 Basel
+GEO:47.565;7.57
+TRANSP:TRANSPARENT
+URL:https://vonbartha.com/exhibitions/christian-andersson-mother-tongue/
+DESCRIPTION:Christian Andersson: Mother Tongue at von Bartha is on until 2
+ 3 Oct 2026. Opening hours: Tue–Fri 14–18 · Sat 11–16.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Christian Andersson: Mother Tongue closes 23 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

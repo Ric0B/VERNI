@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Louise Desnos: Acedia
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cpg-acedia-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261012
+DTEND;VALUE=DATE:20270109
+SUMMARY:Louise Desnos: Acedia · Centre de la photographie Genève
+LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
+ 05 Genève
+GEO:46.1994;6.1368
+TRANSP:TRANSPARENT
+URL:https://www.centrephotogeneve.ch/exhibitions/louise-desnos-acedia
+DESCRIPTION:Louise Desnos: Acedia at Centre de la photographie Genève. 12
+  Oct 2026 – 8 Jan 2027. Listed by Weekly VERNI\; confirm dates and hour
+ s with the venue. Details: https://www.centrephotogeneve.ch/exhibitions/l
+ ouise-desnos-acedia
+END:VEVENT
+END:VCALENDAR

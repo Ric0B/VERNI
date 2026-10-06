@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-presenhuber-the-case-is-altered-or-die-sache-ist-anders-closing@v
+ erni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Last days: Liam Gillick: The Case is Altered or Die Sache ist ande
+ rs closes 31 Oct
+LOCATION:Galerie Eva Presenhuber\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3903;8.5129
+TRANSP:TRANSPARENT
+URL:https://www.presenhuber.com/exhibitions/liam-gillick5
+DESCRIPTION:Liam Gillick: The Case is Altered or Die Sache ist anders at G
+ alerie Eva Presenhuber is on until 31 Oct 2026. Opening hours: Tue–Fri 
+ 11–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Liam Gillick: The Case is Altered or Die Sache ist 
+ anders closes 31 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

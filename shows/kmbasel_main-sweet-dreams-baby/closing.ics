@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbasel_main-sweet-dreams-baby-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270311
+DTEND;VALUE=DATE:20270312
+SUMMARY:Last days: Roy Lichtenstein: Sweet Dreams\, Baby! closes 14 Mar
+LOCATION:Kunstmuseum Basel | Hauptbau & Neubau\, St. Alban-Graben 16\, 405
+ 1 Basel
+GEO:47.5547;7.5963
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbasel.ch/en/exhibitions/2026/roy-lichtenstein-sweet
+ -dreams-baby
+DESCRIPTION:Roy Lichtenstein: Sweet Dreams\, Baby! at Kunstmuseum Basel | 
+ Hauptbau & Neubau is on until 14 Mar 2027. Opening hours: Tue\, Thu–Sun
+  10–18 · Wed 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Roy Lichtenstein: Sweet Dreams\, Baby! closes 14 Ma
+ r
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

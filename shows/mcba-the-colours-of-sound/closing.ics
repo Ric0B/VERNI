@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mcba-the-colours-of-sound-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270114
+DTEND;VALUE=DATE:20270115
+SUMMARY:Last days: Charles Blanc-Gatti: The Colours of Sound closes 17 Jan
+LOCATION:MCBA Musée cantonal des Beaux-Arts\, Place de la Gare 16\, 1003 
+ Lausanne
+GEO:46.5172;6.6268
+TRANSP:TRANSPARENT
+URL:https://www.mcba.ch/en/exhibitions/blanc-gatti/
+DESCRIPTION:Charles Blanc-Gatti: The Colours of Sound at MCBA Musée canto
+ nal des Beaux-Arts is on until 17 Jan 2027. Opening hours: Tue–Wed\, Fr
+ i–Sun 10–18 · Thu 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Charles Blanc-Gatti: The Colours of Sound closes 17
+  Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

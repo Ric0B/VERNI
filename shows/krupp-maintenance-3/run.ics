@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Kaspar Müller: Maintenance 3
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-krupp-maintenance-3-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260828
+DTEND;VALUE=DATE:20261101
+SUMMARY:Kaspar Müller: Maintenance 3 · Galerie Nicolas Krupp
+LOCATION:Galerie Nicolas Krupp\, Riehentorstrasse 33\, 4058 Basel
+GEO:47.564;7.594
+TRANSP:TRANSPARENT
+URL:https://www.nicolaskrupp.com/exhibitions/2026-08-kaspar-müller
+DESCRIPTION:Kaspar Müller: Maintenance 3 at Galerie Nicolas Krupp. 28 Aug
+  – 31 Oct 2026. Listed by Weekly VERNI\; confirm dates and hours with t
+ he venue. Details: https://www.nicolaskrupp.com/exhibitions/2026-08-kaspa
+ r-müller
+END:VEVENT
+END:VCALENDAR

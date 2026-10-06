@@ -279,3 +279,15 @@ main > .page, main > .split { padding-bottom: 8px; }
 @media (min-width: 1300px) {
   .split { grid-template-columns: minmax(0, 660px) minmax(0, 1fr); gap: 56px; }
 }
+
+/* pre-built pages for search engines and sharing (shows/, venues/, city/, region/) */
+.slinks { display: flex; gap: 2px; margin-left: auto; overflow-x: auto; scrollbar-width: none; }
+.slinks a { min-height: 44px; display: inline-flex; align-items: center; padding: 0 10px; border-radius: var(--pill); text-decoration: none; font-size: .875rem; font-weight: 500; color: var(--mute); white-space: nowrap; }
+.slinks a:hover { background: var(--soft); color: var(--ink); }
+body.static main { min-height: 50vh; padding-bottom: 24px; max-width: 760px; margin-inline: auto; }
+body.static footer { max-width: 760px; margin-inline: auto; }
+.crumbs { font-size: .8125rem; color: var(--mute); padding-top: 16px; }
+.crumbs a { color: var(--mute); }
+.ssr ul { padding-left: 1.1em; columns: 1; }
+.ssr li { margin-block: 4px; }
+@media (min-width: 900px) { .ssr ul { columns: 2; } }

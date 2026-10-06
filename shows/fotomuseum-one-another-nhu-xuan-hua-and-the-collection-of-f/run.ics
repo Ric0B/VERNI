@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Nhu Xuan Hua: One Another – Nhu Xuan Hua and the Collection
+  of Fotomuseum Winterthur
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-fotomuseum-one-another-nhu-xuan-hua-and-the-collection-of-f-run@v
+ erni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260627
+DTEND;VALUE=DATE:20261012
+SUMMARY:Nhu Xuan Hua: One Another – Nhu Xuan Hua and the Collection of F
+ otomuseum Winterthur · Fotomuseum Winterthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+TRANSP:TRANSPARENT
+URL:https://www.fotomuseum.ch/en/exhibitions-post/miteinander-nhu-xuan-hua
+ -und-die-sammlung-des-fotomuseum-winterthur/
+DESCRIPTION:Nhu Xuan Hua: One Another – Nhu Xuan Hua and the Collection 
+ of Fotomuseum Winterthur at Fotomuseum Winterthur. 27 Jun – 11 Oct 2026
+ . Listed by Weekly VERNI\; confirm dates and hours with the venue. Detail
+ s: https://www.fotomuseum.ch/en/exhibitions-post/miteinander-nhu-xuan-hua
+ -und-die-sammlung-des-fotomuseum-winterthur/
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmluzern-spot-on-andreas-brunner-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:Last days: Andreas Brunner: spot on Andreas Brunner closes 11 Oct
+LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
+GEO:47.0503;8.3117
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumluzern.ch/en/exhibitions/andreas-brunner/
+DESCRIPTION:Andreas Brunner: spot on Andreas Brunner at Kunstmuseum Luzern
+  is on until 11 Oct 2026. Opening hours: Tue\, Thu–Sun 11–18 · Wed 1
+ 1–19.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Andreas Brunner: spot on Andreas Brunner closes 11 
+ Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

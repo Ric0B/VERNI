@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Five O'Clock Thesis with Charlotte Matter
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e040@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261014T150000Z
+DTEND:20261014T160000Z
+SUMMARY:Talk: Five O'Clock Thesis with Charlotte Matter · Helmhaus Züric
+ h
+LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
+GEO:47.3712;8.543
+URL:https://helmhaus.org
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Five O'Clock Thesis with Charlotte Matter starts in 1 ho
+ ur
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

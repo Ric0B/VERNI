@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kunsthaus-maria-lassnig-and-edvard-munch-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270218
+DTEND;VALUE=DATE:20270219
+SUMMARY:Last days: Maria Lassnig\, Edvard Munch: Maria Lassnig and Edvard 
+ Munch closes 21 Feb
+LOCATION:Kunsthaus Zürich\, Heimplatz 1\, 8001 Zürich
+GEO:47.3703;8.5481
+TRANSP:TRANSPARENT
+URL:https://www.kunsthaus.ch/en/besuch-planen/ausstellungen/maria-lassnig-
+ und-edvard-munch/
+DESCRIPTION:Maria Lassnig\, Edvard Munch: Maria Lassnig and Edvard Munch a
+ t Kunsthaus Zürich is on until 21 Feb 2027. Opening hours: Tue–Wed\, F
+ ri–Sun 10–18 · Thu 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Maria Lassnig\, Edvard Munch: Maria Lassnig and Edv
+ ard Munch closes 21 Feb
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

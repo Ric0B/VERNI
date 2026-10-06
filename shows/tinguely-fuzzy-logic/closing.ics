@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-tinguely-fuzzy-logic-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270304
+DTEND;VALUE=DATE:20270305
+SUMMARY:Last days: Nicolas Darrot: Fuzzy Logic closes 7 Mar
+LOCATION:Museum Tinguely\, Paul Sacher-Anlage 2\, 4058 Basel
+GEO:47.5591;7.6124
+TRANSP:TRANSPARENT
+URL:https://www.tinguely.ch/en/exhibitions.html
+DESCRIPTION:Nicolas Darrot: Fuzzy Logic at Museum Tinguely is on until 7 M
+ ar 2027. Opening hours: Tue–Wed\, Fri–Sun 11–18 · Thu 11–21.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Nicolas Darrot: Fuzzy Logic closes 7 Mar
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

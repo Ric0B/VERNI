@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Stepmother: Album Presentation
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e016@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261020T180000Z
+DTEND:20261020T190000Z
+SUMMARY:Performance: Stepmother: Album Presentation · Kunstraum Walchetur
+ m
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Stepmother: Album Presentation starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

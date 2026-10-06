@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Yanik Soland: Walking on Rubber Eggshells
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khbl-walking-on-rubber-eggshells-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20261116
+SUMMARY:Yanik Soland: Walking on Rubber Eggshells · Kunsthaus Baselland
+LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
+GEO:47.5329;7.6152
+TRANSP:TRANSPARENT
+URL:https://kunsthausbaselland.ch/ausstellungen/yanik-soland
+DESCRIPTION:Yanik Soland: Walking on Rubber Eggshells at Kunsthaus Basella
+ nd. 25 Sep – 15 Nov 2026. Listed by Weekly VERNI\; confirm dates and ho
+ urs with the venue. Details: https://kunsthausbaselland.ch/ausstellungen/
+ yanik-soland
+END:VEVENT
+END:VCALENDAR

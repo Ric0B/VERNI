@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mamco-mamco-x-sasa-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Last days: Joana Hadjithomas\, Khalil Joreige: MAMCO x SaSA closes
+  15 Nov
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+TRANSP:TRANSPARENT
+URL:https://www.mamco.ch/en/2329/MAMCO-x-SaSA
+DESCRIPTION:Joana Hadjithomas\, Khalil Joreige: MAMCO x SaSA at MAMCO Gen
+ ève is on until 15 Nov 2026. Opening hours: See the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Joana Hadjithomas\, Khalil Joreige: MAMCO x SaSA cl
+ oses 15 Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

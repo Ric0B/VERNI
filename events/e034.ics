@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Vernissage: ALLES ECHT!
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e034@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261029T173000Z
+DTEND:20261029T183000Z
+SUMMARY:Opening: ALLES ECHT! · Coalmine
+LOCATION:Coalmine\, Turnerstrasse 1\, 8400 Winterthur
+GEO:47.4988;8.724
+URL:https://www.coalmine.ch/event/vernissage-zur-ausstellung-alles-echt/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: ALLES ECHT! starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

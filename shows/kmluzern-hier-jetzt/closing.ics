@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmluzern-hier-jetzt-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270129
+SUMMARY:Last days: Noemi Pfister: hier & jetzt closes 31 Jan
+LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
+GEO:47.0503;8.3117
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumluzern.ch/en/exhibitions/hier-jetzt-vdg/
+DESCRIPTION:Noemi Pfister: hier & jetzt at Kunstmuseum Luzern is on until 
+ 31 Jan 2027. Opening hours: Tue\, Thu–Sun 11–18 · Wed 11–19.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Noemi Pfister: hier & jetzt closes 31 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

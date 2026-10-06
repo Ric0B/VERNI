@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Heidi Bucher\, Liesl Raff: Closer
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmw-closer-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260613
+DTEND;VALUE=DATE:20261109
+SUMMARY:Heidi Bucher\, Liesl Raff: Closer · Kunstmuseum Winterthur
+LOCATION:Kunstmuseum Winterthur\, Museumstrasse 52\, 8400 Winterthur
+GEO:47.5003;8.7321
+TRANSP:TRANSPARENT
+URL:https://www.kmw.ch/en/exhibition/heidi-bucher-liesl-raff/
+DESCRIPTION:Heidi Bucher\, Liesl Raff: Closer at Kunstmuseum Winterthur. 1
+ 3 Jun – 8 Nov 2026. Listed by Weekly VERNI\; confirm dates and hours wi
+ th the venue. Details: https://www.kmw.ch/en/exhibition/heidi-bucher-lies
+ l-raff/
+END:VEVENT
+END:VCALENDAR

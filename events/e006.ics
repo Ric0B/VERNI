@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Guided tour: Collection Insights with Kamilla Ødegård
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e006@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261018T130000Z
+DTEND:20261018T140000Z
+SUMMARY:Tour: Guided tour: Collection Insights with Kamilla Ødegård · M
+ igros Museum für Gegenwartskunst
+LOCATION:Migros Museum für Gegenwartskunst\, Limmatstrasse 270\, 8005 Zü
+ rich
+GEO:47.3891;8.5206
+URL:https://migrosmuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Guided tour: Collection Insights with Kamilla Ødegård 
+ starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

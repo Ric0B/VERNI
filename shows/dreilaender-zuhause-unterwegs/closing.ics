@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-dreilaender-zuhause-unterwegs-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270415
+DTEND;VALUE=DATE:20270416
+SUMMARY:Last days: Zuhause – unterwegs closes 18 Apr
+LOCATION:Dreiländermuseum\, Basler Strasse 143\, 79540 Lörrach
+GEO:47.6123;7.6608
+TRANSP:TRANSPARENT
+URL:https://www.dreilaendermuseum.eu/anschauen/sonderausstellungen/
+DESCRIPTION:Zuhause – unterwegs at Dreiländermuseum is on until 18 Apr 
+ 2027. Opening hours: Tue–Sun 11–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Zuhause – unterwegs closes 18 Apr
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-skopia-pierre-andre-ferrand-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Last days: Pierre André Ferrand closes 31 Oct
+LOCATION:Skopia\, Rue des Vieux-Grenadiers 9\, 1205 Genève
+GEO:46.1993;6.1343
+TRANSP:TRANSPARENT
+URL:https://www.skopia.ch/exhibitions-all/pierre-andre-ferrand-2026
+DESCRIPTION:Pierre André Ferrand at Skopia is on until 31 Oct 2026. Openi
+ ng hours: Tue–Fri 11–18:30 · Sat 11–17.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Pierre André Ferrand closes 31 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

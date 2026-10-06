@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mamco-sylvia-sleigh-and-re-collection-an-exhibition-in-closing@ve
+ rni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Last days: Sylvia Sleigh: Sylvia Sleigh and Re-Collection: An Exhi
+ bition in Two Parts closes 25 Oct
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+TRANSP:TRANSPARENT
+URL:https://www.mamco.ch/en/2330/MAMCO-x-MAH
+DESCRIPTION:Sylvia Sleigh: Sylvia Sleigh and Re-Collection: An Exhibition 
+ in Two Parts at MAMCO Genève is on until 25 Oct 2026. Opening hours: See
+  the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Sylvia Sleigh: Sylvia Sleigh and Re-Collection: An 
+ Exhibition in Two Parts closes 25 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

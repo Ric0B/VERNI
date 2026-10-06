@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-luma-hans-ulrich-obrist-archives-maria-lassnig-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261217
+DTEND;VALUE=DATE:20261218
+SUMMARY:Last days: Maria Lassnig: Hans Ulrich Obrist Archives: Maria Lassn
+ ig closes 20 Dec
+LOCATION:LUMA Westbau\, Limmatstrasse 270\, 8005 Zürich
+GEO:47.3893;8.5204
+TRANSP:TRANSPARENT
+URL:https://westbau.com/en/program/maria-lassnig
+DESCRIPTION:Maria Lassnig: Hans Ulrich Obrist Archives: Maria Lassnig at L
+ UMA Westbau is on until 20 Dec 2026. Opening hours: See the venue's websi
+ te.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Maria Lassnig: Hans Ulrich Obrist Archives: Maria L
+ assnig closes 20 Dec
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

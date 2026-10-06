@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Guided tour: Helen Levitt – City at Play
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e013@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261025T103000Z
+DTEND:20261025T113000Z
+SUMMARY:Tour: Guided tour: Helen Levitt – City at Play · Fotomuseum Win
+ terthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+URL:https://fotomuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Guided tour: Helen Levitt – City at Play starts in 1 h
+ our
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

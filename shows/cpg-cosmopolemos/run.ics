@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Edmund Clark\, Crofton Black: Cosmopolemos
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cpg-cosmopolemos-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20270221
+SUMMARY:Edmund Clark\, Crofton Black: Cosmopolemos · Centre de la photogr
+ aphie Genève
+LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
+ 05 Genève
+GEO:46.1994;6.1368
+TRANSP:TRANSPARENT
+URL:https://www.centrephotogeneve.ch/exhibitions/edmund-clark-et-crofton-b
+ lack-cosmopolemos
+DESCRIPTION:Edmund Clark\, Crofton Black: Cosmopolemos at Centre de la pho
+ tographie Genève. 29 Oct 2026 – 20 Feb 2027. Listed by Weekly VERNI\; 
+ confirm dates and hours with the venue. Details: https://www.centrephotog
+ eneve.ch/exhibitions/edmund-clark-et-crofton-black-cosmopolemos
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-hek-studio-lemercier-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261112
+DTEND;VALUE=DATE:20261113
+SUMMARY:Last days: Studio Lemercier closes 15 Nov
+LOCATION:HEK (Haus der Elektronischen Künste)\, Freilager-Platz 9\, 4142 
+ Münchenstein
+GEO:47.5337;7.6134
+TRANSP:TRANSPARENT
+URL:https://hek.ch/programm/ausstellungen/studio-lemercier
+DESCRIPTION:Studio Lemercier at HEK (Haus der Elektronischen Künste) is o
+ n until 15 Nov 2026. Opening hours: See the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Studio Lemercier closes 15 Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

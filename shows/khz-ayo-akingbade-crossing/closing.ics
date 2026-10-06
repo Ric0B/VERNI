@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khz-ayo-akingbade-crossing-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Last days: Ayo Akingbade: Crossing closes 10 Jan
+LOCATION:Kunsthalle Zürich\, Limmatstrasse 270\, 8005 Zürich
+GEO:47.3892;8.5208
+TRANSP:TRANSPARENT
+URL:http://www.kunsthallezurich.ch/
+DESCRIPTION:Ayo Akingbade: Crossing at Kunsthalle Zürich is on until 10 J
+ an 2027. Opening hours: Tue–Wed\, Fri–Sun 11–18 · Thu 11–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Ayo Akingbade: Crossing closes 10 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

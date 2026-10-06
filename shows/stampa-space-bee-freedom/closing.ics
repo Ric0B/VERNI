@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-stampa-space-bee-freedom-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Last days: Jonas Burkhalter: Space Bee Freedom closes 7 Nov
+LOCATION:Galerie Stampa\, Spalenberg 2\, 4051 Basel
+GEO:47.5575;7.586
+TRANSP:TRANSPARENT
+URL:https://www.stampa-galerie.ch/
+DESCRIPTION:Jonas Burkhalter: Space Bee Freedom at Galerie Stampa is on un
+ til 7 Nov 2026. Opening hours: See the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Jonas Burkhalter: Space Bee Freedom closes 7 Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

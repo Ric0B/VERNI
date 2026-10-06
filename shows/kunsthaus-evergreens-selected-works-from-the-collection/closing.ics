@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kunsthaus-evergreens-selected-works-from-the-collection-closing@v
+ erni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270107
+DTEND;VALUE=DATE:20270108
+SUMMARY:Last days: Evergreens. Selected Works from the Collection closes 1
+ 0 Jan
+LOCATION:Kunsthaus Zürich\, Heimplatz 1\, 8001 Zürich
+GEO:47.3703;8.5481
+TRANSP:TRANSPARENT
+URL:https://www.kunsthaus.ch/en/besuch-planen/ausstellungen/ikonen/
+DESCRIPTION:Evergreens. Selected Works from the Collection at Kunsthaus Z
+ ürich is on until 10 Jan 2027. Opening hours: Tue–Wed\, Fri–Sun 10
+ –18 · Thu 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Evergreens. Selected Works from the Collection clos
+ es 10 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

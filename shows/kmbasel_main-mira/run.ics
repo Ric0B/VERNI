@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Renée Levi: Mira
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbasel_main-mira-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20250830
+DTEND;VALUE=DATE:20290102
+SUMMARY:Renée Levi: Mira · Kunstmuseum Basel | Hauptbau & Neubau
+LOCATION:Kunstmuseum Basel | Hauptbau & Neubau\, St. Alban-Graben 16\, 405
+ 1 Basel
+GEO:47.5547;7.5963
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbasel.ch/en/exhibitions/2025/renee-levi
+DESCRIPTION:Renée Levi: Mira at Kunstmuseum Basel | Hauptbau & Neubau. 30
+  Aug 2025 – 1 Jan 2029. Listed by Weekly VERNI\; confirm dates and hour
+ s with the venue. Details: https://kunstmuseumbasel.ch/en/exhibitions/202
+ 5/renee-levi
+END:VEVENT
+END:VCALENDAR

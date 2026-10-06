@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mai36-inferno-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261104
+DTEND;VALUE=DATE:20261105
+SUMMARY:Last days: Hiroki Tsukuda: Inferno closes 7 Nov
+LOCATION:Mai 36 Galerie\, Rämistrasse 37\, 8001 Zürich
+GEO:47.3709;8.5476
+TRANSP:TRANSPARENT
+URL:https://www.mai36.com/exhibitions/hiroki-tsukuda
+DESCRIPTION:Hiroki Tsukuda: Inferno at Mai 36 Galerie is on until 7 Nov 20
+ 26. Opening hours: See the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Hiroki Tsukuda: Inferno closes 7 Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

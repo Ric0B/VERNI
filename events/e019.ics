@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ensemble Tzara #1: Jannik Giger
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e019@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261024T180000Z
+DTEND:20261024T190000Z
+SUMMARY:Performance: Ensemble Tzara #1: Jannik Giger · Kunstraum Walchetu
+ rm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Ensemble Tzara #1: Jannik Giger starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

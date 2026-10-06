@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kunstraumriehen-la-maison-des-heures-perdues-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261105
+DTEND;VALUE=DATE:20261106
+SUMMARY:Last days: Jahic/Roethlisberger: La Maison des Heures Perdues clos
+ es 8 Nov
+LOCATION:Kunst Raum Riehen\, Baselstrasse 71\, 4125 Riehen
+GEO:47.5838;7.6495
+TRANSP:TRANSPARENT
+URL:https://www.kunstraumriehen.ch/de/page/jahicroethlisberger-la-maison-d
+ es-heures-perdues
+DESCRIPTION:Jahic/Roethlisberger: La Maison des Heures Perdues at Kunst Ra
+ um Riehen is on until 8 Nov 2026. Opening hours: Wed–Fri 13–18 · Sat
+ –Sun 11–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Jahic/Roethlisberger: La Maison des Heures Perdues 
+ closes 8 Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

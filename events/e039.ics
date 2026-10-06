@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Tour and Shared Impressions
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e039@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261008T163000Z
+DTEND:20261008T173000Z
+SUMMARY:Tour: Tour and Shared Impressions · Helmhaus Zürich
+LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
+GEO:47.3712;8.543
+URL:https://helmhaus.org
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Tour and Shared Impressions starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

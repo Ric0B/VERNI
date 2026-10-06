@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-presenhuber-entropy-2026-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261020
+DTEND;VALUE=DATE:20261021
+SUMMARY:Last days: Angela Bulloch: Entropy\, 2026 closes 23 Oct
+LOCATION:Galerie Eva Presenhuber\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3903;8.5129
+TRANSP:TRANSPARENT
+URL:https://www.presenhuber.com/exhibitions/angela-bulloch4
+DESCRIPTION:Angela Bulloch: Entropy\, 2026 at Galerie Eva Presenhuber is o
+ n until 23 Oct 2026. Opening hours: Tue–Fri 11–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Angela Bulloch: Entropy\, 2026 closes 23 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

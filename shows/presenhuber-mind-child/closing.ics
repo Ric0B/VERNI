@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-presenhuber-mind-child-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261208
+DTEND;VALUE=DATE:20261209
+SUMMARY:Last days: Josh Smith: Mind Child closes 11 Dec
+LOCATION:Galerie Eva Presenhuber\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3903;8.5129
+TRANSP:TRANSPARENT
+URL:https://www.presenhuber.com/exhibitions/josh-smith7
+DESCRIPTION:Josh Smith: Mind Child at Galerie Eva Presenhuber is on until 
+ 11 Dec 2026. Opening hours: Tue–Fri 11–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Josh Smith: Mind Child closes 11 Dec
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

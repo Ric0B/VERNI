@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Labouring Bodies
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-tinguely-labouring-bodies-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260610
+DTEND;VALUE=DATE:20261109
+SUMMARY:Labouring Bodies · Museum Tinguely
+LOCATION:Museum Tinguely\, Paul Sacher-Anlage 2\, 4058 Basel
+GEO:47.5591;7.6124
+TRANSP:TRANSPARENT
+URL:https://www.tinguely.ch/en/exhibitions.html
+DESCRIPTION:Labouring Bodies at Museum Tinguely. 10 Jun – 8 Nov 2026. Li
+ sted by Weekly VERNI\; confirm dates and hours with the venue. Details: h
+ ttps://www.tinguely.ch/en/exhibitions.html
+END:VEVENT
+END:VCALENDAR

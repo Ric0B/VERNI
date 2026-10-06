@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mah-john-m-armleder-carte-blanche-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Last days: John M Armleder: Carte Blanche closes 25 Oct
+LOCATION:Musée d'art et d'histoire\, Rue Charles-Galland 2\, 1206 Genève
+GEO:46.1995;6.1517
+TRANSP:TRANSPARENT
+URL:https://www.mahmah.ch
+DESCRIPTION:John M Armleder: Carte Blanche at Musée d'art et d'histoire i
+ s on until 25 Oct 2026. Opening hours: See the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: John M Armleder: Carte Blanche closes 25 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

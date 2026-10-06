@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sylvia Sleigh: Sylvia Sleigh and Re-Collection: An Exhibition
+  in Two Parts
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mamco-sylvia-sleigh-and-re-collection-an-exhibition-in-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260605
+DTEND;VALUE=DATE:20261026
+SUMMARY:Sylvia Sleigh: Sylvia Sleigh and Re-Collection: An Exhibition in T
+ wo Parts · MAMCO Genève
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+TRANSP:TRANSPARENT
+URL:https://www.mamco.ch/en/2330/MAMCO-x-MAH
+DESCRIPTION:Sylvia Sleigh: Sylvia Sleigh and Re-Collection: An Exhibition 
+ in Two Parts at MAMCO Genève. 5 Jun – 25 Oct 2026. Listed by Weekly VE
+ RNI\; confirm dates and hours with the venue. Details: https://www.mamco.
+ ch/en/2330/MAMCO-x-MAH
+END:VEVENT
+END:VCALENDAR

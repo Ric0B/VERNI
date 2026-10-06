@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mcba-la-ronde-manor-art-prize-2026-vaud-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270211
+DTEND;VALUE=DATE:20270212
+SUMMARY:Last days: Lucas Erin: La ronde (Manor Art Prize 2026 Vaud) closes
+  14 Feb
+LOCATION:MCBA Musée cantonal des Beaux-Arts\, Place de la Gare 16\, 1003 
+ Lausanne
+GEO:46.5172;6.6268
+TRANSP:TRANSPARENT
+URL:https://www.mcba.ch/en/exhibitions/lucas-erin/
+DESCRIPTION:Lucas Erin: La ronde (Manor Art Prize 2026 Vaud) at MCBA Musé
+ e cantonal des Beaux-Arts is on until 14 Feb 2027. Opening hours: Tue–W
+ ed\, Fri–Sun 10–18 · Thu 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Lucas Erin: La ronde (Manor Art Prize 2026 Vaud) cl
+ oses 14 Feb
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

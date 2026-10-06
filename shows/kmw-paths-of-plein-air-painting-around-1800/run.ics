@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Paths of Plein-Air Painting Around 1800
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmw-paths-of-plein-air-painting-around-1800-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20261026
+SUMMARY:Paths of Plein-Air Painting Around 1800 · Kunstmuseum Winterthur
+LOCATION:Kunstmuseum Winterthur\, Museumstrasse 52\, 8400 Winterthur
+GEO:47.5003;8.7321
+TRANSP:TRANSPARENT
+URL:https://www.kmw.ch/en/exhibition/zur-sonne-zur-freiheit/
+DESCRIPTION:Paths of Plein-Air Painting Around 1800 at Kunstmuseum Wintert
+ hur. 4 Jul – 25 Oct 2026. Listed by Weekly VERNI\; confirm dates and ho
+ urs with the venue. Details: https://www.kmw.ch/en/exhibition/zur-sonne-z
+ ur-freiheit/
+END:VEVENT
+END:VCALENDAR

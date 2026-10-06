@@ -16,7 +16,7 @@ The app downloads this file from the repository's `main` branch. It only accepts
 5. Set `generatedAt` to the current UTC time (`2026-10-12T06:00:00Z` format).
 6. Run `python3 tools/validate_data.py`. Fix every ERROR. Read the warnings.
 7. Copy the file to `WeeklyVerni/Resources/shows.json` (the copy shipped inside the app) and commit both with a message like `Weekly refresh 2026-10-12: 71 shows, 34 events`. Push to `main`.
-8. Reply with a short report: how many venues were read, which failed, what changed, and anything you were unsure about.
+9. Reply with a short report: how many venues were read, which failed, what changed, and anything you were unsure about.
 
 ## Rules
 

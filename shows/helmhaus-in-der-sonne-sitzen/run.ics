@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:In der Sonne sitzen
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-helmhaus-in-der-sonne-sitzen-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261002
+DTEND;VALUE=DATE:20270104
+SUMMARY:In der Sonne sitzen · Helmhaus Zürich
+LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
+GEO:47.3712;8.543
+TRANSP:TRANSPARENT
+URL:https://helmhaus.org
+DESCRIPTION:In der Sonne sitzen at Helmhaus Zürich. 2 Oct 2026 – 3 Jan 
+ 2027. Listed by Weekly VERNI\; confirm dates and hours with the venue. De
+ tails: https://helmhaus.org
+END:VEVENT
+END:VCALENDAR

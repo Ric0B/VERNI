@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Jonas Burkhalter: Space Bee Freedom
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-stampa-space-bee-freedom-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260910
+DTEND;VALUE=DATE:20261108
+SUMMARY:Jonas Burkhalter: Space Bee Freedom · Galerie Stampa
+LOCATION:Galerie Stampa\, Spalenberg 2\, 4051 Basel
+GEO:47.5575;7.586
+TRANSP:TRANSPARENT
+URL:https://www.stampa-galerie.ch/
+DESCRIPTION:Jonas Burkhalter: Space Bee Freedom at Galerie Stampa. 10 Sep 
+ – 7 Nov 2026. Listed by Weekly VERNI\; confirm dates and hours with the
+  venue. Details: https://www.stampa-galerie.ch/
+END:VEVENT
+END:VCALENDAR

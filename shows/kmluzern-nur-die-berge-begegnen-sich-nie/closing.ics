@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmluzern-nur-die-berge-begegnen-sich-nie-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270128
+DTEND;VALUE=DATE:20270129
+SUMMARY:Last days: Dominik Zietlow: Nur die Berge begegnen sich nie closes
+  31 Jan
+LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
+GEO:47.0503;8.3117
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumluzern.ch/en/exhibitions/dominik-zietlow-manor/
+DESCRIPTION:Dominik Zietlow: Nur die Berge begegnen sich nie at Kunstmuseu
+ m Luzern is on until 31 Jan 2027. Opening hours: Tue\, Thu–Sun 11–18 
+ · Wed 11–19.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Dominik Zietlow: Nur die Berge begegnen sich nie cl
+ oses 31 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

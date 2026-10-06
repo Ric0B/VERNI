@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Constellations
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-beyeler-constellations-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20270906
+SUMMARY:Constellations · Fondation Beyeler
+LOCATION:Fondation Beyeler\, Baselstrasse 101\, 4125 Riehen
+GEO:47.5876;7.6532
+TRANSP:TRANSPARENT
+URL:https://www.fondationbeyeler.ch/en/exhibitions
+DESCRIPTION:Constellations at Fondation Beyeler. 26 Sep 2026 – 5 Sep 202
+ 7. Listed by Weekly VERNI\; confirm dates and hours with the venue. Detai
+ ls: https://www.fondationbeyeler.ch/en/exhibitions
+END:VEVENT
+END:VCALENDAR

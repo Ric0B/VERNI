@@ -1,0 +1,32 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbasel_main-boundless-printmaking-the-schweizerische-graphis-clo
+ sing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261126
+DTEND;VALUE=DATE:20261127
+SUMMARY:Last days: Boundless Printmaking. The Schweizerische Graphische Ge
+ sellschaft closes 29 Nov
+LOCATION:Kunstmuseum Basel | Hauptbau & Neubau\, St. Alban-Graben 16\, 405
+ 1 Basel
+GEO:47.5547;7.5963
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbasel.ch/en/exhibitions/2026/boundless-printmaking-
+ the-schweizerische-graphische-gesellschaft
+DESCRIPTION:Boundless Printmaking. The Schweizerische Graphische Gesellsch
+ aft at Kunstmuseum Basel | Hauptbau & Neubau is on until 29 Nov 2026. Ope
+ ning hours: Tue\, Thu–Sun 10–18 · Wed 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Boundless Printmaking. The Schweizerische Graphisch
+ e Gesellschaft closes 29 Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Ayo Akingbade: Crossing
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khz-ayo-akingbade-crossing-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20270111
+SUMMARY:Ayo Akingbade: Crossing · Kunsthalle Zürich
+LOCATION:Kunsthalle Zürich\, Limmatstrasse 270\, 8005 Zürich
+GEO:47.3892;8.5208
+TRANSP:TRANSPARENT
+URL:http://www.kunsthallezurich.ch/
+DESCRIPTION:Ayo Akingbade: Crossing at Kunsthalle Zürich. 26 Sep 2026 –
+  10 Jan 2027. Listed by Weekly VERNI\; confirm dates and hours with the v
+ enue. Details: http://www.kunsthallezurich.ch/
+END:VEVENT
+END:VCALENDAR

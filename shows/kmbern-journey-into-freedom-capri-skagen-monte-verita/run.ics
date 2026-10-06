@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Journey into Freedom. Capri – Skagen – Monte Verità
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbern-journey-into-freedom-capri-skagen-monte-verita-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261030
+DTEND;VALUE=DATE:20270201
+SUMMARY:Journey into Freedom. Capri – Skagen – Monte Verità · Kunstm
+ useum Bern
+LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
+GEO:46.951;7.443
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbern.ch/en/node/11397
+DESCRIPTION:Journey into Freedom. Capri – Skagen – Monte Verità at Ku
+ nstmuseum Bern. 30 Oct 2026 – 31 Jan 2027. Listed by Weekly VERNI\; con
+ firm dates and hours with the venue. Details: https://kunstmuseumbern.ch/
+ en/node/11397
+END:VEVENT
+END:VCALENDAR

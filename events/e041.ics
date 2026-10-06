@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Forget Me Not! lecture
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e041@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261022T160000Z
+DTEND:20261022T170000Z
+SUMMARY:Talk: Forget Me Not! lecture · Helmhaus Zürich
+LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
+GEO:47.3712;8.543
+URL:https://helmhaus.org
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Forget Me Not! lecture starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

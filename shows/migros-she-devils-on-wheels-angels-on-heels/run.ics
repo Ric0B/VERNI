@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sylvie Fleury\, Shamiran Istifan: She-Devils on Wheels\, Ange
+ ls on Heels
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-migros-she-devils-on-wheels-angels-on-heels-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260926
+DTEND;VALUE=DATE:20270118
+SUMMARY:Sylvie Fleury\, Shamiran Istifan: She-Devils on Wheels\, Angels on
+  Heels · Migros Museum für Gegenwartskunst
+LOCATION:Migros Museum für Gegenwartskunst\, Limmatstrasse 270\, 8005 Zü
+ rich
+GEO:47.3891;8.5206
+TRANSP:TRANSPARENT
+URL:https://migrosmuseum.ch/en/exhibitions/she-devils-on-wheels-angels-on-
+ heels
+DESCRIPTION:Sylvie Fleury\, Shamiran Istifan: She-Devils on Wheels\, Angel
+ s on Heels at Migros Museum für Gegenwartskunst. 26 Sep 2026 – 17 Jan 
+ 2027. Listed by Weekly VERNI\; confirm dates and hours with the venue. De
+ tails: https://migrosmuseum.ch/en/exhibitions/she-devils-on-wheels-angels
+ -on-heels
+END:VEVENT
+END:VCALENDAR

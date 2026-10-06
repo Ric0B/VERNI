@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-tinguely-les-temoins-oculistes-the-sense-of-sight-in-art-closing@
+ verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+SUMMARY:Last days: Les témoins oculistes. The sense of sight in art close
+ s 9 May
+LOCATION:Museum Tinguely\, Paul Sacher-Anlage 2\, 4058 Basel
+GEO:47.5591;7.6124
+TRANSP:TRANSPARENT
+URL:https://www.tinguely.ch/en/exhibitions.html
+DESCRIPTION:Les témoins oculistes. The sense of sight in art at Museum Ti
+ nguely is on until 9 May 2027. Opening hours: Tue–Wed\, Fri–Sun 11–
+ 18 · Thu 11–21.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Les témoins oculistes. The sense of sight in art c
+ loses 9 May
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

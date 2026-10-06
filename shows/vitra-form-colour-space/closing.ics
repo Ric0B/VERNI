@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-vitra-form-colour-space-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270506
+DTEND;VALUE=DATE:20270507
+SUMMARY:Last days: Verner Panton: Form\, Colour\, Space closes 9 May
+LOCATION:Vitra Design Museum\, Charles-Eames-Strasse 2\, 79576 Weil am Rhe
+ in
+GEO:47.6026;7.6187
+TRANSP:TRANSPARENT
+URL:https://www.design-museum.de/en/exhibitions/detailpages/verner-panton-
+ form-colour-space.html
+DESCRIPTION:Verner Panton: Form\, Colour\, Space at Vitra Design Museum is
+  on until 9 May 2027. Opening hours: Mon–Sun 10–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Verner Panton: Form\, Colour\, Space closes 9 May
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

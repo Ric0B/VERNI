@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmw-paths-of-plein-air-painting-around-1800-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Last days: Paths of Plein-Air Painting Around 1800 closes 25 Oct
+LOCATION:Kunstmuseum Winterthur\, Museumstrasse 52\, 8400 Winterthur
+GEO:47.5003;8.7321
+TRANSP:TRANSPARENT
+URL:https://www.kmw.ch/en/exhibition/zur-sonne-zur-freiheit/
+DESCRIPTION:Paths of Plein-Air Painting Around 1800 at Kunstmuseum Wintert
+ hur is on until 25 Oct 2026. Opening hours: Wed–Sun 10–17 · Tue 10
+ –20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Paths of Plein-Air Painting Around 1800 closes 25 O
+ ct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

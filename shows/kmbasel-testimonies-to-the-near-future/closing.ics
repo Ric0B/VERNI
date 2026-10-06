@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbasel-testimonies-to-the-near-future-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261008
+DTEND;VALUE=DATE:20261009
+SUMMARY:Last days: Cao Fei: Testimonies to the Near Future closes 11 Oct
+LOCATION:Kunstmuseum Basel | Gegenwart\, St. Alban-Rheinweg 60\, 4052 Base
+ l
+GEO:47.5553;7.6003
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbasel.ch/en/exhibitions/2026/cao-fei
+DESCRIPTION:Cao Fei: Testimonies to the Near Future at Kunstmuseum Basel |
+  Gegenwart is on until 11 Oct 2026. Opening hours: Tue–Sun 11–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Cao Fei: Testimonies to the Near Future closes 11 O
+ ct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

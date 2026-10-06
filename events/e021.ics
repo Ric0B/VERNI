@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Michael Taussig: Postcards for Mia
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e021@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261027T170000Z
+DTEND:20261027T180000Z
+SUMMARY:Talk: Michael Taussig: Postcards for Mia · Cabaret Voltaire
+LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
+GEO:47.3721;8.544
+URL:https://www.cabaretvoltaire.ch/programme/michael-taussig-postcards-for
+ -mia
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Michael Taussig: Postcards for Mia starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

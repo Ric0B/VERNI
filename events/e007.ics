@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Public guided tour
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e007@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261011T094500Z
+DTEND:20261011T104500Z
+SUMMARY:Tour: Public guided tour · Museum Haus Konstruktiv
+LOCATION:Museum Haus Konstruktiv\, Limmatstrasse 268\, 8005 Zürich
+GEO:47.37;8.531
+URL:https://hauskonstruktiv.ch/en/events/534149
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Public guided tour starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

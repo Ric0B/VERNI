@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Sinnesumschmeichelungen
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khbl-sinnesumschmeichelungen-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20270405
+SUMMARY:Sinnesumschmeichelungen · Kunsthaus Baselland
+LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
+GEO:47.5329;7.6152
+TRANSP:TRANSPARENT
+URL:https://kunsthausbaselland.ch/ausstellungen/sinnesumschmeichelungen
+DESCRIPTION:Sinnesumschmeichelungen at Kunsthaus Baselland. 25 Sep 2026 
+ – 4 Apr 2027. Listed by Weekly VERNI\; confirm dates and hours with the
+  venue. Details: https://kunsthausbaselland.ch/ausstellungen/sinnesumschm
+ eichelungen
+END:VEVENT
+END:VCALENDAR

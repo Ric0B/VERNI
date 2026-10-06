@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Glenn Jones\, Liam Grant\, Son of Buzzi
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e017@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261021T180000Z
+DTEND:20261021T190000Z
+SUMMARY:Performance: Glenn Jones\, Liam Grant\, Son of Buzzi · Kunstraum 
+ Walcheturm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/agenda
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Glenn Jones\, Liam Grant\, Son of Buzzi starts in
+  1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

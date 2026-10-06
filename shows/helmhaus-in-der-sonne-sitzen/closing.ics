@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-helmhaus-in-der-sonne-sitzen-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261231
+DTEND;VALUE=DATE:20270101
+SUMMARY:Last days: In der Sonne sitzen closes 3 Jan
+LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
+GEO:47.3712;8.543
+TRANSP:TRANSPARENT
+URL:https://helmhaus.org
+DESCRIPTION:In der Sonne sitzen at Helmhaus Zürich is on until 3 Jan 2027
+ . Opening hours: Tue–Wed\, Fri–Sun 11–18 · Thu 11–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: In der Sonne sitzen closes 3 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -27,6 +27,7 @@ const I = {
   next: svg('<path d="M9.5 5.5L16 12l-6.5 6.5"/>', 18, 1.9), ext: svg('<path d="M7 17L17 7M9 7h8v8"/>', 16, 2.2),
   up: svg('<path d="M6 14l6-6 6 6"/>', 20, 2), down: svg('<path d="M6 10l6 6 6-6"/>', 20, 2), x: svg('<path d="M6 6l12 12M18 6L6 18"/>', 20, 2),
   search: svg('<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>', 20),
+  bell: svg('<path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>', 16, 2),
 };
 
 /* ---------- state ---------- */
@@ -238,6 +239,10 @@ viewFns.show = () => {
           ${evs.length ? `<dt>Next</dt><dd><b>${evs[0].type}</b><br>${fDayLong(evs[0].date)}${evs[0].time ? ", " + evs[0].time : ""}</dd>` : ""}
           ${x.artists.length ? `<dt>Artists</dt><dd>${artistLinks(x)}</dd>` : ""}</dl>
         ${x.url ? `<p><a class="btn ghost" href="${esc(x.url)}" target="_blank" rel="noopener">Details on ${esc(hostOf(x.url) || "the venue's site")} ${I.ext}</a></p>` : ""}
+        <div class="btnrow" aria-label="Calendar">
+          ${x.noStart ? "" : `<a class="btn ghost" href="shows/${esc(x.id)}/run.ics" download>${I.cal} Add to calendar</a><a class="btn ghost" href="${esc(googleCal(x))}" target="_blank" rel="noopener">Google Calendar ${I.ext}</a>`}
+          ${diffDays(x.end, TODAY) >= 0 ? `<a class="btn ghost" href="shows/${esc(x.id)}/closing.ics" download>${I.bell} Remind me before it closes</a>` : ""}
+        </div>
         ${evs.length ? `<h2 class="sec-h">Events</h2>${evs.map(eventLine).join("")}` : ""}
         ${more.length ? `<h2 class="sec-h">Also at ${esc(v.name)}</h2>${more.map((y) => cardHTML(y, { showVenue: false })).join("")}` : ""}
       </article>
@@ -248,8 +253,15 @@ viewFns.show = () => {
     },
   };
 };
+const ymd = (d) => `${d.getFullYear()}${String(d.getMonth() + 1).padStart(2, "0")}${String(d.getDate()).padStart(2, "0")}`;
+function googleCal(x) {
+  const v = M.venues[x.venue];
+  const q = new URLSearchParams({ action: "TEMPLATE", text: `${artistNames(x)}${x.title ? ": " + x.title : ""} · ${v.name}`, dates: `${ymd(x.start)}/${ymd(addDays(x.end, 1))}`, details: x.url, location: `${v.name}, ${v.address}` });
+  return "https://calendar.google.com/calendar/render?" + q;
+}
+const eventCal = (e) => (e.time ? `<br><a class="sm" href="events/${esc(e.id)}.ics" download>Add to calendar with reminder</a>` : "");
 function eventLine(e) {
-  return `<div class="vrow"><span><b>${fDayLong(e.date)}${e.time ? ", " + e.time : ""}</b><br><span class="mute sm">${esc(e.title)}</span></span><span><span class="tag t-${e.type}">${e.type}</span></span></div>`;
+  return `<div class="vrow"><span><b>${fDayLong(e.date)}${e.time ? ", " + e.time : ""}</b><br><span class="mute sm">${esc(e.title)}</span>${eventCal(e)}</span><span><span class="tag t-${e.type}">${e.type}</span></span></div>`;
 }
 
 /* ----- events ----- */
@@ -260,6 +272,7 @@ viewFns.events = () => {
     && !(diffDays(e.date, TODAY) === 0 && e.time && e.time < nowHM));
   let h = `<div class="page"><div class="detail wide"><div class="page-h"><div class="kicker">${esc(scopeName())}</div><h1>Events</h1></div>
     ${staleNotice()}
+    <p class="sm mute">Add events to your calendar with a reminder one hour before. <a href="calendar/events.ics" download>Calendar file with all events</a>. It lists everything, so add it once and delete what you don't want.</p>
     <div class="chips" role="group" aria-label="Event type"><button class="chip" type="button" data-action="evtype" data-type="all" aria-pressed="${state.evType === "all"}">All</button>
       ${EVENT_TYPES.map(([id, , plural]) => `<button class="chip" type="button" data-action="evtype" data-type="${id}" aria-pressed="${state.evType === id}">${plural}</button>`).join("")}</div>`;
   let any = false;
@@ -279,7 +292,7 @@ viewFns.events = () => {
           return `<div class="ev"><span class="ev-t">${e.time || "–"}</span><div class="ev-x"><span class="tag t-${e.type}">${e.type}</span>
             ${x ? `<div><a href="${hashFor("show", x.id)}"><b>${esc(artistNames(x))}</b>${x.title ? `<br><i>${esc(x.title)}</i>` : ""}</a></div>` : ""}
             ${e.typeId !== "opening" && e.typeId !== "finissage" ? `<div><b>${esc(e.title)}</b></div>` : ""}
-            <div class="v"><a href="${hashFor("venue", e.venue)}">${esc(v.name)}</a>${multiCity() ? " · " + esc(cityLabel(v.city)) : ""}</div>${link}</div></div>`;
+            <div class="v"><a href="${hashFor("venue", e.venue)}">${esc(v.name)}</a>${multiCity() ? " · " + esc(cityLabel(v.city)) : ""}</div>${link}${eventCal(e)}</div></div>`;
         }).join("") + "</div></div>";
     }
     if (!days) continue;

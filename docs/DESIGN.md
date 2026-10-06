@@ -55,3 +55,10 @@ Hours are stored only when the venue's page states them. Unknown hours show as "
 - Discoverability: pre-render one static page per show and venue so search engines can index them.
 - Languages: German, French and Italian.
 - Offline and install: add a service worker so the site opens with no connection.
+
+## Search and calendar (added)
+
+- `tools/build_site.py` turns `data/shows.json` into plain HTML pages: one per show (`shows/<id>/`), venue (`venues/<id>/`), city and region, plus `sitemap.xml`, `robots.txt` and `404.html`. Each page has a canonical address, Open Graph tags, breadcrumbs and schema.org markup (`ExhibitionEvent` for shows, `Museum`/`ArtGallery` with opening hours for venues). The home page carries a crawlable summary that the app replaces when it loads.
+- Calendar files are generated the same way: `shows/<id>/run.ics` (the whole run), `shows/<id>/closing.ics` (a reminder three days before the last day, with an alarm at 09:00), `events/<id>.ics` (one event, alarm one hour before) and `calendar/events.ics` (everything, to subscribe to).
+- The refresh task runs the build after every data update, so pages, sitemap and calendar files never drift from the data. Pages for shows that ended are removed with the next refresh.
+- To move to your own domain, run `python3 tools/build_site.py --base https://yourdomain.ch` and set the same address in `robots.txt`.

@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmbasel_main-mira-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20281229
+DTEND;VALUE=DATE:20281230
+SUMMARY:Last days: Renée Levi: Mira closes 1 Jan
+LOCATION:Kunstmuseum Basel | Hauptbau & Neubau\, St. Alban-Graben 16\, 405
+ 1 Basel
+GEO:47.5547;7.5963
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumbasel.ch/en/exhibitions/2025/renee-levi
+DESCRIPTION:Renée Levi: Mira at Kunstmuseum Basel | Hauptbau & Neubau is 
+ on until 1 Jan 2029. Opening hours: Tue\, Thu–Sun 10–18 · Wed 10–2
+ 0.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Renée Levi: Mira closes 1 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

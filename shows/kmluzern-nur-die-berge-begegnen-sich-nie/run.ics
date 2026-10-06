@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Dominik Zietlow: Nur die Berge begegnen sich nie
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmluzern-nur-die-berge-begegnen-sich-nie-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20270201
+SUMMARY:Dominik Zietlow: Nur die Berge begegnen sich nie · Kunstmuseum Lu
+ zern
+LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
+GEO:47.0503;8.3117
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumluzern.ch/en/exhibitions/dominik-zietlow-manor/
+DESCRIPTION:Dominik Zietlow: Nur die Berge begegnen sich nie at Kunstmuseu
+ m Luzern. 24 Oct 2026 – 31 Jan 2027. Listed by Weekly VERNI\; confirm d
+ ates and hours with the venue. Details: https://kunstmuseumluzern.ch/en/e
+ xhibitions/dominik-zietlow-manor/
+END:VEVENT
+END:VCALENDAR

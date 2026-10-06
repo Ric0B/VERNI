@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Opening of Aurora Király exhibition
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e005@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261010T140000Z
+DTEND:20261010T150000Z
+SUMMARY:Opening: Aurora Király · Fondation Fernet-Branca
+LOCATION:Fondation Fernet-Branca\, 2 rue du Ballon\, 68300 Saint-Louis
+GEO:47.589;7.556
+URL:https://www.fondationfernet-branca.org/en/exhibitions/aurora-kiraly-pr
+ actices-looking
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Aurora Király starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

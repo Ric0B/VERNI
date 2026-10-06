@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-krupp-maintenance-3-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261029
+SUMMARY:Last days: Kaspar Müller: Maintenance 3 closes 31 Oct
+LOCATION:Galerie Nicolas Krupp\, Riehentorstrasse 33\, 4058 Basel
+GEO:47.564;7.594
+TRANSP:TRANSPARENT
+URL:https://www.nicolaskrupp.com/exhibitions/2026-08-kaspar-müller
+DESCRIPTION:Kaspar Müller: Maintenance 3 at Galerie Nicolas Krupp is on u
+ ntil 31 Oct 2026. Opening hours: Thu–Fri 14–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Kaspar Müller: Maintenance 3 closes 31 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

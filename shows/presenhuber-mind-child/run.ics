@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Josh Smith: Mind Child
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-presenhuber-mind-child-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260925
+DTEND;VALUE=DATE:20261212
+SUMMARY:Josh Smith: Mind Child · Galerie Eva Presenhuber
+LOCATION:Galerie Eva Presenhuber\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3903;8.5129
+TRANSP:TRANSPARENT
+URL:https://www.presenhuber.com/exhibitions/josh-smith7
+DESCRIPTION:Josh Smith: Mind Child at Galerie Eva Presenhuber. 25 Sep – 
+ 11 Dec 2026. Listed by Weekly VERNI\; confirm dates and hours with the ve
+ nue. Details: https://www.presenhuber.com/exhibitions/josh-smith7
+END:VEVENT
+END:VCALENDAR

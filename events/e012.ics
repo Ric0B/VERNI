@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Curator's talk with Joshua Chuang and Alessandra Nappo
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e012@verni
+DTSTAMP:20261005T221756Z
+DTSTART:20261024T130000Z
+DTEND:20261024T140000Z
+SUMMARY:Talk: Curator's talk with Joshua Chuang and Alessandra Nappo · Fo
+ tomuseum Winterthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+URL:https://fotomuseum.ch/en
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Curator's talk with Joshua Chuang and Alessandra Nappo s
+ tarts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

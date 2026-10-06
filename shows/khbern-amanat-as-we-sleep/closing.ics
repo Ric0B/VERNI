@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khbern-amanat-as-we-sleep-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Last days: Saodat Ismailova: Amanat – As We Sleep closes 22 Nov
+LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
+GEO:46.9418;7.4497
+TRANSP:TRANSPARENT
+URL:https://kunsthallebern.ch/en/exhibitions/2026-saodat-ismailova-amanat-
+ as-we-sleep
+DESCRIPTION:Saodat Ismailova: Amanat – As We Sleep at Kunsthalle Bern is
+  on until 22 Nov 2026. Opening hours: Tue–Wed\, Fri–Sun 11–18 · Th
+ u 11–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Saodat Ismailova: Amanat – As We Sleep closes 22 
+ Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmluzern-all-at-once-an-interplay-with-li-tavor-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261015
+DTEND;VALUE=DATE:20261016
+SUMMARY:Last days: Shirana Shahbazi: All at Once. An Interplay with Li Tav
+ or closes 18 Oct
+LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
+GEO:47.0503;8.3117
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumluzern.ch/en/exhibitions/shirana-shahbazi/
+DESCRIPTION:Shirana Shahbazi: All at Once. An Interplay with Li Tavor at K
+ unstmuseum Luzern is on until 18 Oct 2026. Opening hours: Tue\, Thu–Sun
+  11–18 · Wed 11–19.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Shirana Shahbazi: All at Once. An Interplay with Li
+  Tavor closes 18 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

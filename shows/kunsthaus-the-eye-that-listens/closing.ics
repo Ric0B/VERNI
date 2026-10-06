@@ -1,0 +1,29 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kunsthaus-the-eye-that-listens-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261022
+DTEND;VALUE=DATE:20261023
+SUMMARY:Last days: Vilhelm Hammershøi: The Eye That Listens closes 25 Oct
+LOCATION:Kunsthaus Zürich\, Heimplatz 1\, 8001 Zürich
+GEO:47.3703;8.5481
+TRANSP:TRANSPARENT
+URL:https://www.kunsthaus.ch/en/besuch-planen/ausstellungen/vilhelm-hammer
+ shoi/
+DESCRIPTION:Vilhelm Hammershøi: The Eye That Listens at Kunsthaus Zürich
+  is on until 25 Oct 2026. Opening hours: Tue–Wed\, Fri–Sun 10–18 ·
+  Thu 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Vilhelm Hammershøi: The Eye That Listens closes 25
+  Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

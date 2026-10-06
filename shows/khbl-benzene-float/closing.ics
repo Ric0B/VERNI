@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khbl-benzene-float-closing@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270121
+DTEND;VALUE=DATE:20270122
+SUMMARY:Last days: Monira Al Qadiri: Benzene Float closes 24 Jan
+LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
+GEO:47.5329;7.6152
+TRANSP:TRANSPARENT
+URL:https://kunsthausbaselland.ch/ausstellungen/monira-al-qadiri
+DESCRIPTION:Monira Al Qadiri: Benzene Float at Kunsthaus Baselland is on u
+ ntil 24 Jan 2027. Opening hours: Tue–Wed\, Fri 11–18 · Thu 11–20 
+ · Sat–Sun 11–17.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Monira Al Qadiri: Benzene Float closes 24 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

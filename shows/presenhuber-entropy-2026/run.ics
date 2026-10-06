@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Angela Bulloch: Entropy\, 2026
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-presenhuber-entropy-2026-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260912
+DTEND;VALUE=DATE:20261024
+SUMMARY:Angela Bulloch: Entropy\, 2026 · Galerie Eva Presenhuber
+LOCATION:Galerie Eva Presenhuber\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3903;8.5129
+TRANSP:TRANSPARENT
+URL:https://www.presenhuber.com/exhibitions/angela-bulloch4
+DESCRIPTION:Angela Bulloch: Entropy\, 2026 at Galerie Eva Presenhuber. 12 
+ Sep – 23 Oct 2026. Listed by Weekly VERNI\; confirm dates and hours wit
+ h the venue. Details: https://www.presenhuber.com/exhibitions/angela-bull
+ och4
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Pierre André Ferrand
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-skopia-pierre-andre-ferrand-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260918
+DTEND;VALUE=DATE:20261101
+SUMMARY:Pierre André Ferrand · Skopia
+LOCATION:Skopia\, Rue des Vieux-Grenadiers 9\, 1205 Genève
+GEO:46.1993;6.1343
+TRANSP:TRANSPARENT
+URL:https://www.skopia.ch/exhibitions-all/pierre-andre-ferrand-2026
+DESCRIPTION:Pierre André Ferrand at Skopia. 18 Sep – 31 Oct 2026. Liste
+ d by Weekly VERNI\; confirm dates and hours with the venue. Details: http
+ s://www.skopia.ch/exhibitions-all/pierre-andre-ferrand-2026
+END:VEVENT
+END:VCALENDAR

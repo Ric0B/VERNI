@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Verner Panton: Form\, Colour\, Space
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-vitra-form-colour-space-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260523
+DTEND;VALUE=DATE:20270510
+SUMMARY:Verner Panton: Form\, Colour\, Space · Vitra Design Museum
+LOCATION:Vitra Design Museum\, Charles-Eames-Strasse 2\, 79576 Weil am Rhe
+ in
+GEO:47.6026;7.6187
+TRANSP:TRANSPARENT
+URL:https://www.design-museum.de/en/exhibitions/detailpages/verner-panton-
+ form-colour-space.html
+DESCRIPTION:Verner Panton: Form\, Colour\, Space at Vitra Design Museum. 2
+ 3 May 2026 – 9 May 2027. Listed by Weekly VERNI\; confirm dates and hou
+ rs with the venue. Details: https://www.design-museum.de/en/exhibitions/d
+ etailpages/verner-panton-form-colour-space.html
+END:VEVENT
+END:VCALENDAR

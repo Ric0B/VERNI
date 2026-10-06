@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Shirana Shahbazi: All at Once. An Interplay with Li Tavor
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmluzern-all-at-once-an-interplay-with-li-tavor-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20260704
+DTEND;VALUE=DATE:20261019
+SUMMARY:Shirana Shahbazi: All at Once. An Interplay with Li Tavor · Kunst
+ museum Luzern
+LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
+GEO:47.0503;8.3117
+TRANSP:TRANSPARENT
+URL:https://kunstmuseumluzern.ch/en/exhibitions/shirana-shahbazi/
+DESCRIPTION:Shirana Shahbazi: All at Once. An Interplay with Li Tavor at K
+ unstmuseum Luzern. 4 Jul – 18 Oct 2026. Listed by Weekly VERNI\; confir
+ m dates and hours with the venue. Details: https://kunstmuseumluzern.ch/e
+ n/exhibitions/shirana-shahbazi/
+END:VEVENT
+END:VCALENDAR
