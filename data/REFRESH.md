@@ -15,7 +15,8 @@ The app downloads this file from the repository's `main` branch. It only accepts
    - If a venue's page could not be read this week, **keep its existing records**. Never delete because a fetch failed.
 5. Set `generatedAt` to the current UTC time (`2026-10-12T06:00:00Z` format).
 6. Run `python3 tools/validate_data.py`. Fix every ERROR. Read the warnings.
-7. Copy the file to `WeeklyVerni/Resources/shows.json` (the copy shipped inside the app) and commit both with a message like `Weekly refresh 2026-10-12: 71 shows, 34 events`. Push to `main`.
+7. Run `python3 tools/build_site.py`. It regenerates the pages for search engines, the sitemap and the calendar files from the data file.
+8. Commit everything (`git add -A`) with a message like `Refresh 2026-10-12: 71 shows, 34 events` and push to `main`. (The iPhone app keeps its own bundled copy as an offline fallback; that copy only changes when a new app version is released.)
 9. Reply with a short report: how many venues were read, which failed, what changed, and anything you were unsure about.
 
 ## Rules
