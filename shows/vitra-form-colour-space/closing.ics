@@ -7,7 +7,7 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-vitra-form-colour-space-closing@verni
-DTSTAMP:20261005T221756Z
+DTSTAMP:20261007T060000Z
 DTSTART;VALUE=DATE:20270506
 DTEND;VALUE=DATE:20270507
 SUMMARY:Last days: Verner Panton: Form\, Colour\, Space closes 9 May

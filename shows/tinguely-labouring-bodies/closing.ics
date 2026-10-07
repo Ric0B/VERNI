@@ -7,7 +7,7 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-tinguely-labouring-bodies-closing@verni
-DTSTAMP:20261005T221756Z
+DTSTAMP:20261007T060000Z
 DTSTART;VALUE=DATE:20261105
 DTEND;VALUE=DATE:20261106
 SUMMARY:Last days: Labouring Bodies closes 8 Nov

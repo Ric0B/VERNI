@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-05T22:17:56Z",
+ "generatedAt": "2026-10-07T06:00:00Z",
  "note": "Facts gathered from each venue's own website. Hours and dates should be confirmed with the venue. Descriptions and images are not copied; every record links to its source.",
  "venues": [
   {
@@ -2000,16 +2000,6 @@
   }
  ],
  "events": [
-  {
-   "venue": "khbl",
-   "type": "tour",
-   "title": "Kunst über Mittag mit Lunch",
-   "date": "2026-10-06",
-   "time": "12:15",
-   "url": "https://kunsthausbaselland.ch/",
-   "show": null,
-   "id": "e001"
-  },
   {
    "venue": "khbl",
    "type": "tour",

@@ -7,7 +7,7 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-mai36-false-horizon-closing@verni
-DTSTAMP:20261005T221756Z
+DTSTAMP:20261007T060000Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Last days: Markus Saile: False Horizon closes 7 Nov
