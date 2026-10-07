@@ -1,5 +1,5 @@
 import {
-  REGIONS, CITIES, TYPES, TYPE_ORDER, EVENT_TYPES, cityOf, cityLabel,
+  REGIONS, CITIES, TYPES, TYPE_ORDER, EVENT_TYPES, FESTIVAL_KINDS, festivalKindLabel, festivalRange, cityOf, cityLabel,
   TODAY, addDays, diffDays, fDate, fWeekday, fDayLong,
   loadListings, buildModel, status, isVisible, isCurrent, closingSoon, dateRange, isOpenNow, hoursText, walkKm,
 } from "./data.js";
@@ -27,6 +27,7 @@ const I = {
   next: svg('<path d="M9.5 5.5L16 12l-6.5 6.5"/>', 18, 1.9), ext: svg('<path d="M7 17L17 7M9 7h8v8"/>', 16, 2.2),
   up: svg('<path d="M6 14l6-6 6 6"/>', 20, 2), down: svg('<path d="M6 10l6 6 6-6"/>', 20, 2), x: svg('<path d="M6 6l12 12M18 6L6 18"/>', 20, 2),
   search: svg('<circle cx="11" cy="11" r="6.5"/><path d="M16 16l4.5 4.5"/>', 20),
+  fest: svg('<path d="M4 20l5-14 9 9z"/><path d="M14 4v2M19 8h2M18 3l1 1.5M5 6.5l1.5 1"/>'),
   bell: svg('<path d="M6 16.5V11a6 6 0 0 1 12 0v5.5l1.5 1.5h-15z"/><path d="M10 20.5a2 2 0 0 0 4 0"/>', 16, 2),
 };
 
@@ -35,7 +36,7 @@ let M = null;                       // the listings model
 let loadedFromCache = false;
 const state = {
   scope: store.get("scope", "switzerland"), view: "exhibitions", param: null,
-  openNow: false, type: "all", q: "", evType: "all", venueType: "all", venueOpen: false, venueQ: "", artistQ: "",
+  openNow: false, type: "all", q: "", evType: "all", festKind: "all", venueType: "all", venueOpen: false, venueQ: "", artistQ: "",
   mapSel: null,
   tour: store.get("tour", []), favs: store.get("favs", []), tourOrder: store.get("tourOrder", "custom") === "shortest" ? "shortest" : "custom",
 };
@@ -62,7 +63,7 @@ function inScope(venueId, tok = state.scope) {
 const multiCity = () => sc().level !== "city";
 
 /* ---------- routing: #<scope>[.<view>[.<param>]] ---------- */
-const VIEWS = ["exhibitions", "events", "map", "tour", "favs", "venues", "artists", "about", "venue", "artist", "show"];
+const VIEWS = ["exhibitions", "events", "festivals", "map", "tour", "favs", "venues", "artists", "about", "venue", "artist", "show", "festival"];
 function hashFor(view = state.view, param = state.param, scope = state.scope) {
   let h = scope;
   if (view && view !== "exhibitions") h += "." + view;
@@ -74,7 +75,7 @@ function readHash() {
   state.scope = parseScope(tok) ? tok : (parseScope(state.scope) ? state.scope : "switzerland");
   store.set("scope", state.scope);
   let v = VIEWS.includes(view) ? view : "exhibitions";
-  const lookup = { venue: M.venues, artist: M.artists, show: M.shows }[v];
+  const lookup = { venue: M.venues, artist: M.artists, show: M.shows, festival: M.festivals }[v];
   if (lookup && !lookup[param]) v = "exhibitions";
   state.view = v;
   state.param = lookup ? param : null;
@@ -303,6 +304,44 @@ viewFns.events = () => {
   return { html: h + "</div></div>" };
 };
 
+/* ----- festivals ----- */
+const festInScope = (f) => { const s = sc(); return s.level === "ch" || (s.level === "region" ? cityOf(f.city).region === s.id : f.city === s.id); };
+function festivalCard(f) {
+  const d0 = diffDays(f.start, TODAY), d1 = diffDays(f.end, TODAY);
+  const st = d0 > 0 ? (d0 <= 7 ? `<span class="status up">Starts ${d0 === 1 ? "tomorrow" : "in " + d0 + " days"}</span>` : "") : `<span class="status soon">On now</span>`;
+  return `<article class="card"><a class="card-main" href="${hashFor("festival", f.id)}"><div class="card-art">${esc(f.name)}</div>
+    <div class="card-venue">${esc(festivalKindLabel(f.kind))} · ${esc(cityLabel(f.city))}</div></a>
+    <div class="card-foot"><div class="meta">${st}<span class="when">${festivalRange(f)}</span></div>
+    <div class="acts"><a class="act" href="festivals/${esc(f.id)}/run.ics" download aria-label="Add ${esc(f.name)} to calendar">${I.cal}Add</a></div></div></article>`;
+}
+viewFns.festivals = () => {
+  const kinds = FESTIVAL_KINDS.filter(([id]) => Object.values(M.festivals).some((f) => f.kind === id));
+  const list = Object.values(M.festivals).filter((f) => diffDays(f.end, TODAY) >= 0 && festInScope(f) && (state.festKind === "all" || f.kind === state.festKind)).sort((a, b) => a.start - b.start);
+  const months = [];
+  list.forEach((f) => { const m = f.start.toLocaleDateString("en-GB", { month: "long", year: "numeric" }); const g = months.find((x) => x.m === m); g ? g.items.push(f) : months.push({ m, items: [f] }); });
+  return { html: `<div class="page"><div class="detail wide"><div class="page-h"><div class="kicker">${esc(scopeName())}</div><h1>Festivals</h1></div>
+    <p class="mute sm">Film festivals and festivals for art, media and performance. Dates are as published by each festival.</p>
+    <div class="chips" role="group" aria-label="Festival type"><button class="chip" type="button" data-action="festkind" data-kind="all" aria-pressed="${state.festKind === "all"}">All</button>
+      ${kinds.map(([id, l]) => `<button class="chip" type="button" data-action="festkind" data-kind="${id}" aria-pressed="${state.festKind === id}">${l}</button>`).join("")}</div>
+    ${months.length ? months.map((g) => `<section class="group"><div class="gh"><h2>${esc(g.m)}</h2><span class="sm mute">${g.items.length}</span></div>${g.items.map(festivalCard).join("")}</section>`).join("") : `<p class="empty">No festivals listed for this selection.</p>`}
+    <p class="sm mute" style="margin-top:24px"><a href="calendar/events.ics" download>Calendar file with openings and events</a></p></div></div>` };
+};
+viewFns.festival = () => {
+  const f = M.festivals[state.param];
+  const gcal = "https://calendar.google.com/calendar/render?" + new URLSearchParams({ action: "TEMPLATE", text: f.name, dates: `${ymd(f.start)}/${ymd(addDays(f.end, 1))}`, details: f.url, location: f.place });
+  return { html: `<div class="page"><div class="split">
+    <article class="detail"><a class="back" href="${hashFor("festivals")}">${I.back} Festivals</a>
+      <div class="page-h"><div class="kicker">${esc(festivalKindLabel(f.kind))} · ${esc(cityLabel(f.city))}</div><h1>${esc(f.name)}</h1></div>
+      <dl class="kv"><dt>Dates</dt><dd>${festivalRange(f)}</dd><dt>Place</dt><dd>${esc(f.place)}</dd>
+        <dt>Website</dt><dd>${f.url ? `<a href="${esc(f.url)}" target="_blank" rel="noopener">${esc(hostOf(f.url))} ↗</a>` : "Not listed"}</dd></dl>
+      <p class="mute sm">Dates as published by the festival. Check its website for the programme, venues and tickets.</p>
+      <div class="btnrow">${f.url ? `<a class="btn" href="${esc(f.url)}" target="_blank" rel="noopener">Official site ${I.ext}</a>` : ""}
+        <a class="btn ghost" href="festivals/${esc(f.id)}/run.ics" download>${I.cal} Add to calendar</a><a class="btn ghost" href="${esc(gcal)}" target="_blank" rel="noopener">Google Calendar ${I.ext}</a>
+        ${diffDays(f.start, TODAY) >= 0 ? `<a class="btn ghost" href="festivals/${esc(f.id)}/reminder.ics" download>${I.bell} Remind me a week before</a>` : ""}</div>
+    </article><aside class="mapcol" aria-label="Map"><div class="map" id="map"></div></aside></div></div>`,
+    after() { if (mountMap()) map.setPins([{ id: f.id, lat: f.lat, lon: f.lon, title: f.name, label: "", selected: true, popup: `<b>${esc(f.name)}</b><br>${esc(f.place)}` }]); } };
+};
+
 /* ----- map ----- */
 function mapModel() {
   const list = filteredShows();
@@ -503,7 +542,7 @@ viewFns.about = () => ({
 });
 
 /* ================= chrome ================= */
-const NAV = [["exhibitions", "Shows", I.list], ["events", "Events", I.cal], ["map", "Map", I.pin], ["tour", "Plan", I.route]];
+const NAV = [["exhibitions", "Shows", I.list], ["events", "Events", I.cal], ["festivals", "Festivals", I.fest], ["map", "Map", I.pin], ["tour", "Plan", I.route]];
 const DESKTOP_TABS = [...NAV.map(([id, l]) => [id, l]), ["venues", "Venues"], ["artists", "Artists"]];
 function updateChrome() {
   $("#scope-btn").innerHTML = `${I.pinS}<span>${esc(scopeName())}</span>${I.chev}`;
@@ -514,15 +553,16 @@ function updateChrome() {
   c.hidden = !n;
   $("#saved-link").href = hashFor("favs", null);
   $("#brand").href = hashFor("exhibitions", null);
-  const active = { show: "exhibitions", venue: "venues", artist: "artists" }[state.view] || state.view;
+  const active = { show: "exhibitions", venue: "venues", artist: "artists", festival: "festivals" }[state.view] || state.view;
   $("#tabs").innerHTML = DESKTOP_TABS.map(([id, l]) => `<a href="${hashFor(id, null)}" ${active === id ? 'aria-current="page"' : ""}>${l}</a>`).join("");
   const tourN = state.tour.filter((id) => M.shows[id]).length;
   $("#bottom").innerHTML = NAV.map(([id, l, ic]) => `<a href="${hashFor(id, null)}" ${active === id ? 'aria-current="page"' : ""}><span class="ic">${ic}${id === "tour" && tourN ? `<span class="badge">${tourN}</span>` : ""}</span>${l}</a>`).join("");
-  const titles = { exhibitions: "", events: "Events · ", map: "Map · ", tour: "Tourplan · ", favs: "Favourites · ", venues: "Venues · ", artists: "Artists · ", about: "About · " };
+  const titles = { exhibitions: "", events: "Events · ", festivals: "Festivals · ", map: "Map · ", tour: "Tourplan · ", favs: "Favourites · ", venues: "Venues · ", artists: "Artists · ", about: "About · " };
   let t = titles[state.view] ?? "";
   if (state.view === "show") t = artistNames(M.shows[state.param]) + " · ";
   if (state.view === "venue") t = M.venues[state.param].name + " · ";
   if (state.view === "artist") t = M.artists[state.param].name + " · ";
+  if (state.view === "festival") t = M.festivals[state.param].name + " · ";
   document.title = t + "Weekly VERNI";
   document.documentElement.style.setProperty("--header-h", $("#top").offsetHeight + "px");
   $("#foot").innerHTML = `<nav aria-label="Footer"><a href="${hashFor("venues")}">Venues</a><a href="${hashFor("artists")}">Artists</a><a href="${hashFor("about")}">About</a></nav>
@@ -547,7 +587,9 @@ function openDialog(html) {
 function closeDialog() { if (dlg.open) dlg.close(); }
 dlg.addEventListener("click", (e) => { if (e.target === dlg) closeDialog(); });
 function scopeDialog() {
-  const count = (tok) => Object.values(M.shows).filter((x) => isVisible(x) && inScope(x.venue, tok)).length;
+  const cityScope = (cid, tok) => { const s = parseScope(tok); return s.level === "ch" || (s.level === "region" ? cityOf(cid).region === s.id : cid === s.id); };
+  const count = (tok) => Object.values(M.shows).filter((x) => isVisible(x) && inScope(x.venue, tok)).length
+    + Object.values(M.festivals).filter((f) => diffDays(f.end, TODAY) >= 0 && cityScope(f.city, tok)).length;
   let h = `<div class="dlg-h"><h2>Location</h2><button class="done" type="button" data-action="close">Done</button></div>
     <input type="search" id="sc-q" placeholder="Search city or region" aria-label="Search city or region" autocomplete="off">
     <div id="sc-sw"><button class="opt" type="button" data-action="set-scope" data-scope="switzerland" aria-current="${state.scope === "switzerland"}"><span><span class="nm">Switzerland</span><span class="smx">Everything, grouped by city</span></span><span class="ct">${count("switzerland")}</span></button></div>
@@ -632,6 +674,7 @@ document.addEventListener("click", (e) => {
     case "vtype": state.venueType = a.dataset.type; render(); break;
     case "vopen": state.venueOpen = !state.venueOpen; render(); break;
     case "evtype": state.evType = a.dataset.type; render(); break;
+    case "festkind": state.festKind = a.dataset.kind; render(); break;
     case "jump": { const t = document.getElementById("L-" + a.dataset.l); if (t) t.scrollIntoView({ behavior: "smooth", block: "start" }); break; }
     default: break;
   }

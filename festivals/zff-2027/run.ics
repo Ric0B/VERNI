@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ZFF – Zurich Film Festival
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:festival-zff-2027-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270923
+DTEND;VALUE=DATE:20271004
+SUMMARY:ZFF – Zurich Film Festival
+LOCATION:Zurich\, Zurich\, Switzerland
+GEO:47.3769;8.5417
+TRANSP:TRANSPARENT
+URL:https://zff.com/en
+DESCRIPTION:ZFF – Zurich Film Festival\, 23 Sep – 3 Oct 2027\, Zurich.
+  Listed by Weekly VERNI\; check the festival's website for the programme.
+  https://zff.com/en
+END:VEVENT
+END:VCALENDAR

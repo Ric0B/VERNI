@@ -45,3 +45,28 @@ See `tools/validate_data.py` for the exact rules. Top level: `schemaVersion` (1)
 - event: `id, venue, show (id or null), type, title, date, time, url`
 
 Cities are the ids in `WeeklyVerni/Models.swift` (`basel`, `riehen`, `muenchenstein`, `liestal`, `weil`, `stlouis`, `loerrach`, `zurich`, `winterthur`, `geneva`, `lausanne`, `vevey`, `bern`, `lucerne`, `lugano`). Group or collection shows have no artists; the title is then shown as the headline.
+
+## Festivals
+
+`data/shows.json` has a `festivals` list: film festivals and festivals for art, media, photography and performance (for example MESH in Basel). Music-only festivals and trade fairs are out of scope.
+
+- Record: `id, name, kind (film|media-art|photography|performance|art-week|other), city, place, lat, lon, start, end, url`. The `url` is the festival's own site. `city` is one of the ids used for venues, plus `nyon`, `baden`, `solothurn`, `locarno`, `neuchatel`.
+- Festivals already in the list: keep them current. Read the festival's own site; if dates changed, update them. When an edition has ended, replace it with the next edition once the festival has published it, otherwise remove it.
+- Never guess dates. If an official site does not state them, leave the record as it is and mention it in your report.
+
+## Discovery: things you may not publish yourself
+
+Everything above (venues already in the file, festivals already in the file) is updated directly. Anything **new** that comes from outside that trusted list goes to `data/candidates.json` for the owner to approve or reject with `python3 tools/curate.py`:
+
+- festivals, shows, events or venues you find through web searches, listings sites, newsletters or press that are not in `data/shows.json`
+- anything you are unsure about
+
+Search for: film festivals in Switzerland (all language regions), festivals for media art and technology, photography festivals and biennials, performance and theatre festivals with an art focus, art weeks, and openings or exhibitions at galleries and off-spaces that are not yet listed.
+
+Rules for candidates:
+1. Skip anything that is already in `data/shows.json`, or whose key appears in `data/rejected.json` (`kind|slug of name or title|start date`). Rejected items must never come back.
+2. Read the candidates already in the file first and do not add duplicates. Remove candidates whose date has passed.
+3. Add each as `{"id": "c-<short-slug>", "kind": "festival|show|event|venue", "record": {...same fields as the live data...}, "source": "<page where you found it>", "note": "<what is uncertain, one or two sentences>", "foundAt": "<today>"}`. For a show or event the venue id must already exist; if the venue is new, add a `venue` candidate first.
+4. A note is required whenever dates, place or the organiser come from a search result and not from the festival's or venue's own page.
+5. `data/candidates.json` is local, not committed, and has the form `{"generatedAt": "...", "candidates": [...]}`.
+6. In your report, say how many candidates you added.

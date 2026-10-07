@@ -26,7 +26,17 @@ export const CITIES = [
   { id: "bern", name: "Bern", region: "bern" },
   { id: "lucerne", name: "Lucerne", region: "central" },
   { id: "lugano", name: "Lugano", region: "ticino" },
+  { id: "nyon", name: "Nyon", region: "lake-geneva" },
+  { id: "baden", name: "Baden", region: "zurich" },
+  { id: "solothurn", name: "Solothurn", region: "bern" },
+  { id: "locarno", name: "Locarno", region: "ticino" },
+  { id: "neuchatel", name: "Neuchâtel", region: "bern" },
 ];
+
+export const FESTIVAL_KINDS = [
+  ["film", "Film"], ["media-art", "Media art"], ["photography", "Photography"], ["performance", "Performance"], ["art-week", "Art weeks"], ["other", "Other"],
+];
+export const festivalKindLabel = (k) => (FESTIVAL_KINDS.find(([id]) => id === k) || [0, "Festival"])[1];
 
 export const TYPES = {
   gallery: { name: "Galleries", short: "Galleries", singular: "Gallery" },
@@ -126,7 +136,13 @@ export function buildModel(set) {
     id: e.id, date: isoDay(e.date), time: e.time || "", type: EVENT_LABEL[e.type] || "Talk", typeId: e.type,
     title: e.title, venue: e.venue, show: e.show && shows[e.show] ? e.show : null, url: safeUrl(e.url),
   }));
-  return { venues, artists, shows, events, generatedAt: new Date(set.generatedAt) };
+  const festivals = {};
+  for (const f of set.festivals || []) {
+    if (!f.id || !f.start || !f.end || !f.name) continue;
+    festivals[f.id] = { id: f.id, name: f.name, kind: f.kind || "other", city: f.city, place: f.place || cityOf(f.city).name, lat: f.lat, lon: f.lon,
+      start: isoDay(f.start), end: isoDay(f.end), url: safeUrl(f.url) };
+  }
+  return { venues, artists, shows, events, festivals, generatedAt: new Date(set.generatedAt) };
 }
 
 // ---- show helpers ----
@@ -140,6 +156,7 @@ export function status(x) {
 export const isVisible = (x) => diffDays(x.end, TODAY) >= 0 && diffDays(x.start, TODAY) <= 35;
 export const isCurrent = (x) => diffDays(x.start, TODAY) <= 0 && diffDays(x.end, TODAY) >= 0;
 export const closingSoon = (x) => isCurrent(x) && diffDays(x.end, TODAY) <= 7;
+export const festivalRange = (f) => (f.start.getFullYear() === f.end.getFullYear() ? fDate(f.start) : fDateY(f.start)) + " – " + fDateY(f.end);
 export const dateRange = (x) => (x.noStart ? "until " + fDateY(x.end) : (x.start.getFullYear() === x.end.getFullYear() ? fDate(x.start) : fDateY(x.start)) + " – " + fDateY(x.end));
 
 // ---- opening hours, in Swiss time. null when the venue's page did not state any ----

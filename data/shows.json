@@ -2410,5 +2410,79 @@
    "time": "18:00",
    "url": "https://helmhaus.org"
   }
+ ],
+ "festivals": [
+  {
+   "id": "mesh-2026",
+   "name": "MESH – Festival für Kunst und Technologie",
+   "kind": "media-art",
+   "city": "muenchenstein",
+   "place": "Dreispitz, Münchenstein / Basel",
+   "lat": 47.5337,
+   "lon": 7.6134,
+   "start": "2026-10-14",
+   "end": "2026-10-18",
+   "url": "https://www.meshfestival.ch/"
+  },
+  {
+   "id": "giff-2026",
+   "name": "GIFF – Geneva International Film Festival",
+   "kind": "film",
+   "city": "geneva",
+   "place": "Geneva",
+   "lat": 46.2044,
+   "lon": 6.1432,
+   "start": "2026-10-30",
+   "end": "2026-11-08",
+   "url": "https://www.giff.ch/en/"
+  },
+  {
+   "id": "kurzfilmtage-winterthur-2026",
+   "name": "Internationale Kurzfilmtage Winterthur",
+   "kind": "film",
+   "city": "winterthur",
+   "place": "Winterthur",
+   "lat": 47.4988,
+   "lon": 8.724,
+   "start": "2026-11-03",
+   "end": "2026-11-08",
+   "url": "https://www.kurzfilmtage.ch/en/"
+  },
+  {
+   "id": "visions-du-reel-2027",
+   "name": "Visions du Réel",
+   "kind": "film",
+   "city": "nyon",
+   "place": "Nyon",
+   "lat": 46.3833,
+   "lon": 6.2395,
+   "start": "2027-04-09",
+   "end": "2027-04-18",
+   "url": "https://www.visionsdureel.ch/en/"
+  },
+  {
+   "id": "fantoche-2027",
+   "name": "Fantoche – International Animation Film Festival",
+   "kind": "film",
+   "city": "baden",
+   "place": "Baden",
+   "lat": 47.4731,
+   "lon": 8.3064,
+   "start": "2027-09-07",
+   "end": "2027-09-12",
+   "url": "https://fantoche.ch/en"
+  },
+  {
+   "id": "zff-2027",
+   "name": "ZFF – Zurich Film Festival",
+   "kind": "film",
+   "city": "zurich",
+   "place": "Zurich",
+   "lat": 47.3769,
+   "lon": 8.5417,
+   "start": "2027-09-23",
+   "end": "2027-10-03",
+   "url": "https://zff.com/en"
+  }
  ]
 }

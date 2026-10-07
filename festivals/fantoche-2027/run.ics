@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Fantoche – International Animation Film Festival
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:festival-fantoche-2027-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270907
+DTEND;VALUE=DATE:20270913
+SUMMARY:Fantoche – International Animation Film Festival
+LOCATION:Baden\, Baden\, Switzerland
+GEO:47.4731;8.3064
+TRANSP:TRANSPARENT
+URL:https://fantoche.ch/en
+DESCRIPTION:Fantoche – International Animation Film Festival\, 7 Sep –
+  12 Sep 2027\, Baden. Listed by Weekly VERNI\; check the festival's websi
+ te for the programme. https://fantoche.ch/en
+END:VEVENT
+END:VCALENDAR

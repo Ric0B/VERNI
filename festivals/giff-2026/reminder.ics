@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Festival reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:festival-giff-2026-reminder@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261023
+DTEND;VALUE=DATE:20261024
+SUMMARY:Starts 30 Oct: GIFF – Geneva International Film Festival
+LOCATION:Geneva\, Geneva\, Switzerland
+GEO:46.2044;6.1432
+TRANSP:TRANSPARENT
+URL:https://www.giff.ch/en/
+DESCRIPTION:GIFF – Geneva International Film Festival runs 30 Oct – 8 
+ Nov 2026. Programme and tickets: https://www.giff.ch/en/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Starts 30 Oct: GIFF – Geneva International Film Festival
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

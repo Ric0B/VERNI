@@ -20,7 +20,10 @@ CITIES = {  # id: (name, region, country code)
     "zurich": ("Zurich", "zurich", "CH"), "winterthur": ("Winterthur", "zurich", "CH"),
     "geneva": ("Geneva", "lake-geneva", "CH"), "lausanne": ("Lausanne", "lake-geneva", "CH"), "vevey": ("Vevey", "lake-geneva", "CH"),
     "bern": ("Bern", "bern", "CH"), "lucerne": ("Lucerne", "central", "CH"), "lugano": ("Lugano", "ticino", "CH"),
+    "nyon": ("Nyon", "lake-geneva", "CH"), "baden": ("Baden", "zurich", "CH"), "solothurn": ("Solothurn", "bern", "CH"),
+    "locarno": ("Locarno", "ticino", "CH"), "neuchatel": ("Neuchâtel", "bern", "CH"),
 }
+KIND_LABEL = {"film": "Film festival", "media-art": "Media art & technology festival", "photography": "Photography festival", "performance": "Performance festival", "art-week": "Art week", "other": "Festival"}
 TYPE_SINGULAR = {"gallery": "Gallery", "institution": "Institution", "foundation": "Foundation / private collection", "offspace": "Off-space"}
 TYPE_PLURAL = {"gallery": "Galleries", "institution": "Institutions", "foundation": "Foundations & private collections", "offspace": "Off-spaces"}
 EVENT_LABEL = {"opening": "Opening", "finissage": "Finissage", "talk": "Talk", "tour": "Tour", "performance": "Performance"}
@@ -124,6 +127,7 @@ class Site:
         self.venues = {v["id"]: v for v in data["venues"]}
         self.shows = data["shows"]
         self.events = data["events"]
+        self.festivals = data.get("festivals", [])
         self.generated = data["generatedAt"]
         self.updated = dt.datetime.fromisoformat(self.generated.replace("Z", "+00:00")).astimezone(ZURICH)
         self.pages = []  # (relative url, lastmod)
@@ -227,6 +231,60 @@ class Site:
             if e.get("time"):
                 self.write_ics(f"events/{e['id']}.ics", e["title"], [self.ev_timed(e)])
         self.write_ics("calendar/events.ics", "Weekly VERNI: openings and events", [self.ev_timed(e) for e in self.events if e.get("time")])
+
+    # ---------- festivals ----------
+    def fest_place(self, f):
+        return {"name": f.get("place") or CITIES[f["city"]][0], "address": CITIES[f["city"]][0] + ", Switzerland", "lat": f["lat"], "lon": f["lon"]}
+
+    def festival_calendars(self, f):
+        base = slug_path("festivals", f["id"])
+        place = self.fest_place(f)
+        desc = f"{f['name']}, {date_range(f)}, {place['name']}. Listed by Weekly VERNI; check the festival's website for the programme. {f['url']}"
+        self.write_ics(base + "run.ics", f["name"], [self.ev_allday(f"festival-{f['id']}-run", f["name"], f["start"], f["end"], place, f["url"], desc)])
+        today = dt.date.fromisoformat(self.generated[:10])
+        out = {"run": base + "run.ics"}
+        if dt.date.fromisoformat(f["start"]) >= today:
+            day = max(today, dt.date.fromisoformat(f["start"]) - dt.timedelta(days=7)).isoformat()
+            self.write_ics(base + "reminder.ics", "Festival reminder", [self.ev_allday(
+                f"festival-{f['id']}-reminder", f"Starts {fmt_date(f['start'], False)}: {f['name']}", day, day, place, f["url"],
+                f"{f['name']} runs {date_range(f)}. Programme and tickets: {f['url']}", alarm="PT9H")])
+            out["reminder"] = base + "reminder.ics"
+        return out
+
+    def festival_page(self, f):
+        rel = slug_path("festivals", f["id"])
+        place = self.fest_place(f)
+        cal = self.festival_calendars(f)
+        kind = KIND_LABEL.get(f["kind"], "Festival")
+        dr = date_range(f)
+        title = f"{f['name']}, {dr}, {CITIES[f['city']][0]}"
+        desc = f"{f['name']} in {CITIES[f['city']][0]}, {dr}. Dates, place and link to the official programme."
+        end_excl = (dt.date.fromisoformat(f["end"]) + dt.timedelta(days=1)).isoformat()
+        gcal = "https://calendar.google.com/calendar/render?" + urllib.parse.urlencode({"action": "TEMPLATE", "text": f["name"], "dates": f"{compact(f['start'])}/{compact(end_excl)}", "details": f["url"], "location": place["name"]})
+        btns = f'<a class="btn" href="{esc(f["url"])}" rel="noopener">Official site: {esc(host(f["url"]))}</a><a class="btn ghost" href="run.ics" download>Add to calendar</a><a class="btn ghost" href="{esc(gcal)}" rel="noopener">Google Calendar</a>'
+        if cal.get("reminder"):
+            btns += '<a class="btn ghost" href="reminder.ics" download>Remind me a week before</a>'
+        body = f"""<nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> › <a href="../">Festivals</a></nav>
+<article class="detail"><div class="page-h"><div class="kicker">{esc(kind)} · {esc(CITIES[f['city']][0])}</div><h1>{esc(f['name'])}</h1></div>
+<dl class="kv"><dt>Dates</dt><dd>{esc(dr)}</dd><dt>Place</dt><dd>{esc(place['name'])}</dd><dt>Website</dt><dd><a href="{esc(f['url'])}" rel="noopener">{esc(host(f['url']))}</a></dd></dl>
+<p class="mute sm">Dates as published by the festival. Check its website for the programme, venues and tickets.</p>
+<div class="btnrow">{btns}</div>
+<div class="btnrow"><a class="btn ghost" href="../../#switzerland.festival.{esc(f['id'])}">Open in the app</a></div></article>"""
+        jsonld = [{"@context": "https://schema.org", "@type": "Festival", "name": f["name"], "startDate": f["start"], "endDate": f["end"], "url": self.url(rel), "sameAs": f["url"],
+                   "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+                   "location": {"@type": "Place", "name": place["name"], "address": {"@type": "PostalAddress", "addressLocality": CITIES[f["city"]][0], "addressCountry": CITIES[f["city"]][2]},
+                               "geo": {"@type": "GeoCoordinates", "latitude": f["lat"], "longitude": f["lon"]}}}]
+        self.write(rel, self.shell(rel, 2, title + " | Weekly VERNI", desc, body, jsonld))
+
+    def festivals_index(self):
+        rel = "festivals/"
+        fs = sorted(self.festivals, key=lambda f: (f["start"], f["name"]))
+        rows = "".join(f'<a class="vrow" href="{f["id"]}/"><span class="nm">{esc(f["name"])}</span><span class="ct">{esc(date_range(f))}</span><span class="ad">{esc(KIND_LABEL.get(f["kind"], "Festival"))} · {esc(CITIES[f["city"]][0])}</span><span></span></a>' for f in fs)
+        body = f"""<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a></nav><div class="detail wide"><div class="page-h"><div class="kicker">Swiss festivals</div><h1>Festivals</h1></div>
+<p class="mute">Film festivals and festivals for art, media and performance across Switzerland.</p>{rows or '<p class="empty">No festivals listed yet.</p>'}</div>"""
+        items = [{"@type": "ListItem", "position": i + 1, "url": self.url(slug_path("festivals", f["id"])), "name": f["name"]} for i, f in enumerate(fs)]
+        self.write(rel, self.shell(rel, 1, "Festivals in Switzerland: film, media art and performance | Weekly VERNI", f"{len(fs)} film festivals and art festivals in Switzerland with dates and links.", body,
+                                   [{"@context": "https://schema.org", "@type": "ItemList", "name": "Festivals in Switzerland", "itemListElement": items}]))
 
     # ---------- page shell ----------
     def shell(self, rel, depth, title, desc, body, jsonld=(), kicker_noindex=False):
@@ -413,6 +471,7 @@ class Site:
         by_city = {}
         for s in self.shows:
             by_city.setdefault(self.venues[s["venue"]]["city"], []).append(s)
+        festivals = "".join(f'<li><a href="{slug_path("festivals", f["id"])}">{esc(f["name"])}</a>, {esc(CITIES[f["city"]][0])}, {esc(date_range(f))}</li>' for f in sorted(self.festivals, key=lambda f: f["start"]))
         regions = "".join(f'<li><a href="{slug_path("region", r)}">{esc(n)}</a></li>' for r, n in REGIONS.items())
         cities = "".join(f'<li><a href="{slug_path("city", c)}">{esc(CITIES[c][0])}</a> <span class="mute">{len(by_city.get(c, []))}</span></li>' for c in CITIES if by_city.get(c))
         shows = "".join(f'<li><a href="{slug_path("shows", s["id"])}">{esc(self.show_title(s)[0])}</a>, {esc(self.venues[s["venue"]]["name"])}, {esc(date_range(s))}</li>'
@@ -421,6 +480,7 @@ class Site:
 <div class="page ssr"><div class="page-h"><div class="kicker">Weekly VERNI</div><h1>Contemporary art in Switzerland</h1></div>
 <p>Exhibitions, openings and events at galleries, museums and art spaces from Basel to Lugano, gathered from the venues' own websites and updated twice a week.</p>
 <p><a href="calendar/events.ics" download>Calendar file with every opening and event</a>, each with a reminder one hour before. Add it once to your calendar app.</p>
+<h2 class="sec-h"><a href="festivals/">Festivals</a></h2><ul>{festivals}</ul>
 <h2 class="sec-h">Regions</h2><ul>{regions}</ul><h2 class="sec-h">Cities</h2><ul>{cities}</ul>
 <h2 class="sec-h">On view and coming up</h2><ul>{shows}</ul></div>
 <!--SSR:END-->"""
@@ -454,8 +514,11 @@ class Site:
         (self.out / "robots.txt").write_text(f"User-agent: *\nAllow: /\n\nSitemap: {self.base}/sitemap.xml\n", encoding="utf-8")
 
     def build(self):
-        for d in ("shows", "venues", "city", "region", "events", "calendar"):
+        for d in ("shows", "venues", "city", "region", "events", "calendar", "festivals"):
             shutil.rmtree(self.out / d, ignore_errors=True)
+        for f in self.festivals:
+            self.festival_page(f)
+        self.festivals_index()
         for s in self.shows:
             self.show_page(s)
         for v in self.venues.values():

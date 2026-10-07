@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Festival reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:festival-visions-du-reel-2027-reminder@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20270402
+DTEND;VALUE=DATE:20270403
+SUMMARY:Starts 9 Apr: Visions du Réel
+LOCATION:Nyon\, Nyon\, Switzerland
+GEO:46.3833;6.2395
+TRANSP:TRANSPARENT
+URL:https://www.visionsdureel.ch/en/
+DESCRIPTION:Visions du Réel runs 9 Apr – 18 Apr 2027. Programme and tic
+ kets: https://www.visionsdureel.ch/en/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Starts 9 Apr: Visions du Réel
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

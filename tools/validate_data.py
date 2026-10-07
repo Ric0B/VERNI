@@ -16,7 +16,7 @@ if d.get("schemaVersion") != 1: errors.append("schemaVersion must be 1")
 try: gen = dt.datetime.fromisoformat(d["generatedAt"].replace("Z", "+00:00"))
 except Exception: errors.append("generatedAt must be an ISO-8601 UTC time like 2026-10-05T12:00:00Z"); gen = None
 
-CITIES = {"basel","riehen","muenchenstein","liestal","weil","stlouis","loerrach","zurich","winterthur","geneva","lausanne","vevey","bern","lucerne","lugano"}
+CITIES = {"basel","riehen","muenchenstein","liestal","weil","stlouis","loerrach","zurich","winterthur","geneva","lausanne","vevey","bern","lucerne","lugano","nyon","baden","solothurn","locarno","neuchatel"}
 TYPES = {"gallery","institution","foundation","offspace"}
 EVENTS = {"opening","finissage","talk","tour","performance"}
 
@@ -58,8 +58,23 @@ for e in d["events"]:
     if e.get("time") and not re.fullmatch(r"\d\d:\d\d", e["time"]): errors.append(f"{w}: time must be HH:MM")
     if e.get("url") and not re.match(r"https?://", e["url"]): errors.append(f"{w}: url must be absolute")
 
+FEST_KINDS = {"film", "media-art", "photography", "performance", "art-week", "other"}
+fids = set()
+for f in d.get("festivals", []):
+    w = f"festival {f.get('id')}"
+    if f["id"] in fids: errors.append(f"duplicate festival id {f['id']}")
+    fids.add(f["id"])
+    if f.get("kind") not in FEST_KINDS: errors.append(f"{w}: kind must be one of {sorted(FEST_KINDS)}")
+    if f.get("city") not in CITIES: errors.append(f"{w}: unknown city {f.get('city')}")
+    st, en = day(f["start"], w), day(f["end"], w)
+    if st and en and en < st: errors.append(f"{w}: ends before it starts")
+    if en and en < today - dt.timedelta(days=1): warnings.append(f"{w}: already over, drop it")
+    if en and en > today + dt.timedelta(days=900): warnings.append(f"{w}: more than two years away, check")
+    if not re.match(r"https?://", f.get("url") or ""): errors.append(f"{w}: needs an http(s) url")
+    if not (45.7 < f.get("lat", 0) < 48.0 and 5.9 < f.get("lon", 0) < 10.6): errors.append(f"{w}: coordinates outside Switzerland")
+
 if len(d["shows"]) < 20: errors.append("fewer than 20 shows: a failed gather must never replace good data")
 for w in warnings: print("warning:", w)
 for e in errors: print("ERROR:", e)
-print(f"{len(d['venues'])} venues, {len(d['shows'])} shows, {len(d['events'])} events, {len(errors)} errors, {len(warnings)} warnings")
+print(f"{len(d['venues'])} venues, {len(d['shows'])} shows, {len(d['events'])} events, {len(d.get('festivals', []))} festivals, {len(errors)} errors, {len(warnings)} warnings")
 sys.exit(1 if errors else 0)

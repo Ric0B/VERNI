@@ -68,10 +68,10 @@ button { font: inherit; color: inherit; background: none; border: 0; padding: 0;
 .tabs a[aria-current="page"] { background: var(--ink); color: var(--paper); font-weight: 600; }
 
 /* bottom navigation (phones) */
-.bottom { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr));
+.bottom { position: fixed; left: 0; right: 0; bottom: 0; z-index: 40; display: grid; grid-template-columns: repeat(5, minmax(0, 1fr));
   padding: 6px 8px calc(8px + env(safe-area-inset-bottom, 0px)); background: var(--paper); border-top: 1px solid var(--rule); }
 .bottom a { display: flex; flex-direction: column; align-items: center; gap: 2px; min-height: 52px; text-decoration: none; color: var(--mute); font-size: .75rem; font-weight: 500; }
-.bottom .ic { position: relative; width: 56px; height: 30px; border-radius: var(--pill); display: grid; place-items: center; }
+.bottom .ic { position: relative; width: 52px; height: 30px; border-radius: var(--pill); display: grid; place-items: center; }
 .bottom a[aria-current="page"] { color: var(--ink); font-weight: 700; }
 .bottom a[aria-current="page"] .ic { background: color-mix(in srgb, var(--mark) 18%, transparent); color: var(--mark-text); }
 .bottom .badge { top: -2px; right: 6px; }

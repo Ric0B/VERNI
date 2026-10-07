@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Festival reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:festival-mesh-2026-reminder@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261007
+DTEND;VALUE=DATE:20261008
+SUMMARY:Starts 14 Oct: MESH – Festival für Kunst und Technologie
+LOCATION:Dreispitz\, Münchenstein / Basel\, Münchenstein\, Switzerland
+GEO:47.5337;7.6134
+TRANSP:TRANSPARENT
+URL:https://www.meshfestival.ch/
+DESCRIPTION:MESH – Festival für Kunst und Technologie runs 14 Oct – 1
+ 8 Oct 2026. Programme and tickets: https://www.meshfestival.ch/
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Starts 14 Oct: MESH – Festival für Kunst und Technologie
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

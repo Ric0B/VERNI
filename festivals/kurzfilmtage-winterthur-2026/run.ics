@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Internationale Kurzfilmtage Winterthur
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:festival-kurzfilmtage-winterthur-2026-run@verni
+DTSTAMP:20261005T221756Z
+DTSTART;VALUE=DATE:20261103
+DTEND;VALUE=DATE:20261109
+SUMMARY:Internationale Kurzfilmtage Winterthur
+LOCATION:Winterthur\, Winterthur\, Switzerland
+GEO:47.4988;8.724
+TRANSP:TRANSPARENT
+URL:https://www.kurzfilmtage.ch/en/
+DESCRIPTION:Internationale Kurzfilmtage Winterthur\, 3 Nov – 8 Nov 2026\
+ , Winterthur. Listed by Weekly VERNI\; check the festival's website for t
+ he programme. https://www.kurzfilmtage.ch/en/
+END:VEVENT
+END:VCALENDAR
