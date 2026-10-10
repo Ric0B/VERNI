@@ -7,7 +7,7 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-khbl-benzene-float-closing@verni
-DTSTAMP:20261007T060000Z
+DTSTAMP:20261010T060000Z
 DTSTART;VALUE=DATE:20270121
 DTEND;VALUE=DATE:20270122
 SUMMARY:Last days: Monira Al Qadiri: Benzene Float closes 24 Jan

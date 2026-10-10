@@ -7,7 +7,7 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-krupp-maintenance-3-closing@verni
-DTSTAMP:20261007T060000Z
+DTSTAMP:20261010T060000Z
 DTSTART;VALUE=DATE:20261028
 DTEND;VALUE=DATE:20261029
 SUMMARY:Last days: Kaspar Müller: Maintenance 3 closes 31 Oct

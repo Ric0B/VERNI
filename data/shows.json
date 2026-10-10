@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-07T06:00:00Z",
+ "generatedAt": "2026-10-10T06:00:00Z",
  "note": "Facts gathered from each venue's own website. Hours and dates should be confirmed with the venue. Descriptions and images are not copied; every record links to its source.",
  "venues": [
   {
@@ -2002,16 +2002,6 @@
  "events": [
   {
    "venue": "khbl",
-   "type": "tour",
-   "title": "Abendführung",
-   "date": "2026-10-08",
-   "time": "18:30",
-   "url": "https://kunsthausbaselland.ch/",
-   "show": null,
-   "id": "e002"
-  },
-  {
-   "venue": "khbl",
    "type": "talk",
    "title": "Performance und Künstlergespräch: Yanik Soland",
    "date": "2026-11-07",
@@ -2123,16 +2113,6 @@
   {
    "venue": "walcheturm",
    "type": "performance",
-   "title": "IGNM Konzert: Galina Ustwolskaja «Grand Duet»",
-   "date": "2026-10-08",
-   "time": "20:30",
-   "url": "https://walcheturm.ch/agenda",
-   "show": null,
-   "id": "e014"
-  },
-  {
-   "venue": "walcheturm",
-   "type": "performance",
    "title": "Zhao Ziyi & Manfred Werder",
    "date": "2026-10-19",
    "time": "20:00",
@@ -2209,16 +2189,6 @@
    "url": "https://www.cabaretvoltaire.ch/programme/dears-write-21-2",
    "show": null,
    "id": "e022"
-  },
-  {
-   "venue": "mamco",
-   "type": "tour",
-   "title": "Family activities (SaSA)",
-   "date": "2026-10-07",
-   "time": "16:00",
-   "url": "https://www.mamco.ch/en",
-   "show": null,
-   "id": "e023"
   },
   {
    "venue": "mamco",
@@ -2369,16 +2339,6 @@
    "date": "2026-12-19",
    "time": "14:00",
    "url": "https://kunsthalle-luzern.ch"
-  },
-  {
-   "id": "e039",
-   "venue": "helmhaus",
-   "show": "helmhaus-in-der-sonne-sitzen",
-   "type": "tour",
-   "title": "Tour and Shared Impressions",
-   "date": "2026-10-08",
-   "time": "18:30",
-   "url": "https://helmhaus.org"
   },
   {
    "id": "e040",

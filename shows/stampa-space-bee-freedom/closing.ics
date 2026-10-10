@@ -7,7 +7,7 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-stampa-space-bee-freedom-closing@verni
-DTSTAMP:20261007T060000Z
+DTSTAMP:20261010T060000Z
 DTSTART;VALUE=DATE:20261104
 DTEND;VALUE=DATE:20261105
 SUMMARY:Last days: Jonas Burkhalter: Space Bee Freedom closes 7 Nov

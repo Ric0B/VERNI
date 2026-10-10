@@ -7,9 +7,9 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-kmluzern-spot-on-andreas-brunner-closing@verni
-DTSTAMP:20261007T060000Z
-DTSTART;VALUE=DATE:20261008
-DTEND;VALUE=DATE:20261009
+DTSTAMP:20261010T060000Z
+DTSTART;VALUE=DATE:20261010
+DTEND;VALUE=DATE:20261011
 SUMMARY:Last days: Andreas Brunner: spot on Andreas Brunner closes 11 Oct
 LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
 GEO:47.0503;8.3117

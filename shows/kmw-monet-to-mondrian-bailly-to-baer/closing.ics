@@ -7,7 +7,7 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-kmw-monet-to-mondrian-bailly-to-baer-closing@verni
-DTSTAMP:20261007T060000Z
+DTSTAMP:20261010T060000Z
 DTSTART;VALUE=DATE:20261228
 DTEND;VALUE=DATE:20261229
 SUMMARY:Last days: Monet to Mondrian – Bailly to Baer closes 31 Dec

@@ -7,7 +7,7 @@ X-WR-CALNAME:Festival reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:festival-fantoche-2027-reminder@verni
-DTSTAMP:20261007T060000Z
+DTSTAMP:20261010T060000Z
 DTSTART;VALUE=DATE:20270831
 DTEND;VALUE=DATE:20270901
 SUMMARY:Starts 7 Sep: Fantoche – International Animation Film Festival
