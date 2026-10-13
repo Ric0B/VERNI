@@ -7,14 +7,15 @@ X-WR-CALNAME:Vernissage: Journey into Freedom
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:event-e029@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART:20261029T173000Z
 DTEND:20261029T183000Z
 SUMMARY:Opening: Journey into Freedom. Capri – Skagen – Monte Verità 
  · Kunstmuseum Bern
 LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
 GEO:46.951;7.443
-URL:https://kunstmuseumbern.ch/en/node/11397
+URL:https://www.kunstmuseumbern.ch/en/event/journey-freedom-capri-skagen-m
+ onte-verita
 DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM

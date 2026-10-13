@@ -7,13 +7,13 @@ X-WR-CALNAME:Walk & Talk
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:event-e032@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART:20261029T163000Z
 DTEND:20261029T173000Z
 SUMMARY:Talk: Walk & Talk · Kunsthalle Bern
 LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
 GEO:46.9418;7.4497
-URL:https://kunsthallebern.ch/en/
+URL:https://kunsthallebern.ch/en/collective-learning/2026-10-29-walk-talk
 DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM

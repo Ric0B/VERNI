@@ -7,7 +7,7 @@ X-WR-CALNAME:Guided tour: Collection Insights with Kamilla Ødegård
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:event-e006@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART:20261018T130000Z
 DTEND:20261018T140000Z
 SUMMARY:Tour: Guided tour: Collection Insights with Kamilla Ødegård · M
@@ -15,7 +15,8 @@ SUMMARY:Tour: Guided tour: Collection Insights with Kamilla Ødegård · M
 LOCATION:Migros Museum für Gegenwartskunst\, Limmatstrasse 270\, 8005 Zü
  rich
 GEO:47.3891;8.5206
-URL:https://migrosmuseum.ch/en
+URL:https://migrosmuseum.ch/en/art-education/collection-insights-she-devil
+ s-on-wheels-headquaters-mit-kamilla-odegard
 DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM

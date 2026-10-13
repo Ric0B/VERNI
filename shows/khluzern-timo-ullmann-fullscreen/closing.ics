@@ -7,14 +7,14 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-khluzern-timo-ullmann-fullscreen-closing@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART;VALUE=DATE:20261216
 DTEND;VALUE=DATE:20261217
 SUMMARY:Last days: Timo Ullmann: Fullscreen closes 19 Dec
 LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
 GEO:47.057;8.3107
 TRANSP:TRANSPARENT
-URL:https://kunsthalle-luzern.ch
+URL:https://kunsthalle-luzern.ch/ausstellungen/aktuell
 DESCRIPTION:Timo Ullmann: Fullscreen at Kunsthalle Luzern is on until 19 D
  ec 2026. Opening hours: Wed–Sat 14–19 · Sun 14–17.
 BEGIN:VALARM

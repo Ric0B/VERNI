@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Beyond Visible Reality
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kilchmann-beyond-visible-reality-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261220
+SUMMARY:Beyond Visible Reality · Galerie Peter Kilchmann
+LOCATION:Galerie Peter Kilchmann\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3901;8.5133
+TRANSP:TRANSPARENT
+URL:https://www.peterkilchmann.com/exhibitions/653-beyond-visible-reality-
+ opening-wednesday-oct.-28zahnradstrasse-21-8005-zurich/
+DESCRIPTION:Beyond Visible Reality at Galerie Peter Kilchmann. 28 Oct – 
+ 19 Dec 2026. Listed by Weekly VERNI\; confirm dates and hours with the ve
+ nue. Details: https://www.peterkilchmann.com/exhibitions/653-beyond-visib
+ le-reality-opening-wednesday-oct.-28zahnradstrasse-21-8005-zurich/
+END:VEVENT
+END:VCALENDAR

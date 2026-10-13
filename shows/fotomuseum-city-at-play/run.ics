@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Helen Levitt: City at Play
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-fotomuseum-city-at-play-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261024
+DTEND;VALUE=DATE:20270201
+SUMMARY:Helen Levitt: City at Play · Fotomuseum Winterthur
+LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
+GEO:47.4932;8.7462
+TRANSP:TRANSPARENT
+URL:https://www.fotomuseum.ch/en/exhibitions-post/helen-levitt-die-strasse
+ -als-buehne/
+DESCRIPTION:Helen Levitt: City at Play at Fotomuseum Winterthur. 24 Oct 20
+ 26 – 31 Jan 2027. Listed by Weekly VERNI\; confirm dates and hours with
+  the venue. Details: https://www.fotomuseum.ch/en/exhibitions-post/helen-
+ levitt-die-strasse-als-buehne/
+END:VEVENT
+END:VCALENDAR

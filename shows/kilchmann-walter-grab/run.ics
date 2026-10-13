@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Walter Grab: Walter Grab (1927–1989)
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kilchmann-walter-grab-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261220
+SUMMARY:Walter Grab: Walter Grab (1927–1989) · Galerie Peter Kilchmann
+LOCATION:Galerie Peter Kilchmann\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3901;8.5133
+TRANSP:TRANSPARENT
+URL:https://www.peterkilchmann.com/exhibitions/651-walter-grab-1927-1989-o
+ pening-wednesday-oct.-28zahnradstrasse-21-8005-zurich/
+DESCRIPTION:Walter Grab: Walter Grab (1927–1989) at Galerie Peter Kilchm
+ ann. 28 Oct – 19 Dec 2026. Listed by Weekly VERNI\; confirm dates and h
+ ours with the venue. Details: https://www.peterkilchmann.com/exhibitions/
+ 651-walter-grab-1927-1989-opening-wednesday-oct.-28zahnradstrasse-21-8005
+ -zurich/
+END:VEVENT
+END:VCALENDAR

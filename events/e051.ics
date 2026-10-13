@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Vernissage: Roberto Burle Marx – Modernismo tropical
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e051@verni
+DTSTAMP:20261013T151559Z
+DTSTART:20261016T160000Z
+DTEND:20261016T170000Z
+SUMMARY:Opening: Roberto Burle Marx · Zentrum Paul Klee
+LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
+GEO:46.9489;7.4745
+URL:https://www.zpk.org/en/event/roberto-burle-marx-modernismo-tropical
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Roberto Burle Marx starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

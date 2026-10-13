@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Multisensory tour: Der Duft der Freiheit
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e055@verni
+DTSTAMP:20261013T151559Z
+DTSTART:20261128T130000Z
+DTEND:20261128T140000Z
+SUMMARY:Tour: Multisensory tour: Der Duft der Freiheit · Kunstmuseum Bern
+LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
+GEO:46.951;7.443
+URL:https://www.kunstmuseumbern.ch/en/node/14084
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Multisensory tour: Der Duft der Freiheit starts in 1 hou
+ r
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

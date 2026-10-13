@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-mcba-black-flower-closing@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20270225
+DTEND;VALUE=DATE:20270226
+SUMMARY:Last days: Ted Joans: Black Flower closes 28 Feb
+LOCATION:MCBA Musée cantonal des Beaux-Arts\, Place de la Gare 16\, 1003 
+ Lausanne
+GEO:46.5172;6.6268
+TRANSP:TRANSPARENT
+URL:https://www.mcba.ch/en/exhibitions/ted-joans/
+DESCRIPTION:Ted Joans: Black Flower at MCBA Musée cantonal des Beaux-Arts
+  is on until 28 Feb 2027. Opening hours: Tue–Wed\, Fri–Sun 10–18 ·
+  Thu 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Ted Joans: Black Flower closes 28 Feb
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

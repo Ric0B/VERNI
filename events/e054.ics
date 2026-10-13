@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Reading in the exhibition: Zeit der Aussteiger
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e054@verni
+DTSTAMP:20261013T151559Z
+DTSTART:20261101T100000Z
+DTEND:20261101T110000Z
+SUMMARY:Talk: Reading in the exhibition: Zeit der Aussteiger · Kunstmuseu
+ m Bern
+LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
+GEO:46.951;7.443
+URL:https://www.kunstmuseumbern.ch/en/node/14078
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Reading in the exhibition: Zeit der Aussteiger starts in
+  1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

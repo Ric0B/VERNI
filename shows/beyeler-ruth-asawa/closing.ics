@@ -7,14 +7,14 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-beyeler-ruth-asawa-closing@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART;VALUE=DATE:20270107
 DTEND;VALUE=DATE:20270108
 SUMMARY:Last days: Ruth Asawa closes 10 Jan
 LOCATION:Fondation Beyeler\, Baselstrasse 101\, 4125 Riehen
 GEO:47.5876;7.6532
 TRANSP:TRANSPARENT
-URL:https://www.fondationbeyeler.ch/en/exhibitions
+URL:https://www.fondationbeyeler.ch/en/exhibitions/ruth-asawa
 DESCRIPTION:Ruth Asawa at Fondation Beyeler is on until 10 Jan 2027. Openi
  ng hours: Wed 10–20 · Thu–Sun 10–18.
 BEGIN:VALARM

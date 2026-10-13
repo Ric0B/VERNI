@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Kunst : Schnee
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-dreilaender-kunst-schnee-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261206
+DTEND;VALUE=DATE:20270125
+SUMMARY:Kunst : Schnee · Dreiländermuseum
+LOCATION:Dreiländermuseum\, Basler Strasse 143\, 79540 Lörrach
+GEO:47.6123;7.6608
+TRANSP:TRANSPARENT
+URL:https://www.dreilaendermuseum.eu/anschauen/sonderausstellungen/
+DESCRIPTION:Kunst : Schnee at Dreiländermuseum. 6 Dec 2026 – 24 Jan 202
+ 7. Listed by Weekly VERNI\; confirm dates and hours with the venue. Detai
+ ls: https://www.dreilaendermuseum.eu/anschauen/sonderausstellungen/
+END:VEVENT
+END:VCALENDAR

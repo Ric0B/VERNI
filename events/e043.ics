@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Late opening & tours: Sylvia Sleigh and Re-Collection
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e043@verni
+DTSTAMP:20261013T151559Z
+DTSTART:20261015T160000Z
+DTEND:20261015T170000Z
+SUMMARY:Tour: Late opening & tours: Sylvia Sleigh and Re-Collection · MAM
+ CO Genève
+LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
+GEO:46.2012;6.148
+URL:https://www.mamco.ch/en/2359/Late-opening-Tours
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Late opening & tours: Sylvia Sleigh and Re-Collection st
+ arts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

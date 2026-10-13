@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Opening: Edmund Clark and Crofton Black – Cosmopolemos
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e047@verni
+DTSTAMP:20261013T151559Z
+DTSTART:20261028T170000Z
+DTEND:20261028T180000Z
+SUMMARY:Opening: Edmund Clark\, Crofton Black · Centre de la photographie
+  Genève
+LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
+ 05 Genève
+GEO:46.1994;6.1368
+URL:https://www.centrephotogeneve.ch/exhibitions/edmund-clark-et-crofton-b
+ lack-cosmopolemos
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Edmund Clark\, Crofton Black starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Guided tour (Wasis Diop & Mbaye Diop)
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e057@verni
+DTSTAMP:20261013T151559Z
+DTSTART:20261024T120000Z
+DTEND:20261024T130000Z
+SUMMARY:Tour: Guided tour (Wasis Diop & Mbaye Diop) · Circuit
+LOCATION:Circuit\, Avenue de Montchoisi 9\, 1006 Lausanne
+GEO:46.511;6.64
+URL:https://vibrationsforward.com/agenda/visites-guidees-des-expos/
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Tour: Guided tour (Wasis Diop & Mbaye Diop) starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

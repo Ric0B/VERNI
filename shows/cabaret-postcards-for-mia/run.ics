@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Michael Taussig: Postcards for Mia
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cabaret-postcards-for-mia-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261028
+DTEND;VALUE=DATE:20261123
+SUMMARY:Michael Taussig: Postcards for Mia · Cabaret Voltaire
+LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
+GEO:47.3721;8.544
+TRANSP:TRANSPARENT
+URL:https://www.cabaretvoltaire.ch/programm/michael-taussig-postcards-for-
+ mia---the-role-of-images-in-ethnographic-notebooks-and-in-our-ways-of-thi
+ nking
+DESCRIPTION:Michael Taussig: Postcards for Mia at Cabaret Voltaire. 28 Oct
+  – 22 Nov 2026. Listed by Weekly VERNI\; confirm dates and hours with t
+ he venue. Details: https://www.cabaretvoltaire.ch/programm/michael-taussi
+ g-postcards-for-mia---the-role-of-images-in-ethnographic-notebooks-and-in
+ -our-ways-of-thinking
+END:VEVENT
+END:VCALENDAR

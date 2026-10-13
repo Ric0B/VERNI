@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:zentral!
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmluzern-zentral-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261128
+DTEND;VALUE=DATE:20270201
+SUMMARY:zentral! · Kunstmuseum Luzern
+LOCATION:Kunstmuseum Luzern\, Europaplatz 1\, 6002 Luzern
+GEO:47.0503;8.3117
+TRANSP:TRANSPARENT
+URL:https://www.kunstmuseumluzern.ch/en/exhibitions/zentral-2026/
+DESCRIPTION:zentral! at Kunstmuseum Luzern. 28 Nov 2026 – 31 Jan 2027. L
+ isted by Weekly VERNI\; confirm dates and hours with the venue. Details: 
+ https://www.kunstmuseumluzern.ch/en/exhibitions/zentral-2026/
+END:VEVENT
+END:VCALENDAR

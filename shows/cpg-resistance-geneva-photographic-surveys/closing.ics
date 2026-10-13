@@ -1,0 +1,30 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cpg-resistance-geneva-photographic-surveys-closing@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20270526
+DTEND;VALUE=DATE:20270527
+SUMMARY:Last days: Resistance. Geneva Photographic Surveys closes 29 May
+LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
+ 05 Genève
+GEO:46.1994;6.1368
+TRANSP:TRANSPARENT
+URL:https://www.centrephotogeneve.ch/exhibitions/resistances-enquetes-phot
+ ographiques-genevoises
+DESCRIPTION:Resistance. Geneva Photographic Surveys at Centre de la photog
+ raphie Genève is on until 29 May 2027. Opening hours: Tue–Wed\, Fri 11
+ –18 · Thu 11–20 · Sat 11–16:45.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Resistance. Geneva Photographic Surveys closes 29 M
+ ay
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Cantonale Berne Jura 2026/2027
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khbern-cantonale-berne-jura-2026-2027-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20270201
+SUMMARY:Cantonale Berne Jura 2026/2027 · Kunsthalle Bern
+LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
+GEO:46.9418;7.4497
+TRANSP:TRANSPARENT
+URL:https://kunsthallebern.ch/en/exhibitions/2026-cantonale-berne-jura-202
+ 6-2027
+DESCRIPTION:Cantonale Berne Jura 2026/2027 at Kunsthalle Bern. 13 Dec 2026
+  – 31 Jan 2027. Listed by Weekly VERNI\; confirm dates and hours with t
+ he venue. Details: https://kunsthallebern.ch/en/exhibitions/2026-cantonal
+ e-berne-jura-2026-2027
+END:VEVENT
+END:VCALENDAR

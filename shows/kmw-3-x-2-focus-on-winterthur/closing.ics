@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmw-3-x-2-focus-on-winterthur-closing@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261029
+DTEND;VALUE=DATE:20261030
+SUMMARY:Last days: 3 x 2: Focus on Winterthur closes 1 Nov
+LOCATION:Kunstmuseum Winterthur\, Museumstrasse 52\, 8400 Winterthur
+GEO:47.5003;8.7321
+TRANSP:TRANSPARENT
+URL:https://www.kmw.ch/en/exhibition/3-x-2-fokus-winterthur-3/
+DESCRIPTION:3 x 2: Focus on Winterthur at Kunstmuseum Winterthur is on unt
+ il 1 Nov 2026. Opening hours: Wed–Sun 10–17 · Tue 10–20.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: 3 x 2: Focus on Winterthur closes 1 Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

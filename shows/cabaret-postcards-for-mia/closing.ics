@@ -1,0 +1,28 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-cabaret-postcards-for-mia-closing@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261119
+DTEND;VALUE=DATE:20261120
+SUMMARY:Last days: Michael Taussig: Postcards for Mia closes 22 Nov
+LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
+GEO:47.3721;8.544
+TRANSP:TRANSPARENT
+URL:https://www.cabaretvoltaire.ch/programm/michael-taussig-postcards-for-
+ mia---the-role-of-images-in-ethnographic-notebooks-and-in-our-ways-of-thi
+ nking
+DESCRIPTION:Michael Taussig: Postcards for Mia at Cabaret Voltaire is on u
+ ntil 22 Nov 2026. Opening hours: See the venue's website.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Michael Taussig: Postcards for Mia closes 22 Nov
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

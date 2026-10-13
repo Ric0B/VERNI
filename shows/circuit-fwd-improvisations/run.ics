@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:FWD – Improvisations
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-circuit-fwd-improvisations-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261003
+DTEND;VALUE=DATE:20261115
+SUMMARY:FWD – Improvisations · Circuit
+LOCATION:Circuit\, Avenue de Montchoisi 9\, 1006 Lausanne
+GEO:46.511;6.64
+TRANSP:TRANSPARENT
+URL:https://www.circuit.li/
+DESCRIPTION:FWD – Improvisations at Circuit. 3 Oct – 14 Nov 2026. List
+ ed by Weekly VERNI\; confirm dates and hours with the venue. Details: htt
+ ps://www.circuit.li/
+END:VEVENT
+END:VCALENDAR

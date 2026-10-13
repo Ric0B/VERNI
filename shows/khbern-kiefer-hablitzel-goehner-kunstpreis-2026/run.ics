@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Lyna Beggah\, Alessandro Ferrari: Kiefer Hablitzel | Göhner 
+ Kunstpreis 2026
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-khbern-kiefer-hablitzel-goehner-kunstpreis-2026-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261213
+DTEND;VALUE=DATE:20270201
+SUMMARY:Lyna Beggah\, Alessandro Ferrari: Kiefer Hablitzel | Göhner Kunst
+ preis 2026 · Kunsthalle Bern
+LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
+GEO:46.9418;7.4497
+TRANSP:TRANSPARENT
+URL:https://kunsthallebern.ch/en/exhibitions/2026-lyna-beggah-alessandro-f
+ errari
+DESCRIPTION:Lyna Beggah\, Alessandro Ferrari: Kiefer Hablitzel | Göhner K
+ unstpreis 2026 at Kunsthalle Bern. 13 Dec 2026 – 31 Jan 2027. Listed by
+  Weekly VERNI\; confirm dates and hours with the venue. Details: https://
+ kunsthallebern.ch/en/exhibitions/2026-lyna-beggah-alessandro-ferrari
+END:VEVENT
+END:VCALENDAR

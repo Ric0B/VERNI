@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Speakers' Corner Kunsthalle Luzern #9
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e056@verni
+DTSTAMP:20261013T151559Z
+DTSTART:20261210T180000Z
+DTEND:20261210T190000Z
+SUMMARY:Talk: Speakers' Corner Kunsthalle Luzern #9 · Kunsthalle Luzern
+LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
+GEO:47.057;8.3107
+URL:https://kunsthalle-luzern.ch/ausstellungen/aktuell
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Speakers' Corner Kunsthalle Luzern #9 starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

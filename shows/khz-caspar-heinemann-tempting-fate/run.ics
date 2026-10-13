@@ -7,16 +7,18 @@ X-WR-CALNAME:Caspar Heinemann: Tempting Fate
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-khz-caspar-heinemann-tempting-fate-run@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART;VALUE=DATE:20260926
 DTEND;VALUE=DATE:20270111
 SUMMARY:Caspar Heinemann: Tempting Fate · Kunsthalle Zürich
 LOCATION:Kunsthalle Zürich\, Limmatstrasse 270\, 8005 Zürich
 GEO:47.3892;8.5208
 TRANSP:TRANSPARENT
-URL:http://www.kunsthallezurich.ch/
+URL:https://www.kunsthallezurich.ch/en/ausstellungen/10330-caspar-heineman
+ n
 DESCRIPTION:Caspar Heinemann: Tempting Fate at Kunsthalle Zürich. 26 Sep 
  2026 – 10 Jan 2027. Listed by Weekly VERNI\; confirm dates and hours wi
- th the venue. Details: http://www.kunsthallezurich.ch/
+ th the venue. Details: https://www.kunsthallezurich.ch/en/ausstellungen/1
+ 0330-caspar-heinemann
 END:VEVENT
 END:VCALENDAR

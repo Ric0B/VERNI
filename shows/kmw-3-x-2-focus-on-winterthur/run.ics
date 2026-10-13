@@ -1,0 +1,23 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:3 x 2: Focus on Winterthur
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kmw-3-x-2-focus-on-winterthur-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20261009
+DTEND;VALUE=DATE:20261102
+SUMMARY:3 x 2: Focus on Winterthur · Kunstmuseum Winterthur
+LOCATION:Kunstmuseum Winterthur\, Museumstrasse 52\, 8400 Winterthur
+GEO:47.5003;8.7321
+TRANSP:TRANSPARENT
+URL:https://www.kmw.ch/en/exhibition/3-x-2-fokus-winterthur-3/
+DESCRIPTION:3 x 2: Focus on Winterthur at Kunstmuseum Winterthur. 9 Oct 
+ – 1 Nov 2026. Listed by Weekly VERNI\; confirm dates and hours with the
+  venue. Details: https://www.kmw.ch/en/exhibition/3-x-2-fokus-winterthur-
+ 3/
+END:VEVENT
+END:VCALENDAR

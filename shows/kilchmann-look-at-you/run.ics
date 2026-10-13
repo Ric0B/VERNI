@@ -1,0 +1,24 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Valentin Rilliet: Look at You
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-kilchmann-look-at-you-run@verni
+DTSTAMP:20261013T151559Z
+DTSTART;VALUE=DATE:20260905
+DTEND;VALUE=DATE:20261018
+SUMMARY:Valentin Rilliet: Look at You · Galerie Peter Kilchmann
+LOCATION:Galerie Peter Kilchmann\, Zahnradstrasse 21\, 8005 Zürich
+GEO:47.3901;8.5133
+TRANSP:TRANSPARENT
+URL:https://www.peterkilchmann.com/exhibitions/642-valentin-rilliet-look-a
+ t-you-galerie-peter-kilchmann-zahnradstr.-21/
+DESCRIPTION:Valentin Rilliet: Look at You at Galerie Peter Kilchmann. 5 Se
+ p – 17 Oct 2026. Listed by Weekly VERNI\; confirm dates and hours with 
+ the venue. Details: https://www.peterkilchmann.com/exhibitions/642-valent
+ in-rilliet-look-at-you-galerie-peter-kilchmann-zahnradstr.-21/
+END:VEVENT
+END:VCALENDAR

@@ -7,14 +7,15 @@ X-WR-CALNAME:Performance und Künstlergespräch: Yanik Soland
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:event-e003@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART:20261107T150000Z
 DTEND:20261107T160000Z
 SUMMARY:Talk: Performance und Künstlergespräch: Yanik Soland · Kunsthau
  s Baselland
 LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
 GEO:47.5329;7.6152
-URL:https://kunsthausbaselland.ch/
+URL:https://kunsthausbaselland.ch/agenda/performance-und-künstlergespräc
+ h-yanik-soland
 DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM

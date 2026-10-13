@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly VERNI//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Lecture: Roberto Burle Marx – Denken im «Systema naturae»
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e052@verni
+DTSTAMP:20261013T151559Z
+DTSTART:20261108T140000Z
+DTEND:20261108T150000Z
+SUMMARY:Talk: Lecture: Roberto Burle Marx – Denken im «Systema naturae
+ » · Zentrum Paul Klee
+LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
+GEO:46.9489;7.4745
+URL:https://www.zpk.org/en/node/13940
+DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Lecture: Roberto Burle Marx – Denken im «Systema natu
+ rae» starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

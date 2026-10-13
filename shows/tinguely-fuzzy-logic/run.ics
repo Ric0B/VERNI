@@ -7,16 +7,18 @@ X-WR-CALNAME:Nicolas Darrot: Fuzzy Logic
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-tinguely-fuzzy-logic-run@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART;VALUE=DATE:20260305
 DTEND;VALUE=DATE:20270308
 SUMMARY:Nicolas Darrot: Fuzzy Logic · Museum Tinguely
 LOCATION:Museum Tinguely\, Paul Sacher-Anlage 2\, 4058 Basel
 GEO:47.5591;7.6124
 TRANSP:TRANSPARENT
-URL:https://www.tinguely.ch/en/exhibitions.html
+URL:https://www.tinguely.ch/en/exhibitions/exhibitions/2026/nicolas-darrot
+ .html
 DESCRIPTION:Nicolas Darrot: Fuzzy Logic at Museum Tinguely. 5 Mar 2026 –
   7 Mar 2027. Listed by Weekly VERNI\; confirm dates and hours with the ve
- nue. Details: https://www.tinguely.ch/en/exhibitions.html
+ nue. Details: https://www.tinguely.ch/en/exhibitions/exhibitions/2026/nic
+ olas-darrot.html
 END:VEVENT
 END:VCALENDAR

@@ -3,22 +3,23 @@ VERSION:2.0
 PRODID:-//Weekly VERNI//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Studio Lemercier
+X-WR-CALNAME:Studio Lemercier: Thresholds
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-hek-studio-lemercier-run@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART;VALUE=DATE:20260822
 DTEND;VALUE=DATE:20261116
-SUMMARY:Studio Lemercier · HEK (Haus der Elektronischen Künste)
+SUMMARY:Studio Lemercier: Thresholds · HEK (Haus der Elektronischen Küns
+ te)
 LOCATION:HEK (Haus der Elektronischen Künste)\, Freilager-Platz 9\, 4142 
  Münchenstein
 GEO:47.5337;7.6134
 TRANSP:TRANSPARENT
 URL:https://hek.ch/programm/ausstellungen/studio-lemercier
-DESCRIPTION:Studio Lemercier at HEK (Haus der Elektronischen Künste). 22 
- Aug – 15 Nov 2026. Listed by Weekly VERNI\; confirm dates and hours wit
- h the venue. Details: https://hek.ch/programm/ausstellungen/studio-lemerc
- ier
+DESCRIPTION:Studio Lemercier: Thresholds at HEK (Haus der Elektronischen K
+ ünste). 22 Aug – 15 Nov 2026. Listed by Weekly VERNI\; confirm dates a
+ nd hours with the venue. Details: https://hek.ch/programm/ausstellungen/s
+ tudio-lemercier
 END:VEVENT
 END:VCALENDAR

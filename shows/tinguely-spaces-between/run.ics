@@ -7,16 +7,18 @@ X-WR-CALNAME:Zilla Leutenegger: SPACES BETWEEN
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-tinguely-spaces-between-run@verni
-DTSTAMP:20261010T060000Z
+DTSTAMP:20261013T151559Z
 DTSTART;VALUE=DATE:20260923
 DTEND;VALUE=DATE:20270308
 SUMMARY:Zilla Leutenegger: SPACES BETWEEN · Museum Tinguely
 LOCATION:Museum Tinguely\, Paul Sacher-Anlage 2\, 4058 Basel
 GEO:47.5591;7.6124
 TRANSP:TRANSPARENT
-URL:https://www.tinguely.ch/en/exhibitions.html
+URL:https://www.tinguely.ch/en/exhibitions/exhibitions/2026/zilla-leuteneg
+ ger.html
 DESCRIPTION:Zilla Leutenegger: SPACES BETWEEN at Museum Tinguely. 23 Sep 2
  026 – 7 Mar 2027. Listed by Weekly VERNI\; confirm dates and hours with
-  the venue. Details: https://www.tinguely.ch/en/exhibitions.html
+  the venue. Details: https://www.tinguely.ch/en/exhibitions/exhibitions/2
+ 026/zilla-leutenegger.html
 END:VEVENT
 END:VCALENDAR
