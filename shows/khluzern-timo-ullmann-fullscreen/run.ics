@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Timo Ullmann: Fullscreen
@@ -16,7 +16,7 @@ GEO:47.057;8.3107
 TRANSP:TRANSPARENT
 URL:https://kunsthalle-luzern.ch/ausstellungen/aktuell
 DESCRIPTION:Timo Ullmann: Fullscreen at Kunsthalle Luzern. 24 Oct – 19 D
- ec 2026. Listed by Weekly VERNI\; confirm dates and hours with the venue.
+ ec 2026. Listed by Weekly RADAR\; confirm dates and hours with the venue.
   Details: https://kunsthalle-luzern.ch/ausstellungen/aktuell
 END:VEVENT
 END:VCALENDAR

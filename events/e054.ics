@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Reading in the exhibition: Zeit der Aussteiger
@@ -15,7 +15,7 @@ SUMMARY:Talk: Reading in the exhibition: Zeit der Aussteiger · Kunstmuseu
 LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
 GEO:46.951;7.443
 URL:https://www.kunstmuseumbern.ch/en/node/14078
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

@@ -1,9 +1,9 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
-X-WR-CALNAME:Weekly VERNI: openings and events
+X-WR-CALNAME:Weekly RADAR: openings and events
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:event-e003@verni
@@ -16,7 +16,7 @@ LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
 GEO:47.5329;7.6152
 URL:https://kunsthausbaselland.ch/agenda/performance-und-künstlergespräc
  h-yanik-soland
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -35,7 +35,7 @@ LOCATION:HEK (Haus der Elektronischen Künste)\, Freilager-Platz 9\, 4142
  Münchenstein
 GEO:47.5337;7.6134
 URL:https://hek.ch/programm/veranstaltungen/open-decks
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -55,7 +55,7 @@ LOCATION:Migros Museum für Gegenwartskunst\, Limmatstrasse 270\, 8005 Zü
 GEO:47.3891;8.5206
 URL:https://migrosmuseum.ch/en/art-education/collection-insights-she-devil
  s-on-wheels-headquaters-mit-kamilla-odegard
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -73,7 +73,7 @@ SUMMARY:Tour: Public guided tour · Museum Haus Konstruktiv
 LOCATION:Museum Haus Konstruktiv\, Limmatstrasse 268\, 8005 Zürich
 GEO:47.37;8.531
 URL:https://hauskonstruktiv.ch/en/events/536189
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -90,7 +90,7 @@ SUMMARY:Tour: Public guided tour · Museum Haus Konstruktiv
 LOCATION:Museum Haus Konstruktiv\, Limmatstrasse 268\, 8005 Zürich
 GEO:47.37;8.531
 URL:https://hauskonstruktiv.ch/en/events/534152
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -108,7 +108,7 @@ LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
 GEO:47.4932;8.7462
 URL:https://www.fotomuseum.ch/en/events-post/ausstellungseroeffnung-helen-
  levitt-die-strasse-als-buehne/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -127,7 +127,7 @@ LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
 GEO:47.4932;8.7462
 URL:https://www.fotomuseum.ch/en/events-post/curators-talk-mit-joshua-chua
  ng-und-alessandra-nappo/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -147,7 +147,7 @@ LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
 GEO:47.4932;8.7462
 URL:https://www.fotomuseum.ch/en/events-post/fuehrung-helen-levitt-die-str
  asse-als-buehne/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -165,7 +165,7 @@ SUMMARY:Performance: Zhao Ziyi & Manfred Werder · Kunstraum Walcheturm
 LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
 GEO:47.3791;8.5327
 URL:https://walcheturm.ch/agenda
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -183,7 +183,7 @@ SUMMARY:Performance: Stepmother: Album Presentation · Kunstraum Walchetur
 LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
 GEO:47.3791;8.5327
 URL:https://walcheturm.ch/agenda
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -201,7 +201,7 @@ SUMMARY:Performance: Glenn Jones\, Liam Grant\, Son of Buzzi · Kunstraum
 LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
 GEO:47.3791;8.5327
 URL:https://walcheturm.ch/agenda
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -219,7 +219,7 @@ SUMMARY:Performance: FRANCE · Kunstraum Walcheturm
 LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
 GEO:47.3791;8.5327
 URL:https://walcheturm.ch/agenda
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -237,7 +237,7 @@ SUMMARY:Performance: Ensemble Tzara #1: Jannik Giger · Kunstraum Walchetu
 LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
 GEO:47.3791;8.5327
 URL:https://walcheturm.ch/agenda
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -254,7 +254,7 @@ SUMMARY:Performance: hiddenbell Percussion Night · Kunstraum Walcheturm
 LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
 GEO:47.3791;8.5327
 URL:https://walcheturm.ch/agenda
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -272,7 +272,7 @@ LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
 GEO:47.3721;8.544
 URL:https://www.cabaretvoltaire.ch/programme/michael-taussig-postcards-for
  -mia
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -289,7 +289,7 @@ SUMMARY:Talk: dears\, write · Cabaret Voltaire
 LOCATION:Cabaret Voltaire\, Spiegelgasse 1\, 8001 Zürich
 GEO:47.3721;8.544
 URL:https://www.cabaretvoltaire.ch/programme/dears-write-21-2
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -307,7 +307,7 @@ SUMMARY:Tour: Free tour (Joana Hadjithomas & Khalil Joreige) · MAMCO Gen
 LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
 GEO:46.2012;6.148
 URL:https://www.mamco.ch/en/2409/Free-tour
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -325,7 +325,7 @@ SUMMARY:Finissage: Sylvia Sleigh · MAMCO Genève
 LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
 GEO:46.2012;6.148
 URL:https://www.mamco.ch/en/2391/Closing-Event
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -343,7 +343,7 @@ SUMMARY:Talk: Zwischen Realität und Wahrheit: Fotografie und Malerei · K
 LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
 GEO:46.951;7.443
 URL:https://www.kunstmuseumbern.ch/en/node/12953
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -363,7 +363,7 @@ LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
 GEO:46.951;7.443
 URL:https://www.kunstmuseumbern.ch/en/event/journey-freedom-capri-skagen-m
  onte-verita
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -381,7 +381,7 @@ SUMMARY:Talk: Walk & Talk · Kunsthalle Bern
 LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
 GEO:46.9418;7.4497
 URL:https://kunsthallebern.ch/en/collective-learning/2026-10-29-walk-talk
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -398,7 +398,7 @@ SUMMARY:Talk: Yael Inokai: Die Auster · Coalmine
 LOCATION:Coalmine\, Turnerstrasse 1\, 8400 Winterthur
 GEO:47.4988;8.724
 URL:https://www.coalmine.ch/event/yael-inokai-die-auster/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -415,7 +415,7 @@ SUMMARY:Opening: ALLES ECHT! · Coalmine
 LOCATION:Coalmine\, Turnerstrasse 1\, 8400 Winterthur
 GEO:47.4988;8.724
 URL:https://www.coalmine.ch/event/vernissage-zur-ausstellung-alles-echt/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -432,7 +432,7 @@ SUMMARY:Opening: Timo Ullmann · Kunsthalle Luzern
 LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
 GEO:47.057;8.3107
 URL:https://kunsthalle-luzern.ch
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -450,7 +450,7 @@ SUMMARY:Tour: Tour with Timo Ullmann and Marius Geschinske · Kunsthalle L
 LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
 GEO:47.057;8.3107
 URL:https://kunsthalle-luzern.ch
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -468,7 +468,7 @@ SUMMARY:Tour: Tour and screening at stattkino Luzern · Kunsthalle Luzern
 LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
 GEO:47.057;8.3107
 URL:https://kunsthalle-luzern.ch
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -485,7 +485,7 @@ SUMMARY:Finissage: Timo Ullmann · Kunsthalle Luzern
 LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
 GEO:47.057;8.3107
 URL:https://kunsthalle-luzern.ch
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -503,7 +503,7 @@ SUMMARY:Talk: Five O'Clock Thesis with Charlotte Matter · Helmhaus Züric
 LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
 GEO:47.3712;8.543
 URL:https://helmhaus.org
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -521,7 +521,7 @@ SUMMARY:Talk: Forget Me Not! lecture · Helmhaus Zürich
 LOCATION:Helmhaus Zürich\, Limmatquai 31\, 8001 Zürich
 GEO:47.3712;8.543
 URL:https://helmhaus.org
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -538,7 +538,7 @@ SUMMARY:Tour: Öffentliche Führung · Kunsthaus Baselland
 LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
 GEO:47.5329;7.6152
 URL:https://kunsthausbaselland.ch/agenda/öffentliche-führung-80
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -556,7 +556,7 @@ SUMMARY:Tour: Late opening & tours: Sylvia Sleigh and Re-Collection · MAM
 LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
 GEO:46.2012;6.148
 URL:https://www.mamco.ch/en/2359/Late-opening-Tours
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -575,7 +575,7 @@ SUMMARY:Tour: Free tour (Joana Hadjithomas & Khalil Joreige) · MAMCO Gen
 LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
 GEO:46.2012;6.148
 URL:https://www.mamco.ch/en/2410/Free-tour
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -594,7 +594,7 @@ SUMMARY:Tour: Free tour (Joana Hadjithomas & Khalil Joreige) · MAMCO Gen
 LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
 GEO:46.2012;6.148
 URL:https://www.mamco.ch/en/2411/Free-tour
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -613,7 +613,7 @@ SUMMARY:Tour: Free tour (Joana Hadjithomas & Khalil Joreige) · MAMCO Gen
 LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
 GEO:46.2012;6.148
 URL:https://www.mamco.ch/en/2413/Free-tour
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -634,7 +634,7 @@ LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
 GEO:46.1994;6.1368
 URL:https://www.centrephotogeneve.ch/exhibitions/edmund-clark-et-crofton-b
  lack-cosmopolemos
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -652,7 +652,7 @@ LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
 GEO:46.9418;7.4497
 URL:https://kunsthallebern.ch/en/collective-learning/2026-11-1-exhibition-
  visit-guided-relaxation
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -670,7 +670,7 @@ LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
 GEO:46.9418;7.4497
 URL:https://kunsthallebern.ch/en/collective-learning/2026-11-22-closing-we
  ekend
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -688,7 +688,7 @@ LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
 GEO:46.9418;7.4497
 URL:https://kunsthallebern.ch/en/collective-learning/2026-12-12-eroffnung-
  cantonale-berne-jura-lyna
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -705,7 +705,7 @@ SUMMARY:Opening: Roberto Burle Marx · Zentrum Paul Klee
 LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
 GEO:46.9489;7.4745
 URL:https://www.zpk.org/en/event/roberto-burle-marx-modernismo-tropical
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -723,7 +723,7 @@ SUMMARY:Talk: Lecture: Roberto Burle Marx – Denken im «Systema naturae
 LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
 GEO:46.9489;7.4745
 URL:https://www.zpk.org/en/node/13940
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -742,7 +742,7 @@ SUMMARY:Tour: Guided tour in English: Roberto Burle Marx – Modernismo tr
 LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
 GEO:46.9489;7.4745
 URL:https://www.zpk.org/en/node/13998
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -761,7 +761,7 @@ SUMMARY:Talk: Reading in the exhibition: Zeit der Aussteiger · Kunstmuseu
 LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
 GEO:46.951;7.443
 URL:https://www.kunstmuseumbern.ch/en/node/14078
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -779,7 +779,7 @@ SUMMARY:Tour: Multisensory tour: Der Duft der Freiheit · Kunstmuseum Bern
 LOCATION:Kunstmuseum Bern\, Hodlerstrasse 8–12\, 3011 Bern
 GEO:46.951;7.443
 URL:https://www.kunstmuseumbern.ch/en/node/14084
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -797,7 +797,7 @@ SUMMARY:Talk: Speakers' Corner Kunsthalle Luzern #9 · Kunsthalle Luzern
 LOCATION:Kunsthalle Luzern\, Löwenplatz 11\, 6004 Luzern
 GEO:47.057;8.3107
 URL:https://kunsthalle-luzern.ch/ausstellungen/aktuell
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -814,7 +814,7 @@ SUMMARY:Tour: Guided tour (Wasis Diop & Mbaye Diop) · Circuit
 LOCATION:Circuit\, Avenue de Montchoisi 9\, 1006 Lausanne
 GEO:46.511;6.64
 URL:https://vibrationsforward.com/agenda/visites-guidees-des-expos/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -831,7 +831,7 @@ SUMMARY:Performance: Performance by Brutus Labiche · Circuit
 LOCATION:Circuit\, Avenue de Montchoisi 9\, 1006 Lausanne
 GEO:46.511;6.64
 URL:https://www.circuit.li/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

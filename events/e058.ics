@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Performance by Brutus Labiche
@@ -14,7 +14,7 @@ SUMMARY:Performance: Performance by Brutus Labiche · Circuit
 LOCATION:Circuit\, Avenue de Montchoisi 9\, 1006 Lausanne
 GEO:46.511;6.64
 URL:https://www.circuit.li/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

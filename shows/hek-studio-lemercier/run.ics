@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Studio Lemercier: Thresholds
@@ -18,7 +18,7 @@ GEO:47.5337;7.6134
 TRANSP:TRANSPARENT
 URL:https://hek.ch/programm/ausstellungen/studio-lemercier
 DESCRIPTION:Studio Lemercier: Thresholds at HEK (Haus der Elektronischen K
- ünste). 22 Aug – 15 Nov 2026. Listed by Weekly VERNI\; confirm dates a
+ ünste). 22 Aug – 15 Nov 2026. Listed by Weekly RADAR\; confirm dates a
  nd hours with the venue. Details: https://hek.ch/programm/ausstellungen/s
  tudio-lemercier
 END:VEVENT

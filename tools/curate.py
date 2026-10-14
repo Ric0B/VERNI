@@ -190,7 +190,7 @@ class Handler(BaseHTTPRequestHandler):
 
 
 PAGE = r"""<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Review candidates · Weekly VERNI</title><meta name="token" content="__TOKEN__">
+<title>Review candidates · Weekly RADAR</title><meta name="token" content="__TOKEN__">
 <style>
 :root{--paper:#f1f0f4;--ink:#17151d;--mute:#5c5770;--line:#c9c5d6;--card:#fff;--mark:#5b3cff;--yes:#0d7a52;--no:#b3261e}
 @media(prefers-color-scheme:dark){:root{--paper:#0e0d13;--ink:#ebe8f2;--mute:#a29cb5;--line:#3a3646;--card:#15131b;--mark:#a08aff;--yes:#4fd69c;--no:#ff8a80}}

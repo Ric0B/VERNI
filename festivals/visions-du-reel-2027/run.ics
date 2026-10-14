@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Visions du Réel
@@ -16,7 +16,7 @@ GEO:46.3833;6.2395
 TRANSP:TRANSPARENT
 URL:https://www.visionsdureel.ch/en/
 DESCRIPTION:Visions du Réel\, 9 Apr – 18 Apr 2027\, Nyon. Listed by Wee
- kly VERNI\; check the festival's website for the programme. https://www.v
+ kly RADAR\; check the festival's website for the programme. https://www.v
  isionsdureel.ch/en/
 END:VEVENT
 END:VCALENDAR

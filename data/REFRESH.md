@@ -1,6 +1,6 @@
 # Weekly refresh: instructions for the gathering agent
 
-Purpose: keep `data/shows.json` current so the Weekly VERNI app (iPhone, and later web) always shows what is on now.
+Purpose: keep `data/shows.json` current so the Weekly RADAR app (iPhone, and later web) always shows what is on now.
 The app downloads this file from the repository's `main` branch. It only accepts a file whose `generatedAt` is newer than the one it has, so a bad run can never make the app older, but a bad file that looks valid will be shown to everyone. Be careful, not fast.
 
 ## Steps

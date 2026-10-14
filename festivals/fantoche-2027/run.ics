@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Fantoche – International Animation Film Festival
@@ -16,7 +16,7 @@ GEO:47.4731;8.3064
 TRANSP:TRANSPARENT
 URL:https://fantoche.ch/en
 DESCRIPTION:Fantoche – International Animation Film Festival\, 7 Sep –
-  12 Sep 2027\, Baden. Listed by Weekly VERNI\; check the festival's websi
+  12 Sep 2027\, Baden. Listed by Weekly RADAR\; check the festival's websi
  te for the programme. https://fantoche.ch/en
 END:VEVENT
 END:VCALENDAR

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Zuhause – unterwegs
@@ -16,7 +16,7 @@ GEO:47.6123;7.6608
 TRANSP:TRANSPARENT
 URL:https://www.dreilaendermuseum.eu/anschauen/sonderausstellungen/
 DESCRIPTION:Zuhause – unterwegs at Dreiländermuseum. 19 Sep 2026 – 18
-  Apr 2027. Listed by Weekly VERNI\; confirm dates and hours with the venu
+  Apr 2027. Listed by Weekly RADAR\; confirm dates and hours with the venu
  e. Details: https://www.dreilaendermuseum.eu/anschauen/sonderausstellunge
  n/
 END:VEVENT

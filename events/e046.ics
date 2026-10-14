@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Free tour (Joana Hadjithomas & Khalil Joreige)
@@ -15,7 +15,7 @@ SUMMARY:Tour: Free tour (Joana Hadjithomas & Khalil Joreige) · MAMCO Gen
 LOCATION:MAMCO Genève\, Rue des Granges 13\, 1204 Genève
 GEO:46.2012;6.148
 URL:https://www.mamco.ch/en/2413/Free-tour
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

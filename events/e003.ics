@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Performance und Künstlergespräch: Yanik Soland
@@ -16,7 +16,7 @@ LOCATION:Kunsthaus Baselland\, Helsinki-Strasse 5\, 4142 Münchenstein
 GEO:47.5329;7.6152
 URL:https://kunsthausbaselland.ch/agenda/performance-und-künstlergespräc
  h-yanik-soland
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

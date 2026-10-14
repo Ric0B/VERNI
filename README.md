@@ -1,4 +1,4 @@
-# Weekly VERNI
+# Weekly RADAR
 
 Exhibitions, openings and events in contemporary art across Switzerland. Listings are gathered from the venues' own websites.
 

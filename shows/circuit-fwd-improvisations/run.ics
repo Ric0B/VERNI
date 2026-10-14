@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:FWD – Improvisations
@@ -16,7 +16,7 @@ GEO:46.511;6.64
 TRANSP:TRANSPARENT
 URL:https://www.circuit.li/
 DESCRIPTION:FWD – Improvisations at Circuit. 3 Oct – 14 Nov 2026. List
- ed by Weekly VERNI\; confirm dates and hours with the venue. Details: htt
+ ed by Weekly RADAR\; confirm dates and hours with the venue. Details: htt
  ps://www.circuit.li/
 END:VEVENT
 END:VCALENDAR

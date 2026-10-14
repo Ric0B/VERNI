@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:ALLES ECHT!
@@ -16,7 +16,7 @@ GEO:47.4988;8.724
 TRANSP:TRANSPARENT
 URL:https://www.coalmine.ch/event/alles-echt/
 DESCRIPTION:ALLES ECHT! at Coalmine. 30 Oct 2026 – 24 Jan 2027. Listed b
- y Weekly VERNI\; confirm dates and hours with the venue. Details: https:/
+ y Weekly RADAR\; confirm dates and hours with the venue. Details: https:/
  /www.coalmine.ch/event/alles-echt/
 END:VEVENT
 END:VCALENDAR

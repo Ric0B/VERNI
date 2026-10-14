@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Opening: Edmund Clark and Crofton Black – Cosmopolemos
@@ -17,7 +17,7 @@ LOCATION:Centre de la photographie Genève\, Promenade des Bastions 8\, 12
 GEO:46.1994;6.1368
 URL:https://www.centrephotogeneve.ch/exhibitions/edmund-clark-et-crofton-b
  lack-cosmopolemos
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

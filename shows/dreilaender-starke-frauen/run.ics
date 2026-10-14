@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Starke Frauen
@@ -16,7 +16,7 @@ GEO:47.6123;7.6608
 TRANSP:TRANSPARENT
 URL:https://www.dreilaendermuseum.eu/anschauen/sonderausstellungen/
 DESCRIPTION:Starke Frauen at Dreiländermuseum. 17 Nov – 4 Dec 2026. Lis
- ted by Weekly VERNI\; confirm dates and hours with the venue. Details: ht
+ ted by Weekly RADAR\; confirm dates and hours with the venue. Details: ht
  tps://www.dreilaendermuseum.eu/anschauen/sonderausstellungen/
 END:VEVENT
 END:VCALENDAR

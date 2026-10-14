@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Headroom
@@ -16,7 +16,7 @@ GEO:47.565;7.57
 TRANSP:TRANSPARENT
 URL:https://vonbartha.com/exhibitions/headroom/
 DESCRIPTION:Headroom at von Bartha. 5 Nov 2026 – 8 Jan 2027. Listed by W
- eekly VERNI\; confirm dates and hours with the venue. Details: https://vo
+ eekly RADAR\; confirm dates and hours with the venue. Details: https://vo
  nbartha.com/exhibitions/headroom/
 END:VEVENT
 END:VCALENDAR

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Pierre André Ferrand
@@ -16,7 +16,7 @@ GEO:46.1993;6.1343
 TRANSP:TRANSPARENT
 URL:https://www.skopia.ch/exhibitions-all/pierre-andre-ferrand-2026
 DESCRIPTION:Pierre André Ferrand at Skopia. 18 Sep – 31 Oct 2026. Liste
- d by Weekly VERNI\; confirm dates and hours with the venue. Details: http
+ d by Weekly RADAR\; confirm dates and hours with the venue. Details: http
  s://www.skopia.ch/exhibitions-all/pierre-andre-ferrand-2026
 END:VEVENT
 END:VCALENDAR

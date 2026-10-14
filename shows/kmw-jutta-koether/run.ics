@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Jutta Koether
@@ -16,7 +16,7 @@ GEO:47.5003;8.7321
 TRANSP:TRANSPARENT
 URL:https://www.kmw.ch/en/exhibition/jutta-koether/
 DESCRIPTION:Jutta Koether at Kunstmuseum Winterthur. 12 Sep 2026 – 17 Ja
- n 2027. Listed by Weekly VERNI\; confirm dates and hours with the venue. 
+ n 2027. Listed by Weekly RADAR\; confirm dates and hours with the venue. 
  Details: https://www.kmw.ch/en/exhibition/jutta-koether/
 END:VEVENT
 END:VCALENDAR

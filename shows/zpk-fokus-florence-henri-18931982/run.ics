@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Florence Henri: Fokus. Florence Henri (1893–1982)
@@ -17,7 +17,7 @@ GEO:46.9489;7.4745
 TRANSP:TRANSPARENT
 URL:https://zpk.org/en/node/11353
 DESCRIPTION:Florence Henri: Fokus. Florence Henri (1893–1982) at Zentrum
-  Paul Klee. 29 Aug 2026 – 10 Jan 2027. Listed by Weekly VERNI\; confirm
+  Paul Klee. 29 Aug 2026 – 10 Jan 2027. Listed by Weekly RADAR\; confirm
   dates and hours with the venue. Details: https://zpk.org/en/node/11353
 END:VEVENT
 END:VCALENDAR

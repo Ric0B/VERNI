@@ -71,7 +71,7 @@ def ics_fold(line):
 
 
 def ics_calendar(name, events):
-    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Weekly VERNI//Listings//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", f"X-WR-CALNAME:{ics_text(name)}", "X-WR-TIMEZONE:Europe/Zurich"]
+    lines = ["BEGIN:VCALENDAR", "VERSION:2.0", "PRODID:-//Weekly RADAR//Listings//EN", "CALSCALE:GREGORIAN", "METHOD:PUBLISH", f"X-WR-CALNAME:{ics_text(name)}", "X-WR-TIMEZONE:Europe/Zurich"]
     for ev in events:
         lines += ev
     lines.append("END:VCALENDAR")
@@ -179,7 +179,7 @@ class Site:
                  f"LOCATION:{ics_text(v['name'] + ', ' + v['address'])}", f"GEO:{v['lat']};{v['lon']}"]
         if e.get("url"):
             lines.append(f"URL:{e['url']}")
-        lines += [f"DESCRIPTION:{ics_text('Listed by Weekly VERNI. The end time is not published, so one hour is assumed. Confirm with the venue.')}",
+        lines += [f"DESCRIPTION:{ics_text('Listed by Weekly RADAR. The end time is not published, so one hour is assumed. Confirm with the venue.')}",
                   "BEGIN:VALARM", "ACTION:DISPLAY", f"DESCRIPTION:{ics_text(summary)} starts in 1 hour", "TRIGGER:-PT1H", "END:VALARM", "END:VEVENT"]
         return lines
 
@@ -204,7 +204,7 @@ class Site:
         v = self.venues[s["venue"]]
         names, sub = self.show_title(s)
         label = names + (f": {sub}" if sub else "")
-        desc = f"{label} at {v['name']}. {date_range(s)}. Listed by Weekly VERNI; confirm dates and hours with the venue." + (f" Details: {s['url']}" if s.get("url") else "")
+        desc = f"{label} at {v['name']}. {date_range(s)}. Listed by Weekly RADAR; confirm dates and hours with the venue." + (f" Details: {s['url']}" if s.get("url") else "")
         base = slug_path("shows", s["id"])
         out = {}
         if s.get("start"):
@@ -230,7 +230,7 @@ class Site:
         for e in self.events:
             if e.get("time"):
                 self.write_ics(f"events/{e['id']}.ics", e["title"], [self.ev_timed(e)])
-        self.write_ics("calendar/events.ics", "Weekly VERNI: openings and events", [self.ev_timed(e) for e in self.events if e.get("time")])
+        self.write_ics("calendar/events.ics", "Weekly RADAR: openings and events", [self.ev_timed(e) for e in self.events if e.get("time")])
 
     # ---------- festivals ----------
     def fest_place(self, f):
@@ -239,7 +239,7 @@ class Site:
     def festival_calendars(self, f):
         base = slug_path("festivals", f["id"])
         place = self.fest_place(f)
-        desc = f"{f['name']}, {date_range(f)}, {place['name']}. Listed by Weekly VERNI; check the festival's website for the programme. {f['url']}"
+        desc = f"{f['name']}, {date_range(f)}, {place['name']}. Listed by Weekly RADAR; check the festival's website for the programme. {f['url']}"
         self.write_ics(base + "run.ics", f["name"], [self.ev_allday(f"festival-{f['id']}-run", f["name"], f["start"], f["end"], place, f["url"], desc)])
         today = dt.date.fromisoformat(self.generated[:10])
         out = {"run": base + "run.ics"}
@@ -274,7 +274,7 @@ class Site:
                    "eventStatus": "https://schema.org/EventScheduled", "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
                    "location": {"@type": "Place", "name": place["name"], "address": {"@type": "PostalAddress", "addressLocality": CITIES[f["city"]][0], "addressCountry": CITIES[f["city"]][2]},
                                "geo": {"@type": "GeoCoordinates", "latitude": f["lat"], "longitude": f["lon"]}}}]
-        self.write(rel, self.shell(rel, 2, title + " | Weekly VERNI", desc, body, jsonld))
+        self.write(rel, self.shell(rel, 2, title + " | Weekly RADAR", desc, body, jsonld))
 
     def festivals_index(self):
         rel = "festivals/"
@@ -283,7 +283,7 @@ class Site:
         body = f"""<nav class="crumbs" aria-label="Breadcrumb"><a href="../">Home</a></nav><div class="detail wide"><div class="page-h"><div class="kicker">Swiss festivals</div><h1>Festivals</h1></div>
 <p class="mute">Film festivals and festivals for art, media and performance across Switzerland.</p>{rows or '<p class="empty">No festivals listed yet.</p>'}</div>"""
         items = [{"@type": "ListItem", "position": i + 1, "url": self.url(slug_path("festivals", f["id"])), "name": f["name"]} for i, f in enumerate(fs)]
-        self.write(rel, self.shell(rel, 1, "Festivals in Switzerland: film, media art and performance | Weekly VERNI", f"{len(fs)} film festivals and art festivals in Switzerland with dates and links.", body,
+        self.write(rel, self.shell(rel, 1, "Festivals in Switzerland: film, media art and performance | Weekly RADAR", f"{len(fs)} film festivals and art festivals in Switzerland with dates and links.", body,
                                    [{"@context": "https://schema.org", "@type": "ItemList", "name": "Festivals in Switzerland", "itemListElement": items}]))
 
     # ---------- page shell ----------
@@ -313,7 +313,7 @@ class Site:
 <body class="static">
 <a class="skip" href="#main">Skip to content</a>
 <header class="top">
-  <a class="brand" href="{up}" aria-label="Weekly VERNI, home">VERNI</a>
+  <a class="brand" href="{up}" aria-label="Weekly RADAR, home">RADAR</a>
   <nav class="slinks" aria-label="Main"><a href="{up}#switzerland">Shows</a><a href="{up}#switzerland.events">Events</a><a href="{up}#switzerland.map">Map</a><a href="{up}#switzerland.venues">Venues</a></nav>
 </header>
 <main id="main" class="page">
@@ -388,7 +388,7 @@ class Site:
             if s.get("url"):
                 event["sameAs"] = s["url"]
             jsonld.append(event)
-        self.write(rel, self.shell(rel, 2, title + " | Weekly VERNI", desc, body, jsonld))
+        self.write(rel, self.shell(rel, 2, title + " | Weekly RADAR", desc, body, jsonld))
 
     def place_ld(self, v):
         street, postal, locality = split_address(v["address"])
@@ -446,7 +446,7 @@ class Site:
                 {"@type": "ListItem", "position": 1, "name": "Home", "item": self.url("")},
                 {"@type": "ListItem", "position": 2, "name": CITIES[v["city"]][0], "item": self.url(slug_path("city", v["city"]))},
                 {"@type": "ListItem", "position": 3, "name": v["name"]}]}]
-        self.write(rel, self.shell(rel, 2, title + " | Weekly VERNI", desc, body, jsonld))
+        self.write(rel, self.shell(rel, 2, title + " | Weekly RADAR", desc, body, jsonld))
 
     # ---------- city and region pages ----------
     def place_page(self, kind, pid, name, venue_ids, intro):
@@ -464,7 +464,7 @@ class Site:
 {''.join(f'<a class="vrow" href="../../{slug_path("venues", v["id"])}"><span class="nm">{esc(v["name"])}</span><span class="ct">{esc(TYPE_SINGULAR[v["type"]])}</span><span class="ad">{esc(v["address"])}</span><span></span></a>' for v in venues)}
 <div class="btnrow"><a class="btn ghost" href="../../#{'region-' + pid if kind == 'region' else pid}">Open in the app</a></div></div>"""
         items = [{"@type": "ListItem", "position": i + 1, "url": self.url(slug_path("shows", s["id"])), "name": ", ".join(s["artists"]) or s["title"]} for i, s in enumerate(shows)]
-        self.write(rel, self.shell(rel, 2, title + " | Weekly VERNI", desc, body, [{"@context": "https://schema.org", "@type": "ItemList", "name": f"Exhibitions in {name}", "itemListElement": items}]))
+        self.write(rel, self.shell(rel, 2, title + " | Weekly RADAR", desc, body, [{"@context": "https://schema.org", "@type": "ItemList", "name": f"Exhibitions in {name}", "itemListElement": items}]))
 
     # ---------- home summary, 404, sitemap, robots ----------
     def home_summary(self):
@@ -477,7 +477,7 @@ class Site:
         shows = "".join(f'<li><a href="{slug_path("shows", s["id"])}">{esc(self.show_title(s)[0])}</a>, {esc(self.venues[s["venue"]]["name"])}, {esc(date_range(s))}</li>'
                         for s in sorted(self.shows, key=lambda s: s["end"]))
         return f"""<!--SSR:START-->
-<div class="page ssr"><div class="page-h"><div class="kicker">Weekly VERNI</div><h1>Contemporary art in Switzerland</h1></div>
+<div class="page ssr"><div class="page-h"><div class="kicker">Weekly RADAR</div><h1>Contemporary art in Switzerland</h1></div>
 <p>Exhibitions, openings and events at galleries, museums and art spaces from Basel to Lugano, gathered from the venues' own websites and updated twice a week.</p>
 <p><a href="calendar/events.ics" download>Calendar file with every opening and event</a>, each with a reminder one hour before. Add it once to your calendar app.</p>
 <h2 class="sec-h"><a href="festivals/">Festivals</a></h2><ul>{festivals}</ul>
@@ -495,7 +495,7 @@ class Site:
             s = s.replace('<p class="page loading" id="loading">Loading listings…</p>', f'<div id="loading">{summary}</div>')
         canonical = f'<link rel="canonical" href="{self.base}/">'
         s = re.sub(r'<link rel="canonical" href="[^"]*">', canonical, s) if 'rel="canonical"' in s else s.replace('<link rel="manifest"', canonical + '\n<link rel="manifest"', 1)
-        site_ld = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "Weekly VERNI", "url": self.base + "/",
+        site_ld = ld({"@context": "https://schema.org", "@type": "WebSite", "name": "Weekly RADAR", "url": self.base + "/",
                       "description": "Exhibitions, openings and events in contemporary art across Switzerland."})
         s = re.sub(r'<script type="application/ld\+json">.*?</script>\n?', "", s, flags=re.S)
         s = s.replace("</head>", site_ld + "\n</head>", 1)
@@ -503,7 +503,7 @@ class Site:
 
     def not_found(self):
         body = '<div class="page-h"><h1>Page not found</h1></div><p class="mute">That page is not here. Shows end, and their pages go with them.</p><div class="btnrow"><a class="btn" href="/VERNI/">See what is on now</a></div>'
-        (self.out / "404.html").write_text(self.shell("404.html", 0, "Page not found | Weekly VERNI", "Page not found", body).replace(f'<link rel="canonical" href="{self.url("404.html")}">', ""), encoding="utf-8")
+        (self.out / "404.html").write_text(self.shell("404.html", 0, "Page not found | Weekly RADAR", "Page not found", body).replace(f'<link rel="canonical" href="{self.url("404.html")}">', ""), encoding="utf-8")
 
     def sitemap(self):
         urls = [("", self.generated[:10])] + self.pages

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Frida Kahlo
@@ -16,7 +16,7 @@ GEO:47.5876;7.6532
 TRANSP:TRANSPARENT
 URL:https://www.fondationbeyeler.ch/en/exhibitions/frida-kahlo
 DESCRIPTION:Frida Kahlo at Fondation Beyeler. 31 Jan – 17 May 2027. List
- ed by Weekly VERNI\; confirm dates and hours with the venue. Details: htt
+ ed by Weekly RADAR\; confirm dates and hours with the venue. Details: htt
  ps://www.fondationbeyeler.ch/en/exhibitions/frida-kahlo
 END:VEVENT
 END:VCALENDAR

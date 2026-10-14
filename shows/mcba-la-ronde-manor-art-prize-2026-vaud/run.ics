@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Lucas Erin: La ronde (Manor Art Prize 2026 Vaud)
@@ -19,7 +19,7 @@ TRANSP:TRANSPARENT
 URL:https://www.mcba.ch/en/exhibitions/lucas-erin/
 DESCRIPTION:Lucas Erin: La ronde (Manor Art Prize 2026 Vaud) at MCBA Musé
  e cantonal des Beaux-Arts. 28 Aug 2026 – 14 Feb 2027. Listed by Weekly 
- VERNI\; confirm dates and hours with the venue. Details: https://www.mcba
+ RADAR\; confirm dates and hours with the venue. Details: https://www.mcba
  .ch/en/exhibitions/lucas-erin/
 END:VEVENT
 END:VCALENDAR

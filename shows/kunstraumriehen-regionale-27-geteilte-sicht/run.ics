@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Regionale 27. Geteilte Sicht
@@ -16,7 +16,7 @@ GEO:47.5838;7.6495
 TRANSP:TRANSPARENT
 URL:https://www.kunstraumriehen.ch/de/page/regionale-27-geteilte-sicht
 DESCRIPTION:Regionale 27. Geteilte Sicht at Kunst Raum Riehen. 28 Nov 2026
-  – 31 Jan 2027. Listed by Weekly VERNI\; confirm dates and hours with t
+  – 31 Jan 2027. Listed by Weekly RADAR\; confirm dates and hours with t
  he venue. Details: https://www.kunstraumriehen.ch/de/page/regionale-27-ge
  teilte-sicht
 END:VEVENT

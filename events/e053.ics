@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Guided tour in English: Roberto Burle Marx – Modernismo tro
@@ -16,7 +16,7 @@ SUMMARY:Tour: Guided tour in English: Roberto Burle Marx – Modernismo tr
 LOCATION:Zentrum Paul Klee\, Monument im Fruchtland 3\, 3006 Bern
 GEO:46.9489;7.4745
 URL:https://www.zpk.org/en/node/13998
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Open Decks
@@ -15,7 +15,7 @@ LOCATION:HEK (Haus der Elektronischen Künste)\, Freilager-Platz 9\, 4142
  Münchenstein
 GEO:47.5337;7.6134
 URL:https://hek.ch/programm/veranstaltungen/open-decks
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

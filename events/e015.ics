@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Zhao Ziyi & Manfred Werder
@@ -14,7 +14,7 @@ SUMMARY:Performance: Zhao Ziyi & Manfred Werder · Kunstraum Walcheturm
 LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
 GEO:47.3791;8.5327
 URL:https://walcheturm.ch/agenda
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

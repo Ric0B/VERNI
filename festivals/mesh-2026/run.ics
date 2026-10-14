@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:MESH – Festival für Kunst und Technologie
@@ -16,7 +16,7 @@ GEO:47.5337;7.6134
 TRANSP:TRANSPARENT
 URL:https://www.meshfestival.ch/
 DESCRIPTION:MESH – Festival für Kunst und Technologie\, 14 Oct – 18 O
- ct 2026\, Dreispitz\, Münchenstein / Basel. Listed by Weekly VERNI\; che
+ ct 2026\, Dreispitz\, Münchenstein / Basel. Listed by Weekly RADAR\; che
  ck the festival's website for the programme. https://www.meshfestival.ch/
 END:VEVENT
 END:VCALENDAR

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Sinnesumschmeichelungen
@@ -16,7 +16,7 @@ GEO:47.5329;7.6152
 TRANSP:TRANSPARENT
 URL:https://kunsthausbaselland.ch/ausstellungen/sinnesumschmeichelungen
 DESCRIPTION:Sinnesumschmeichelungen at Kunsthaus Baselland. 25 Sep 2026 
- – 4 Apr 2027. Listed by Weekly VERNI\; confirm dates and hours with the
+ – 4 Apr 2027. Listed by Weekly RADAR\; confirm dates and hours with the
   venue. Details: https://kunsthausbaselland.ch/ausstellungen/sinnesumschm
  eichelungen
 END:VEVENT

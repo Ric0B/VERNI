@@ -531,8 +531,8 @@ viewFns.artist = () => {
 
 /* ----- about ----- */
 viewFns.about = () => ({
-  html: `<div class="page"><div class="detail"><div class="page-h"><div class="kicker">About</div><h1>Weekly VERNI</h1></div>
-    <div class="prose"><p>Weekly VERNI lists exhibitions, openings and events at galleries, museums, foundations and off-spaces across Switzerland.</p>
+  html: `<div class="page"><div class="detail"><div class="page-h"><div class="kicker">About</div><h1>Weekly RADAR</h1></div>
+    <div class="prose"><p>Weekly RADAR lists exhibitions, openings and events at galleries, museums, foundations and off-spaces across Switzerland.</p>
     <p>Pick Switzerland, a region or a single city at the top. Every page follows that choice.</p>
     <p>Everything here comes from the venues' own websites, and each show links back to its source. The listings are re-read twice a week. Venues change their programme often, so confirm dates and hours with the venue before you go.</p>
     <p>Some venues are missing or incomplete, mostly where a website could not be read automatically. They are added as soon as their pages can be read.</p></div>
@@ -563,7 +563,7 @@ function updateChrome() {
   if (state.view === "venue") t = M.venues[state.param].name + " · ";
   if (state.view === "artist") t = M.artists[state.param].name + " · ";
   if (state.view === "festival") t = M.festivals[state.param].name + " · ";
-  document.title = t + "Weekly VERNI";
+  document.title = t + "Weekly RADAR";
   document.documentElement.style.setProperty("--header-h", $("#top").offsetHeight + "px");
   $("#foot").innerHTML = `<nav aria-label="Footer"><a href="${hashFor("venues")}">Venues</a><a href="${hashFor("artists")}">Artists</a><a href="${hashFor("about")}">About</a></nav>
     <span>Listings gathered from the venues' own websites, updated ${M.generatedAt.toLocaleString("en-GB", { day: "numeric", month: "short", hour: "2-digit", minute: "2-digit" })}. Confirm dates and hours with the venue. Map © OpenStreetMap contributors. English only for now.</span>`;
@@ -612,7 +612,7 @@ function filterScope(q) {
   $("#sc-sw").hidden = !!q && !"switzerland everything country".includes(q);
 }
 function menuDialog() {
-  openDialog(`<div class="dlg-h"><h2>Weekly VERNI</h2><button class="done" type="button" data-action="close">Done</button></div>
+  openDialog(`<div class="dlg-h"><h2>Weekly RADAR</h2><button class="done" type="button" data-action="close">Done</button></div>
     <nav class="menu" aria-label="Menu"><div class="grp">Browse</div><a href="${hashFor("venues")}">Venues</a><a href="${hashFor("artists")}">Artists</a>
     <div class="grp">More</div><a href="${hashFor("about")}">About</a><button type="button" data-action="reset">Clear Tourplan &amp; Favourites</button></nav>`);
 }

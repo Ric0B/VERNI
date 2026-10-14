@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Walk & Talk
@@ -14,7 +14,7 @@ SUMMARY:Talk: Walk & Talk · Kunsthalle Bern
 LOCATION:Kunsthalle Bern\, Helvetiaplatz 1\, 3005 Bern
 GEO:46.9418;7.4497
 URL:https://kunsthallebern.ch/en/collective-learning/2026-10-29-walk-talk
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY

@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Franz Marc: The Quest for a Better World
@@ -16,7 +16,7 @@ GEO:46.951;7.443
 TRANSP:TRANSPARENT
 URL:https://www.kunstmuseumbern.ch/en/node/14058
 DESCRIPTION:Franz Marc: The Quest for a Better World at Kunstmuseum Bern. 
- 26 Feb – 4 Jul 2027. Listed by Weekly VERNI\; confirm dates and hours w
+ 26 Feb – 4 Jul 2027. Listed by Weekly RADAR\; confirm dates and hours w
  ith the venue. Details: https://www.kunstmuseumbern.ch/en/node/14058
 END:VEVENT
 END:VCALENDAR

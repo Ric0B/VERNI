@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Landon Metz: 2026
@@ -16,7 +16,7 @@ GEO:47.565;7.57
 TRANSP:TRANSPARENT
 URL:https://vonbartha.com/exhibitions/landon-metz-2026/
 DESCRIPTION:Landon Metz: 2026 at von Bartha. 5 Nov 2026 – 8 Jan 2027. Li
- sted by Weekly VERNI\; confirm dates and hours with the venue. Details: h
+ sted by Weekly RADAR\; confirm dates and hours with the venue. Details: h
  ttps://vonbartha.com/exhibitions/landon-metz-2026/
 END:VEVENT
 END:VCALENDAR

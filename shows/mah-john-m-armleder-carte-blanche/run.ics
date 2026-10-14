@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:John M Armleder: Carte Blanche
@@ -16,7 +16,7 @@ GEO:46.1995;6.1517
 TRANSP:TRANSPARENT
 URL:https://www.mahmah.ch
 DESCRIPTION:John M Armleder: Carte Blanche at Musée d'art et d'histoire. 
- 29 Jan – 25 Oct 2026. Listed by Weekly VERNI\; confirm dates and hours 
+ 29 Jan – 25 Oct 2026. Listed by Weekly RADAR\; confirm dates and hours 
  with the venue. Details: https://www.mahmah.ch
 END:VEVENT
 END:VCALENDAR

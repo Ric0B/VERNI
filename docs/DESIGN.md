@@ -1,4 +1,4 @@
-# Weekly VERNI: system design
+# Weekly RADAR: system design
 
 ## Requirements
 

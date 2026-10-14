@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Maria Lassnig: Hans Ulrich Obrist Archives: Maria Lassnig
@@ -17,7 +17,7 @@ GEO:47.3893;8.5204
 TRANSP:TRANSPARENT
 URL:https://westbau.com/en/program/maria-lassnig
 DESCRIPTION:Maria Lassnig: Hans Ulrich Obrist Archives: Maria Lassnig at L
- UMA Westbau. 13 Jun – 20 Dec 2026. Listed by Weekly VERNI\; confirm dat
+ UMA Westbau. 13 Jun – 20 Dec 2026. Listed by Weekly RADAR\; confirm dat
  es and hours with the venue. Details: https://westbau.com/en/program/mari
  a-lassnig
 END:VEVENT

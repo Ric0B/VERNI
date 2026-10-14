@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:GIFF – Geneva International Film Festival
@@ -16,7 +16,7 @@ GEO:46.2044;6.1432
 TRANSP:TRANSPARENT
 URL:https://www.giff.ch/en/
 DESCRIPTION:GIFF – Geneva International Film Festival\, 30 Oct – 8 Nov
-  2026\, Geneva. Listed by Weekly VERNI\; check the festival's website for
+  2026\, Geneva. Listed by Weekly RADAR\; check the festival's website for
   the programme. https://www.giff.ch/en/
 END:VEVENT
 END:VCALENDAR

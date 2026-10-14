@@ -1,6 +1,6 @@
 BEGIN:VCALENDAR
 VERSION:2.0
-PRODID:-//Weekly VERNI//Listings//EN
+PRODID:-//Weekly RADAR//Listings//EN
 CALSCALE:GREGORIAN
 METHOD:PUBLISH
 X-WR-CALNAME:Curator's talk with Joshua Chuang and Alessandra Nappo
@@ -16,7 +16,7 @@ LOCATION:Fotomuseum Winterthur\, Grüzenstrasse 44\, 8400 Winterthur
 GEO:47.4932;8.7462
 URL:https://www.fotomuseum.ch/en/events-post/curators-talk-mit-joshua-chua
  ng-und-alessandra-nappo/
-DESCRIPTION:Listed by Weekly VERNI. The end time is not published\, so one
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
   hour is assumed. Confirm with the venue.
 BEGIN:VALARM
 ACTION:DISPLAY
