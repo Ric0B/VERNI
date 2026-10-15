@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly RADAR//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Zwei Tage Strom
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e063@verni
+DTSTAMP:20261015T205912Z
+DTSTART:20261030T193000Z
+DTEND:20261030T203000Z
+SUMMARY:Performance: Zwei Tage Strom · Kunstraum Walcheturm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: Zwei Tage Strom starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

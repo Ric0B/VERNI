@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly RADAR//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-beyeler-louise-bourgeois-closing@verni
+DTSTAMP:20261015T205912Z
+DTSTART;VALUE=DATE:20271014
+DTEND;VALUE=DATE:20271015
+SUMMARY:Last days: Louise Bourgeois closes 17 Oct
+LOCATION:Fondation Beyeler\, Baselstrasse 101\, 4125 Riehen
+GEO:47.5876;7.6532
+TRANSP:TRANSPARENT
+URL:https://www.fondationbeyeler.ch/en/exhibitions
+DESCRIPTION:Louise Bourgeois at Fondation Beyeler is on until 17 Oct 2027.
+  Opening hours: Wed 10–20 · Thu–Sun 10–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Louise Bourgeois closes 17 Oct
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

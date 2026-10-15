@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly RADAR//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-beyeler-elizabeth-peyton-closing@verni
+DTSTAMP:20261015T205912Z
+DTSTART;VALUE=DATE:20280106
+DTEND;VALUE=DATE:20280107
+SUMMARY:Last days: Elizabeth Peyton closes 9 Jan
+LOCATION:Fondation Beyeler\, Baselstrasse 101\, 4125 Riehen
+GEO:47.5876;7.6532
+TRANSP:TRANSPARENT
+URL:https://www.fondationbeyeler.ch/en/exhibitions
+DESCRIPTION:Elizabeth Peyton at Fondation Beyeler is on until 9 Jan 2028. 
+ Opening hours: Wed 10–20 · Thu–Sun 10–18.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Elizabeth Peyton closes 9 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

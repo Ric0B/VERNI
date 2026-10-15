@@ -1,0 +1,25 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly RADAR//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Martina Hefter: Nach der Sonne schauen
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e067@verni
+DTSTAMP:20261015T205912Z
+DTSTART:20261110T183000Z
+DTEND:20261110T193000Z
+SUMMARY:Talk: Martina Hefter: Nach der Sonne schauen · Coalmine
+LOCATION:Coalmine\, Turnerstrasse 1\, 8400 Winterthur
+GEO:47.4988;8.724
+URL:https://www.coalmine.ch/
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Talk: Martina Hefter: Nach der Sonne schauen starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

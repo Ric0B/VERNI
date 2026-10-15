@@ -1,0 +1,27 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly RADAR//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:ENMZ Ensemble Neue Musik Zürich / Nacht der Unken
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e065@verni
+DTSTAMP:20261015T205912Z
+DTSTART:20261113T190000Z
+DTEND:20261113T200000Z
+SUMMARY:Performance: ENMZ Ensemble Neue Musik Zürich / Nacht der Unken ·
+  Kunstraum Walcheturm
+LOCATION:Kunstraum Walcheturm\, Kanonengasse 20\, 8004 Zürich
+GEO:47.3791;8.5327
+URL:https://walcheturm.ch/
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Performance: ENMZ Ensemble Neue Musik Zürich / Nacht der Unke
+ n starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

@@ -1,0 +1,22 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly RADAR//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Andreas Bucher\, Dieter Wymann
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-krupp-bucher-wymann-run@verni
+DTSTAMP:20261015T205912Z
+DTSTART;VALUE=DATE:20261107
+DTEND;VALUE=DATE:20270110
+SUMMARY:Andreas Bucher\, Dieter Wymann · Galerie Nicolas Krupp
+LOCATION:Galerie Nicolas Krupp\, Riehentorstrasse 33\, 4058 Basel
+GEO:47.564;7.594
+TRANSP:TRANSPARENT
+URL:https://www.nicolaskrupp.com/exhibitions
+DESCRIPTION:Andreas Bucher\, Dieter Wymann at Galerie Nicolas Krupp. 7 Nov
+  2026 – 9 Jan 2027. Listed by Weekly RADAR\; confirm dates and hours wi
+ th the venue. Details: https://www.nicolaskrupp.com/exhibitions
+END:VEVENT
+END:VCALENDAR

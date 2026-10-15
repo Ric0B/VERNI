@@ -1,6 +1,6 @@
 {
  "schemaVersion": 1,
- "generatedAt": "2026-10-13T15:15:59Z",
+ "generatedAt": "2026-10-15T20:59:12Z",
  "note": "Facts gathered from each venue's own website. Hours and dates should be confirmed with the venue. Descriptions and images are not copied; every record links to its source.",
  "venues": [
   {
@@ -2158,6 +2158,40 @@
    "start": "2027-01-31",
    "end": "2027-05-17",
    "url": "https://www.fondationbeyeler.ch/en/exhibitions/frida-kahlo"
+  },
+  {
+   "venue": "krupp",
+   "artists": [
+    "Andreas Bucher",
+    "Dieter Wymann"
+   ],
+   "title": "Andreas Bucher, Dieter Wymann",
+   "start": "2026-11-07",
+   "end": "2027-01-09",
+   "url": "https://www.nicolaskrupp.com/exhibitions",
+   "id": "krupp-bucher-wymann"
+  },
+  {
+   "venue": "beyeler",
+   "artists": [
+    "Louise Bourgeois"
+   ],
+   "title": "Louise Bourgeois",
+   "start": "2027-06-13",
+   "end": "2027-10-17",
+   "url": "https://www.fondationbeyeler.ch/en/exhibitions",
+   "id": "beyeler-louise-bourgeois"
+  },
+  {
+   "venue": "beyeler",
+   "artists": [
+    "Elizabeth Peyton"
+   ],
+   "title": "Elizabeth Peyton",
+   "start": "2027-09-26",
+   "end": "2028-01-09",
+   "url": "https://www.fondationbeyeler.ch/en/exhibitions",
+   "id": "beyeler-elizabeth-peyton"
   }
  ],
  "events": [
@@ -2190,16 +2224,6 @@
    "url": "https://migrosmuseum.ch/en/art-education/collection-insights-she-devils-on-wheels-headquaters-mit-kamilla-odegard",
    "show": "migros-she-devils-on-wheels-angels-on-heels",
    "id": "e006"
-  },
-  {
-   "venue": "konstruktiv",
-   "type": "tour",
-   "title": "Public guided tour",
-   "date": "2026-10-14",
-   "time": "18:15",
-   "url": "https://hauskonstruktiv.ch/en/events/536189",
-   "show": "konstruktiv-the-body-within-abstraction",
-   "id": "e008"
   },
   {
    "venue": "konstruktiv",
@@ -2323,16 +2347,6 @@
   },
   {
    "venue": "mamco",
-   "type": "tour",
-   "title": "Free tour (Joana Hadjithomas & Khalil Joreige)",
-   "date": "2026-10-13",
-   "time": "15:00",
-   "url": "https://www.mamco.ch/en/2409/Free-tour",
-   "show": "mamco-mamco-x-sasa",
-   "id": "e024"
-  },
-  {
-   "venue": "mamco",
    "type": "finissage",
    "title": "Closing event: Sylvia Sleigh and Re-Collection",
    "date": "2026-10-25",
@@ -2430,16 +2444,6 @@
    "date": "2026-12-19",
    "time": "14:00",
    "url": "https://kunsthalle-luzern.ch"
-  },
-  {
-   "id": "e040",
-   "venue": "helmhaus",
-   "show": "helmhaus-in-der-sonne-sitzen",
-   "type": "talk",
-   "title": "Five O'Clock Thesis with Charlotte Matter",
-   "date": "2026-10-14",
-   "time": "17:00",
-   "url": "https://helmhaus.org"
   },
   {
    "id": "e041",
@@ -2620,6 +2624,96 @@
    "date": "2026-11-13",
    "time": "19:00",
    "url": "https://www.circuit.li/"
+  },
+  {
+   "venue": "krupp",
+   "type": "opening",
+   "title": "Opening: Andreas Bucher, Dieter Wymann",
+   "date": "2026-11-06",
+   "time": "17:00",
+   "url": "https://www.nicolaskrupp.com/exhibitions",
+   "show": "krupp-bucher-wymann",
+   "id": "e059"
+  },
+  {
+   "venue": "artbrut",
+   "type": "opening",
+   "title": "Opening: The World of Armand Schulthess",
+   "date": "2026-11-26",
+   "time": "18:30",
+   "url": "https://www.artbrut.ch/en/",
+   "show": "artbrut-the-world-of-armand-schulthess",
+   "id": "e060"
+  },
+  {
+   "venue": "mamco",
+   "type": "tour",
+   "title": "Free tour (Joana Hadjithomas & Khalil Joreige)",
+   "date": "2026-11-06",
+   "time": "15:00",
+   "url": "https://www.mamco.ch/en",
+   "show": "mamco-mamco-x-sasa",
+   "id": "e061"
+  },
+  {
+   "venue": "mamco",
+   "type": "tour",
+   "title": "Free tour (Joana Hadjithomas & Khalil Joreige)",
+   "date": "2026-11-10",
+   "time": "15:00",
+   "url": "https://www.mamco.ch/en",
+   "show": "mamco-mamco-x-sasa",
+   "id": "e062"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "Zwei Tage Strom",
+   "date": "2026-10-30",
+   "time": "20:30",
+   "url": "https://walcheturm.ch/",
+   "show": null,
+   "id": "e063"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "Machine Musicianship presented by ICST",
+   "date": "2026-11-12",
+   "time": "20:00",
+   "url": "https://walcheturm.ch/",
+   "show": null,
+   "id": "e064"
+  },
+  {
+   "venue": "walcheturm",
+   "type": "performance",
+   "title": "ENMZ Ensemble Neue Musik Zürich / Nacht der Unken",
+   "date": "2026-11-13",
+   "time": "20:00",
+   "url": "https://walcheturm.ch/",
+   "show": null,
+   "id": "e065"
+  },
+  {
+   "venue": "cabaret",
+   "type": "talk",
+   "title": "dears, write",
+   "date": "2026-11-25",
+   "time": "19:00",
+   "url": "https://www.cabaretvoltaire.ch/",
+   "show": null,
+   "id": "e066"
+  },
+  {
+   "venue": "coalmine",
+   "type": "talk",
+   "title": "Martina Hefter: Nach der Sonne schauen",
+   "date": "2026-11-10",
+   "time": "19:30",
+   "url": "https://www.coalmine.ch/",
+   "show": null,
+   "id": "e067"
   }
  ],
  "festivals": [

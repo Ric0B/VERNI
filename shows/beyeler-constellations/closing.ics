@@ -7,7 +7,7 @@ X-WR-CALNAME:Closing reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:show-beyeler-constellations-closing@verni
-DTSTAMP:20261013T151559Z
+DTSTAMP:20261015T205912Z
 DTSTART;VALUE=DATE:20270902
 DTEND;VALUE=DATE:20270903
 SUMMARY:Last days: Constellations closes 5 Sep

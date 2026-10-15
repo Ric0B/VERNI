@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly RADAR//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Opening: The World of Armand Schulthess
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:event-e060@verni
+DTSTAMP:20261015T205912Z
+DTSTART:20261126T173000Z
+DTEND:20261126T183000Z
+SUMMARY:Opening: Armand Schulthess · Collection de l'Art Brut
+LOCATION:Collection de l'Art Brut\, Avenue des Bergières 11\, 1004 Lausan
+ ne
+GEO:46.5275;6.6235
+URL:https://www.artbrut.ch/en/
+DESCRIPTION:Listed by Weekly RADAR. The end time is not published\, so one
+  hour is assumed. Confirm with the venue.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Opening: Armand Schulthess starts in 1 hour
+TRIGGER:-PT1H
+END:VALARM
+END:VEVENT
+END:VCALENDAR

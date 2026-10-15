@@ -7,7 +7,7 @@ X-WR-CALNAME:Festival reminder
 X-WR-TIMEZONE:Europe/Zurich
 BEGIN:VEVENT
 UID:festival-kurzfilmtage-winterthur-2026-reminder@verni
-DTSTAMP:20261013T151559Z
+DTSTAMP:20261015T205912Z
 DTSTART;VALUE=DATE:20261027
 DTEND;VALUE=DATE:20261028
 SUMMARY:Starts 3 Nov: Internationale Kurzfilmtage Winterthur

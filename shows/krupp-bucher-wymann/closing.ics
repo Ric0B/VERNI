@@ -1,0 +1,26 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Weekly RADAR//Listings//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Closing reminder
+X-WR-TIMEZONE:Europe/Zurich
+BEGIN:VEVENT
+UID:show-krupp-bucher-wymann-closing@verni
+DTSTAMP:20261015T205912Z
+DTSTART;VALUE=DATE:20270106
+DTEND;VALUE=DATE:20270107
+SUMMARY:Last days: Andreas Bucher\, Dieter Wymann closes 9 Jan
+LOCATION:Galerie Nicolas Krupp\, Riehentorstrasse 33\, 4058 Basel
+GEO:47.564;7.594
+TRANSP:TRANSPARENT
+URL:https://www.nicolaskrupp.com/exhibitions
+DESCRIPTION:Andreas Bucher\, Dieter Wymann at Galerie Nicolas Krupp is on 
+ until 9 Jan 2027. Opening hours: Thu–Fri 14–18 · Sat 14–17.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Last days: Andreas Bucher\, Dieter Wymann closes 9 Jan
+TRIGGER;RELATED=START:PT9H
+END:VALARM
+END:VEVENT
+END:VCALENDAR
