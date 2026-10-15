@@ -16,6 +16,6 @@ Publish: in the repository settings, Pages > Build and deployment > Source "Depl
 
 The refresh agent adds new festivals, shows and venues it finds on the web to `data/candidates.json` (local, never published). Review them with:
 
-    python3 tools/curate.py        # or double-click "Curate VERNI.command" in the folder above this one
+    python3 tools/curate.py        # or double-click "Curate RADAR.command" in the folder above this one
 
 Yes adds the record to the live data, No remembers it so it never comes back, and Publish checks, rebuilds and pushes.
