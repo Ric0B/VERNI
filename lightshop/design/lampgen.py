@@ -128,10 +128,22 @@ def f_glut(T, Z, p):
     return prof + p["quilt"] * (quilt - 0.5) * collar(Z, p) * np.sin(math.pi * t)
 
 
+def mulberry32(seed):
+    """Tiny seeded RNG, bit-identical to the JavaScript version in the configurator."""
+    a = seed & 0xFFFFFFFF
+
+    def rnd():
+        nonlocal a
+        a = (a + 0x6D2B79F5) & 0xFFFFFFFF
+        t = ((a ^ (a >> 15)) * (1 | a)) & 0xFFFFFFFF
+        t = ((t + (((t ^ (t >> 7)) * (61 | t)) & 0xFFFFFFFF)) & 0xFFFFFFFF) ^ t
+        return ((t ^ (t >> 14)) & 0xFFFFFFFF) / 4294967296
+    return rnd
+
+
 def _attractors(p):
-    rng = np.random.default_rng(p["seed"])
-    n = p["attractors"]
-    return np.stack([rng.uniform(0, TAU, n), rng.uniform(0.25, 0.85, n) * p["height"]], axis=1)
+    rnd = mulberry32(int(p["seed"]))
+    return [(rnd() * TAU, (0.25 + 0.6 * rnd()) * p["height"]) for _ in range(int(p["attractors"]))]
 
 
 def f_moraene(T, Z, p):
@@ -153,10 +165,10 @@ def f_gletscher(T, Z, p):
     h = p["height"]
     t = Z / h
     prof = p["r_base"] + (p["r_top"] - p["r_base"]) * t + p["bulge"] * np.sin(math.pi * np.clip(t, 0, 1))
-    rng = np.random.default_rng(p["seed"])
-    n = p["cells"]
-    st = rng.uniform(0, TAU, n)
-    sz = rng.uniform(-0.05, 1.05, n) * h
+    rnd = mulberry32(int(p["seed"]))
+    pts = [(rnd() * TAU, (-0.05 + 1.1 * rnd()) * h) for _ in range(int(p["cells"]))]
+    st = [a for a, _ in pts]
+    sz = [b for _, b in pts]
     circ = p["r_base"]  # scale theta to arc length so cells stay round
     d1 = np.full(T.shape, np.inf)
     d2 = np.full(T.shape, np.inf)
@@ -205,8 +217,8 @@ DESIGNS = {
         "height": 330, "r_base": 92, "r_belly": 112, "ribs": 56, "twist": 0.06, "rib_min": 0.6, "rib_max": 8.0,
         "reach": 85, "warp": 4.0, "attractors": 4, "seed": 7, **COMMON}},
     "gletscher": {"title": "Gletscher", "kind": "table", "fn": f_gletscher, "params": {
-        "height": 300, "r_base": 96, "r_top": 82, "bulge": 18, "cells": 70, "stretch": 1.35, "groove_width": 3.6,
-        "groove_depth": 2.8, "dome": 2.2, "cushion_scale": 34, "seed": 11, **COMMON}},
+        "height": 300, "r_base": 96, "r_top": 82, "bulge": 18, "cells": 70, "stretch": 1.35, "groove_width": 4.6,
+        "groove_depth": 2.6, "dome": 1.8, "cushion_scale": 34, "seed": 11, **COMMON}},
     "bise": {"title": "Bise", "kind": "table", "fn": f_bise, "params": {
         "height": 320, "r_mid": 92, "r_swing": 10, "n": 20, "turns": 2.0, "amp": 5.0, **COMMON}},
 }

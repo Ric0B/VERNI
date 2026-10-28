@@ -98,7 +98,7 @@ PRODUCTS = [
     {
         "slug": "aare", "name": "Aare", "shape": "aare", "price": 169, "cordless": False,
         "type": {"de": "Tischlampe", "en": "Table lamp"},
-        "height": 340, "diameter": 216, "weight": 0.9, "print_h": 5, "layers": 1333, "colours": ["frost", "sand", "stein"],
+        "height": 340, "diameter": 216, "weight": 0.9, "print_h": 9, "layers": 1333, "colours": ["frost", "sand", "stein"],
         "material": {"de": "Schirm PLA, Fassungsträger PETG, pflanzenbasiert", "en": "Shade PLA, socket mount PETG, plant-based"},
         "light": {"de": "E27 LED, 4.9 W, 2700 K (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K (included), max. 7 W LED"},
         "power": {"de": "Eurostecker, Schnurschalter, Schutzklasse II", "en": "Europlug, inline switch, class II"},
@@ -125,7 +125,7 @@ PRODUCTS = [
     {
         "slug": "foehn", "name": "Föhn", "shape": "foehn", "price": 139, "cordless": True,
         "type": {"de": "Kabellose Tischlampe", "en": "Cordless table lamp"},
-        "height": 240, "diameter": 276, "weight": 0.6, "print_h": 6, "layers": 1092, "colours": ["frost", "sand", "nacht"],
+        "height": 240, "diameter": 276, "weight": 0.6, "print_h": 4, "layers": 1092, "colours": ["frost", "sand", "nacht"],
         "material": {"de": "PLA, pflanzenbasiert", "en": "PLA, plant-based"},
         "light": {"de": "Integrierte LED, 2700 K, stufenlos dimmbar per Touch", "en": "Built-in LED, 2700 K, touch dimmable"},
         "power": {"de": "Akku, laden über USB-C, ca. 12 h bei mittlerer Helligkeit", "en": "Battery, USB-C charging, about 12 h at medium brightness"},
@@ -152,7 +152,7 @@ PRODUCTS = [
     {
         "slug": "firn", "name": "Firn", "shape": "firn", "price": 189, "cordless": False,
         "type": {"de": "Pendelleuchte", "en": "Pendant lamp"},
-        "height": 200, "diameter": 346, "weight": 0.8, "print_h": 4, "layers": 833, "colours": ["frost", "sand", "stein"],
+        "height": 200, "diameter": 346, "weight": 0.8, "print_h": 5, "layers": 833, "colours": ["frost", "sand", "stein"],
         "material": {"de": "PLA transluzent, Aufhängung PETG", "en": "Translucent PLA, PETG mount"},
         "light": {"de": "E27 LED, 6 W, 2700 K (im Paket), max. 7 W LED", "en": "E27 LED, 6 W, 2700 K (included), max. 7 W LED"},
         "power": {"de": "Deckenanschluss mit Baldachin, Schutzklasse II, Installation durch Fachperson", "en": "Ceiling connection with canopy, class II, installation by an electrician"},
@@ -179,7 +179,7 @@ PRODUCTS = [
     {
         "slug": "grat", "name": "Grat", "shape": "grat", "price": 219, "cordless": False,
         "type": {"de": "Tischlampe", "en": "Table lamp"},
-        "height": 322, "diameter": 212, "weight": 1.1, "print_h": 5, "layers": 1250, "colours": ["stein", "nacht", "sand"],
+        "height": 322, "diameter": 212, "weight": 1.1, "print_h": 6, "layers": 1250, "colours": ["stein", "nacht", "sand"],
         "material": {"de": "PLA matt, Fassungsträger PETG", "en": "Matte PLA, PETG socket mount"},
         "light": {"de": "E27 LED, 4.9 W, 2700 K (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K (included), max. 7 W LED"},
         "power": {"de": "Eurostecker, Schnurschalter, Schutzklasse II", "en": "Europlug, inline switch, class II"},
@@ -206,7 +206,7 @@ PRODUCTS = [
     {
         "slug": "nebel", "name": "Nebel", "shape": "nebel", "price": 349, "cordless": False,
         "type": {"de": "Stehlampe", "en": "Floor lamp"},
-        "height": 1230, "diameter": 206, "weight": 3.4, "print_h": 18, "layers": 5000, "colours": ["frost", "stein"],
+        "height": 1230, "diameter": 206, "weight": 3.4, "print_h": 21, "layers": 5000, "colours": ["frost", "stein"],
         "material": {"de": "Vier gestapelte PLA-Segmente auf Aluminiumrohr, Fuss mit Stahlgewicht", "en": "Four stacked PLA segments on an aluminium tube, base with steel weight"},
         "light": {"de": "2× E27 LED, je 4.9 W, 2700 K (im Paket)", "en": "2× E27 LED, 4.9 W each, 2700 K (included)"},
         "power": {"de": "Eurostecker, Fussschalter, Schutzklasse II", "en": "Europlug, foot switch, class II"},
@@ -220,12 +220,12 @@ PRODUCTS = [
         "body": {
             "de": [
                 "Wer im Mittelland wohnt, kennt ihn: den Hochnebel, der im November tagelang liegt. Die Nebel-Stehlampe nimmt sein Licht mit, aber nur das Schöne daran.",
-                "Vier Segmente, zusammen 18 Stunden Druckzeit und 5000 Schichten, sitzen auf einem Aluminiumrohr. Zwei Birnen leuchten den ganzen Schaft gleichmässig aus.",
+                "Vier Segmente, zusammen 21 Stunden Druckzeit und 5000 Schichten, sitzen auf einem Aluminiumrohr. Zwei Birnen leuchten den ganzen Schaft gleichmässig aus.",
                 "Sie wird zerlegt geliefert und in fünf Minuten ohne Werkzeug zusammengesteckt. Ein Segment ersetzen wir einzeln, falls einmal etwas passiert.",
             ],
             "en": [
                 "Anyone who lives on the Swiss plateau knows it: the low fog that sits for days in November. The Nebel floor lamp takes its light and leaves the gloom.",
-                "Four segments, 18 hours of printing and 5,000 layers in total, sit on an aluminium tube. Two bulbs light the whole column evenly.",
+                "Four segments, 21 hours of printing and 5,000 layers in total, sit on an aluminium tube. Two bulbs light the whole column evenly.",
                 "It ships in parts and goes together in five minutes without tools. If anything happens, we replace a single segment.",
             ],
         },
@@ -288,7 +288,7 @@ PRODUCTS = [
         "slug": "moraene", "name": "Moräne", "shape": "moraene", "price": 460, "cordless": False, "series": "atelier",
         "edition": {"de": "Edition von 50, nummeriert", "en": "Edition of 50, numbered"},
         "type": {"de": "Tischlampe", "en": "Table lamp"},
-        "height": 352, "diameter": 236, "weight": 1.1, "print_h": 8, "layers": 1375, "colours": ["frost", "stein"],
+        "height": 352, "diameter": 236, "weight": 1.1, "print_h": 9, "layers": 1375, "colours": ["frost", "stein"],
         "material": {"de": "PLA, Fassungsträger PETG, Fuss aus geöltem Eichenholz", "en": "PLA, PETG socket mount, oiled oak base"},
         "light": {"de": "E27 LED, 4.9 W, 2700 K, dimmbar (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K, dimmable (included), max. 7 W LED"},
         "power": {"de": "Eurostecker, Drehdimmer im Kabel, Schutzklasse II", "en": "Europlug, inline rotary dimmer, class II"},
@@ -316,7 +316,7 @@ PRODUCTS = [
         "slug": "gletscher", "name": "Gletscher", "shape": "gletscher", "price": 540, "cordless": False, "series": "atelier",
         "edition": {"de": "Unikat: jedes Exemplar ist einmalig", "en": "One-off: every piece is unique"},
         "type": {"de": "Tischlampe, Unikat", "en": "Table lamp, one-off"},
-        "height": 322, "diameter": 214, "weight": 1.0, "print_h": 8, "layers": 1250, "colours": ["frost"],
+        "height": 322, "diameter": 214, "weight": 1.0, "print_h": 6, "layers": 1250, "colours": ["frost"],
         "material": {"de": "PLA transluzent, Fassungsträger PETG, Fuss aus geöltem Eichenholz", "en": "Translucent PLA, PETG socket mount, oiled oak base"},
         "light": {"de": "E27 LED, 4.9 W, 2700 K, dimmbar (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K, dimmable (included), max. 7 W LED"},
         "power": {"de": "Eurostecker, Drehdimmer im Kabel, Schutzklasse II", "en": "Europlug, inline rotary dimmer, class II"},
@@ -493,11 +493,11 @@ PAGES = {
         "how_h": {"de": "Wie eine Lampe entsteht", "en": "How a lamp is made"},
         "steps": {
             "de": [("Entwurf", "Jede Form entsteht im Atelier und wird über Wochen getestet, bis Licht und Proportion stimmen."),
-                   ("Druck", "Über Nacht baut der Drucker die Lampe in 0.24 mm dünnen Schichten auf. Ein Schirm braucht 7 bis 14 Stunden."),
+                   ("Druck", "Über Nacht baut der Drucker die Lampe in 0.24 mm dünnen Schichten auf. Ein Schirm braucht 4 bis 9 Stunden."),
                    ("Prüfung", "Jede Lampe wird vier Stunden eingeschaltet geprüft, bevor sie das Atelier verlässt."),
                    ("Montage", "Fassung, Kabel und Birne setzen wir von Hand ein. Dann notieren wir Schichtzahl und Datum auf der Karte.")],
             "en": [("Design", "Every shape starts in the studio and is tested for weeks until light and proportion are right."),
-                   ("Print", "Overnight the printer builds the lamp in 0.24 mm layers. One shade takes 7 to 14 hours."),
+                   ("Print", "Overnight the printer builds the lamp in 0.24 mm layers. One shade takes 4 to 9 hours."),
                    ("Test", "Every lamp runs switched on for four hours before it leaves the studio."),
                    ("Assembly", "We fit the socket, cable and bulb by hand, then write the layer count and date on the card.")],
         },
@@ -656,11 +656,11 @@ PAGES["unikate"] = {
     "steps": {
         "de": [("Code wählen", "Du schickst uns eine Zahl oder lässt sie uns zufällig ziehen."),
                ("Vorschau", "Innert 2 Tagen erhältst du Bilder deines Musters, ein- und ausgeschaltet."),
-               ("Druck", "Wir drucken deine Lampe in 8 Stunden, prüfen sie 4 Stunden und montieren sie von Hand."),
+               ("Druck", "Wir drucken deine Lampe in 6 Stunden, prüfen sie 4 Stunden und montieren sie von Hand."),
                ("Zertifikat", "Code, Druckdatum, Schichtzahl und eine Abwicklung deines Musters, signiert.")],
         "en": [("Choose a code", "Send us a number, or let us draw one at random."),
                ("Preview", "Within 2 days you get images of your pattern, switched on and off."),
-               ("Print", "We print your lamp in 8 hours, test it for 4 hours and assemble it by hand."),
+               ("Print", "We print your lamp in 6 hours, test it for 4 hours and assemble it by hand."),
                ("Certificate", "Code, print date, layer count and an unrolled drawing of your pattern, signed.")],
     },
 }

@@ -1,0 +1,343 @@
+<meta charset="utf-8">
+<title>Schichtlicht Formlabor</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a node canvas (left) wired into a night viewport (right), like a parametric design tool. */
+:root {
+  --canvas: #dcdfda; --dot: rgba(27, 33, 36, .14); --node: #f7f8f5; --node-head: #1b2124; --ink: #1b2124; --muted: #5a635f;
+  --line: #c9cec9; --wire: #8a918d; --glow: #c97a12; --ok: #2f7d4f; --warn: #b5541c;
+  --night-top: #15181b; --night-bot: #0b0d0f; --night-ink: #ecebe6;
+  --display: "Gloock", Georgia, serif; --body: "Hanken Grotesk", "Helvetica Neue", Arial, sans-serif; --mono: "IBM Plex Mono", ui-monospace, Menlo, monospace;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --canvas: #15181a; --dot: rgba(232, 234, 230, .09); --node: #1e2225; --node-head: #e8eae6; --ink: #e8eae6; --muted: #9ba39f;
+  --line: #30363a; --wire: #5f6763; --glow: #f0a640; --ok: #5bbd83; --warn: #f08a4b; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --canvas: #15181a; --dot: rgba(232, 234, 230, .09); --node: #1e2225; --node-head: #e8eae6; --ink: #e8eae6; --muted: #9ba39f;
+  --line: #30363a; --wire: #5f6763; --glow: #f0a640; --ok: #5bbd83; --warn: #f08a4b; color-scheme: dark; }
+* { box-sizing: border-box; }
+html, body { height: 100%; }
+body { margin: 0; background: var(--canvas); color: var(--ink); font: 400 14px/1.45 var(--body);
+  background-image: radial-gradient(var(--dot) 1px, transparent 1.2px); background-size: 18px 18px; }
+.app { display: grid; grid-template-columns: minmax(300px, 380px) minmax(0, 1fr); gap: 0; min-height: 100%;
+  padding-left: max(0px, env(safe-area-inset-left, 0px)); padding-right: max(0px, env(safe-area-inset-right, 0px)); }
+.rack { padding: 20px max(16px, env(safe-area-inset-left, 0px)) 28px max(16px, env(safe-area-inset-left, 0px)); display: grid; gap: 0; align-content: start; min-width: 0; }
+.brand { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; margin-bottom: 16px; }
+.brand h1 { font: 400 26px/1 var(--display); margin: 0; letter-spacing: .01em; }
+.brand h1 span { color: var(--glow); }
+.brand p { margin: 0; font: 400 11px/1.2 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .12em; }
+.node { background: var(--node); border: 1px solid var(--line); border-radius: 8px; overflow: hidden; min-width: 0; box-shadow: 0 1px 0 rgba(0,0,0,.04); }
+.node header { display: flex; justify-content: space-between; align-items: center; padding: 7px 12px; background: var(--node-head); color: var(--node);
+  font: 500 11px/1 var(--mono); letter-spacing: .1em; text-transform: uppercase; }
+.node header i { font-style: normal; opacity: .6; }
+.node .body { padding: 12px; display: grid; gap: 10px; }
+.wire { height: 22px; position: relative; }
+.wire::before { content: ""; position: absolute; left: 28px; top: 0; bottom: 0; border-left: 2px solid var(--wire); }
+.wire::after { content: ""; position: absolute; left: 24px; bottom: -4px; width: 10px; height: 10px; border-radius: 50%; background: var(--node); border: 2px solid var(--wire); z-index: 1; }
+.designs { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 6px; }
+.designs button { font: 500 13px/1 var(--body); padding: 9px 6px; border-radius: 5px; border: 1px solid var(--line); background: transparent; color: var(--ink); cursor: pointer; }
+.designs button[aria-pressed="true"] { background: var(--ink); color: var(--node); border-color: var(--ink); }
+.designs button small { display: block; font: 400 10px/1.2 var(--mono); color: var(--muted); margin-top: 3px; }
+.designs button[aria-pressed="true"] small { color: inherit; opacity: .7; }
+.slider { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 2px 10px; align-items: center; }
+.slider label { font-size: 12.5px; color: var(--muted); }
+.slider output { font: 500 12px/1 var(--mono); font-variant-numeric: tabular-nums; background: var(--canvas); padding: 3px 6px; border-radius: 3px; min-width: 52px; text-align: right; }
+.slider input { grid-column: 1 / -1; width: 100%; accent-color: var(--glow); margin: 0; }
+.code { display: flex; gap: 6px; }
+.code input { flex: 1; min-width: 0; font: 500 14px/1 var(--mono); padding: 9px 10px; border: 1px solid var(--line); border-radius: 5px; background: var(--canvas); color: var(--ink); }
+.btn { font: 600 13px/1 var(--body); padding: 9px 12px; border-radius: 5px; border: 1px solid var(--ink); background: var(--ink); color: var(--node); cursor: pointer; white-space: nowrap; }
+.btn.ghost { background: transparent; color: var(--ink); }
+.btn:focus-visible, button:focus-visible, input:focus-visible { outline: 2px solid var(--glow); outline-offset: 2px; }
+.hint { font-size: 12px; color: var(--muted); margin: 0; }
+.stats { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 8px 12px; margin: 0; }
+.stats div { display: grid; gap: 2px; }
+.stats dt { font: 400 10.5px/1.2 var(--mono); text-transform: uppercase; letter-spacing: .08em; color: var(--muted); }
+.stats dd { margin: 0; font: 500 15px/1.2 var(--mono); font-variant-numeric: tabular-nums; }
+.verdict { display: flex; align-items: center; gap: 8px; font-weight: 600; font-size: 13px; }
+.verdict::before { content: ""; width: 10px; height: 10px; border-radius: 50%; background: currentColor; }
+.verdict.ok { color: var(--ok); } .verdict.warn { color: var(--warn); }
+.bar { height: 6px; border-radius: 3px; background: var(--canvas); overflow: hidden; }
+.bar span { display: block; height: 100%; background: var(--ok); transition: width .2s, background .2s; }
+pre { margin: 0; font: 400 11.5px/1.5 var(--mono); background: var(--canvas); padding: 10px; border-radius: 5px; white-space: pre-wrap; word-break: break-all; }
+.view { position: sticky; top: 0; height: 100vh; height: 100dvh; min-height: 420px; background: linear-gradient(var(--night-top), var(--night-bot)); color: var(--night-ink); overflow: hidden; }
+.view.day { background: linear-gradient(#eef0ec, #d9dcd6); color: #1b2124; }
+.view canvas { display: block; width: 100%; height: 100%; touch-action: none; cursor: grab; }
+.view canvas:active { cursor: grabbing; }
+.hud { position: absolute; left: 0; right: 0; top: 0; display: flex; justify-content: space-between; gap: 12px; align-items: start;
+  padding: calc(16px + env(safe-area-inset-top, 0px)) max(16px, env(safe-area-inset-right, 0px)) 0 20px; pointer-events: none; }
+.hud h2 { margin: 0; font: 400 clamp(28px, 4vw, 48px)/1 var(--display); }
+.hud p { margin: 6px 0 0; font: 400 11px/1.4 var(--mono); letter-spacing: .08em; text-transform: uppercase; opacity: .7; }
+.hud .toggle { pointer-events: auto; font: 500 12px/1 var(--body); padding: 9px 13px; border-radius: 999px; border: 0; cursor: pointer; background: var(--night-ink); color: var(--night-bot); }
+.view.day .hud .toggle { background: #1b2124; color: #eef0ec; }
+.foot { position: absolute; left: 20px; bottom: calc(14px + env(safe-area-inset-bottom, 0px)); font: 400 11px/1.4 var(--mono); opacity: .55; pointer-events: none; }
+.err { position: absolute; inset: auto 20px 50px 20px; font: 400 13px/1.4 var(--body); }
+@media (max-width: 760px) {
+  .app { grid-template-columns: 1fr; }
+  .view { position: relative; height: 62vh; height: 62dvh; order: -1; }
+}
+@media (prefers-reduced-motion: reduce) { .bar span { transition: none; } }
+</style>
+
+<div class="app">
+  <aside class="rack" aria-label="Parameter">
+    <div class="brand"><h1>Schicht<span>licht</span></h1><p>Formlabor</p></div>
+
+    <section class="node" aria-labelledby="n1"><header id="n1">Form <i>01</i></header>
+      <div class="body"><div class="designs" id="designs" role="group" aria-label="Lampenform"></div></div></section>
+    <div class="wire" aria-hidden="true"></div>
+
+    <section class="node" aria-labelledby="n2"><header id="n2">Parameter <i>02</i></header>
+      <div class="body" id="params"></div></section>
+    <div class="wire" aria-hidden="true"></div>
+
+    <section class="node" id="codeNode" aria-labelledby="n3"><header id="n3">Unikat-Code <i>03</i></header>
+      <div class="body">
+        <div class="code"><label class="hint" for="code" hidden>Code</label>
+          <input id="code" inputmode="text" maxlength="16" placeholder="z. B. 14062019" aria-label="Code">
+          <button class="btn ghost" type="button" id="dice">Zufall</button></div>
+        <p class="hint">Jeder Code ergibt ein eigenes Muster. Gleicher Code, gleiche Lampe, auch in <code>edition.py</code>.</p>
+      </div></section>
+    <div class="wire" aria-hidden="true" id="codeWire"></div>
+
+    <section class="node" aria-labelledby="n4"><header id="n4">Druckbarkeit <i>04</i></header>
+      <div class="body">
+        <div class="verdict ok" id="verdict">Druckbar im Spiralmodus</div>
+        <div class="bar" aria-hidden="true"><span id="bar"></span></div>
+        <dl class="stats">
+          <div><dt>Überhang p99</dt><dd id="s-over">–</dd></div>
+          <div><dt>Überhang max</dt><dd id="s-max">–</dd></div>
+          <div><dt>Höhe × Ø</dt><dd id="s-size">–</dd></div>
+          <div><dt>Schichten</dt><dd id="s-layers">–</dd></div>
+          <div><dt>Filament</dt><dd id="s-gram">–</dd></div>
+          <div><dt>Druckzeit</dt><dd id="s-time">–</dd></div>
+        </dl>
+        <p class="hint">Grenze 50° für saubere Wände. Annahme: 1 Linie à 1.0 mm, 0.24 mm Schichten, 40 mm/s.</p>
+      </div></section>
+    <div class="wire" aria-hidden="true"></div>
+
+    <section class="node" aria-labelledby="n5"><header id="n5">Export <i>05</i></header>
+      <div class="body">
+        <pre id="cli"></pre>
+        <div><button class="btn" type="button" id="copy">Befehl kopieren</button></div>
+        <p class="hint">Im Ordner <code>lightshop/design</code> ausführen. Ergibt eine STL-Datei für Bambu Studio (Spiralvase, 0 Bodenschichten).</p>
+      </div></section>
+  </aside>
+
+  <main class="view" id="view">
+    <canvas id="c" aria-label="3D-Ansicht der Lampe. Ziehen zum Drehen, Mausrad zum Zoomen."></canvas>
+    <div class="hud"><div><h2 id="title">Aare</h2><p id="subtitle">Tischlampe</p></div>
+      <button class="toggle" type="button" id="light" aria-pressed="true">Licht aus</button></div>
+    <p class="foot">Ziehen: drehen · Rad: zoomen · Doppelklick: zurücksetzen</p>
+  </main>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script>
+(function () {
+  const TAU = Math.PI * 2;
+  const clamp = (x, a, b) => Math.min(b, Math.max(a, x));
+  const smooth = (a, b, x) => { const t = clamp((x - a) / (b - a), 0, 1); return t * t * (3 - 2 * t); };
+  function mulberry32(a) { return function () { a |= 0; a = a + 0x6D2B79F5 | 0; let t = Math.imul(a ^ a >>> 15, 1 | a);
+    t = t + Math.imul(t ^ t >>> 7, 61 | t) ^ t; return ((t ^ t >>> 14) >>> 0) / 4294967296; }; }
+  const CRC = (() => { const t = []; for (let n = 0; n < 256; n++) { let c = n; for (let k = 0; k < 8; k++) c = c & 1 ? 0xEDB88320 ^ (c >>> 1) : c >>> 1; t[n] = c >>> 0; } return t; })();
+  function crc32(str) { const b = new TextEncoder().encode(str); let c = 0xFFFFFFFF; for (const x of b) c = CRC[(c ^ x) & 255] ^ (c >>> 8); return (c ^ 0xFFFFFFFF) >>> 0; }
+  const seedFor = (design, code) => crc32(design + ':' + code) % 2000000000;
+  const wrap = a => Math.atan2(Math.sin(a), Math.cos(a));
+  const collar = (z, p) => p.collar > 0 ? smooth(p.collar, p.collar + p.collar_blend, z) : 1;
+
+  // Field functions: identical to lampgen.py. r(theta, z) for one point, with per-design precompute.
+  const D = {
+    aare: { title: 'Aare', kind: 'Tischlampe', p: { height: 320, r_base: 88, r_belly: 104, belly_power: 1.2, ribs: 48, twist: 0.12, rib_depth: 4.5, rib_sharpness: 0.7, collar: 10, collar_blend: 14 },
+      ui: { height: [200, 340, 5], r_belly: [80, 130, 1], ribs: [12, 96, 1], twist: [-0.5, 0.5, 0.01], rib_depth: [0, 8, 0.1], rib_sharpness: [0.3, 1.5, 0.05], belly_power: [0.5, 3, 0.05] },
+      f(th, z, p) { const t = z / p.height; const prof = p.r_base + (p.r_belly - p.r_base) * Math.pow(Math.sin(Math.PI * clamp(t, 0, 1)), p.belly_power);
+        let rib = Math.sin(p.ribs * (th + TAU * p.twist * t)); rib = Math.sign(rib) * Math.pow(Math.abs(rib), p.rib_sharpness);
+        const amp = p.rib_depth * (0.35 + 0.65 * Math.sin(Math.PI * clamp(t, 0, 1))); return prof + amp * rib * collar(z, p); } },
+    firn: { title: 'Firn', kind: 'Pendelleuchte', pendant: true, p: { height: 200, r_top: 34, r_rim: 170, bell_power: 1.6, pleats: 96, pleat_depth: 3.2, pleat_growth: 1.4, pleat_wave: 2.5, collar: 12, collar_blend: 18 },
+      ui: { height: [140, 300, 5], r_rim: [100, 170, 1], bell_power: [0.8, 3, 0.05], pleats: [24, 160, 1], pleat_depth: [0, 6, 0.1], pleat_growth: [0.3, 3, 0.05], pleat_wave: [0, 6, 0.1] },
+      f(th, z, p) { const h = p.height, t = clamp(z / h, 0, 1); const prof = p.r_top + (p.r_rim - p.r_top) * Math.pow(Math.sin(t * Math.PI / 2), p.bell_power);
+        const pleat = Math.sin(p.pleats * th + p.pleat_wave * Math.sin(3 * th) * t); return prof + p.pleat_depth * Math.pow(t, p.pleat_growth) * pleat * collar(z, p); } },
+    grat: { title: 'Grat', kind: 'Tischlampe', p: { height: 300, r_base: 98, r_top: 84, bulge: 14, sides: 14, folds: 3, fold_angle: 0.38, collar: 10, collar_blend: 14 },
+      ui: { height: [200, 340, 5], r_top: [60, 120, 1], bulge: [0, 30, 1], sides: [5, 24, 1], folds: [1, 8, 1], fold_angle: [0, 0.8, 0.01] },
+      f(th, z, p) { const h = p.height, k = p.sides, t = z / h; const zig = 2 * Math.abs(((t * p.folds) % 1) - 0.5);
+        const rot = p.fold_angle * (zig - 0.5) * collar(z, p); const seg = TAU / k; const a = ((th + rot) % seg + seg) % seg - seg / 2;
+        const poly = Math.cos(Math.PI / k) / Math.cos(a); const prof = p.r_base + (p.r_top - p.r_base) * t + p.bulge * Math.sin(Math.PI * clamp(t, 0, 1));
+        return prof * (1 + (poly - 1) * collar(z, p)); } },
+    bise: { title: 'Bise', kind: 'Atelier-Serie', p: { height: 320, r_mid: 92, r_swing: 10, n: 20, turns: 2.0, amp: 5.0, collar: 10, collar_blend: 14 },
+      ui: { height: [200, 340, 5], r_mid: [70, 120, 1], r_swing: [-20, 25, 1], n: [6, 40, 1], turns: [0, 5, 0.05], amp: [0, 9, 0.1] },
+      f(th, z, p) { const t = z / p.height; const prof = p.r_mid - p.r_swing * Math.cos(Math.PI * (2 * t - 1));
+        const w = Math.sin(p.n * th + TAU * p.turns * t) * Math.cos(p.n * th - TAU * p.turns * t); return prof + p.amp * w * collar(z, p); } },
+    moraene: { title: 'Moräne', kind: 'Edition von 50', seeded: true, p: { height: 330, r_base: 92, r_belly: 112, ribs: 56, twist: 0.06, rib_min: 0.6, rib_max: 8.0, reach: 85, warp: 4.0, attractors: 4, seed: 7, collar: 10, collar_blend: 14 },
+      ui: { height: [200, 340, 5], r_belly: [85, 130, 1], ribs: [16, 96, 1], twist: [-0.3, 0.3, 0.01], rib_max: [1, 12, 0.1], reach: [20, 160, 1], warp: [0, 8, 0.1], attractors: [1, 10, 1] },
+      prep(p) { const r = mulberry32(p.seed); p._att = []; for (let i = 0; i < p.attractors; i++) { const a = r() * TAU; p._att.push([a, (0.25 + 0.6 * r()) * p.height]); } },
+      f(th, z, p) { const t = z / p.height; const prof = p.r_base + (p.r_belly - p.r_base) * Math.pow(Math.sin(Math.PI * clamp(t, 0, 1)), 0.9);
+        let infl = 0; for (const [at, az] of p._att) { const d = Math.hypot(wrap(th - at) * prof, z - az); infl = Math.max(infl, Math.exp(-Math.pow(d / p.reach, 2))); }
+        const ph = p.ribs * (th + TAU * p.twist * t) + p.warp * infl; return prof + (p.rib_min + (p.rib_max - p.rib_min) * infl) * Math.sin(ph) * collar(z, p); } },
+    gletscher: { title: 'Gletscher', kind: 'Unikat', seeded: true, p: { height: 300, r_base: 96, r_top: 82, bulge: 18, cells: 70, stretch: 1.35, groove_width: 4.6, groove_depth: 2.6, dome: 1.8, cushion_scale: 34, seed: 11, collar: 10, collar_blend: 14 },
+      ui: { height: [200, 340, 5], bulge: [0, 30, 1], cells: [12, 160, 1], stretch: [0.6, 2.5, 0.05], groove_width: [2, 8, 0.1], groove_depth: [0, 4, 0.1], dome: [0, 4, 0.1] },
+      prep(p) { const r = mulberry32(p.seed); p._pts = []; for (let i = 0; i < p.cells; i++) { const a = r() * TAU; p._pts.push([a, (-0.05 + 1.1 * r()) * p.height]); } },
+      f(th, z, p) { const t = z / p.height; const prof = p.r_base + (p.r_top - p.r_base) * t + p.bulge * Math.sin(Math.PI * clamp(t, 0, 1));
+        let d1 = Infinity, d2 = Infinity; for (const [a, b] of p._pts) { const d = Math.hypot(wrap(th - a) * p.r_base, (z - b) * p.stretch);
+          if (d < d1) { d2 = d1; d1 = d; } else if (d < d2) d2 = d; }
+        const groove = Math.exp(-Math.pow((d2 - d1) / p.groove_width, 2)); const cushion = clamp(d1 / p.cushion_scale, 0, 1);
+        return prof - (p.groove_depth * groove + p.dome * cushion) * collar(z, p); } },
+    nebel: { title: 'Nebel', kind: 'Stehlampe, Segment', p: { height: 300, radius: 92, waist: 7, n1: 18, n2: 18, t1: 1.0, t2: 1.0, amp: 4.0, collar: 10, collar_blend: 14 },
+      ui: { radius: [60, 120, 1], waist: [-15, 15, 1], n1: [4, 40, 1], n2: [4, 40, 1], t1: [-3, 3, 0.05], t2: [-3, 3, 0.05], amp: [0, 8, 0.1] },
+      f(th, z, p) { const t = z / p.height; const prof = p.radius + p.waist * Math.cos(TAU * t);
+        return prof + p.amp * (Math.sin(p.n1 * th + TAU * p.t1 * t) + Math.sin(p.n2 * th - TAU * p.t2 * t)) / 2 * collar(z, p); } },
+    glut: { title: 'Glut', kind: 'Nachtlicht', p: { height: 140, r_max: 60, s0: 0.2, s1: 0.88, cells: 16, rows: 5, quilt: 3.0, collar: 8, collar_blend: 10 },
+      ui: { height: [90, 200, 5], r_max: [40, 80, 1], s1: [0.6, 0.95, 0.01], cells: [4, 32, 1], rows: [1, 10, 1], quilt: [0, 6, 0.1] },
+      f(th, z, p) { const t = clamp(z / p.height, 0, 1); const s = p.s0 + (p.s1 - p.s0) * t; const prof = p.r_max * Math.pow(Math.sin(Math.PI * s), 0.8);
+        const q = Math.abs(Math.sin(p.cells * th / 2)) * Math.abs(Math.sin(Math.PI * p.rows * t)); return prof + p.quilt * (q - 0.5) * collar(z, p) * Math.sin(Math.PI * t); } },
+  };
+  const LABEL = { height: 'Höhe mm', r_belly: 'Bauch-Radius', ribs: 'Rippen', twist: 'Drehung (Umdrehungen)', rib_depth: 'Rippentiefe', rib_sharpness: 'Rippenform', belly_power: 'Bauchform',
+    r_rim: 'Rand-Radius', bell_power: 'Glockenform', pleats: 'Falten', pleat_depth: 'Faltentiefe', pleat_growth: 'Faltenwachstum', pleat_wave: 'Faltenwelle',
+    r_top: 'Radius oben', bulge: 'Bauch', sides: 'Kanten', folds: 'Faltungen', fold_angle: 'Faltwinkel', r_mid: 'Radius', r_swing: 'Taille', n: 'Maschen', turns: 'Umdrehungen', amp: 'Tiefe',
+    rib_max: 'Rippentiefe max', reach: 'Reichweite Attraktor', warp: 'Ablenkung', attractors: 'Attraktorpunkte', cells: 'Zellen', stretch: 'Streckung', groove_width: 'Spaltenbreite',
+    groove_depth: 'Spaltentiefe', dome: 'Wölbung', radius: 'Radius', waist: 'Taille', n1: 'Welle 1', n2: 'Welle 2', t1: 'Drall 1', t2: 'Drall 2', r_max: 'Radius max', s1: 'Schliessen oben', rows: 'Reihen', quilt: 'Polster' };
+
+  let cur = 'aare', P = {}, on = true, code = '';
+  const NT = 480, DZ = 2;
+
+  // ---------- three.js scene
+  const canvas = document.getElementById('c'), view = document.getElementById('view');
+  let renderer;
+  try { renderer = new THREE.WebGLRenderer({ canvas, antialias: true, alpha: true }); renderer.setClearColor(0x000000, 0); }
+  catch (e) { view.insertAdjacentHTML('beforeend', '<p class="err">Die 3D-Ansicht braucht WebGL. Die Werte links funktionieren trotzdem.</p>'); }
+  const scene = new THREE.Scene();
+  const cam = new THREE.PerspectiveCamera(28, 1, 10, 10000);
+  const group = new THREE.Group(); scene.add(group);
+  const mat = new THREE.ShaderMaterial({
+    side: THREE.DoubleSide, extensions: { derivatives: true },
+    uniforms: { uOn: { value: 1 }, uLight: { value: new THREE.Vector3() }, uH: { value: 300 }, uKey: { value: new THREE.Vector3(-0.6, 0.5, 0.8).normalize() } },
+    vertexShader: 'varying vec3 vN; varying vec3 vP; varying vec3 vW; varying float vZ; attribute float zz; void main(){ vZ = zz; vN = normalize(normalMatrix*normal); vec4 w = modelMatrix*vec4(position,1.); vW = w.xyz; vec4 mv = viewMatrix*w; vP = mv.xyz; gl_Position = projectionMatrix*mv; }',
+    fragmentShader: `uniform float uOn; uniform vec3 uLight; uniform float uH; uniform vec3 uKey; varying vec3 vN; varying vec3 vP; varying vec3 vW; varying float vZ;
+      void main(){ vec3 n = normalize(vN); vec3 v = normalize(-vP); bool back = !gl_FrontFacing; if(back) n = -n;
+        vec3 albedo = vec3(0.88,0.84,0.77); float layer = 0.94 + 0.06*sin(vZ*6.2831/1.1);
+        vec3 key = normalize((viewMatrix*vec4(uKey,0.)).xyz); float diff = max(dot(n,key),0.); float fill = 0.5+0.5*n.y; float rim = pow(1.-max(dot(n,v),0.),3.);
+        vec3 studio = albedo*(0.20 + 0.75*diff + 0.25*fill) + 0.10*rim;
+        vec3 L = normalize(vW - uLight); float d = length(vW - uLight); vec3 nw = normalize(cross(dFdx(vW), dFdy(vW))); if(dot(nw, vW-uLight) < 0.) nw = -nw;
+        float through = max(dot(nw, L), 0.); float fall = 1.0/(1.0 + pow(d/(uH*0.55), 2.2));
+        vec3 glow = vec3(1.0,0.70,0.36)*(0.06 + 1.5*pow(through,1.6))*fall; if(back) glow *= 2.2;
+        vec3 col = mix(studio, albedo*0.04 + glow, uOn)*layer;
+        col = col*(2.51*col+0.03)/(col*(2.43*col+0.59)+0.14);
+        gl_FragColor = vec4(pow(clamp(col,0.,1.), vec3(1./2.2)), 1.); }`,
+  });
+  const base = new THREE.Mesh(new THREE.CylinderGeometry(1, 1, 22, 96), new THREE.MeshBasicMaterial({ color: 0x15191c }));
+  const cable = new THREE.Mesh(new THREE.CylinderGeometry(1.6, 1.6, 900, 8), new THREE.MeshBasicMaterial({ color: 0x15191c }));
+  let mesh = null;
+  let yaw = 0.5, pitch = 0.18, zoom = 1;
+
+  function build() {
+    const d = D[cur]; const p = Object.assign({}, d.p, P);
+    if (d.seeded && code) p.seed = seedFor(cur, code);
+    if (d.prep) d.prep(p);
+    const nz = Math.ceil(p.height / DZ) + 1, n = nz * NT;
+    const pos = new Float32Array(n * 3), zz = new Float32Array(n), R = new Float32Array(n);
+    for (let j = 0; j < nz; j++) { const z = Math.min(j * DZ, p.height);
+      for (let i = 0; i < NT; i++) { const th = i / NT * TAU, r = d.f(th, z, p), k = j * NT + i; R[k] = r;
+        pos[3 * k] = r * Math.cos(th); pos[3 * k + 1] = z; pos[3 * k + 2] = -r * Math.sin(th); zz[k] = z; } }
+    const idx = new Uint32Array((nz - 1) * NT * 6); let q = 0;
+    for (let j = 0; j < nz - 1; j++) for (let i = 0; i < NT; i++) { const a = j * NT + i, b = j * NT + (i + 1) % NT, c = a + NT, e = b + NT;
+      idx[q++] = a; idx[q++] = e; idx[q++] = b; idx[q++] = a; idx[q++] = c; idx[q++] = e; }
+    const g = new THREE.BufferGeometry(); g.setAttribute('position', new THREE.BufferAttribute(pos, 3)); g.setAttribute('zz', new THREE.BufferAttribute(zz, 1));
+    g.setIndex(new THREE.BufferAttribute(idx, 1)); g.computeVertexNormals();
+    if (mesh) { group.remove(mesh); mesh.geometry.dispose(); }
+    mesh = new THREE.Mesh(g, mat);
+    if (d.pendant) { mesh.rotation.x = Math.PI; mesh.position.y = p.height; }
+    group.add(mesh);
+    let rmax = 0, area = 0, circ = 0; for (let k = 0; k < n; k++) rmax = Math.max(rmax, R[k]);
+    // printability: slope from vertical between rings, and area for filament
+    const sl = [];
+    for (let j = 0; j < nz - 1; j++) { const dz = Math.min((j + 1) * DZ, p.height) - j * DZ; let ring = 0;
+      for (let i = 0; i < NT; i++) { const k = j * NT + i; sl.push(Math.atan(Math.abs(R[k + NT] - R[k]) / dz) * 180 / Math.PI);
+        const r1 = R[k], r2 = R[j * NT + (i + 1) % NT]; ring += Math.hypot(r2 * Math.cos(TAU / NT) - r1, r2 * Math.sin(TAU / NT)); }
+      circ += ring; area += ring * Math.hypot(dz, 0); }
+    sl.sort((a, b) => a - b); const p99 = sl[Math.floor(sl.length * 0.99)], mx = sl[sl.length - 1];
+    const layers = Math.round(p.height / 0.24), grams = area * 1.0 / 1000 * 1.24, hours = (circ / (nz - 1)) * layers / 40 / 3600;
+    stats({ p99, mx, h: p.height, dia: 2 * rmax, layers, grams, hours });
+    group.remove(base); group.remove(cable);
+    if (d.pendant) { cable.position.y = p.height + 450; group.add(cable); }
+    else if (cur !== 'glut') { base.scale.set(rmax * 0.82, 1, rmax * 0.82); base.position.y = -11; group.add(base); }
+    mat.uniforms.uLight.value.set(0, d.pendant ? p.height * 0.38 : p.height * 0.45, 0); mat.uniforms.uH.value = p.height;
+    group.userData = { h: p.height, r: rmax };
+    cli(p); frame();
+  }
+
+  function stats(s) {
+    const ok = s.p99 <= 50;
+    const v = document.getElementById('verdict'); v.className = 'verdict ' + (ok ? 'ok' : 'warn');
+    v.textContent = ok ? 'Druckbar im Spiralmodus' : 'Zu steil: Werte zurücknehmen';
+    const bar = document.getElementById('bar'); bar.style.width = clamp(s.p99 / 70 * 100, 2, 100) + '%'; bar.style.background = ok ? 'var(--ok)' : 'var(--warn)';
+    document.getElementById('s-over').textContent = s.p99.toFixed(0) + '°';
+    document.getElementById('s-max').textContent = s.mx.toFixed(0) + '°';
+    document.getElementById('s-size').textContent = Math.round(s.h) + ' × ' + Math.round(s.dia) + ' mm';
+    document.getElementById('s-layers').textContent = s.layers.toLocaleString('de-CH');
+    document.getElementById('s-gram').textContent = '≈ ' + Math.round(s.grams) + ' g';
+    document.getElementById('s-time').textContent = '≈ ' + s.hours.toFixed(1) + ' h';
+  }
+
+  function cli(p) {
+    const d = D[cur]; const ch = Object.keys(d.ui).filter(k => P[k] !== undefined && P[k] !== d.p[k]).map(k => k + '=' + P[k]);
+    let cmd;
+    if (d.seeded && code) cmd = cur === 'gletscher' ? `python3 edition.py gletscher --code ${code}` : `python3 lampgen.py ${cur} --set seed=${p.seed}`;
+    else cmd = `python3 lampgen.py ${cur}`;
+    if (ch.length) cmd += (cmd.includes('--set') ? ' ' : ' --set ') + ch.join(' ');
+    if (d.seeded && code && cur === 'gletscher' && ch.length) cmd = `python3 lampgen.py gletscher --set seed=${p.seed} ${ch.join(' ')}`;
+    document.getElementById('cli').textContent = cmd.startsWith('python3 edition.py') ? cmd + ' --pdf' : cmd + ' --res fine';
+  }
+
+  function frame() {
+    if (!renderer) return;
+    const w = view.clientWidth, h = view.clientHeight; renderer.setPixelRatio(Math.min(2, window.devicePixelRatio || 1)); renderer.setSize(w, h, false);
+    cam.aspect = w / h; cam.updateProjectionMatrix();
+    const { h: H, r } = group.userData; const d = D[cur];
+    const fitH = d.pendant ? H * 1.6 : H + 40, mid = d.pendant ? H * 0.55 : H / 2 - 10;
+    const dist = Math.max(fitH * 1.6, r * 3.0 / cam.aspect) / (2 * Math.tan(THREE.MathUtils.degToRad(14))) / zoom;
+    cam.position.set(Math.sin(yaw) * Math.cos(pitch) * dist, mid + Math.sin(pitch) * dist, Math.cos(yaw) * Math.cos(pitch) * dist);
+    cam.lookAt(0, mid, 0); renderer.render(scene, cam);
+  }
+
+  // ---------- UI
+  const dWrap = document.getElementById('designs');
+  for (const k of Object.keys(D)) { const b = document.createElement('button'); b.type = 'button'; b.dataset.k = k;
+    b.innerHTML = D[k].title + '<small>' + D[k].kind + '</small>'; b.setAttribute('aria-pressed', k === cur);
+    b.addEventListener('click', () => select(k)); dWrap.appendChild(b); }
+
+  function select(k) {
+    cur = k; P = {}; code = ''; document.getElementById('code').value = '';
+    dWrap.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', b.dataset.k === k));
+    document.getElementById('title').textContent = D[k].title; document.getElementById('subtitle').textContent = D[k].kind;
+    const codeNode = document.getElementById('codeNode'); codeNode.hidden = !D[k].seeded; document.getElementById('codeWire').hidden = !D[k].seeded;
+    const box = document.getElementById('params'); box.innerHTML = '';
+    for (const [key, [min, max, step]] of Object.entries(D[k].ui)) {
+      const id = 'p-' + key, val = D[k].p[key];
+      const row = document.createElement('div'); row.className = 'slider';
+      row.innerHTML = `<label for="${id}">${LABEL[key] || key}</label><output for="${id}" id="${id}-o">${val}</output><input type="range" id="${id}" min="${min}" max="${max}" step="${step}" value="${val}">`;
+      const inp = row.querySelector('input'), out = row.querySelector('output');
+      let raf = 0; inp.addEventListener('input', () => { P[key] = +inp.value; out.textContent = inp.value; cancelAnimationFrame(raf); raf = requestAnimationFrame(build); });
+      box.appendChild(row);
+    }
+    zoom = 1; build();
+  }
+
+  document.getElementById('code').addEventListener('input', e => { code = e.target.value.trim(); build(); });
+  document.getElementById('dice').addEventListener('click', () => { code = String(Math.floor(Math.random() * 1e8)); document.getElementById('code').value = code; build(); });
+  document.getElementById('light').addEventListener('click', e => { on = !on; mat.uniforms.uOn.value = on ? 1 : 0; view.classList.toggle('day', !on);
+    e.currentTarget.setAttribute('aria-pressed', on); e.currentTarget.textContent = on ? 'Licht aus' : 'Licht an'; frame(); });
+  document.getElementById('copy').addEventListener('click', e => { const t = document.getElementById('cli').textContent, b = e.currentTarget;
+    navigator.clipboard.writeText(t).then(() => { b.textContent = 'Kopiert'; setTimeout(() => b.textContent = 'Befehl kopieren', 1500); })
+      .catch(() => { const r = document.createRange(); r.selectNodeContents(document.getElementById('cli')); const s = getSelection(); s.removeAllRanges(); s.addRange(r); }); });
+
+  let drag = null;
+  canvas.addEventListener('pointerdown', e => { drag = { x: e.clientX, y: e.clientY, yaw, pitch }; canvas.setPointerCapture(e.pointerId); });
+  canvas.addEventListener('pointermove', e => { if (!drag) return; yaw = drag.yaw - (e.clientX - drag.x) * 0.008; pitch = clamp(drag.pitch + (e.clientY - drag.y) * 0.006, -0.3, 1.2); frame(); });
+  canvas.addEventListener('pointerup', () => drag = null);
+  canvas.addEventListener('wheel', e => { e.preventDefault(); zoom = clamp(zoom * Math.exp(-e.deltaY * 0.001), 0.6, 3); frame(); }, { passive: false });
+  canvas.addEventListener('dblclick', () => { yaw = 0.5; pitch = 0.18; zoom = 1; frame(); });
+  window.addEventListener('resize', frame);
+  select('aare');
+})();
+</script>
