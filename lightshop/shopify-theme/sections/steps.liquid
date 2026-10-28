@@ -1,0 +1,22 @@
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h2>{{ section.settings.heading }}</h2></div>
+    <ol class="steps">
+      {%- for block in section.blocks -%}
+        <li {{ block.shopify_attributes }}><h3>{{ block.settings.title }}</h3><p>{{ block.settings.text }}</p></li>
+      {%- endfor -%}
+    </ol>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Steps",
+  "settings": [ { "type": "text", "id": "heading", "label": "Heading", "default": "Wie eine Lampe entsteht" } ],
+  "blocks": [ { "type": "step", "name": "Step", "settings": [
+    { "type": "text", "id": "title", "label": "Title", "default": "Druck" },
+    { "type": "textarea", "id": "text", "label": "Text", "default": "Über Nacht baut der Drucker die Lampe in 0.24 mm dünnen Schichten auf." } ] } ],
+  "max_blocks": 4,
+  "presets": [ { "name": "Steps", "blocks": [ { "type": "step" }, { "type": "step" }, { "type": "step" }, { "type": "step" } ] } ]
+}
+{% endschema %}

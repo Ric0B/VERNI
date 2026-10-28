@@ -1,0 +1,16 @@
+<section class="section"><div class="wrap prose">
+  <h1>{{ 'customer.login' | t }}</h1>
+  {%- form 'customer_login', class: 'form' -%}
+    {{ form.errors | default_errors }}
+    <label for="LoginEmail">{{ 'contact.email' | t }}<input id="LoginEmail" type="email" name="customer[email]" autocomplete="email" required></label>
+    <label for="LoginPassword">{{ 'customer.password' | t }}<input id="LoginPassword" type="password" name="customer[password]" autocomplete="current-password" required></label>
+    <button class="btn" type="submit">{{ 'customer.login' | t }}</button>
+  {%- endform -%}
+  <p><a href="{{ routes.account_register_url }}">{{ 'customer.register' | t }}</a></p>
+  {%- form 'recover_customer_password', class: 'form' -%}
+    {{ form.errors | default_errors }}
+    {%- if form.posted_successfully? -%}<p class="form-msg">{{ 'customer.recover_sent' | t }}</p>{%- endif -%}
+    <label for="RecoverEmail">{{ 'customer.recover' | t }}<input id="RecoverEmail" type="email" name="email" autocomplete="email"></label>
+    <button class="btn ghost" type="submit">{{ 'customer.recover' | t }}</button>
+  {%- endform -%}
+</div></section>

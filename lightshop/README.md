@@ -2,16 +2,23 @@
 
 Overnight work from 28–29 Oct 2026. Working brand name **Schichtlicht** ("layer light"); see the name options.
 
-| # | What | File |
+| # | What | Where |
 |---|---|---|
 | 1 | Suppliers with prices: filament, electrics, bulbs, packaging, shipping, sales channels | `research/01-suppliers.md` |
-| 2 | Market research: competitors, price gap, trends, 6-lamp range, costs per lamp, revenue scenarios, paid ads verdict | `research/02-market-and-range.md` |
-| 2b | Legal checklist (Swiss low-voltage ordinance NEV, e-waste fee vRG, EU product safety GPSR, EU e-waste WEEE). **Read this early** | `research/03-legal-checklist.md` |
+| 2 | Market research: competitors, price gap, trends, range, costs per lamp, revenue scenarios, paid ads verdict | `research/02-market-and-range.md` |
+| 2b | Legal checklist (NEV, vRG, GPSR, WEEE) | `research/03-legal-checklist.md` |
 | 2c | Brand names | `research/04-brand-names.md` |
-| 3 | Draft website, German + English, built-in SEO | `site/` (built site in `site/public/`) |
-| 3b | Keyword map, article plan, link building | `site/seo/keywords.md` |
-| 3c | Moving it to Shopify, step by step, with a product import file | `site/SHOPIFY.md`, `site/shopify/products.csv` |
-| 4 | Social media plan: 90 days to launch, formats, calendar, captions, ad budget | `social/campaign-plan.md` |
+| 3 | **Parametric design system**: 10 lamp formulas, STL export, printability check | `design/lampgen.py`, `design/README.md` |
+| 3b | Bases, mounts and couplers (PETG), sized from each shade | `design/parts.py` |
+| 3c | One-offs and numbered editions with registry and certificate PDF | `design/edition.py`, `samples/certificate-example.pdf` |
+| 3d | **Formlabor**: in-browser configurator with live 3D (private page) | `design/formlabor.html` · https://claude.ai/artifact/9G4yVFCJJCnMvVcZBLtnwQ |
+| 4 | Draft website, German + English, renders, Atelier series, one-off page, 13 articles, SEO | `site/` · preview https://claude.ai/artifact/9HEDNLgLsuSYMm6TYPxPck |
+| 4b | Keyword map, article plan, link building | `site/seo/keywords.md` |
+| 4c | **Shopify theme** (Online Store 2.0, 0 Theme Check issues) + product CSV with metafields | `shopify-theme/`, `site/shopify/`, `site/SHOPIFY.md` |
+| 5 | Social media plan (90 days) | `social/campaign-plan.md` |
+| 5b | First 4 weeks written out + outreach messages (creators, cafés, stores, press) | `social/first-4-weeks.md` |
+| 6 | B2B sales sheet and price list (PDF) | `b2b/sales-sheet.pdf` (rebuild: `python3 b2b/make_sheet.py`) |
+| 7 | Compliance kit: declaration of conformity, technical file, test log, risk assessment, safety sheet, label | `compliance/` |
 
 ## View the site
 
@@ -24,7 +31,7 @@ Edit any text or price in `site/content.py`, then run `python3 build.py` again.
 
 1. **Price:** "accessible premium" at CHF 129–249, plus an entry lamp at CHF 69 and B2B sets. Under CHF 70 is crowded; CHF 90–200 is thin in Switzerland.
 2. **Market:** Switzerland and Liechtenstein first. Germany and Austria in year 2, because selling into the EU from Switzerland needs an EU responsible person (GPSR), WEEE registration and customs handling.
-3. **Product:** launch with 3 lamps (Aare, Föhn cordless, Firn pendant). Add one a month.
+3. **Product:** launch with 3 lamps (Aare, Föhn cordless, Firn pendant) plus the Atelier series as the brand's halo: Bise CHF 390, Moräne edition of 50 at CHF 460, Gletscher one-off at CHF 540, own-code commission at CHF 690.
 4. **Safety:** LED only, max. 7 W. PETG at the socket, pre-certified electrics, a temperature test log per design. Europlug works in CH, DE and AT.
 5. **Ads:** none before Christmas 2026. Test CHF 300–450 in Feb–Mar 2027 after 20 organic sales. Break-even ROAS is about 1.5.
 

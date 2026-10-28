@@ -12,20 +12,16 @@ The static site in `public/` is the design and content blueprint. Shopify runs t
 6. Settings → Shipping: Swiss Post, CHF 8, free above CHF 120.
 7. Settings → Taxes: no VAT until you register.
 
-## 2. Theme (about 4 h)
+## 2. Theme (15 min)
 
-- Start from **Dawn** (free, fast, accessible), or a premium theme made for few products (e.g. "Sense", "Craft").
-- Copy the look from `assets/site.css`:
-  - Colours: background `#eceeea`, text `#1b2124`, accent `#c97a12`
-  - Fonts: Gloock for headings, Hanken Grotesk for body text (both on Google Fonts; in Shopify's font picker, or upload them)
-- Rebuild the home page sections in the theme editor: hero, featured collection (3 lamps), "Wie eine Lampe entsteht" as a multicolumn section, the B2B banner, blog posts.
+A ready theme is in `../shopify-theme/` (Online Store 2.0, passes Shopify Theme Check with no issues). Upload `../shopify-theme/schichtlicht-theme.zip` under Online Store → Themes → Add theme → Upload, then follow `../shopify-theme/README.md` (menus, collections, page templates, images).
 
 ## 3. Products (30 min)
 
 1. Run `python3 build.py`. This writes `shopify/products.csv` (Shopify's import format, one row per colour, all products as drafts).
 2. Products → Import → `shopify/products.csv`.
-3. **Replace the images.** The CSV points at placeholder drawings on your future domain. Upload real photos per colour instead.
-4. Add product metafields for "layers", "print time" and "light source" so the theme can show the spec table.
+3. **Images.** The CSV points at the renders on your future domain (`/assets/renders/`). Until the domain serves them, upload the JPGs by hand. Later, replace them with real photos and keep one lit photo per product with `#on` in its alt text.
+4. Create the product metafields listed in `shopify/metafields.md` **before** importing, so the spec table fills in.
 
 ## 4. Pages and blog
 

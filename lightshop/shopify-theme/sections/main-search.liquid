@@ -1,0 +1,25 @@
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h1>{{ 'search.title' | t }}</h1></div>
+    <form action="{{ routes.search_url }}" method="get" class="inline-form" role="search">
+      <label class="skip" for="SearchQ">{{ 'search.title' | t }}</label>
+      <input id="SearchQ" type="search" name="q" value="{{ search.terms | escape }}" placeholder="{{ 'search.placeholder' | t }}">
+      <button class="btn" type="submit">{{ 'search.button' | t }}</button>
+    </form>
+    {%- if search.performed -%}
+      <div class="grid" style="margin-top:2.5rem">
+        {%- for item in search.results -%}
+          {%- if item.object_type == 'product' -%}{% render 'product-card', product: item %}
+          {%- elsif item.object_type == 'article' -%}{% render 'article-card', article: item %}
+          {%- else -%}<a class="post" href="{{ item.url }}"><h3>{{ item.title }}</h3></a>{%- endif -%}
+        {%- else -%}
+          <p>{{ 'search.none' | t }}</p>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{ "name": "Search" }
+{% endschema %}

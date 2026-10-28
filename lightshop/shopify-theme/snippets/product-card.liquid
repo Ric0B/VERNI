@@ -1,0 +1,36 @@
+{%- comment -%}
+  Product card: first image switched off, the image whose alt text contains "#on" fades in on hover.
+  Usage: {% render 'product-card', product: product %}
+{%- endcomment -%}
+{%- liquid
+  assign lit = nil
+  for media in product.media
+    if media.alt contains '#on'
+      assign lit = media
+      break
+    endif
+  endfor
+  assign off = product.featured_media
+-%}
+<a class="card" href="{{ product.url }}">
+  <div class="card-art">
+    {%- if off -%}
+      {{ off | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '400, 600, 900, 1200', sizes: '(max-width: 40rem) 100vw, 33vw', alt: product.title }}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'placeholder' }}
+    {%- endif -%}
+    {%- if lit -%}
+      {{ lit | image_url: width: 1200 | image_tag: loading: 'lazy', widths: '400, 600, 900, 1200', sizes: '(max-width: 40rem) 100vw, 33vw', alt: '', class: 'lit' }}
+    {%- endif -%}
+    {%- if product.metafields.custom.edition != blank -%}
+      <span class="badge">{{ product.metafields.custom.edition }}</span>
+    {%- endif -%}
+  </div>
+  <div class="card-meta">
+    <h3>{{ product.title }}</h3>
+    <span class="price">{{ product.price | money }}</span>
+  </div>
+  {%- if product.metafields.custom.tagline != blank -%}
+    <p class="type">{{ product.type }} · {{ product.metafields.custom.tagline }}</p>
+  {%- endif -%}
+</a>

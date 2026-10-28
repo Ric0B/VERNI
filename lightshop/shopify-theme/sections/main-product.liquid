@@ -1,0 +1,128 @@
+{%- liquid
+  assign current = product.selected_or_first_available_variant
+  assign lit = nil
+  for media in product.media
+    if media.alt contains '#on'
+      assign lit = media
+      break
+    endif
+  endfor
+  assign off = current.featured_media | default: product.featured_media
+  assign m = product.metafields.custom
+-%}
+<nav class="crumbs wrap" aria-label="Breadcrumb">
+  <ol>
+    <li><a href="{{ routes.root_url }}">{{ 'general.home' | t }}</a></li>
+    {%- if collection -%}<li><a href="{{ collection.url }}">{{ collection.title }}</a></li>{%- endif -%}
+    <li aria-current="page">{{ product.title }}</li>
+  </ol>
+</nav>
+
+<div class="wrap pdp" data-product>
+  <figure class="pdp-art" data-lamp>
+    {%- if off -%}
+      {{ off | image_url: width: 1600 | image_tag: widths: '600, 900, 1200, 1600', sizes: '(max-width: 40rem) 100vw, 50vw', alt: product.title, fetchpriority: 'high', data-off: '' }}
+    {%- else -%}
+      {{ 'product-1' | placeholder_svg_tag: 'placeholder' }}
+    {%- endif -%}
+    {%- if lit -%}
+      <template data-lit-src>{{ lit | image_url: width: 1600 }}</template>
+      <figcaption>
+        <button class="light-toggle" type="button" data-light aria-pressed="false" data-on="{{ 'product.light_on' | t }}" data-off="{{ 'product.light_off' | t }}">{{ 'product.light_on' | t }}</button>
+      </figcaption>
+    {%- endif -%}
+  </figure>
+
+  <div class="pdp-info">
+    <div>
+      <p class="eyebrow">{{ product.type }}{% if m.edition != blank %} · {{ m.edition }}{% endif %}</p>
+      <h1>{{ product.title }}</h1>
+    </div>
+    {%- if m.tagline != blank -%}<p class="lead">{{ m.tagline }}</p>{%- endif -%}
+    <p class="pdp-price" data-price>{{ current.price | money }}</p>
+
+    {%- form 'product', product, class: 'product-form', id: 'ProductForm' -%}
+      <input type="hidden" name="id" value="{{ current.id }}" data-variant-id>
+      {%- unless product.has_only_default_variant -%}
+        {%- for option in product.options_with_values -%}
+          <fieldset class="swatches">
+            <legend>{{ option.name }}</legend>
+            {%- for value in option.values -%}
+              <span class="swatch">
+                <input type="radio" id="opt-{{ forloop.parentloop.index }}-{{ forloop.index }}" name="option{{ forloop.parentloop.index }}" value="{{ value | escape }}"{% if option.selected_value == value %} checked{% endif %} data-option>
+                <label for="opt-{{ forloop.parentloop.index }}-{{ forloop.index }}">{{ value }}</label>
+              </span>
+            {%- endfor -%}
+          </fieldset>
+        {%- endfor -%}
+      {%- endunless -%}
+      <div class="row">
+        <button class="btn" type="submit" name="add"{% unless current.available %} disabled{% endunless %} data-add>
+          {%- if current.available %}{{ 'product.add' | t }}{% else %}{{ 'product.sold_out' | t }}{% endif -%}
+        </button>
+      </div>
+    {%- endform -%}
+
+    <ul class="promises">
+      {%- for block in section.blocks -%}
+        {%- if block.type == 'promise' -%}<li {{ block.shopify_attributes }}>{{ block.settings.text }}</li>{%- endif -%}
+      {%- endfor -%}
+    </ul>
+
+    <div class="prose">{{ product.description }}</div>
+
+    <details open>
+      <summary>{{ 'product.specs' | t }}</summary>
+      <table class="specs"><tbody>
+        {%- if m.height_cm != blank -%}<tr><th>{{ 'product.height' | t }}</th><td>{{ m.height_cm }} cm</td></tr>{%- endif -%}
+        {%- if m.diameter_cm != blank -%}<tr><th>{{ 'product.diameter' | t }}</th><td>{{ m.diameter_cm }} cm</td></tr>{%- endif -%}
+        {%- if m.layers != blank -%}<tr><th>{{ 'product.layers' | t }}</th><td>{{ m.layers }} × 0.24 mm</td></tr>{%- endif -%}
+        {%- if m.print_hours != blank -%}<tr><th>{{ 'product.print_time' | t }}</th><td>{{ m.print_hours }} h</td></tr>{%- endif -%}
+        {%- if m.material != blank -%}<tr><th>{{ 'product.material' | t }}</th><td>{{ m.material }}</td></tr>{%- endif -%}
+        {%- if m.light != blank -%}<tr><th>{{ 'product.light' | t }}</th><td>{{ m.light }}</td></tr>{%- endif -%}
+        {%- if m.power != blank -%}<tr><th>{{ 'product.power' | t }}</th><td>{{ m.power }}</td></tr>{%- endif -%}
+        {%- if m.cable != blank -%}<tr><th>{{ 'product.cable' | t }}</th><td>{{ m.cable }}</td></tr>{%- endif -%}
+      </tbody></table>
+    </details>
+    {%- for block in section.blocks -%}
+      {%- if block.type == 'collapsible' -%}
+        <details {{ block.shopify_attributes }}><summary>{{ block.settings.heading }}</summary>{{ block.settings.content }}</details>
+      {%- endif -%}
+    {%- endfor -%}
+  </div>
+</div>
+
+<script type="application/json" data-variants>
+  [{%- for v in product.variants -%}{"id":{{ v.id }},"options":{{ v.options | json }},"price":{{ v.price | money | json }},"available":{{ v.available | json }},"image":{% if v.featured_media %}{{ v.featured_media | image_url: width: 1600 | json }}{% else %}null{% endif %}}{% unless forloop.last %},{% endunless %}{%- endfor -%}]
+</script>
+<script type="application/ld+json">{{ product | structured_data }}</script>
+
+{% schema %}
+{
+  "name": "Product",
+  "blocks": [
+    {
+      "type": "promise",
+      "name": "Promise line",
+      "settings": [ { "type": "text", "id": "text", "label": "Text", "default": "Gedruckt und montiert in der Schweiz" } ]
+    },
+    {
+      "type": "collapsible",
+      "name": "Collapsible text",
+      "settings": [
+        { "type": "text", "id": "heading", "label": "Heading", "default": "Pflege" },
+        { "type": "richtext", "id": "content", "label": "Content", "default": "<p>Mit einem trockenen Tuch abstauben. Nur LED bis max. 7 W verwenden.</p>" }
+      ]
+    }
+  ],
+  "default": {
+    "blocks": [
+      { "type": "promise", "settings": { "text": "Gedruckt und montiert in der Schweiz" } },
+      { "type": "promise", "settings": { "text": "Gratis Versand in der Schweiz ab CHF 120" } },
+      { "type": "promise", "settings": { "text": "30 Tage Rückgabe" } },
+      { "type": "promise", "settings": { "text": "2 Jahre Garantie, Ersatzteile auf Lebenszeit" } },
+      { "type": "collapsible" }
+    ]
+  }
+}
+{% endschema %}

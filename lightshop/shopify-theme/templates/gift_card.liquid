@@ -1,0 +1,20 @@
+{%- layout none -%}
+<!doctype html>
+<html lang="{{ request.locale.iso_code }}">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ 'gift_card.title' | t }} | {{ shop.name }}</title>
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+    {{ content_for_header }}
+  </head>
+  <body>
+    <main class="section"><div class="wrap prose">
+      <h1>{{ 'gift_card.title' | t }}</h1>
+      <p class="pdp-price">{{ gift_card.balance | money }}</p>
+      <p>{{ 'gift_card.code' | t }}: <b>{{ gift_card.code | format_code }}</b></p>
+      {%- if gift_card.expires_on -%}<p>{{ 'gift_card.expires' | t: date: gift_card.expires_on }}</p>{%- endif -%}
+      <p class="row"><a class="btn" href="{{ shop.url }}">{{ shop.name }}</a></p>
+    </div></main>
+  </body>
+</html>

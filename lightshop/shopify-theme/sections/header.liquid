@@ -1,0 +1,42 @@
+<header class="site-head">
+  <div class="wrap">
+    <a class="logo" href="{{ routes.root_url }}">
+      {{- section.settings.brand_a -}}<span>{{ section.settings.brand_b }}</span>
+    </a>
+    <nav class="nav" aria-label="{{ 'accessibility.main_menu' | t }}">
+      {%- for link in section.settings.menu.links -%}
+        <a href="{{ link.url }}"{% if link.current %} aria-current="page"{% endif %}>{{ link.title }}</a>
+      {%- endfor -%}
+    </nav>
+    <div class="head-tools">
+      {%- if localization.available_languages.size > 1 -%}
+        {%- form 'localization', id: 'HeaderLanguageForm', class: 'lang-form' -%}
+          <input type="hidden" name="language_code" value="{{ localization.language.iso_code }}">
+          {%- for language in localization.available_languages -%}
+            {%- unless language.iso_code == localization.language.iso_code -%}
+              <button type="submit" name="language_code" value="{{ language.iso_code }}" lang="{{ language.iso_code }}">
+                {{- language.iso_code | upcase -}}
+              </button>
+            {%- endunless -%}
+          {%- endfor -%}
+        {%- endform -%}
+      {%- endif -%}
+      <a href="{{ routes.cart_url }}">
+        {{- 'cart.title' | t -}}
+        <span class="cart-count">{{ cart.item_count }}</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+{% schema %}
+{
+  "name": "Header",
+  "class": "section-header",
+  "settings": [
+    { "type": "text", "id": "brand_a", "label": "Brand name, first part", "default": "Schicht" },
+    { "type": "text", "id": "brand_b", "label": "Brand name, accent part", "default": "licht" },
+    { "type": "link_list", "id": "menu", "label": "Menu", "default": "main-menu" }
+  ]
+}
+{% endschema %}

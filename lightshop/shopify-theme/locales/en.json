@@ -1,0 +1,90 @@
+{
+  "general": {
+    "home": "Home",
+    "view_all": "View all",
+    "all_lamps": "All lamps",
+    "not_found": "This page does not exist (any more).",
+    "page": "Page {{ page }}",
+    "tagged": "Tagged {{ tags }}"
+  },
+  "accessibility": {
+    "skip": "Skip to content",
+    "main_menu": "Main menu"
+  },
+  "newsletter": {
+    "heading": "See new lamps first",
+    "email": "Email address",
+    "button": "Sign up",
+    "waitlist": "Join the waitlist",
+    "success": "Thank you, you're signed up."
+  },
+  "product": {
+    "add": "Add to cart",
+    "sold_out": "Sold out",
+    "light_on": "Switch the light on",
+    "light_off": "Switch the light off",
+    "specs": "Specifications",
+    "height": "Height",
+    "diameter": "Diameter",
+    "layers": "Layers",
+    "print_time": "Print time",
+    "material": "Material",
+    "light": "Light source",
+    "power": "Power",
+    "cable": "Cable"
+  },
+  "collection": {
+    "empty": "There are no lamps in this collection yet.",
+    "all": "All collections"
+  },
+  "cart": {
+    "title": "Cart",
+    "quantity": "Quantity",
+    "subtotal": "Subtotal",
+    "update": "Update",
+    "checkout": "Check out",
+    "empty": "Your cart is empty.",
+    "note": "Free shipping in Switzerland over CHF 120. Pay by card or TWINT."
+  },
+  "contact": {
+    "name": "Name",
+    "business": "Business",
+    "email": "Email",
+    "quantity": "Number of lamps",
+    "message": "What is the project?",
+    "send": "Send request",
+    "success": "Thank you. We'll reply within two working days."
+  },
+  "search": {
+    "title": "Search",
+    "placeholder": "Lamp, colour, topic",
+    "button": "Search",
+    "none": "Nothing found."
+  },
+  "gift_card": {
+    "title": "Gift card",
+    "code": "Code",
+    "expires": "Valid until {{ date }}"
+  },
+  "customer": {
+    "login": "Log in",
+    "password": "Password",
+    "password_confirm": "Confirm password",
+    "register": "Create account",
+    "recover": "Forgot password",
+    "recover_sent": "We've sent you an email.",
+    "account": "My account",
+    "addresses": "Addresses",
+    "logout": "Log out",
+    "orders": "Orders",
+    "no_orders": "No orders yet.",
+    "order": "Order",
+    "street": "Street",
+    "zip": "Postcode",
+    "city": "City",
+    "country": "Country",
+    "add_address": "Save address",
+    "activate": "Activate account",
+    "reset": "Reset password"
+  }
+}

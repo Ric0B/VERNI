@@ -1,0 +1,39 @@
+<section class="hero night">
+  <div class="wrap">
+    <div class="hero-copy">
+      {%- if section.settings.eyebrow != blank -%}<p class="eyebrow">{{ section.settings.eyebrow }}</p>{%- endif -%}
+      <h1>{{ section.settings.heading }}</h1>
+      {%- if section.settings.text != blank -%}<div class="lead">{{ section.settings.text }}</div>{%- endif -%}
+      <div class="row">
+        {%- if section.settings.button_label != blank -%}<a class="btn light" href="{{ section.settings.button_link }}">{{ section.settings.button_label }}</a>{%- endif -%}
+        {%- if section.settings.button2_label != blank -%}<a class="btn ghost light" href="{{ section.settings.button2_link }}">{{ section.settings.button2_label }}</a>{%- endif -%}
+      </div>
+      {%- if section.settings.specline != blank -%}<p class="specline">{{ section.settings.specline }}</p>{%- endif -%}
+    </div>
+    <div class="hero-art">
+      {%- if section.settings.image != blank -%}
+        {{ section.settings.image | image_url: width: 1600 | image_tag: widths: '600, 900, 1200, 1600', sizes: '(max-width: 40rem) 85vw, 40vw', fetchpriority: 'high', alt: section.settings.image.alt }}
+      {%- else -%}
+        {{ 'lifestyle-1' | placeholder_svg_tag: 'placeholder' }}
+      {%- endif -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Night hero",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Eyebrow", "default": "Gedruckt und montiert in der Schweiz" },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Licht, Schicht für Schicht." },
+    { "type": "richtext", "id": "text", "label": "Text", "default": "<p>Lampen aus pflanzenbasiertem Material, in der Schweiz gedruckt und von Hand montiert.</p>" },
+    { "type": "image_picker", "id": "image", "label": "Lamp image (lit, dark background)" },
+    { "type": "text", "id": "button_label", "label": "Button label", "default": "Lampen ansehen" },
+    { "type": "url", "id": "button_link", "label": "Button link" },
+    { "type": "text", "id": "button2_label", "label": "Second button label", "default": "Unikate" },
+    { "type": "url", "id": "button2_link", "label": "Second button link" },
+    { "type": "text", "id": "specline", "label": "Spec line", "default": "1'375 Schichten · 0.24 mm · 2700 K" }
+  ],
+  "presets": [ { "name": "Night hero" } ]
+}
+{% endschema %}

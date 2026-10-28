@@ -1,0 +1,13 @@
+<article class="wrap article">
+  <header class="prose">
+    <p class="eyebrow"><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'date' }}</time></p>
+    <h1>{{ article.title }}</h1>
+  </header>
+  <div class="prose">{{ article.content }}</div>
+  <p class="row"><a class="btn" href="{{ routes.all_products_collection_url }}">{{ 'general.all_lamps' | t }} →</a></p>
+</article>
+<script type="application/ld+json">{{ article | structured_data }}</script>
+
+{% schema %}
+{ "name": "Article" }
+{% endschema %}

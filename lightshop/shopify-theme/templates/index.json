@@ -1,0 +1,122 @@
+{
+  "sections": {
+    "hero": {
+      "type": "hero-night",
+      "settings": {
+        "button_link": "shopify://collections/all",
+        "button2_link": "shopify://pages/unikate"
+      }
+    },
+    "collection": {
+      "type": "featured-collection",
+      "settings": {
+        "heading": "Kollektion",
+        "collection": "kollektion",
+        "limit": 6
+      }
+    },
+    "atelier": {
+      "type": "featured-collection",
+      "settings": {
+        "eyebrow": "Atelier-Serie",
+        "heading": "Berechnet, nicht gezeichnet",
+        "text": "<p>Parametrische Formen in Editionen von 50 und als Unikate.</p>",
+        "collection": "atelier-serie",
+        "limit": 3
+      }
+    },
+    "oneoffs": {
+      "type": "image-trio",
+      "blocks": {
+        "a": {
+          "type": "image",
+          "settings": {
+            "caption": "Code 0023"
+          }
+        },
+        "b": {
+          "type": "image",
+          "settings": {
+            "caption": "Code 0042"
+          }
+        },
+        "c": {
+          "type": "image",
+          "settings": {
+            "caption": "Code 0108"
+          }
+        }
+      },
+      "block_order": [
+        "a",
+        "b",
+        "c"
+      ],
+      "settings": {
+        "link": "shopify://pages/unikate",
+        "text": "<p>Bei der Gletscher-Lampe bestimmt eine einzige Zahl, wo die Spalten verlaufen. Jeden Code drucken wir genau einmal.</p>"
+      }
+    },
+    "steps": {
+      "type": "steps",
+      "blocks": {
+        "s1": {
+          "type": "step",
+          "settings": {
+            "title": "Entwurf",
+            "text": "Jede Form ist eine Formel und wird über Wochen getestet, bis Licht und Proportion stimmen."
+          }
+        },
+        "s2": {
+          "type": "step",
+          "settings": {
+            "title": "Druck",
+            "text": "Über Nacht baut der Drucker die Lampe in 0.24 mm dünnen Schichten auf, in einer einzigen Linie."
+          }
+        },
+        "s3": {
+          "type": "step",
+          "settings": {
+            "title": "Prüfung",
+            "text": "Jede Lampe wird vier Stunden eingeschaltet geprüft, bevor sie das Atelier verlässt."
+          }
+        },
+        "s4": {
+          "type": "step",
+          "settings": {
+            "title": "Montage",
+            "text": "Fassung, Kabel und Birne setzen wir von Hand ein und notieren Schichtzahl und Datum auf der Karte."
+          }
+        }
+      },
+      "block_order": [
+        "s1",
+        "s2",
+        "s3",
+        "s4"
+      ],
+      "settings": {}
+    },
+    "band": {
+      "type": "band",
+      "settings": {
+        "link": "shopify://pages/gastronomie-hotels"
+      }
+    },
+    "journal": {
+      "type": "blog-posts",
+      "settings": {
+        "blog": "journal"
+      }
+    }
+  },
+  "order": [
+    "hero",
+    "collection",
+    "atelier",
+    "oneoffs",
+    "steps",
+    "band",
+    "journal"
+  ]
+}

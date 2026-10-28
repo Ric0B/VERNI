@@ -1,0 +1,52 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-page",
+      "settings": {}
+    },
+    "trio": {
+      "type": "image-trio",
+      "blocks": {
+        "a": {
+          "type": "image",
+          "settings": {
+            "caption": "Code 0023"
+          }
+        },
+        "b": {
+          "type": "image",
+          "settings": {
+            "caption": "Code 0042"
+          }
+        },
+        "c": {
+          "type": "image",
+          "settings": {
+            "caption": "Code 0108"
+          }
+        }
+      },
+      "block_order": [
+        "a",
+        "b",
+        "c"
+      ],
+      "settings": {
+        "heading": "Drei Codes, drei Lampen",
+        "link_label": ""
+      }
+    },
+    "form": {
+      "type": "contact-form",
+      "settings": {
+        "heading": "Dein eigener Code, CHF 690",
+        "text": "<p>Schick uns eine Zahl, zum Beispiel ein Datum. Du bekommst innert 2 Tagen eine Vorschau.</p>"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "trio",
+    "form"
+  ]
+}

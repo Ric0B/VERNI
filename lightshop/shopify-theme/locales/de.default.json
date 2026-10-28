@@ -1,0 +1,90 @@
+{
+  "general": {
+    "home": "Start",
+    "view_all": "Alle ansehen",
+    "all_lamps": "Alle Lampen",
+    "not_found": "Diese Seite gibt es nicht (mehr).",
+    "page": "Seite {{ page }}",
+    "tagged": "Stichwort {{ tags }}"
+  },
+  "accessibility": {
+    "skip": "Zum Inhalt springen",
+    "main_menu": "Hauptmenü"
+  },
+  "newsletter": {
+    "heading": "Neue Lampen zuerst sehen",
+    "email": "E-Mail-Adresse",
+    "button": "Eintragen",
+    "waitlist": "Auf die Warteliste",
+    "success": "Danke, du bist eingetragen."
+  },
+  "product": {
+    "add": "In den Warenkorb",
+    "sold_out": "Ausverkauft",
+    "light_on": "Licht einschalten",
+    "light_off": "Licht ausschalten",
+    "specs": "Technische Daten",
+    "height": "Höhe",
+    "diameter": "Durchmesser",
+    "layers": "Schichten",
+    "print_time": "Druckzeit",
+    "material": "Material",
+    "light": "Leuchtmittel",
+    "power": "Anschluss",
+    "cable": "Kabel"
+  },
+  "collection": {
+    "empty": "In dieser Sammlung gibt es noch keine Lampen.",
+    "all": "Alle Sammlungen"
+  },
+  "cart": {
+    "title": "Warenkorb",
+    "quantity": "Menge",
+    "subtotal": "Zwischensumme",
+    "update": "Aktualisieren",
+    "checkout": "Zur Kasse",
+    "empty": "Dein Warenkorb ist leer.",
+    "note": "Gratis Versand in der Schweiz ab CHF 120. Bezahlen mit Karte oder TWINT."
+  },
+  "contact": {
+    "name": "Name",
+    "business": "Betrieb",
+    "email": "E-Mail",
+    "quantity": "Anzahl Lampen",
+    "message": "Worum geht es?",
+    "send": "Anfrage senden",
+    "success": "Danke. Wir melden uns innert zwei Werktagen."
+  },
+  "search": {
+    "title": "Suche",
+    "placeholder": "Lampe, Farbe, Thema",
+    "button": "Suchen",
+    "none": "Nichts gefunden."
+  },
+  "gift_card": {
+    "title": "Geschenkgutschein",
+    "code": "Code",
+    "expires": "Gültig bis {{ date }}"
+  },
+  "customer": {
+    "login": "Anmelden",
+    "password": "Passwort",
+    "password_confirm": "Passwort bestätigen",
+    "register": "Konto erstellen",
+    "recover": "Passwort vergessen",
+    "recover_sent": "Wir haben dir eine E-Mail geschickt.",
+    "account": "Mein Konto",
+    "addresses": "Adressen",
+    "logout": "Abmelden",
+    "orders": "Bestellungen",
+    "no_orders": "Noch keine Bestellungen.",
+    "order": "Bestellung",
+    "street": "Strasse",
+    "zip": "PLZ",
+    "city": "Ort",
+    "country": "Land",
+    "add_address": "Adresse speichern",
+    "activate": "Konto aktivieren",
+    "reset": "Passwort zurücksetzen"
+  }
+}

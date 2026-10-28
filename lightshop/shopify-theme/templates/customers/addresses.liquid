@@ -1,0 +1,15 @@
+<section class="section"><div class="wrap prose">
+  <h1>{{ 'customer.addresses' | t }}</h1>
+  {%- paginate customer.addresses by 10 -%}
+    {%- for address in customer.addresses -%}<p>{{ address | format_address }}</p>{%- endfor -%}
+  {%- endpaginate -%}
+  {%- form 'customer_address', customer.new_address, class: 'form' -%}
+    {{ form.errors | default_errors }}
+    <label for="AddrName">{{ 'contact.name' | t }}<input id="AddrName" name="address[first_name]" value="{{ form.first_name }}" autocomplete="given-name"></label>
+    <label for="AddrStreet">{{ 'customer.street' | t }}<input id="AddrStreet" name="address[address1]" value="{{ form.address1 }}" autocomplete="address-line1"></label>
+    <label for="AddrZip">{{ 'customer.zip' | t }}<input id="AddrZip" name="address[zip]" value="{{ form.zip }}" autocomplete="postal-code"></label>
+    <label for="AddrCity">{{ 'customer.city' | t }}<input id="AddrCity" name="address[city]" value="{{ form.city }}" autocomplete="address-level2"></label>
+    <label for="AddrCountry">{{ 'customer.country' | t }}<select id="AddrCountry" name="address[country]" data-default="{{ form.country }}">{{ all_country_option_tags }}</select></label>
+    <button class="btn" type="submit">{{ 'customer.add_address' | t }}</button>
+  {%- endform -%}
+</div></section>

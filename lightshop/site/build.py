@@ -24,6 +24,7 @@ HTML_LANG = {"de": "de-CH", "en": "en"}
 FONTS = ("https://fonts.googleapis.com/css2?family=Gloock&family=Hanken+Grotesk:wght@400;500;600"
          "&family=IBM+Plex+Mono:wght@400;500&display=swap")
 CSS = open(os.path.join(ROOT, "assets", "site.css"), encoding="utf-8").read()
+CSS_NOFONTS = CSS[CSS.index("/* fonts:end */") + len("/* fonts:end */"):] if "/* fonts:end */" in CSS else CSS
 E = html.escape
 VIEWPORT_META = '\n<meta name="claude:viewport-fit-sides" content="cover">' if ARTIFACT else ""
 
@@ -181,7 +182,11 @@ def page(src, lang, title, desc, body, alt_path, current=None, lds=(), og_image=
     t = UI[lang]
     alt_de = src if lang == "de" else alt_path
     alt_en = src if lang == "en" else alt_path
-    style = f"<style>{CSS}</style>" if ARTIFACT else f'<link rel="stylesheet" href="{asset(src, "site.css")}">'
+    if ARTIFACT:  # artifact pages cannot load relative font files from inlined CSS: use Google Fonts there
+        style = f'<link rel="stylesheet" href="{FONTS}"><style>{CSS_NOFONTS}</style>'
+    else:  # self-hosted fonts, no request to Google (privacy)
+        style = (f'<link rel="preload" href="{asset(src, "fonts/gloock-latin-400-normal.woff2")}" as="font" type="font/woff2" crossorigin>'
+                 f'<link rel="stylesheet" href="{asset(src, "site.css")}">')
     og_image = og_image or absolute("assets/renders/gletscher-frost-on.jpg")
     head = f'''<title>{E(title)}</title>{VIEWPORT_META}
 <meta name="description" content="{E(desc)}">
@@ -196,8 +201,6 @@ def page(src, lang, title, desc, body, alt_path, current=None, lds=(), og_image=
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#eceeea" media="(prefers-color-scheme: light)">
 <meta name="theme-color" content="#111416" media="(prefers-color-scheme: dark)">
-<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="{FONTS}">
 {style}
 {"".join(ld(x) for x in lds)}'''
     content = f'''{header(src, lang, alt_path, current)}
@@ -564,27 +567,47 @@ def build_sitemap():
 
 
 def build_shopify_csv():
+    """Shopify product CSV: one row per colour, an extra image row for the lit render (alt text ends in #on,
+    which the theme uses for the light toggle), and product metafields the theme's spec table reads."""
     d = os.path.join(ROOT, "shopify")
     os.makedirs(d, exist_ok=True)
+    meta = [("Layers", "layers", "number_integer"), ("Print hours", "print_hours", "number_integer"),
+            ("Height cm", "height_cm", "number_decimal"), ("Diameter cm", "diameter_cm", "number_decimal"),
+            ("Material", "material", "single_line_text_field"), ("Light", "light", "single_line_text_field"),
+            ("Power", "power", "single_line_text_field"), ("Cable", "cable", "single_line_text_field"),
+            ("Edition", "edition", "single_line_text_field"), ("Tagline", "tagline", "single_line_text_field")]
     cols = ["Handle", "Title", "Body (HTML)", "Vendor", "Product Category", "Type", "Tags", "Published",
             "Option1 Name", "Option1 Value", "Variant SKU", "Variant Grams", "Variant Inventory Tracker",
             "Variant Inventory Policy", "Variant Fulfillment Service", "Variant Price", "Variant Requires Shipping",
-            "Variant Taxable", "Image Src", "Image Position", "Image Alt Text", "SEO Title", "SEO Description", "Status"]
+            "Variant Taxable", "Variant Image", "Image Src", "Image Position", "Image Alt Text", "SEO Title", "SEO Description", "Status"]
+    cols += [f"{label} (product.metafields.custom.{key})" for label, key, _ in meta]
     with open(os.path.join(d, "products.csv"), "w", newline="", encoding="utf-8") as f:
         w = csv.writer(f)
         w.writerow(cols)
         for p in PRODUCTS:
             body = "".join(f"<p>{E(x)}</p>" for x in p["body"]["de"])
-            tags = ", ".join(["3D-Druck", "Made in Switzerland", p["type"]["de"]] + (["kabellos", "Akku"] if p["cordless"] else []))
+            tags = ", ".join(["3D-Druck", "Made in Switzerland", p["type"]["de"], "atelier-serie" if p.get("series") == "atelier" else "kollektion"]
+                             + (["kabellos", "Akku"] if p["cordless"] else []))
+            mvals = [layers(p), p["print_h"], p["height"] / 10, p["diameter"] / 10, p["material"]["de"], p["light"]["de"],
+                     p["power"]["de"], p["cable"]["de"], (p.get("edition") or {}).get("de", ""), p["tagline"]["de"]]
+            img_url = lambda name: f'{BRAND["domain"]}/assets/renders/{name}.jpg'
             for i, c in enumerate(p["colours"]):
                 first = i == 0
-                w.writerow([
-                    p["slug"], p["name"] if first else "", body if first else "", BRAND["name"] if first else "",
-                    "Home & Garden > Lighting > Lamps" if first else "", p["type"]["de"] if first else "", tags if first else "",
-                    "TRUE" if first else "", "Farbe" if first else "", COLOURS[c]["de"], f'SL-{p["slug"].upper()}-{c.upper()}',
-                    int(p["weight"] * 1000), "shopify", "continue", "manual", f'{p["price"]}.00', "TRUE", "TRUE",
-                    f'{BRAND["domain"]}/assets/renders/{p["slug"]}-{c}.jpg', i + 1, f'{p["name"]} {COLOURS[c]["de"]}',
-                    p["seo_title"]["de"] if first else "", p["seo_desc"]["de"] if first else "", "draft" if first else ""])
+                row = [p["slug"], p["name"] if first else "", body if first else "", BRAND["name"] if first else "",
+                       "Home & Garden > Lighting > Lamps" if first else "", p["type"]["de"] if first else "", tags if first else "",
+                       "TRUE" if first else "", "Farbe" if first else "", COLOURS[c]["de"], f'SL-{p["slug"].upper()}-{c.upper()}',
+                       int(p["weight"] * 1000), "shopify", "continue", "manual", f'{p["price"]}.00', "TRUE", "TRUE",
+                       img_url(render_name(p, c)), img_url(render_name(p, c)), i + 1, f'{p["name"]} {COLOURS[c]["de"]}',
+                       p["seo_title"]["de"] if first else "", p["seo_desc"]["de"] if first else "", "draft" if first else ""]
+                row += mvals if first else [""] * len(meta)
+                w.writerow(row)
+            lit = [p["slug"]] + [""] * (cols.index("Image Src") - 1) + [img_url(render_name(p, on=True)), len(p["colours"]) + 1,
+                   f'{p["name"]} eingeschaltet #on', "", "", ""] + [""] * len(meta)
+            w.writerow(lit)
+    with open(os.path.join(d, "metafields.md"), "w", encoding="utf-8") as f:
+        f.write("# Product metafield definitions\n\nCreate these once in Shopify admin > Settings > Custom data > Products "
+                "(namespace `custom`) before importing `products.csv`, so the theme's spec table and badges fill in.\n\n"
+                "| Name | Key | Type |\n|---|---|---|\n" + "".join(f"| {l} | custom.{k} | {t} |\n" for l, k, t in meta))
 
 
 def main():
@@ -592,6 +615,7 @@ def main():
         shutil.rmtree(OUT)
     os.makedirs(os.path.join(OUT, "assets"))
     shutil.copy(os.path.join(ROOT, "assets", "site.css"), os.path.join(OUT, "assets", "site.css"))
+    shutil.copytree(os.path.join(ROOT, "assets", "fonts"), os.path.join(OUT, "assets", "fonts"))
     with open(os.path.join(OUT, "assets", "logo.svg"), "w", encoding="utf-8") as f:
         f.write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#1b2124"/>'
                 + "".join(f'<rect x="16" y="{14 + i * 4}" width="32" height="2" fill="#f0a640" fill-opacity="{.35 + i * .06:.2f}"/>' for i in range(10))

@@ -1,0 +1,9 @@
+<section class="section"><div class="wrap prose">
+  <h1>{{ 'customer.order' | t }} {{ order.name }}</h1>
+  <p>{{ order.created_at | date: format: 'date' }}</p>
+  <table class="specs"><tbody>
+    {%- for line in order.line_items -%}<tr><td>{{ line.title }}</td><td>{{ line.quantity }}</td><td class="price">{{ line.final_line_price | money }}</td></tr>{%- endfor -%}
+  </tbody></table>
+  <p class="pdp-price">{{ order.total_price | money }}</p>
+  <p><a href="{{ routes.account_url }}">{{ 'customer.account' | t }}</a></p>
+</div></section>

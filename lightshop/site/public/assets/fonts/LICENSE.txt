@@ -1,0 +1,4 @@
+Gloock, Hanken Grotesk and IBM Plex Mono are licensed under the SIL Open Font License 1.1
+(https://openfontlicense.org). Files from the @fontsource npm packages, latin subset.
+Self-hosted on purpose: loading fonts from Google's servers sends visitors' IP addresses to
+Google, which German courts have ruled a privacy violation (LG München, 20 O 17493/20).

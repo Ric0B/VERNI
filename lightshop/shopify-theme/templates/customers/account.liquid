@@ -1,0 +1,9 @@
+<section class="section"><div class="wrap prose">
+  <h1>{{ 'customer.account' | t }}</h1>
+  <p>{{ customer.name }} · {{ customer.email }}</p>
+  <p><a href="{{ routes.account_addresses_url }}">{{ 'customer.addresses' | t }}</a> · <a href="{{ routes.account_logout_url }}">{{ 'customer.logout' | t }}</a></p>
+  <h2>{{ 'customer.orders' | t }}</h2>
+  {%- paginate customer.orders by 20 -%}
+    <ul>{%- for order in customer.orders -%}<li><a href="{{ order.customer_url }}">{{ order.name }}</a> · {{ order.created_at | date: format: 'date' }} · {{ order.total_price | money }}</li>{%- else -%}<li>{{ 'customer.no_orders' | t }}</li>{%- endfor -%}</ul>
+  {%- endpaginate -%}
+</div></section>

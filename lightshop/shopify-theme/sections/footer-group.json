@@ -1,0 +1,41 @@
+{
+  "type": "footer",
+  "name": "Footer group",
+  "sections": {
+    "footer": {
+      "type": "footer",
+      "blocks": {
+        "menu1": {
+          "type": "menu",
+          "settings": {
+            "heading": "Shop",
+            "menu": "footer"
+          }
+        },
+        "menu2": {
+          "type": "menu",
+          "settings": {
+            "heading": "Hilfe",
+            "menu": "help"
+          }
+        },
+        "menu3": {
+          "type": "menu",
+          "settings": {
+            "heading": "Rechtliches",
+            "menu": "legal"
+          }
+        }
+      },
+      "block_order": [
+        "menu1",
+        "menu2",
+        "menu3"
+      ],
+      "settings": {}
+    }
+  },
+  "order": [
+    "footer"
+  ]
+}

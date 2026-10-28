@@ -1,0 +1,5 @@
+<a class="post" href="{{ article.url }}">
+  <p class="eyebrow"><time datetime="{{ article.published_at | date: '%Y-%m-%d' }}">{{ article.published_at | date: format: 'date' }}</time></p>
+  <h3>{{ article.title }}</h3>
+  <p>{{ article.excerpt_or_content | strip_html | truncatewords: 26 }}</p>
+</a>

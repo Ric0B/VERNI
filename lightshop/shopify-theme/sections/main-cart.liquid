@@ -1,0 +1,35 @@
+<section class="section">
+  <div class="wrap">
+    <div class="section-head"><h1>{{ 'cart.title' | t }}</h1></div>
+    {%- if cart.item_count > 0 -%}
+      <form action="{{ routes.cart_url }}" method="post" class="cart">
+        <table class="specs">
+          <tbody>
+            {%- for item in cart.items -%}
+              <tr>
+                <td>{%- if item.image -%}{{ item.image | image_url: width: 160 | image_tag: width: 80, height: 100, loading: 'lazy', alt: item.title }}{%- endif -%}</td>
+                <td><a href="{{ item.url }}">{{ item.product.title }}</a><br><small>{{ item.variant.title }}</small></td>
+                <td><label class="skip" for="Qty-{{ forloop.index }}">{{ 'cart.quantity' | t }}</label>
+                  <input id="Qty-{{ forloop.index }}" type="number" name="updates[]" value="{{ item.quantity }}" min="0" class="qty"></td>
+                <td class="price">{{ item.final_line_price | money }}</td>
+              </tr>
+            {%- endfor -%}
+          </tbody>
+        </table>
+        <div class="row cart-foot">
+          <p class="pdp-price">{{ 'cart.subtotal' | t }} {{ cart.total_price | money }}</p>
+          <button class="btn ghost" type="submit" name="update">{{ 'cart.update' | t }}</button>
+          <button class="btn" type="submit" name="checkout">{{ 'cart.checkout' | t }}</button>
+        </div>
+        <p class="note">{{ 'cart.note' | t }}</p>
+      </form>
+    {%- else -%}
+      <p class="lead">{{ 'cart.empty' | t }}</p>
+      <p class="row"><a class="btn" href="{{ routes.all_products_collection_url }}">{{ 'general.all_lamps' | t }} →</a></p>
+    {%- endif -%}
+  </div>
+</section>
+
+{% schema %}
+{ "name": "Cart" }
+{% endschema %}
