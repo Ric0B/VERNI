@@ -10,7 +10,6 @@ Also writes public/sitemap.xml, public/robots.txt and shopify/products.csv
 import csv
 import html
 import json
-import math
 import os
 import shutil
 import sys
@@ -66,106 +65,24 @@ def absolute(path):
     return BRAND["domain"] + "/" + path
 
 
-# ---------------------------------------------------------------- lamp art
+# ---------------------------------------------------------------- images
+# Renders come from ../design (lampgen.py + the three.js renderer): one image
+# per colour switched off, plus one switched on in the first colour.
 
-def profile(shape):
-    """Return (segments, extras). Each segment: (list of (y, r), material)."""
-    if shape == "aare":
-        pts = [(y, 82 + 10 * math.sin((y - 70) / 360 * math.pi) + 4 * math.sin(y / 9)) for y in range(70, 431, 3)]
-        return [(pts, "shade")], {"base": (430, 70), "ribs": True}
-    if shape == "foehn":
-        cap = [(y, 150 * math.sqrt(max(0, 1 - ((230 - y) / 110) ** 2))) for y in range(120, 231, 3)]
-        stem = [(y, 34 + (y - 232) * .07) for y in range(232, 441, 4)]
-        return [(cap, "shade"), (stem, "shade")], {"base": (440, 60)}
-    if shape == "firn":
-        dome = [(y, 18 + 152 * math.sin(min(1, (y - 150) / 175) * math.pi / 2) ** 1.4) for y in range(150, 331, 3)]
-        return [(dome, "shade")], {"cable": (0, 150), "bulb": 300}
-    if shape == "grat":
-        crown_r = [70, 112, 88, 124, 96, 116, 84]
-        crown = []
-        for i in range(len(crown_r) - 1):
-            for t in range(0, 10):
-                y = 70 + (i + t / 10) * 38
-                crown.append((y, crown_r[i] + (crown_r[i + 1] - crown_r[i]) * t / 10))
-        base = [(298, 90), (330, 112), (370, 84), (410, 104), (450, 92)]
-        return [(crown, "shade"), (base, "solid")], {"base": (450, 92)}
-    if shape == "nebel":
-        segs = []
-        for i in range(4):
-            top, bot = 24 + i * 102, 24 + i * 102 + 98
-            segs.append(([(y, 46 + 5 * math.sin((y - top) / 98 * math.pi)) for y in range(top, bot + 1, 3)], "shade"))
-        return segs, {"base": (446, 78), "stand": True}
-    if shape == "glut":
-        egg = [(y, 92 * math.sqrt(max(0, 1 - ((y - 300) / 140) ** 2)) * (1 - .12 * (300 - y) / 140)) for y in range(162, 441, 3)]
-        return [(egg, "shade")], {"base": (440, 64)}
-    raise ValueError(shape)
-
-
-TONES = {  # (lit centre, edge, layer line opacity, glow strength)
-    "frost": ("#fff6e2", "#e9d6b4", .20, .85),
-    "sand": ("#f6dcae", "#cfa66b", .22, .7),
-    "stein": ("#dedbd2", "#9c9b94", .22, .45),
-    "nacht": ("#52627c", "#1f2a3b", .30, .5),
-}
-
-
-def lamp_svg(shape, colour):
-    centre, edge, line_op, glow = TONES[colour]
-    cx = 200
-    segs, extra = profile(shape)
-    uid = f"{shape}-{colour}"
-    out = [f'<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 500" role="img" aria-label="{shape}">',
-           "<defs>",
-           f'<radialGradient id="g-{uid}" cx="50%" cy="50%" r="50%"><stop offset="0" stop-color="#ffb347" stop-opacity="{glow * .55}"/>'
-           f'<stop offset="1" stop-color="#ffb347" stop-opacity="0"/></radialGradient>',
-           f'<linearGradient id="s-{uid}" x1="0" x2="1"><stop offset="0" stop-color="{edge}"/><stop offset=".45" stop-color="{centre}"/>'
-           f'<stop offset=".6" stop-color="{centre}"/><stop offset="1" stop-color="{edge}"/></linearGradient>',
-           f'<linearGradient id="d-{uid}" x1="0" x2="1"><stop offset="0" stop-color="#20262b"/><stop offset=".5" stop-color="#3a4248"/><stop offset="1" stop-color="#1a1f23"/></linearGradient>',
-           f'<pattern id="l-{uid}" width="8" height="4" patternUnits="userSpaceOnUse"><rect width="8" height="1" fill="#000" fill-opacity="{line_op}"/></pattern>',
-           f'<pattern id="r-{uid}" width="14" height="8" patternUnits="userSpaceOnUse"><rect width="5" height="8" fill="#000" fill-opacity=".07"/></pattern>',
-           "</defs>"]
-    ys = [y for pts, _ in segs for y, _ in pts]
-    gy = (min(ys) + max(ys)) / 2
-    out.append(f'<ellipse cx="{cx}" cy="{gy:.0f}" rx="190" ry="{(max(ys) - min(ys)) / 2 + 60:.0f}" fill="url(#g-{uid})"/>')
-    if "base" in extra:
-        by, br = extra["base"]
-        out.append(f'<ellipse cx="{cx}" cy="{by + 8}" rx="{br + 40}" ry="9" fill="#000" fill-opacity=".12"/>')
-    if extra.get("cable"):
-        a, b = extra["cable"]
-        out.append(f'<rect x="{cx - 1.5}" y="{a}" width="3" height="{b - a}" fill="#2a2f33"/>')
-    if extra.get("stand"):
-        out.append(f'<rect x="{cx - 4}" y="20" width="8" height="430" fill="#9aa0a4"/>')
-        out.append(f'<rect x="{cx - 78}" y="440" width="156" height="12" rx="6" fill="#2a2f33"/>')
-    if extra.get("bulb"):
-        out.append(f'<circle cx="{cx}" cy="{extra["bulb"]}" r="26" fill="#fff4d6" fill-opacity=".9"/>')
-    for pts, mat in segs:
-        right = " ".join(f"{cx + r:.1f},{y:.1f}" for y, r in pts)
-        left = " ".join(f"{cx - r:.1f},{y:.1f}" for y, r in reversed(pts))
-        poly = f"{right} {left}"
-        fill = f"url(#d-{uid})" if mat == "solid" else f"url(#s-{uid})"
-        out.append(f'<polygon points="{poly}" fill="{fill}"/>')
-        if extra.get("ribs") and mat == "shade":
-            out.append(f'<polygon points="{poly}" fill="url(#r-{uid})"/>')
-        out.append(f'<polygon points="{poly}" fill="url(#l-{uid})"/>')
-    out.append("</svg>")
-    return "\n".join(out)
-
-
-def write_art():
-    d = os.path.join(OUT, "assets", "img")
-    os.makedirs(d, exist_ok=True)
-    for p in PRODUCTS:
-        for c in p["colours"]:
-            with open(os.path.join(d, f'{p["slug"]}-{c}.svg'), "w", encoding="utf-8") as f:
-                f.write(lamp_svg(p["shape"], c))
-
-
-def img(src_path, p, lang, colour=None, eager=False):
+def render_name(p, colour=None, on=False):
     colour = colour or p["colours"][0]
+    return f'{p["slug"]}-{colour}{"-on" if on else ""}'
+
+
+def img(src_path, p, lang, colour=None, on=False, eager=False, small=True, extra=""):
+    colour = colour or p["colours"][0]
+    name = render_name(p, colour, on)
+    alt = f'{p["name"]} {p["type"][lang]}, {COLOURS[colour][lang]}' + ((", eingeschaltet" if lang == "de" else ", switched on") if on else "")
     loading = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
-    alt = f'{p["name"]} {p["type"][lang]}, {COLOURS[colour][lang]}'
-    return (f'<img src="{asset(src_path, "img/" + p["slug"] + "-" + colour + ".svg")}" width="400" height="500" '
-            f'alt="{E(alt)}" {loading}>')
+    big = asset(src_path, f"renders/{name}.jpg")
+    sm = asset(src_path, f"renders/{name}-600.jpg")
+    srcset = f'srcset="{sm} 600w, {big} 1200w" sizes="(max-width: 40rem) 100vw, {"33vw" if small else "50vw"}"'
+    return f'<img src="{sm if small else big}" {srcset} width="1200" height="1500" alt="{E(alt)}" {loading} {extra}>'
 
 
 # ---------------------------------------------------------------- layout
@@ -199,8 +116,8 @@ def crumbs_html(src, items):
 
 def header(src, lang, alt_path, current):
     t = UI[lang]
-    nav = [("shop", t["nav_shop"]), ("cordless", t["nav_cordless"]), ("b2b", t["nav_b2b"]),
-           ("about", t["nav_about"]), ("journal", t["nav_journal"])]
+    nav = [("shop", t["nav_shop"]), ("atelier_series", t["nav_atelier"]), ("unikate", t["nav_unikate"]),
+           ("b2b", t["nav_b2b"]), ("journal", t["nav_journal"])]
     links = "".join(
         f'<a href="{rel(src, path_for(k, lang))}"{" aria-current=page" if k == current else ""}>{E(label)}</a>'
         for k, label in nav)
@@ -218,14 +135,15 @@ def footer(src, lang):
     t = UI[lang]
     short = {"faq": t["faq_h"], "b2b": t["nav_b2b"], "about": t["nav_about"]}
     col = lambda keys: "".join(f'<li><a href="{rel(src, path_for(k, lang))}">{E(short.get(k) or PAGES[k]["h1"][lang])}</a></li>' for k in keys)
-    shop = "".join(f'<li><a href="{rel(src, product_path(p, lang))}">{E(p["name"])}</a></li>' for p in PRODUCTS[:4])
+    shop = "".join(f'<li><a href="{rel(src, path_for(k, lang))}">{E(v)}</a></li>' for k, v in
+                   (("shop", t["all_lamps"]), ("atelier_series", t["nav_atelier"]), ("unikate", t["nav_unikate"]), ("cordless", t["nav_cordless"])))
     return f'''<footer class="site-foot"><div class="wrap">
 <div class="foot-news"><p class="logo">Schicht<span>licht</span></p><p>{t["footer_tag"]}</p>
 <h2>{t["newsletter_h"]}</h2>
 <form class="inline-form" data-form novalidate><label class="skip" for="nl-email">{t["email"]}</label>
 <input id="nl-email" type="email" name="email" placeholder="{t["email"]}" required autocomplete="email"><button class="btn" type="submit">{t["subscribe"]}</button></form>
 <p class="form-msg" data-msg aria-live="polite"></p></div>
-<div><h2>{t["shop"]}</h2><ul>{shop}<li><a href="{rel(src, path_for("shop", lang))}">{t["all_lamps"]}</a></li></ul></div>
+<div><h2>{t["shop"]}</h2><ul>{shop}</ul></div>
 <div><h2>{t["help"]}</h2><ul>{col(["faq", "shipping", "b2b", "about"])}</ul></div>
 <div><h2>{t["legal"]}</h2><ul>{col(["imprint", "privacy", "terms"])}</ul>
 <h2 style="margin-top:1.5rem">{t["follow"]}</h2><ul><li><a href="{BRAND["instagram"]}" rel="noopener">Instagram</a></li><li><a href="{BRAND["pinterest"]}" rel="noopener">Pinterest</a></li><li><a href="{BRAND["tiktok"]}" rel="noopener">TikTok</a></li></ul></div>
@@ -245,8 +163,16 @@ JS = """<script>
     var m=f.parentNode.querySelector('[data-msg]'); var email=f.querySelector('input[type=email]');
     if(email && !email.checkValidity()){ if(m) m.textContent=email.validationMessage; email.focus(); return; }
     if(m) m.textContent=f.getAttribute('data-ok')||document.body.getAttribute('data-ok'); f.reset(); }); });
-  document.querySelectorAll('[data-swatch]').forEach(function(r){ r.addEventListener('change',function(){
-    var im=document.querySelector('[data-hero-img]'); if(im){ im.src=im.src.replace(/-[a-z]+\\.svg$/, '-'+r.value+'.svg'); } }); });
+  document.querySelectorAll('[data-lamp]').forEach(function(fig){
+    var im=fig.querySelector('img'), base=fig.getAttribute('data-base'), colour=fig.getAttribute('data-colour'), onc=fig.getAttribute('data-oncolour');
+    var btn=document.querySelector('[data-light]'), root=document.documentElement;
+    var on=root.getAttribute('data-theme')==='dark' || (root.getAttribute('data-theme')!=='light' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+    function set(){ var n=on?onc+'-on':colour; im.src=base+n+'.jpg'; im.srcset=base+n+'-600.jpg 600w, '+base+n+'.jpg 1200w';
+      if(btn){ btn.setAttribute('aria-pressed',on?'true':'false'); btn.textContent=btn.getAttribute(on?'data-off':'data-on'); } }
+    document.querySelectorAll('[data-swatch]').forEach(function(r){ r.addEventListener('change',function(){ colour=r.value; on=false; set(); }); });
+    if(btn) btn.addEventListener('click',function(){ on=!on; set(); });
+    if(on) set();
+  });
 })();
 </script>"""
 
@@ -256,7 +182,7 @@ def page(src, lang, title, desc, body, alt_path, current=None, lds=(), og_image=
     alt_de = src if lang == "de" else alt_path
     alt_en = src if lang == "en" else alt_path
     style = f"<style>{CSS}</style>" if ARTIFACT else f'<link rel="stylesheet" href="{asset(src, "site.css")}">'
-    og_image = og_image or absolute("assets/img/aare-frost.svg")
+    og_image = og_image or absolute("assets/renders/gletscher-frost-on.jpg")
     head = f'''<title>{E(title)}</title>{VIEWPORT_META}
 <meta name="description" content="{E(desc)}">
 <link rel="canonical" href="{absolute(src)}">
@@ -309,8 +235,10 @@ def chf(n):
 
 
 def card(src, p, lang):
+    ed = p.get("edition")
+    badge = f'<span class="badge">{E(ed[lang])}</span>' if ed else ""
     return f'''<a class="card" href="{rel(src, product_path(p, lang))}">
-<div class="card-art">{img(src, p, lang)}</div>
+<div class="card-art">{img(src, p, lang)}{img(src, p, lang, on=True, extra='class="lit" aria-hidden="true"')}{badge}</div>
 <div class="card-meta"><h3>{E(p["name"])}</h3><span class="price">{chf(p["price"])}</span></div>
 <p class="type">{E(p["type"][lang])} · {E(p["tagline"][lang])}</p></a>'''
 
@@ -345,7 +273,7 @@ def blocks(items):
 
 
 def layers(p):
-    return round(p["height"] / BRAND["layer_mm"])
+    return p.get("layers") or round(p["height"] / BRAND["layer_mm"])
 
 
 def fmt_int(n, lang):
@@ -354,31 +282,90 @@ def fmt_int(n, lang):
 
 # ---------------------------------------------------------------- pages
 
+def seed_fig(src, code, lang, eager=False):
+    t = UI[lang]
+    name = f"gletscher-s{code}-on"
+    alt = f'Gletscher {t["code"]} {code}'
+    loading = 'fetchpriority="high"' if eager else 'loading="lazy" decoding="async"'
+    return (f'<figure class="seed"><img src="{asset(src, "renders/" + name + "-600.jpg")}" '
+            f'srcset="{asset(src, "renders/" + name + "-600.jpg")} 600w, {asset(src, "renders/" + name + ".jpg")} 1200w" '
+            f'sizes="(max-width: 40rem) 100vw, 33vw" width="1200" height="1500" alt="{E(alt)}" {loading}>'
+            f'<figcaption><span>{t["code"]}</span> {code:04d}</figcaption></figure>')
+
+
+def core(): return [p for p in PRODUCTS if p.get("series") != "atelier"]
+def atelier(): return [p for p in PRODUCTS if p.get("series") == "atelier"]
+
+
 def build_home(lang):
     src = path_for("home", lang)
     alt = path_for("home", "en" if lang == "de" else "de")
     c = PAGES["home"]
     t = UI[lang]
-    hero_p = PRODUCTS[0]
+    hero_p = next(p for p in PRODUCTS if p["slug"] == "moraene")
     steps = "".join(f"<li><h3>{E(h)}</h3><p>{E(x)}</p></li>" for h, x in c["steps"][lang])
-    posts = "".join(post_card(src, a, lang) for a in ARTICLES)
-    body = f'''<section class="hero"><div class="wrap">
+    posts = "".join(post_card(src, a, lang) for a in ARTICLES[:3])
+    seeds = "".join(seed_fig(src, code, lang) for code in PAGES["unikate"]["seeds"])
+    body = f'''<section class="hero night"><div class="wrap">
 <div class="hero-copy"><p class="eyebrow">{t["made"]}</p><h1>{E(c["hero_h"][lang])}</h1><p class="lead">{E(c["hero_p"][lang])}</p>
-<div class="row"><a class="btn" href="{rel(src, path_for("shop", lang))}">{E(c["cta"][lang])}</a>
-<a class="btn ghost" href="{rel(src, path_for("b2b", lang))}">{E(t["nav_b2b"])}</a></div>
-<p class="specline"><span><b>{fmt_int(layers(hero_p), lang)}</b> {t["layers"]} · {E(hero_p["name"])}</span><span><b>0.24 mm</b> {t["layer_height"]}</span><span><b>2700 K</b></span><span><b>{chf(PRODUCTS[-1]["price"])}–{chf(PRODUCTS[4]["price"])}</b></span></p></div>
-<div class="hero-art"><a href="{rel(src, product_path(hero_p, lang))}">{img(src, hero_p, lang, eager=True)}</a></div>
+<div class="row"><a class="btn light" href="{rel(src, path_for("shop", lang))}">{E(c["cta"][lang])}</a>
+<a class="btn ghost light" href="{rel(src, path_for("unikate", lang))}">{E(t["nav_unikate"])}</a></div>
+<p class="specline"><span><b>{fmt_int(layers(hero_p), lang)}</b> {t["layers"]} · {E(hero_p["name"])}</span><span><b>0.24 mm</b> {t["layer_height"]}</span><span><b>2700 K</b></span></p></div>
+<a class="hero-art" href="{rel(src, product_path(hero_p, lang))}">{img(src, hero_p, lang, on=True, eager=True, small=False)}</a>
 </div></section>
-<section class="section"><div class="wrap"><div class="section-head"><h2>{t["all_lamps"]}</h2><a href="{rel(src, path_for("shop", lang))}">{t["view"]} →</a></div>
-{grid(src, lang, PRODUCTS[:3])}</div></section>
+<section class="section"><div class="wrap"><div class="section-head"><h2>{t["collection"]}</h2><a href="{rel(src, path_for("shop", lang))}">{t["all_lamps"]} →</a></div>
+{grid(src, lang, core())}</div></section>
+<section class="section"><div class="wrap"><div class="section-head"><div class="prose"><p class="eyebrow">{t["nav_atelier"]}</p><h2>{E(c["atelier_h"][lang])}</h2><p class="lead">{E(c["atelier_p"][lang])}</p></div>
+<a href="{rel(src, path_for("atelier_series", lang))}">{t["view"]} →</a></div>{grid(src, lang, atelier())}</div></section>
+<section class="section night"><div class="wrap"><div class="section-head"><div class="prose"><p class="eyebrow">{t["nav_unikate"]}</p><h2>{E(c["unikat_h"][lang])}</h2><p class="lead">{E(PAGES["unikate"]["intro"][lang])}</p></div>
+<a class="btn light" href="{rel(src, path_for("unikate", lang))}">{t["view"]} →</a></div><div class="seeds">{seeds}</div></div></section>
 <section class="section"><div class="wrap"><div class="section-head"><h2>{E(c["how_h"][lang])}</h2></div><ol class="steps">{steps}</ol></div></section>
 <section class="band"><div class="wrap"><div><h2>{E(c["b2b_h"][lang])}</h2><p>{E(c["b2b_p"][lang])}</p></div>
 <a class="btn" href="{rel(src, path_for("b2b", lang))}">{t["view"]} →</a></div></section>
-<section class="section"><div class="wrap"><div class="section-head"><h2>{t["nav_journal"]}</h2></div><div class="posts">{posts}</div></div></section>'''
+<section class="section"><div class="wrap"><div class="section-head"><h2>{t["nav_journal"]}</h2><a href="{rel(src, path_for("journal", lang))}">{t["view"]} →</a></div><div class="posts">{posts}</div></div></section>'''
     site = {"@context": "https://schema.org", "@type": "WebSite", "name": BRAND["name"], "url": absolute(src), "inLanguage": HTML_LANG[lang],
             "publisher": {"@id": BRAND["domain"] + "/#org"}}
     write(src, page(src, lang, c["title"][lang], c["desc"][lang], body, alt, None,
-                    [org_ld(), site, itemlist_ld(lang, PRODUCTS)], bare=ARTIFACT and lang == "de"))
+                    [org_ld(), site, itemlist_ld(lang, PRODUCTS)], og_image=absolute("assets/renders/moraene-frost-on.jpg"),
+                    bare=ARTIFACT and lang == "de"))
+
+
+def build_atelier(lang):
+    c = PAGES["atelier_series"]
+    method = "".join(f"<div><h3>{E(h)}</h3><p>{E(x)}</p></div>" for h, x in c["method"][lang])
+    extra = (f'<section class="section"><div class="wrap"><div class="section-head"><h2>{E(c["method_h"][lang])}</h2></div>'
+             f'<div class="offers">{method}</div></div></section>')
+    build_listing("atelier_series", lang, atelier(), extra)
+
+
+def build_unikate(lang):
+    src = path_for("unikate", lang)
+    alt = path_for("unikate", "en" if lang == "de" else "de")
+    c = PAGES["unikate"]
+    t = UI[lang]
+    g = next(p for p in PRODUCTS if p["slug"] == "gletscher")
+    trail = [(t["breadcrumb_home"], path_for("home", lang)), (c["h1"][lang], src)]
+    seeds = "".join(seed_fig(src, code, lang, eager=i == 0) for i, code in enumerate(c["seeds"]))
+    steps = "".join(f"<li><h3>{E(h)}</h3><p>{E(x)}</p></li>" for h, x in c["steps"][lang])
+    L = {"de": ("Dein Code (eine Zahl, z. B. 14062019)", "E-Mail", "Vorschau anfragen", "Danke. In dieser Vorschau wird noch nichts gesendet."),
+         "en": ("Your code (a number, e.g. 14062019)", "Email", "Request a preview", "Thank you. This preview does not send anything yet.")}[lang]
+    form = f'''<form class="form" data-form data-ok="{E(L[3])}" novalidate>
+<label for="u-code">{L[0]}<input id="u-code" name="code" inputmode="numeric" pattern="[0-9]*" maxlength="12"></label>
+<label for="u-email">{L[1]}<input id="u-email" type="email" name="email" required autocomplete="email"></label>
+<button class="btn" type="submit">{L[2]}</button></form><p class="form-msg" data-msg aria-live="polite"></p>'''
+    body = f'''{crumbs_html(src, trail)}
+<section class="section night"><div class="wrap"><div class="section-head"><div class="prose"><h1>{E(c["h1"][lang])}</h1><p class="lead">{E(c["intro"][lang])}</p></div></div>
+<div class="seeds">{seeds}</div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><h2>{E(c["commission_h"][lang])}</h2><span class="pdp-price">{chf(c["commission_price"])}</span></div>
+<div class="split"><div class="prose"><p class="lead">{E(c["commission"][lang])}</p><ol class="steps steps-2">{steps}</ol></div><div>{form}</div></div></div></section>
+<section class="section"><div class="wrap"><div class="section-head"><h2>{t["related"]}</h2></div>{grid(src, lang, [g, *[p for p in atelier() if p is not g]])}</div></section>'''
+    offer = {"@context": "https://schema.org", "@type": "Product", "name": "Gletscher " + c["h1"][lang] + (" mit eigenem Code" if lang == "de" else " with your own code"),
+             "description": c["desc"][lang], "brand": {"@type": "Brand", "name": BRAND["name"]}, "sku": "SL-GLETSCHER-CODE",
+             "image": [absolute(f"assets/renders/gletscher-s{x}-on.jpg") for x in c["seeds"]],
+             "offers": {"@type": "Offer", "priceCurrency": "CHF", "price": f'{c["commission_price"]}.00', "url": absolute(src),
+                        "availability": "https://schema.org/MadeToOrder", "seller": {"@id": BRAND["domain"] + "/#org"}}}
+    write(src, page(src, lang, c["title"][lang] + " | " + BRAND["name"], c["desc"][lang], body, alt, "unikate",
+                    [crumbs_ld(trail), offer], og_image=absolute("assets/renders/gletscher-s42-on.jpg")))
 
 
 def build_listing(key, lang, items, extra=""):
@@ -419,9 +406,11 @@ def build_product(p, lang):
     related = [x for x in PRODUCTS if x is not p][:3]
     body = f'''{crumbs_html(src, trail)}
 <div class="wrap pdp">
-<div class="pdp-art">{img(src, p, lang, eager=True).replace("<img ", "<img data-hero-img ")}</div>
+<figure class="pdp-art" data-lamp data-base="{asset(src, "renders/" + p["slug"] + "-")}" data-colour="{p["colours"][0]}" data-oncolour="{p["colours"][0]}">
+{img(src, p, lang, eager=True, small=False)}
+<figcaption><button class="light-toggle" type="button" data-light aria-pressed="false" data-on="{t["light_on"]}" data-off="{t["light_off"]}">{t["light_on"]}</button></figcaption></figure>
 <div class="pdp-info">
-<div><p class="eyebrow">{E(p["type"][lang])}</p><h1>{E(p["name"])}</h1></div>
+<div><p class="eyebrow">{E(p["type"][lang])}{" · " + E(p["edition"][lang]) if p.get("edition") else ""}</p><h1>{E(p["name"])}</h1></div>
 <p class="lead">{E(p["tagline"][lang])}</p>
 <p class="pdp-price">{chf(p["price"])}</p>
 <fieldset class="swatches"><legend>{t["colour"]}</legend>{swatches}</fieldset>
@@ -433,7 +422,7 @@ def build_product(p, lang):
 <details><summary>{t["care"]}</summary><p>{E(CARE[lang])}</p></details>
 </div></div>
 <section class="section"><div class="wrap"><div class="section-head"><h2>{t["related"]}</h2></div>{grid(src, lang, related)}</div></section>'''
-    image_urls = [absolute(f'assets/img/{p["slug"]}-{c}.svg') for c in p["colours"]]
+    image_urls = [absolute(f'assets/renders/{p["slug"]}-{c}.jpg') for c in p["colours"]] + [absolute(f'assets/renders/{render_name(p, on=True)}.jpg')]
     product = {
         "@context": "https://schema.org", "@type": "Product", "name": f'{p["name"]} {p["type"][lang]}',
         "description": p["seo_desc"][lang], "sku": f'SL-{p["slug"].upper()}', "image": image_urls,
@@ -490,7 +479,7 @@ def build_journal(lang):
         art = {"@context": "https://schema.org", "@type": "Article", "headline": a["title"][lang], "description": a["desc"][lang],
                "datePublished": a["date"], "dateModified": a["date"], "inLanguage": HTML_LANG[lang],
                "author": {"@id": BRAND["domain"] + "/#org"}, "publisher": {"@id": BRAND["domain"] + "/#org"},
-               "mainEntityOfPage": absolute(asrc), "image": absolute("assets/img/aare-frost.svg")}
+               "mainEntityOfPage": absolute(asrc), "image": absolute("assets/renders/aare-frost-on.jpg")}
         write(asrc, page(asrc, lang, a["title"][lang], a["desc"][lang], abody, aalt, "journal", [crumbs_ld(atrail), art]))
 
 
@@ -553,7 +542,7 @@ def build_404():
 # ---------------------------------------------------------------- sitemap, robots, shopify
 
 def all_pairs():
-    pairs = [(path_for(k, "de"), path_for(k, "en")) for k in ("home", "shop", "cordless", "b2b", "about", "journal", "faq", "shipping", "imprint", "privacy", "terms")]
+    pairs = [(path_for(k, "de"), path_for(k, "en")) for k in ("home", "shop", "atelier_series", "unikate", "cordless", "b2b", "about", "journal", "faq", "shipping", "imprint", "privacy", "terms")]
     pairs += [(product_path(p, "de"), product_path(p, "en")) for p in PRODUCTS]
     pairs += [(article_path(a, "de"), article_path(a, "en")) for a in ARTICLES]
     return pairs
@@ -594,7 +583,7 @@ def build_shopify_csv():
                     "Home & Garden > Lighting > Lamps" if first else "", p["type"]["de"] if first else "", tags if first else "",
                     "TRUE" if first else "", "Farbe" if first else "", COLOURS[c]["de"], f'SL-{p["slug"].upper()}-{c.upper()}',
                     int(p["weight"] * 1000), "shopify", "continue", "manual", f'{p["price"]}.00', "TRUE", "TRUE",
-                    f'{BRAND["domain"]}/assets/img/{p["slug"]}-{c}.svg', i + 1, f'{p["name"]} {COLOURS[c]["de"]}',
+                    f'{BRAND["domain"]}/assets/renders/{p["slug"]}-{c}.jpg', i + 1, f'{p["name"]} {COLOURS[c]["de"]}',
                     p["seo_title"]["de"] if first else "", p["seo_desc"]["de"] if first else "", "draft" if first else ""])
 
 
@@ -607,7 +596,7 @@ def main():
         f.write('<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" fill="#1b2124"/>'
                 + "".join(f'<rect x="16" y="{14 + i * 4}" width="32" height="2" fill="#f0a640" fill-opacity="{.35 + i * .06:.2f}"/>' for i in range(10))
                 + "</svg>")
-    write_art()
+    shutil.copytree(os.path.join(ROOT, "assets", "renders"), os.path.join(OUT, "assets", "renders"))
     for lang in LANGS:
         build_home(lang)
         build_listing("shop", lang, PRODUCTS)
@@ -616,6 +605,8 @@ def main():
         build_listing("cordless", lang, [p for p in PRODUCTS if p["cordless"]], cordless_extra)
         for p in PRODUCTS:
             build_product(p, lang)
+        build_atelier(lang)
+        build_unikate(lang)
         build_journal(lang)
         build_b2b(lang)
         build_faq(lang)

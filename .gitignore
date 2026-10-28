@@ -2,3 +2,4 @@ data/candidates.json
 data/rejected.json
 data/*.tmp
 __pycache__/
+lightshop/design/out/

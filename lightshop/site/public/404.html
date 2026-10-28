@@ -11,7 +11,7 @@
 <link rel="alternate" hreflang="x-default" href="https://www.schichtlicht.ch/">
 <meta property="og:type" content="website"><meta property="og:site_name" content="Schichtlicht">
 <meta property="og:title" content="404 | Schichtlicht"><meta property="og:description" content="Seite nicht gefunden.">
-<meta property="og:url" content="https://www.schichtlicht.ch/"><meta property="og:image" content="https://www.schichtlicht.ch/assets/img/aare-frost.svg">
+<meta property="og:url" content="https://www.schichtlicht.ch/"><meta property="og:image" content="https://www.schichtlicht.ch/assets/renders/gletscher-frost-on.jpg">
 <meta property="og:locale" content="de_CH">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="theme-color" content="#eceeea" media="(prefers-color-scheme: light)">
@@ -25,7 +25,7 @@
 <a class="skip" href="#main">Zum Inhalt springen</a>
 <header class="site-head"><div class="wrap">
 <a class="logo" href="./">Schicht<span>licht</span></a>
-<nav class="nav" aria-label="Main"><a href="lampen/">Lampen</a><a href="kabellose-tischlampen/">Kabellos</a><a href="gastronomie-hotels/">Gastronomie</a><a href="atelier/">Atelier</a><a href="journal/">Journal</a></nav>
+<nav class="nav" aria-label="Main"><a href="lampen/">Lampen</a><a href="atelier-serie/">Atelier-Serie</a><a href="unikate/">Unikate</a><a href="gastronomie-hotels/">Gastronomie</a><a href="journal/">Journal</a></nav>
 <div class="head-tools"><a href="en/" hreflang="en" lang="en">EN</a>
 <a href="#" data-cart>Warenkorb<span class="cart-count" data-count>0</span></a></div>
 </div></header>
@@ -37,7 +37,7 @@
 <form class="inline-form" data-form novalidate><label class="skip" for="nl-email">E-Mail-Adresse</label>
 <input id="nl-email" type="email" name="email" placeholder="E-Mail-Adresse" required autocomplete="email"><button class="btn" type="submit">Eintragen</button></form>
 <p class="form-msg" data-msg aria-live="polite"></p></div>
-<div><h2>Shop</h2><ul><li><a href="lampen/aare/">Aare</a></li><li><a href="lampen/foehn/">Föhn</a></li><li><a href="lampen/firn/">Firn</a></li><li><a href="lampen/grat/">Grat</a></li><li><a href="lampen/">Alle Lampen</a></li></ul></div>
+<div><h2>Shop</h2><ul><li><a href="lampen/">Alle Lampen</a></li><li><a href="atelier-serie/">Atelier-Serie</a></li><li><a href="unikate/">Unikate</a></li><li><a href="kabellose-tischlampen/">Kabellos</a></li></ul></div>
 <div><h2>Hilfe</h2><ul><li><a href="faq/">Häufige Fragen</a></li><li><a href="versand-rueckgabe/">Versand und Rückgabe</a></li><li><a href="gastronomie-hotels/">Gastronomie</a></li><li><a href="atelier/">Atelier</a></li></ul></div>
 <div><h2>Rechtliches</h2><ul><li><a href="impressum/">Impressum</a></li><li><a href="datenschutz/">Datenschutzerklärung</a></li><li><a href="agb/">Allgemeine Geschäftsbedingungen</a></li></ul>
 <h2 style="margin-top:1.5rem">Folgen</h2><ul><li><a href="https://www.instagram.com/schichtlicht" rel="noopener">Instagram</a></li><li><a href="https://www.pinterest.ch/schichtlicht" rel="noopener">Pinterest</a></li><li><a href="https://www.tiktok.com/@schichtlicht" rel="noopener">TikTok</a></li></ul></div>
@@ -55,8 +55,16 @@
     var m=f.parentNode.querySelector('[data-msg]'); var email=f.querySelector('input[type=email]');
     if(email && !email.checkValidity()){ if(m) m.textContent=email.validationMessage; email.focus(); return; }
     if(m) m.textContent=f.getAttribute('data-ok')||document.body.getAttribute('data-ok'); f.reset(); }); });
-  document.querySelectorAll('[data-swatch]').forEach(function(r){ r.addEventListener('change',function(){
-    var im=document.querySelector('[data-hero-img]'); if(im){ im.src=im.src.replace(/-[a-z]+\.svg$/, '-'+r.value+'.svg'); } }); });
+  document.querySelectorAll('[data-lamp]').forEach(function(fig){
+    var im=fig.querySelector('img'), base=fig.getAttribute('data-base'), colour=fig.getAttribute('data-colour'), onc=fig.getAttribute('data-oncolour');
+    var btn=document.querySelector('[data-light]'), root=document.documentElement;
+    var on=root.getAttribute('data-theme')==='dark' || (root.getAttribute('data-theme')!=='light' && window.matchMedia && matchMedia('(prefers-color-scheme: dark)').matches);
+    function set(){ var n=on?onc+'-on':colour; im.src=base+n+'.jpg'; im.srcset=base+n+'-600.jpg 600w, '+base+n+'.jpg 1200w';
+      if(btn){ btn.setAttribute('aria-pressed',on?'true':'false'); btn.textContent=btn.getAttribute(on?'data-off':'data-on'); } }
+    document.querySelectorAll('[data-swatch]').forEach(function(r){ r.addEventListener('change',function(){ colour=r.value; on=false; set(); }); });
+    if(btn) btn.addEventListener('click',function(){ on=!on; set(); });
+    if(on) set();
+  });
 })();
 </script>
 </body>

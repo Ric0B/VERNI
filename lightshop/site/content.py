@@ -20,6 +20,8 @@ BRAND = {
 # Page slugs per language. Keys are internal ids.
 SLUGS = {
     "home": {"de": "", "en": ""},
+    "atelier_series": {"de": "atelier-serie", "en": "atelier-series"},
+    "unikate": {"de": "unikate", "en": "one-offs"},
     "shop": {"de": "lampen", "en": "lamps"},
     "cordless": {"de": "kabellose-tischlampen", "en": "cordless-table-lamps"},
     "b2b": {"de": "gastronomie-hotels", "en": "hospitality"},
@@ -54,6 +56,9 @@ UI = {
         "read": "Weiterlesen", "min": "Min. Lesezeit", "price_incl": "inkl. Versand ab CHF 120",
         "vat_note": "Preise in CHF.", "all_lamps": "Alle Lampen", "faq_h": "Häufige Fragen",
         "draft": "Entwurf",
+        "nav_atelier": "Atelier-Serie", "nav_unikate": "Unikate",
+        "light_on": "Licht einschalten", "light_off": "Licht ausschalten",
+        "collection": "Kollektion", "code": "Code",
     },
     "en": {
         "lang_name": "English", "other": "Deutsch", "skip": "Skip to content",
@@ -76,6 +81,9 @@ UI = {
         "read": "Read", "min": "min read", "price_incl": "free shipping over CHF 120",
         "vat_note": "Prices in CHF.", "all_lamps": "All lamps", "faq_h": "Frequently asked questions",
         "draft": "Draft",
+        "nav_atelier": "Atelier series", "nav_unikate": "One-offs",
+        "light_on": "Switch the light on", "light_off": "Switch the light off",
+        "collection": "Collection", "code": "Code",
     },
 }
 
@@ -90,7 +98,7 @@ PRODUCTS = [
     {
         "slug": "aare", "name": "Aare", "shape": "aare", "price": 169, "cordless": False,
         "type": {"de": "Tischlampe", "en": "Table lamp"},
-        "height": 320, "diameter": 210, "weight": 0.9, "print_h": 9, "colours": ["frost", "sand", "stein"],
+        "height": 340, "diameter": 216, "weight": 0.9, "print_h": 5, "layers": 1333, "colours": ["frost", "sand", "stein"],
         "material": {"de": "Schirm PLA, Fassungsträger PETG, pflanzenbasiert", "en": "Shade PLA, socket mount PETG, plant-based"},
         "light": {"de": "E27 LED, 4.9 W, 2700 K (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K (included), max. 7 W LED"},
         "power": {"de": "Eurostecker, Schnurschalter, Schutzklasse II", "en": "Europlug, inline switch, class II"},
@@ -98,17 +106,17 @@ PRODUCTS = [
         "tagline": {"de": "Gerippte Tischlampe mit weichem, fliessendem Licht.", "en": "Ribbed table lamp with soft, flowing light."},
         "seo_title": {"de": "Aare Tischlampe, gerippt, 3D-gedruckt in der Schweiz", "en": "Aare ribbed table lamp, 3D printed in Switzerland"},
         "seo_desc": {
-            "de": "Aare: gerippte Designer-Tischlampe aus pflanzenbasiertem PLA, 32 cm, warmes 2700 K Licht. In der Schweiz gedruckt und montiert. CHF 169, gratis Versand.",
-            "en": "Aare: ribbed designer table lamp in plant-based PLA, 32 cm, warm 2700 K light. Printed and assembled in Switzerland. CHF 169, free shipping.",
+            "de": "Aare: gerippte Designer-Tischlampe aus pflanzenbasiertem PLA, 34 cm, warmes 2700 K Licht. In der Schweiz gedruckt und montiert. CHF 169, gratis Versand.",
+            "en": "Aare: ribbed designer table lamp in plant-based PLA, 34 cm, warm 2700 K light. Printed and assembled in Switzerland. CHF 169, free shipping.",
         },
         "body": {
             "de": [
-                "Die Aare fliesst nicht gerade. Diese Lampe auch nicht. 96 Rippen winden sich über 1333 Schichten nach oben und brechen das Licht in sanfte Bahnen, ohne zu blenden.",
+                "Die Aare fliesst nicht gerade. Diese Lampe auch nicht. 48 Rippen drehen sich über 1333 Schichten um ein Achtel Umdrehung und brechen das Licht in sanfte, schräge Bahnen, ohne zu blenden.",
                 "Ausgeschaltet ist sie ein Objekt aus mattem, fein strukturiertem Material. Eingeschaltet zeichnet jede Schicht eine feine Linie aus warmem Licht. Für Sideboard, Nachttisch oder Fensterbank.",
                 "Der Fassungsträger ist aus hitzebeständigerem PETG gedruckt, der Schirm sitzt 4 cm von der Glühbirne entfernt. Wir testen jede Form vier Stunden mit der stärksten zugelassenen Birne.",
             ],
             "en": [
-                "The river Aare does not run straight, and neither does this lamp. 96 ribs twist upward across 1,333 layers and break the light into soft bands without glare.",
+                "The river Aare does not run straight, and neither does this lamp. 48 ribs turn an eighth of a circle across 1,333 layers and break the light into soft, slanting bands without glare.",
                 "Switched off, it is an object of matte, finely textured material. Switched on, every layer draws a thin line of warm light. Made for a sideboard, bedside table or windowsill.",
                 "The socket mount is printed in heat-resistant PETG and the shade sits 4 cm from the bulb. Every shape is tested for four hours with the strongest bulb we allow.",
             ],
@@ -117,7 +125,7 @@ PRODUCTS = [
     {
         "slug": "foehn", "name": "Föhn", "shape": "foehn", "price": 139, "cordless": True,
         "type": {"de": "Kabellose Tischlampe", "en": "Cordless table lamp"},
-        "height": 220, "diameter": 180, "weight": 0.6, "print_h": 7, "colours": ["frost", "sand", "nacht"],
+        "height": 240, "diameter": 276, "weight": 0.6, "print_h": 6, "layers": 1092, "colours": ["frost", "sand", "nacht"],
         "material": {"de": "PLA, pflanzenbasiert", "en": "PLA, plant-based"},
         "light": {"de": "Integrierte LED, 2700 K, stufenlos dimmbar per Touch", "en": "Built-in LED, 2700 K, touch dimmable"},
         "power": {"de": "Akku, laden über USB-C, ca. 12 h bei mittlerer Helligkeit", "en": "Battery, USB-C charging, about 12 h at medium brightness"},
@@ -125,8 +133,8 @@ PRODUCTS = [
         "tagline": {"de": "Kabellose Pilzlampe für Tisch, Balkon und Restaurant.", "en": "Cordless mushroom lamp for table, balcony and restaurant."},
         "seo_title": {"de": "Föhn kabellose Tischlampe mit Akku, Pilzlampe", "en": "Föhn cordless table lamp, rechargeable mushroom lamp"},
         "seo_desc": {
-            "de": "Föhn: kabellose Pilzlampe mit Akku und Touch-Dimmer, USB-C, 22 cm. Für Esstisch, Balkon und Gastronomie. In der Schweiz gedruckt. CHF 139.",
-            "en": "Föhn: cordless mushroom lamp with battery and touch dimmer, USB-C, 22 cm. For dining tables, balconies and restaurants. Printed in Switzerland. CHF 139.",
+            "de": "Föhn: kabellose Pilzlampe mit Akku und Touch-Dimmer, USB-C, 24 cm. Für Esstisch, Balkon und Gastronomie. In der Schweiz gedruckt. CHF 139.",
+            "en": "Föhn: cordless mushroom lamp with battery and touch dimmer, USB-C, 24 cm. For dining tables, balconies and restaurants. Printed in Switzerland. CHF 139.",
         },
         "body": {
             "de": [
@@ -144,7 +152,7 @@ PRODUCTS = [
     {
         "slug": "firn", "name": "Firn", "shape": "firn", "price": 189, "cordless": False,
         "type": {"de": "Pendelleuchte", "en": "Pendant lamp"},
-        "height": 210, "diameter": 340, "weight": 0.8, "print_h": 11, "colours": ["frost", "sand", "stein"],
+        "height": 200, "diameter": 346, "weight": 0.8, "print_h": 4, "layers": 833, "colours": ["frost", "sand", "stein"],
         "material": {"de": "PLA transluzent, Aufhängung PETG", "en": "Translucent PLA, PETG mount"},
         "light": {"de": "E27 LED, 6 W, 2700 K (im Paket), max. 7 W LED", "en": "E27 LED, 6 W, 2700 K (included), max. 7 W LED"},
         "power": {"de": "Deckenanschluss mit Baldachin, Schutzklasse II, Installation durch Fachperson", "en": "Ceiling connection with canopy, class II, installation by an electrician"},
@@ -158,66 +166,66 @@ PRODUCTS = [
         "body": {
             "de": [
                 "Firn ist der Schnee, der einen Sommer überlebt hat. Er wird dicht und körnig und leuchtet, wenn die Sonne durchscheint. Diese Pendelleuchte macht dasselbe mit einer LED.",
-                "Der Schirm ist einwandig gedruckt, 0.8 mm dünn und trotzdem stabil. Er streut das Licht breit über den Tisch und blendet nicht, auch nicht von der Seite.",
+                "Der Schirm ist einwandig gedruckt, 1 mm dünn und trotzdem stabil. 96 Falten öffnen sich zum Rand hin wie ein Fächer. Er streut das Licht breit über den Tisch und blendet nicht, auch nicht von der Seite.",
                 "Drei Firn in einer Reihe über einem Esstisch, oder zwanzig in einem Café: Für Projekte passen wir Kabellänge und Farbe an.",
             ],
             "en": [
                 "Firn is snow that has survived a summer. It turns dense and grainy and glows when the sun shines through. This pendant does the same with an LED.",
-                "The shade is printed with a single wall, 0.8 mm thin and still stable. It spreads light wide across the table without glare, even from the side.",
+                "The shade is printed with a single wall, 1 mm thin and still stable. 96 pleats open towards the rim like a fan. It spreads light wide across the table without glare, even from the side.",
                 "Three Firn in a row over a dining table, or twenty in a café: for projects we adjust cable length and colour.",
             ],
         },
     },
     {
         "slug": "grat", "name": "Grat", "shape": "grat", "price": 219, "cordless": False,
-        "type": {"de": "Tischlampe, zweifarbig", "en": "Table lamp, two-tone"},
-        "height": 400, "diameter": 230, "weight": 1.3, "print_h": 14, "colours": ["stein", "nacht", "sand"],
-        "material": {"de": "PLA zweifarbig in einem Druck, Fassungsträger PETG", "en": "Two-colour PLA in one print, PETG socket mount"},
+        "type": {"de": "Tischlampe", "en": "Table lamp"},
+        "height": 322, "diameter": 212, "weight": 1.1, "print_h": 5, "layers": 1250, "colours": ["stein", "nacht", "sand"],
+        "material": {"de": "PLA matt, Fassungsträger PETG", "en": "Matte PLA, PETG socket mount"},
         "light": {"de": "E27 LED, 4.9 W, 2700 K (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K (included), max. 7 W LED"},
         "power": {"de": "Eurostecker, Schnurschalter, Schutzklasse II", "en": "Europlug, inline switch, class II"},
         "cable": {"de": "2 m Textilkabel", "en": "2 m textile cable"},
-        "tagline": {"de": "Facettierte Lampe mit opakem Fuss und leuchtender Krone.", "en": "Faceted lamp with an opaque base and a glowing crown."},
-        "seo_title": {"de": "Grat Designer-Tischlampe, facettiert, zweifarbig", "en": "Grat faceted designer table lamp, two-tone"},
+        "tagline": {"de": "Facettierte Lampe, deren Kanten sich dreimal falten.", "en": "Faceted lamp whose ridges fold three times."},
+        "seo_title": {"de": "Grat Designer-Tischlampe, facettiert", "en": "Grat faceted designer table lamp"},
         "seo_desc": {
-            "de": "Grat: facettierte Designer-Tischlampe, 40 cm, opaker Fuss und transluzente Krone in einem Druck. Schweizer Handarbeit. CHF 219.",
-            "en": "Grat: faceted designer table lamp, 40 cm, opaque base and translucent crown in a single print. Swiss handmade. CHF 219.",
+            "de": "Grat: facettierte Designer-Tischlampe, 32 cm, 14 Kanten, die sich im Zickzack falten. In Steingrau, Nachtblau und Sand. Schweizer Handarbeit. CHF 219.",
+            "en": "Grat: faceted designer table lamp, 32 cm, 14 ridges folding in a zigzag. In stone grey, night blue and sand. Swiss handmade. CHF 219.",
         },
         "body": {
             "de": [
-                "Ein Grat ist die scharfe Kante zwischen zwei Bergflanken. Diese Lampe hat 14 davon. Unten matt und dunkel wie Fels, oben transluzent, wo das Licht austritt.",
-                "Beide Materialien entstehen im selben Druck, mit zwei Düsen gleichzeitig. Es gibt keine Klebestelle und keine Fuge, nur einen Übergang, der wie gewachsen aussieht.",
-                "Die grösste Lampe für den Tisch. Auf einer Kommode oder im Eingang setzt sie den Ton für den ganzen Raum.",
+                "Ein Grat ist die scharfe Kante zwischen zwei Bergflanken. Diese Lampe hat 14 davon. Auf dem Weg nach oben drehen sie dreimal die Richtung, so entsteht ein Fischgratmuster aus Licht und Schatten.",
+                "Die Form ist parametrisch gerechnet: ein Vieleck, dessen Drehung einer Zickzack-Kurve folgt. Gedruckt wird sie in einer einzigen, ununterbrochenen Linie, ohne Naht.",
+                "In Nachtblau wirkt sie ausgeschaltet wie ein Objekt aus Stein. Eingeschaltet glimmen nur die Kanten.",
             ],
             "en": [
-                "A Grat is the sharp ridge between two mountain faces. This lamp has 14 of them: matte and dark like rock at the bottom, translucent at the top where the light comes out.",
-                "Both materials come out of the same print, from two nozzles at once. There is no glue line and no seam, only a transition that looks grown.",
-                "Our largest table lamp. On a chest of drawers or in a hallway it sets the tone for the whole room.",
+                "A Grat is the sharp ridge between two mountain faces. This lamp has 14 of them. On the way up they change direction three times, drawing a herringbone of light and shadow.",
+                "The shape is computed: a polygon whose rotation follows a zigzag curve. It prints as one unbroken line, without a seam.",
+                "In night blue it reads as an object of stone when switched off. Switched on, only the ridges glow.",
             ],
         },
     },
     {
         "slug": "nebel", "name": "Nebel", "shape": "nebel", "price": 349, "cordless": False,
         "type": {"de": "Stehlampe", "en": "Floor lamp"},
-        "height": 1200, "diameter": 260, "weight": 3.4, "print_h": 38, "colours": ["frost", "stein"],
+        "height": 1230, "diameter": 206, "weight": 3.4, "print_h": 18, "layers": 5000, "colours": ["frost", "stein"],
         "material": {"de": "Vier gestapelte PLA-Segmente auf Aluminiumrohr, Fuss mit Stahlgewicht", "en": "Four stacked PLA segments on an aluminium tube, base with steel weight"},
         "light": {"de": "2× E27 LED, je 4.9 W, 2700 K (im Paket)", "en": "2× E27 LED, 4.9 W each, 2700 K (included)"},
         "power": {"de": "Eurostecker, Fussschalter, Schutzklasse II", "en": "Europlug, foot switch, class II"},
         "cable": {"de": "2.5 m Textilkabel", "en": "2.5 m textile cable"},
         "tagline": {"de": "Eine Säule aus Licht, wie Hochnebel am Morgen.", "en": "A column of light, like morning fog over the lake."},
-        "seo_title": {"de": "Nebel Stehlampe 120 cm, 3D-gedruckt, Schweizer Design", "en": "Nebel floor lamp 120 cm, 3D printed, Swiss design"},
+        "seo_title": {"de": "Nebel Stehlampe 123 cm, 3D-gedruckt, Schweizer Design", "en": "Nebel floor lamp 123 cm, 3D printed, Swiss design"},
         "seo_desc": {
-            "de": "Nebel: Stehlampe aus vier gedruckten Segmenten, 120 cm, weiches Raumlicht in 2700 K. Gedruckt und montiert in der Schweiz. CHF 349.",
-            "en": "Nebel: floor lamp made of four printed segments, 120 cm, soft ambient 2700 K light. Printed and assembled in Switzerland. CHF 349.",
+            "de": "Nebel: Stehlampe aus vier gedruckten Segmenten, 123 cm, weiches Raumlicht in 2700 K. Gedruckt und montiert in der Schweiz. CHF 349.",
+            "en": "Nebel: floor lamp made of four printed segments, 123 cm, soft ambient 2700 K light. Printed and assembled in Switzerland. CHF 349.",
         },
         "body": {
             "de": [
                 "Wer im Mittelland wohnt, kennt ihn: den Hochnebel, der im November tagelang liegt. Die Nebel-Stehlampe nimmt sein Licht mit, aber nur das Schöne daran.",
-                "Vier Segmente, zusammen 38 Stunden Druckzeit und 5000 Schichten, sitzen auf einem Aluminiumrohr. Zwei Birnen leuchten den ganzen Schaft gleichmässig aus.",
+                "Vier Segmente, zusammen 18 Stunden Druckzeit und 5000 Schichten, sitzen auf einem Aluminiumrohr. Zwei Birnen leuchten den ganzen Schaft gleichmässig aus.",
                 "Sie wird zerlegt geliefert und in fünf Minuten ohne Werkzeug zusammengesteckt. Ein Segment ersetzen wir einzeln, falls einmal etwas passiert.",
             ],
             "en": [
                 "Anyone who lives on the Swiss plateau knows it: the low fog that sits for days in November. The Nebel floor lamp takes its light and leaves the gloom.",
-                "Four segments, 38 hours of printing and 5,000 layers in total, sit on an aluminium tube. Two bulbs light the whole column evenly.",
+                "Four segments, 18 hours of printing and 5,000 layers in total, sit on an aluminium tube. Two bulbs light the whole column evenly.",
                 "It ships in parts and goes together in five minutes without tools. If anything happens, we replace a single segment.",
             ],
         },
@@ -225,7 +233,7 @@ PRODUCTS = [
     {
         "slug": "glut", "name": "Glut", "shape": "glut", "price": 69, "cordless": True,
         "type": {"de": "Nachtlicht", "en": "Night light"},
-        "height": 140, "diameter": 110, "weight": 0.25, "print_h": 3, "colours": ["frost", "sand", "nacht"],
+        "height": 140, "diameter": 122, "weight": 0.25, "print_h": 2, "layers": 583, "colours": ["frost", "sand", "nacht"],
         "material": {"de": "PLA, pflanzenbasiert", "en": "PLA, plant-based"},
         "light": {"de": "Integrierte LED, 2200 K, zwei Stufen", "en": "Built-in LED, 2200 K, two levels"},
         "power": {"de": "Akku, laden über USB-C, ca. 20 h auf tiefer Stufe", "en": "Battery, USB-C charging, about 20 h on low"},
@@ -244,6 +252,91 @@ PRODUCTS = [
             "en": [
                 "Glut is what is left of a fire when it settles. This small light glows at 2200 kelvin, warmer than a candle, and does not disturb sleep.",
                 "Small enough for the bedside, sturdy enough for a kids' room. One charge lasts about 20 hours on low.",
+            ],
+        },
+    },
+    # ------------------------------------------------------------ Atelier series
+    {
+        "slug": "bise", "name": "Bise", "shape": "bise", "price": 390, "cordless": False, "series": "atelier",
+        "edition": {"de": "Atelier-Serie", "en": "Atelier series"},
+        "type": {"de": "Tischlampe", "en": "Table lamp"},
+        "height": 342, "diameter": 210, "weight": 1.0, "print_h": 7, "layers": 1333, "colours": ["frost", "sand"],
+        "material": {"de": "PLA transluzent, Fassungsträger PETG, Fuss aus geöltem Eichenholz", "en": "Translucent PLA, PETG socket mount, oiled oak base"},
+        "light": {"de": "E27 LED, 4.9 W, 2700 K, dimmbar (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K, dimmable (included), max. 7 W LED"},
+        "power": {"de": "Eurostecker, Drehdimmer im Kabel, Schutzklasse II", "en": "Europlug, inline rotary dimmer, class II"},
+        "cable": {"de": "2 m Textilkabel, Leinen", "en": "2 m linen textile cable"},
+        "tagline": {"de": "Ein gewobenes Gitter aus Licht, wie Strick im kalten Wind.", "en": "A woven lattice of light, like knitwear in a cold wind."},
+        "seo_title": {"de": "Bise Designer-Tischlampe, parametrisches Gewebe", "en": "Bise designer table lamp, parametric weave"},
+        "seo_desc": {
+            "de": "Bise: Designer-Tischlampe mit parametrisch berechnetem Webmuster, 34 cm, Eichenholzfuss, dimmbar. Atelier-Serie, gedruckt in der Schweiz. CHF 390.",
+            "en": "Bise: designer table lamp with a computed woven pattern, 34 cm, oak base, dimmable. Atelier series, printed in Switzerland. CHF 390.",
+        },
+        "body": {
+            "de": [
+                "Die Bise ist der kalte Nordostwind, der im Winter durchs Mittelland zieht. Man zieht dann den dicksten Pullover an. Diese Lampe sieht aus wie sein Strickmuster.",
+                "Zwei Spiralen laufen gegeneinander um die Form und werden miteinander multipliziert. Wo sie sich treffen, entsteht eine Masche. 20 Maschen pro Umfang, zwei volle Umdrehungen, eine Formel.",
+                "Die Atelier-Serie bekommt einen gedrechselten Fuss aus Schweizer Eiche und einen Dimmer im Kabel.",
+            ],
+            "en": [
+                "The Bise is the cold north-east wind that crosses the Swiss plateau in winter, when everyone reaches for their thickest jumper. This lamp looks like its knit.",
+                "Two spirals run against each other around the form and are multiplied together. Where they meet, a stitch appears. 20 stitches around, two full turns, one formula.",
+                "The Atelier series comes with a turned base in Swiss oak and an inline dimmer.",
+            ],
+        },
+    },
+    {
+        "slug": "moraene", "name": "Moräne", "shape": "moraene", "price": 460, "cordless": False, "series": "atelier",
+        "edition": {"de": "Edition von 50, nummeriert", "en": "Edition of 50, numbered"},
+        "type": {"de": "Tischlampe", "en": "Table lamp"},
+        "height": 352, "diameter": 236, "weight": 1.1, "print_h": 8, "layers": 1375, "colours": ["frost", "stein"],
+        "material": {"de": "PLA, Fassungsträger PETG, Fuss aus geöltem Eichenholz", "en": "PLA, PETG socket mount, oiled oak base"},
+        "light": {"de": "E27 LED, 4.9 W, 2700 K, dimmbar (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K, dimmable (included), max. 7 W LED"},
+        "power": {"de": "Eurostecker, Drehdimmer im Kabel, Schutzklasse II", "en": "Europlug, inline rotary dimmer, class II"},
+        "cable": {"de": "2 m Textilkabel, Leinen", "en": "2 m linen textile cable"},
+        "tagline": {"de": "Rippen, die wie Geröll um vier unsichtbare Punkte ausweichen.", "en": "Ribs that swerve like scree around four invisible points."},
+        "seo_title": {"de": "Moräne Designerlampe, limitierte Edition von 50", "en": "Moräne designer lamp, limited edition of 50"},
+        "seo_desc": {
+            "de": "Moräne: limitierte Designer-Tischlampe, 50 nummerierte Exemplare, parametrisch mit Attraktorpunkten gestaltet. Eichenholzfuss, dimmbar. CHF 460.",
+            "en": "Moräne: limited designer table lamp, 50 numbered pieces, shaped parametrically with attractor points. Oak base, dimmable. CHF 460.",
+        },
+        "body": {
+            "de": [
+                "Eine Moräne ist das Geröll, das ein Gletscher vor sich herschiebt und liegen lässt. Ihre Linien weichen den grossen Steinen aus. So entstehen auch die Rippen dieser Lampe.",
+                "56 Rippen laufen nach oben, bis sie in die Nähe von vier unsichtbaren Attraktorpunkten kommen. Dort werden sie tiefer und biegen ab. Jeder Punkt hinterlässt einen Wirbel im Licht.",
+                "Die Moräne gibt es nur 50 Mal. Jedes Exemplar trägt seine Nummer im Fuss und kommt mit einem signierten Zertifikat.",
+            ],
+            "en": [
+                "A moraine is the rubble a glacier pushes ahead of it and leaves behind. Its lines swerve around the big boulders. That is how the ribs of this lamp are made.",
+                "56 ribs rise until they come near four invisible attractor points. There they deepen and bend away. Each point leaves a swirl in the light.",
+                "There will only ever be 50 Moräne. Each one carries its number in the base and comes with a signed certificate.",
+            ],
+        },
+    },
+    {
+        "slug": "gletscher", "name": "Gletscher", "shape": "gletscher", "price": 540, "cordless": False, "series": "atelier",
+        "edition": {"de": "Unikat: jedes Exemplar ist einmalig", "en": "One-off: every piece is unique"},
+        "type": {"de": "Tischlampe, Unikat", "en": "Table lamp, one-off"},
+        "height": 322, "diameter": 214, "weight": 1.0, "print_h": 8, "layers": 1250, "colours": ["frost"],
+        "material": {"de": "PLA transluzent, Fassungsträger PETG, Fuss aus geöltem Eichenholz", "en": "Translucent PLA, PETG socket mount, oiled oak base"},
+        "light": {"de": "E27 LED, 4.9 W, 2700 K, dimmbar (im Paket), max. 7 W LED", "en": "E27 LED, 4.9 W, 2700 K, dimmable (included), max. 7 W LED"},
+        "power": {"de": "Eurostecker, Drehdimmer im Kabel, Schutzklasse II", "en": "Europlug, inline rotary dimmer, class II"},
+        "cable": {"de": "2 m Textilkabel, Leinen", "en": "2 m linen textile cable"},
+        "tagline": {"de": "Ein Muster aus Gletscherspalten, das es nur einmal gibt.", "en": "A pattern of crevasses that exists exactly once."},
+        "seo_title": {"de": "Gletscher Unikat-Lampe, jedes Stück einmalig", "en": "Gletscher one-off lamp, every piece unique"},
+        "seo_desc": {
+            "de": "Gletscher: Tischlampe mit Voronoi-Muster aus Gletscherspalten. Jedes Exemplar wird mit eigenem Code berechnet und nur einmal gedruckt. Mit Zertifikat. CHF 540.",
+            "en": "Gletscher: table lamp with a Voronoi pattern of crevasses. Every piece is computed from its own code and printed once. With certificate. CHF 540.",
+        },
+        "body": {
+            "de": [
+                "Kein Gletscher reisst zweimal gleich. Diese Lampe auch nicht. Ihr Muster ist ein Voronoi-Diagramm: 70 zufällige Punkte auf der Oberfläche, und überall, wo zwei Zellen aneinanderstossen, öffnet sich eine Spalte.",
+                "Die Lage der Punkte bestimmt eine einzige Zahl, der Code. Wir berechnen für jede Bestellung einen neuen Code, drucken die Lampe einmal und verwenden den Code nie wieder.",
+                "Im Paket liegt ein Zertifikat mit Code, Druckdatum, Schichtzahl und einer Abbildung genau deines Musters. Auf Wunsch wählst du den Code selbst, zum Beispiel ein Datum. Siehe Unikate.",
+            ],
+            "en": [
+                "No glacier cracks the same way twice, and neither does this lamp. Its pattern is a Voronoi diagram: 70 random points on the surface, and wherever two cells meet, a crevasse opens.",
+                "A single number, the code, decides where the points lie. We compute a new code for every order, print the lamp once and never use that code again.",
+                "The box contains a certificate with the code, print date, layer count and a drawing of exactly your pattern. You can also choose the code yourself, for example a date. See One-offs.",
             ],
         },
     },
@@ -391,6 +484,9 @@ PAGES = {
         "desc": {"de": "Design-Tischlampen, Pendelleuchten und kabellose Lampen, Schicht für Schicht in der Schweiz gedruckt und von Hand montiert. Gratis Versand ab CHF 120.",
                  "en": "Designer table lamps, pendants and cordless lamps, printed layer by layer in Switzerland and assembled by hand. Free shipping over CHF 120."},
         "hero_h": {"de": "Licht, Schicht für Schicht.", "en": "Light, layer by layer."},
+        "atelier_h": {"de": "Berechnet, nicht gezeichnet", "en": "Computed, not drawn"},
+        "atelier_p": {"de": "Die Atelier-Serie: parametrische Formen in Editionen von 50 und als Unikate.", "en": "The Atelier series: parametric forms in editions of 50 and as one-offs."},
+        "unikat_h": {"de": "Jeder Code ein anderes Muster", "en": "Every code a different pattern"},
         "hero_p": {"de": "Lampen aus pflanzenbasiertem Material, in der Schweiz gedruckt und von Hand montiert. Jede trägt ihre Schichtzahl auf der Karte im Paket.",
                    "en": "Lamps in plant-based material, printed in Switzerland and assembled by hand. Each one comes with a card showing its layer count."},
         "cta": {"de": "Lampen ansehen", "en": "See the lamps"},
@@ -522,5 +618,49 @@ PAGES = {
             "de": [("p", "[ENTWURF] Vertragsschluss, Preise in CHF, Zahlung (Karte, TWINT), Lieferung, 30 Tage freiwilliges Rückgaberecht, Gewährleistung 2 Jahre, Haftung, Gerichtsstand. Vorlage: Handelsverband.swiss oder Treuhänder.")],
             "en": [("p", "[DRAFT] Contract formation, prices in CHF, payment (card, TWINT), delivery, voluntary 30-day returns, 2-year warranty, liability, place of jurisdiction. Template: Handelsverband.swiss or your fiduciary.")],
         },
+    },
+}
+
+PAGES["atelier_series"] = {
+    "title": {"de": "Atelier-Serie: parametrische Designerlampen, limitiert", "en": "Atelier series: parametric designer lamps, limited"},
+    "desc": {"de": "Die Atelier-Serie von Schichtlicht: parametrisch berechnete Designerlampen mit Eichenholzfuss. Limitierte Editionen und Unikate, gedruckt in der Schweiz.",
+             "en": "The Schichtlicht Atelier series: parametrically computed designer lamps with oak bases. Limited editions and one-offs, printed in Switzerland."},
+    "h1": {"de": "Atelier-Serie", "en": "Atelier series"},
+    "intro": {"de": "Formen, die man nicht zeichnen, nur berechnen kann. Jede Lampe der Atelier-Serie entsteht aus einer Formel mit wenigen Parametern: Anzahl Rippen, Drehung, Attraktorpunkte, ein Zufallscode. Wir drucken sie in kleinen Editionen oder als Unikat, mit Fuss aus Schweizer Eiche und Dimmer.",
+              "en": "Shapes you cannot draw, only compute. Every Atelier lamp grows from a formula with a few parameters: number of ribs, twist, attractor points, a random code. We print them in small editions or as one-offs, with a Swiss oak base and a dimmer."},
+    "method_h": {"de": "Die Methode", "en": "The method"},
+    "method": {
+        "de": [("Parameter", "Jede Form ist eine Gleichung für den Radius in Abhängigkeit von Höhe und Winkel. Wenige Zahlen steuern alles."),
+               ("Druckbarkeit", "Bevor eine Form freigegeben wird, prüft das Programm jede Wand auf ihren Winkel. Nichts darf steiler als 50 Grad überhängen."),
+               ("Eine Linie", "Gedruckt wird im Spiralmodus: eine einzige, ununterbrochene Linie von unten bis oben, ohne Naht."),
+               ("Signiert", "Editionen tragen ihre Nummer im Holzfuss. Unikate kommen mit Zertifikat und ihrem Code.")],
+        "en": [("Parameters", "Every shape is an equation for the radius as a function of height and angle. A handful of numbers control everything."),
+               ("Printability", "Before a shape is released, the program checks every wall for its angle. Nothing may overhang more steeply than 50 degrees."),
+               ("One line", "It prints in spiral mode: a single, unbroken line from bottom to top, without a seam."),
+               ("Signed", "Editions carry their number in the wooden base. One-offs come with a certificate and their code.")],
+    },
+}
+
+PAGES["unikate"] = {
+    "title": {"de": "Unikate: Lampen, die es nur einmal gibt", "en": "One-offs: lamps that exist only once"},
+    "desc": {"de": "Unikat-Lampen von Schichtlicht: jedes Muster wird aus einem eigenen Code berechnet und nur einmal gedruckt. Auch mit deinem Datum als Code. Ab CHF 540.",
+             "en": "Schichtlicht one-off lamps: every pattern is computed from its own code and printed only once. Also with your own date as the code. From CHF 540."},
+    "h1": {"de": "Unikate", "en": "One-offs"},
+    "intro": {"de": "Bei der Gletscher-Lampe bestimmt eine einzige Zahl, wo die Spalten verlaufen. Wir nennen sie den Code. Jeder Code ergibt ein anderes Muster, und jeden Code drucken wir genau einmal. Hier sind drei davon.",
+              "en": "In the Gletscher lamp, a single number decides where the crevasses run. We call it the code. Every code gives a different pattern, and we print each code exactly once. Here are three of them."},
+    "seeds": [23, 42, 108],
+    "commission_h": {"de": "Dein eigener Code", "en": "Your own code"},
+    "commission": {"de": "Ein Hochzeitsdatum, ein Geburtstag, die Postleitzahl des ersten gemeinsamen Zuhauses: Aus jeder Zahl berechnen wir dein Muster. Du bekommst vor dem Druck eine Vorschau und kannst ablehnen. Danach wird der Code gesperrt und nie wieder vergeben.",
+                   "en": "A wedding date, a birthday, the postcode of a first home together: we compute your pattern from any number. You see a preview before printing and can say no. After that, the code is locked and never given out again."},
+    "commission_price": 690,
+    "steps": {
+        "de": [("Code wählen", "Du schickst uns eine Zahl oder lässt sie uns zufällig ziehen."),
+               ("Vorschau", "Innert 2 Tagen erhältst du Bilder deines Musters, ein- und ausgeschaltet."),
+               ("Druck", "Wir drucken deine Lampe in 8 Stunden, prüfen sie 4 Stunden und montieren sie von Hand."),
+               ("Zertifikat", "Code, Druckdatum, Schichtzahl und eine Abwicklung deines Musters, signiert.")],
+        "en": [("Choose a code", "Send us a number, or let us draw one at random."),
+               ("Preview", "Within 2 days you get images of your pattern, switched on and off."),
+               ("Print", "We print your lamp in 8 hours, test it for 4 hours and assemble it by hand."),
+               ("Certificate", "Code, print date, layer count and an unrolled drawing of your pattern, signed.")],
     },
 }
