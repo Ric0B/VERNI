@@ -664,3 +664,7 @@ PAGES["unikate"] = {
                ("Certificate", "Code, print date, layer count and an unrolled drawing of your pattern, signed.")],
     },
 }
+
+from articles_more import MORE_ARTICLES  # noqa: E402
+
+ARTICLES = ARTICLES + MORE_ARTICLES

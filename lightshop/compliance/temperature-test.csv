@@ -1,0 +1,7 @@
+model,code_or_serial,date,tester,ambient_c,shade_material,lamp_type,lamp_watt,minutes,shade_max_c,mount_c,base_top_c,notes
+aare,proto-1,2026-11-__,[name],25,PLA frost,E27 LED 2700K,4.9,0,,,,start
+aare,proto-1,2026-11-__,[name],25,PLA frost,E27 LED 2700K,4.9,30,,,,
+aare,proto-1,2026-11-__,[name],25,PLA frost,E27 LED 2700K,4.9,60,,,,
+aare,proto-1,2026-11-__,[name],25,PLA frost,E27 LED 2700K,4.9,120,,,,
+aare,proto-1,2026-11-__,[name],25,PLA frost,E27 LED 2700K,4.9,180,,,,
+aare,proto-1,2026-11-__,[name],25,PLA frost,E27 LED 2700K,4.9,240,,,,end: pass if shade below 45 and mount below 60

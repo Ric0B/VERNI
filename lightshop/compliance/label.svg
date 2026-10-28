@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="50mm" height="30mm" viewBox="0 0 500 300">
+  <!-- Rating label, underside of the base. Print on white polyester label stock. Replace bracketed fields. -->
+  <rect width="500" height="300" rx="14" fill="#fff" stroke="#1b2124" stroke-width="3"/>
+  <g font-family="Helvetica, Arial, sans-serif" fill="#1b2124">
+    <text x="24" y="52" font-size="34" font-family="Georgia, serif">Schichtlicht</text>
+    <text x="24" y="86" font-size="20">[Strasse Nr.] · [PLZ Ort] · Schweiz</text>
+    <text x="24" y="128" font-size="24" font-weight="bold">Typ SL-[MODELL]  ·  Nr. [SERIE]</text>
+    <text x="24" y="164" font-size="22">230 V~ 50 Hz  ·  max. 7 W LED E27</text>
+    <text x="24" y="196" font-size="18">Nur für trockene Innenräume · Dry indoor use only</text>
+    <text x="24" y="228" font-size="18">Gedruckt in der Schweiz · [JJJJ-MM]</text>
+  </g>
+  <!-- class II symbol -->
+  <g transform="translate(330 220)" fill="none" stroke="#1b2124" stroke-width="5">
+    <rect x="0" y="0" width="56" height="56"/><rect x="14" y="14" width="28" height="28"/>
+  </g>
+  <!-- CE: only when the declaration covers EU sale -->
+  <text x="400" y="268" font-size="46" font-family="Helvetica, Arial, sans-serif" fill="#1b2124">CE</text>
+  <!-- crossed-out wheelie bin -->
+  <g transform="translate(410 120)" fill="none" stroke="#1b2124" stroke-width="5">
+    <path d="M10 18 h40 l-5 52 h-30 z"/><path d="M6 18 h48"/><path d="M22 10 h16"/>
+    <path d="M0 4 L60 80"/><path d="M60 4 L0 80"/>
+  </g>
+</svg>
