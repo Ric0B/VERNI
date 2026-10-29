@@ -1,0 +1,36 @@
+{%- comment -%}
+  Markup for the lamp configurator; filled by assets/configurator.js.
+  Also copied verbatim into the standalone preview by site/build_configurator.py, so keep it free of Liquid.
+{%- endcomment -%}
+<div class="cfg-grid">
+  <div class="cfg-stage">
+    <div class="cfg-view">
+      <canvas class="cfg-canvas" aria-label="3D-Vorschau der konfigurierten Leuchte" role="img"></canvas>
+      <button type="button" class="cfg-light" aria-pressed="true">Licht aus</button>
+      <p class="cfg-drag">Ziehen zum Drehen</p>
+    </div>
+    <div class="cfg-head">
+      <h1 class="cfg-title">Leuchte</h1>
+      <p class="cfg-kind"></p>
+      <p class="cfg-note"></p>
+    </div>
+  </div>
+  <form class="cfg-panel" action="#" onsubmit="return false">
+    <fieldset><legend><span class="cfg-n">1</span>Form</legend><div class="cfg-cards" data-step="design"></div></fieldset>
+    <fieldset><legend><span class="cfg-n">2</span>Grösse</legend><div class="cfg-row" data-step="size"></div></fieldset>
+    <fieldset><legend><span class="cfg-n">3</span>Farbe</legend><div class="cfg-row" data-step="colour"></div><div data-step="two"></div></fieldset>
+    <fieldset><legend><span class="cfg-n">4</span><span data-step="mount-title">Sockel und Kabel</span></legend><div data-step="mount"></div></fieldset>
+    <fieldset><legend><span class="cfg-n">5</span>Extras</legend><div data-step="extras"></div></fieldset>
+    <div class="cfg-sum">
+      <ul class="cfg-lines"></ul>
+      <p class="cfg-totalrow"><span>Total</span><strong class="cfg-total" aria-live="polite"></strong></p>
+      <p class="cfg-lead"></p>
+      <button type="button" class="cfg-add">In den Warenkorb</button>
+      <p class="cfg-msg" role="status"></p>
+    </div>
+  </form>
+</div>
+<div class="cfg-bar">
+  <strong class="cfg-total-mobile" aria-hidden="true"></strong>
+  <button type="button" class="cfg-add">In den Warenkorb</button>
+</div>

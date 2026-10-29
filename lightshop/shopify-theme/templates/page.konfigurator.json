@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "configurator": {
+      "type": "configurator",
+      "blocks": {
+        "aare": { "type": "design", "settings": { "design": "aare" } },
+        "grat": { "type": "design", "settings": { "design": "grat" } },
+        "bise": { "type": "design", "settings": { "design": "bise" } },
+        "firn": { "type": "design", "settings": { "design": "firn" } },
+        "korb": { "type": "design", "settings": { "design": "korb" } }
+      },
+      "block_order": ["aare", "grat", "bise", "firn", "korb"],
+      "settings": {}
+    }
+  },
+  "order": ["configurator"]
+}

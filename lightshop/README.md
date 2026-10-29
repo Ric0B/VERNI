@@ -8,10 +8,12 @@ Overnight work from 28–29 Oct 2026. Working brand name **Schichtlicht** ("laye
 | 2 | Market research: competitors, price gap, trends, range, costs per lamp, revenue scenarios, paid ads verdict | `research/02-market-and-range.md` |
 | 2b | Legal checklist (NEV, vRG, GPSR, WEEE) | `research/03-legal-checklist.md` |
 | 2c | Brand names | `research/04-brand-names.md` |
+| 2d | Competitors (outil.li, Gantri, Claywoven, Lasso), price ladder, where to stand apart, the name "centerforphotons" | `research/05-competitors-and-name.md` |
 | 3 | **Parametric design system**: 10 lamp formulas, STL export, printability check | `design/lampgen.py`, `design/README.md` |
 | 3b | Bases, mounts and couplers (PETG), sized from each shade | `design/parts.py` |
 | 3c | One-offs and numbered editions with registry and certificate PDF | `design/edition.py`, `samples/certificate-example.pdf` |
 | 3d | **Formlabor**: in-browser configurator with live 3D (private page) | `design/formlabor.html` · https://claude.ai/artifact/9G4yVFCJJCnMvVcZBLtnwQ |
+| 3e | **Shop configurator**: shape, size, colour, base/cable, extras, live 3D and live price; adds to the Shopify cart (private preview page) | `shopify-theme/sections/configurator.liquid` · `design/konfigurator.html` · https://claude.ai/artifact/LJffLtP4UEjQBiDYQtj8Qj |
 | 3e | **Concepts**: 43 more designs in new lines (WERK industrial, GRENZE experimental, TOTEM stackable modules, DUO double wall), catalogue page | `concepts/` · https://claude.ai/artifact/M2QpZT4NgEakgd8wVrW1G2 |
 | 4 | Draft website, German + English, renders, Atelier series, one-off page, 13 articles, SEO | `site/` · preview https://claude.ai/artifact/9HEDNLgLsuSYMm6TYPxPck |
 | 4b | Keyword map, article plan, link building | `site/seo/keywords.md` |

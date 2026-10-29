@@ -292,10 +292,14 @@ def write_stl(path, V, F):
         f.write(rec.tobytes())
 
 
-def export(name, overrides=None, res="medium", out=OUT, caps=True, tag=""):
+def export(name, overrides=None, res="medium", out=OUT, caps=True, tag="", scale=1.0):
     os.makedirs(out, exist_ok=True)
     T, Z, R, p = build(name, overrides, res)
     V, F = to_triangles(T, Z, R, caps)
+    if scale != 1.0:  # a shop size: uniform scale keeps every wall angle, so printability is unchanged
+        V = V * scale
+        R = R * scale
+        tag = tag or f"-x{scale:g}"
     path = os.path.join(out, f"{name}{tag}-shade.stl")
     write_stl(path, V, F)
     s = stats(T, Z, R)
@@ -317,6 +321,7 @@ def main():
     ap.add_argument("name", nargs="?", default="all")
     ap.add_argument("--res", choices=RES, default="medium")
     ap.add_argument("--set", nargs="*", help="override parameters, e.g. ribs=60 twist=0.5")
+    ap.add_argument("--scale", type=float, default=1.0, help="uniform scale for a shop size, e.g. 0.85 (configurator sizes S/M/L)")
     ap.add_argument("--list", action="store_true")
     a = ap.parse_args()
     if a.list:
@@ -325,7 +330,7 @@ def main():
         return
     names = list(DESIGNS) if a.name == "all" else [a.name]
     for n in names:
-        s = export(n, parse_set(a.set), a.res)
+        s = export(n, parse_set(a.set), a.res, scale=a.scale)
         flag = "OK" if s["p99_overhang_deg"] <= 50 else "CHECK"
         print(f'{n:12} {s["triangles"]:>8} tris  r {s["r_min"]:.0f}-{s["r_max"]:.0f} mm  '
               f'overhang p99 {s["p99_overhang_deg"]:.0f}° max {s["max_overhang_deg"]:.0f}°  {flag}  {s["file"]}')

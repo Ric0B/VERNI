@@ -1,0 +1,71 @@
+{%- comment -%}
+  Lamp configurator. One block per shape: pick the design and the Shopify product whose variants are the
+  sizes (option 1 = S, M, L). Extras are separate one-variant products, added to the cart with the lamp.
+  Colours, cable and engraving travel as line-item properties. See shopify-theme/README.md, "Konfigurator".
+{%- endcomment -%}
+{{ 'configurator.css' | asset_url | stylesheet_tag }}
+<section class="cfg" data-configurator>
+  <script type="application/json" data-configurator-data>
+    {
+      "designs": {
+        {%- for block in section.blocks -%}
+          {%- assign p = block.settings.product -%}
+          {{ block.settings.design | json }}: {
+            "url": {{ p.url | json }},
+            "variants": [
+              {%- for v in p.variants -%}
+                { "id": {{ v.id }}, "title": {{ v.option1 | json }}, "price": {{ v.price }}, "available": {{ v.available }} }{% unless forloop.last %},{% endunless %}
+              {%- endfor -%}
+            ]
+          }{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      },
+      "addons": {
+        {%- assign keys = 'oak,cable,dimmer,engraving,twotone' | split: ',' -%}
+        {%- for k in keys -%}
+          {%- assign setting = k | append: '_product' -%}
+          {%- assign a = section.settings[setting] -%}
+          {{ k | json }}: {% if a != blank %}{ "id": {{ a.selected_or_first_available_variant.id }}, "price": {{ a.selected_or_first_available_variant.price }} }{% else %}null{% endif %}{% unless forloop.last %},{% endunless %}
+        {%- endfor -%}
+      },
+      "settings": { "lead": {{ section.settings.lead | json }} }
+    }
+  </script>
+  {% render 'configurator-markup' %}
+</section>
+<script src="{{ 'three.min.js' | asset_url }}" defer></script>
+<script src="{{ 'configurator.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Konfigurator",
+  "settings": [
+    { "type": "text", "id": "lead", "label": "Lieferzeit", "default": "Gedruckt nach deiner Bestellung in der Schweiz. Versand in 5–8 Werktagen." },
+    { "type": "header", "content": "Extras (je ein Produkt mit einer Variante)" },
+    { "type": "product", "id": "oak_product", "label": "Sockel Eiche" },
+    { "type": "product", "id": "cable_product", "label": "Kabel 3 m" },
+    { "type": "product", "id": "dimmer_product", "label": "Schnurdimmer" },
+    { "type": "product", "id": "engraving_product", "label": "Gravur" },
+    { "type": "product", "id": "twotone_product", "label": "Zweifarbig" }
+  ],
+  "blocks": [
+    {
+      "type": "design",
+      "name": "Form",
+      "settings": [
+        { "type": "select", "id": "design", "label": "Design", "default": "aare",
+          "options": [
+            { "value": "aare", "label": "Aare" }, { "value": "grat", "label": "Grat" }, { "value": "bise", "label": "Bise" },
+            { "value": "firn", "label": "Firn" }, { "value": "korb", "label": "Korb" }
+          ] },
+        { "type": "product", "id": "product", "label": "Produkt (Varianten S, M, L)" }
+      ]
+    }
+  ],
+  "presets": [
+    { "name": "Konfigurator",
+      "blocks": [ { "type": "design", "settings": { "design": "aare" } }, { "type": "design", "settings": { "design": "grat" } },
+        { "type": "design", "settings": { "design": "bise" } }, { "type": "design", "settings": { "design": "firn" } }, { "type": "design", "settings": { "design": "korb" } } ] }
+  ]
+}
+{% endschema %}

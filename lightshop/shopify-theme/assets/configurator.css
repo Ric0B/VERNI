@@ -1,0 +1,80 @@
+/* Lamp configurator. Uses the theme tokens from base.css (--bg, --ink, --glow, --night-*, fonts). */
+.cfg { --cfg-gap: clamp(1rem, 3vw, 2.5rem); padding: var(--cfg-gap) clamp(1rem, 3vw, 2.5rem) 6rem; max-width: 84rem; margin: 0 auto; }
+.cfg-grid { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(20rem, 1fr); gap: var(--cfg-gap); align-items: start; }
+.cfg-stage { position: sticky; top: 1rem; }
+.cfg-view { position: relative; aspect-ratio: 4 / 5; max-height: calc(100vh - 9rem); width: 100%; border-radius: 6px; overflow: hidden; touch-action: none; cursor: grab;
+  background: radial-gradient(120% 90% at 50% 30%, #23282c 0%, var(--night-top) 45%, var(--night-bot) 100%); transition: background .4s; }
+.cfg-view.is-day { background: linear-gradient(180deg, var(--surface) 0%, var(--bg) 100%); }
+.cfg-view:active { cursor: grabbing; }
+.cfg-canvas { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
+.cfg-light { position: absolute; top: .75rem; right: .75rem; font: 500 .8125rem/1 var(--mono); letter-spacing: .02em; padding: .55rem .8rem; border-radius: 99px;
+  border: 1px solid rgba(255, 255, 255, .25); background: rgba(0, 0, 0, .35); color: #ecebe6; cursor: pointer; }
+.cfg-view.is-day .cfg-light { background: var(--surface); color: var(--ink); border-color: var(--line); }
+.cfg-drag { position: absolute; left: .9rem; bottom: .7rem; margin: 0; font: 400 .75rem/1 var(--mono); color: rgba(236, 235, 230, .55); pointer-events: none; }
+.cfg-view.is-day .cfg-drag { color: var(--muted); }
+.cfg-nogl { position: absolute; inset: auto 1rem 1rem; color: #ecebe6; font-size: .9rem; }
+.cfg-head { margin-top: 1rem; }
+.cfg-title { font: 400 clamp(2.2rem, 5vw, 3.4rem)/1 var(--display); margin: 0; }
+.cfg-kind { font: 500 .8125rem/1.4 var(--mono); color: var(--muted); margin: .5rem 0 0; letter-spacing: .02em; }
+.cfg-note { margin: .4rem 0 0; color: var(--muted); }
+
+.cfg-panel { display: grid; gap: 1.6rem; }
+.cfg-panel fieldset { border: 0; padding: 0; margin: 0; min-width: 0; }
+.cfg-panel legend { display: flex; gap: .6rem; align-items: baseline; font: 600 1rem/1.3 var(--body); padding: 0; margin-bottom: .7rem; }
+.cfg-n { font: 500 .75rem/1 var(--mono); color: var(--glow); border: 1px solid currentColor; border-radius: 99px; padding: .2rem .45rem; }
+.cfg-hint { margin: .9rem 0 .45rem; font: 500 .75rem/1.2 var(--mono); color: var(--muted); text-transform: uppercase; letter-spacing: .06em; }
+.cfg-hint:first-child { margin-top: 0; }
+.cfg-row { display: flex; flex-wrap: wrap; gap: .45rem; }
+.cfg-cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(9.5rem, 1fr)); gap: .5rem; }
+.cfg-card, .cfg-chip { position: relative; display: flex; cursor: pointer; border: 1px solid var(--line); background: var(--surface); border-radius: 6px; transition: border-color .15s, box-shadow .15s; }
+.cfg-card { flex-direction: column; gap: .15rem; padding: .75rem .85rem; }
+.cfg-card-t { font: 400 1.35rem/1.1 var(--display); }
+.cfg-card-k { font-size: .8125rem; color: var(--muted); }
+.cfg-card-p { font: 500 .8125rem/1.3 var(--mono); margin-top: .35rem; }
+.cfg-chip { align-items: center; gap: .5rem; padding: .5rem .75rem; font-size: .9375rem; }
+.cfg-row[data-step="size"] { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.cfg-size { flex-direction: column; align-items: flex-start; gap: .1rem; }
+.cfg-size b { font: 600 1.05rem/1 var(--body); }
+.cfg-size span { font-size: .8125rem; }
+.cfg-dim { color: var(--muted); font: 500 .8125rem/1.3 var(--mono); }
+.cfg-sw { width: 1.15rem; height: 1.15rem; border-radius: 50%; background: var(--c); box-shadow: inset 0 0 0 1px rgba(0, 0, 0, .18); flex: none; }
+.cfg-card input, .cfg-chip input { position: absolute; opacity: 0; inset: 0; margin: 0; cursor: pointer; }
+.cfg-card:has(input:checked), .cfg-chip:has(input:checked) { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); }
+.cfg-card:has(input:focus-visible), .cfg-chip:has(input:focus-visible) { outline: 2px solid var(--glow); outline-offset: 2px; }
+.cfg-chip.is-out { opacity: .45; cursor: not-allowed; }
+.cfg-check { display: flex; align-items: center; gap: .6rem; margin-top: .8rem; cursor: pointer; }
+.cfg-check input { width: 1.15rem; height: 1.15rem; accent-color: var(--ink); margin: 0; }
+.cfg-sub { margin: .4rem 0 0 1.75rem; }
+.cfg-field { display: grid; gap: .4rem; margin-top: 1rem; }
+.cfg-field input { font: inherit; padding: .65rem .75rem; border: 1px solid var(--line); border-radius: 6px; background: var(--surface); color: var(--ink); }
+.cfg-field input:focus-visible { outline: 2px solid var(--glow); outline-offset: 1px; }
+
+.cfg-sum { border-top: 1px solid var(--ink); padding-top: 1rem; }
+.cfg-lines { list-style: none; margin: 0; padding: 0; display: grid; gap: .35rem; font-size: .9375rem; }
+.cfg-lines li { display: flex; justify-content: space-between; gap: 1rem; }
+.cfg-lines li span:last-child { font-family: var(--mono); white-space: nowrap; }
+.cfg-totalrow { display: flex; justify-content: space-between; align-items: baseline; margin: .9rem 0 .2rem; font-weight: 600; }
+.cfg-total { font: 400 2rem/1 var(--display); }
+.cfg-lead { margin: .2rem 0 1rem; color: var(--muted); font-size: .875rem; }
+.cfg-add { width: 100%; font: 600 1rem/1 var(--body); padding: 1rem 1.2rem; border-radius: 6px; border: 0; background: var(--ink); color: var(--bg); cursor: pointer; }
+.cfg-add:hover { background: var(--glow); color: var(--glow-ink); }
+.cfg-add:disabled { opacity: .6; cursor: progress; }
+.cfg-msg { min-height: 1.4em; margin: .6rem 0 0; font-size: .875rem; color: var(--muted); }
+.cfg-bar { display: none; }
+
+@media (max-width: 52rem) {
+  .cfg { padding: 0 1rem 6.5rem; }
+  .cfg-grid { grid-template-columns: minmax(0, 1fr); gap: 1.25rem; }
+  .cfg-stage { top: 0; z-index: 2; margin: 0 -1rem; background: var(--bg); padding-bottom: .6rem; }
+  .cfg-view { aspect-ratio: auto; height: 46vh; max-height: none; border-radius: 0; }
+  .cfg-head { margin: .7rem 1rem 0; }
+  .cfg-title { font-size: 1.9rem; display: inline; }
+  .cfg-kind { display: inline; margin-left: .5rem; }
+  .cfg-note { display: none; }
+  .cfg-sum .cfg-add { display: none; }
+  .cfg-bar { display: flex; position: fixed; z-index: 5; left: 0; right: 0; bottom: 0; gap: 1rem; align-items: center; justify-content: space-between;
+    padding: .75rem 1rem calc(.75rem + env(safe-area-inset-bottom)); background: var(--surface); border-top: 1px solid var(--line); }
+  .cfg-bar .cfg-total-mobile { font: 400 1.6rem/1 var(--display); }
+  .cfg-bar .cfg-add { width: auto; padding: .9rem 1.2rem; }
+}
+@media (prefers-reduced-motion: reduce) { .cfg-view, .cfg-card, .cfg-chip { transition: none; } }
