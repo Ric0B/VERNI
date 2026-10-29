@@ -157,9 +157,12 @@ def build_gcode(path, layer_h, width, colour):
     cfg = config_block(layer_h, width, colour, zmax)
     start_lines = start.rstrip("\n").splitlines()
     # our own description lines stay at the very top, after the header
-    text = ("\n".join(header) + "\n" + "\n".join(cfg) + "\n\n" + "\n".join(info) + "\n"
+    # "; FEATURE: Custom" before the machine start and end sequences, as Bambu Studio writes it: the purge line
+    # and nozzle wipe run at the plate edge, and without this role Studio counts them as part of the print,
+    # flags the plate as outside the bed and greys out Print.
+    text = ("\n".join(header) + "\n" + "\n".join(cfg) + "\n\n" + "\n".join(info) + "\n; FEATURE: Custom\n"
             + "\n".join(start_lines[len(info):]) + "\n; MACHINE_START_GCODE_END\n" + f"M73 P{int(100 * PREPARE_S / total)} R{int(t_body / 60)}\n"
-            + tagged_body + "; MACHINE_END_GCODE_START\n" + end.rstrip("\n").replace("M73 P100 R0", "") + "\nM73 P100 R0\n")
+            + tagged_body + "; FEATURE: Custom\n; MACHINE_END_GCODE_START\n" + end.rstrip("\n").replace("M73 P100 R0", "") + "\nM73 P100 R0\n")
     stats = dict(time=total, model_time=t_body, layers=n, length=e_body, weight=mass, zmax=zmax)
     return text, stats
 

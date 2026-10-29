@@ -224,6 +224,7 @@
 ; Schichtlicht KORB woven pendant 'korb' (korb.py)
 ; scale 1.0, H 230 mm, foot Ø236, belly Ø280, collar Ø60
 ; cell 9.0 mm, amp 3.90 mm, strand 0.65 x 0.5 mm, layer 0.25, 215 C, PLA 1.75
+; FEATURE: Custom
 ; ---- Bambu Lab H2S machine start G-code (official template, filled by bambu_gcode.py)
 ;===== machine: H2S =========================
 ;===== date: 2026/04/21 =====================
@@ -132499,6 +132500,7 @@ G1 X168.906 Y189.980 Z229.999 E0.02702 F1800
 G1 X168.507 Y189.963 Z229.999 E0.02702 F1800
 G1 X168.107 Y189.940 Z230.000 E0.02702 F1800
 G1 X167.708 Y189.912 Z230.000 E0.02702 F1800
+; FEATURE: Custom
 ; MACHINE_END_GCODE_START
 ; ---- end
 ; ---- Bambu Lab H2S machine end G-code (official template)
