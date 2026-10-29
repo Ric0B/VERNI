@@ -1,24 +1,426 @@
 ; Schichtlicht KORB woven pendant 'korb' (korb.py)
 ; scale 1.0, H 230 mm, foot Ø236, belly Ø280, collar Ø60
 ; cell 9.0 mm, amp 3.90 mm, strand 0.65 x 0.5 mm, layer 0.25, 215 C, PLA 1.75
-; ---- minimal start G-code (generic). Replace with your printer's own for best results.
-M140 S55
-M104 S170
-G28
-M190 S55
-M109 S215
+; ---- Bambu Lab H2S machine start G-code (official template, filled by bambu_gcode.py)
+;===== machine: H2S =========================
+;===== date: 2026/04/21 =====================
+
+M993 A0 B0 C0 ; nozzle cam detection not allowed.
+
+M400
+;M73 P99
+
+;=====printer start sound ===================
+M17
+M400 S1
+M1006 S1
+M1006 A53 B9 L99 C53 D9 M99 E53 F9 N99 
+M1006 A56 B9 L99 C56 D9 M99 E56 F9 N99 
+M1006 A61 B9 L99 C61 D9 M99 E61 F9 N99 
+M1006 A53 B9 L99 C53 D9 M99 E53 F9 N99 
+M1006 A56 B9 L99 C56 D9 M99 E56 F9 N99 
+M1006 A61 B18 L99 C61 D18 M99 E61 F18 N99 
+M1006 W
+;=====printer start sound ===================
+
+;===== reset machine status =================
+M204 S10000
+M630 S0 P0
+
+G90
+M17 D ; reset motor current to default
+M960 S5 P1 ; turn on logo lamp
+G90
+M1002 set_gcode_claim_speed_level 5 ;Reset speed level
+M220 S100 ;Reset Feedrate
+M221 S100 ;Reset Flowrate
+M73.2   R1.0 ;Reset left time magnitude
+G29.1 Z0 ; clear z-trim value first
+M983.1 M1 
+M901 D4
+M481 S0 ; turn off cutter pos comp
+G28.140 D0; reset pre-extrude z pos
+;===== reset machine status =================
+
+M620 M ;enable remap
+
+;===== avoid end stop =================
+G91
+G380 S2 Z32 F1200
+G380 S2 Z-12 F1200
+G90
+;===== avoid end stop =================
+
+;==== set airduct mode ==== 
+
+    M145 P0 ; set airduct mode to cooling mode for cooling
+    M106 P2 S178 ; turn on auxiliary fan for cooling
+    M106 P3 S127 ; turn on chamber fan for cooling
+    M140 S0 ; stop heatbed from heating
+
+    M1002 gcode_claim_action : 29
+    M191 S0 ; wait for chamber temp
+    M106 P2 S0 ; turn off auxiliary fan
+
+            M142 P1 R30 S40 T45 U0.3 V0.5 W0.8 O45; set PLA/TPU ND0.4 chamber autocooling
+
+M145.2 P0 F1
+
+;==== set airduct mode ==== 
+
+;===== start to heat heatbed & hotend==========
+
+    M1002 set_filament_type:PLA
+
+    M104 S140
+    M140 S55
+
+    ;===== set chamber temperature ==========
+    
+    ;===== set chamber temperature ==========
+
+;===== start to heat heatbead & hotend==========
+
+;====== cog noise reduction=================
+M982.2 S1 ; turn on cog noise reduction
+
+;===== first homing start =====
+M1002 gcode_claim_action : 13
+
+G28 X T300
+
+G150.3 F18000
+T1000 O0 ;Preventing 3D Print Misalignment After Laser Operations
+
+G150.1 F18000 ; wipe mouth to avoid filament stick to heatbed
+G150.3 F18000
+M400 P200
+M972 S24 P0 T2000
+M1002 gcode_claim_action : 74 ; Heatbed surface foreign object detection
+
+M972 S26 P0 C0
+
+M972 S35 P0 C0
+M972 S41 P0 T5000; trash can anti-collision
+
+M1009 Q1 L1
+G91
+G380 S2 Z30 F1200 ; lower heatbed to move toolhead
+G90
+G1 X170 Y160 F30000
+G28 Z P0 T250
+M1009 Q1 L0
+
+;===== first homing end =====
+
+M400
+;M73 P99
+
+;===== detection start =====
+M104 S0 T0 ; stop hotend heating before detection
+M562 P1 E0 B1
+M18 E
+M400 P200
+M1028 S1
+
+M1002 judge_flag build_plate_detect_flag
+M622 S1
+    ;M1002 gcode_claim_action : 11 ; Indentifying build plate type
+    M972 S19 P0 C0 ; heatbed detection
+    
+    M972 S31 P0 T5000; Toolhead camera detection
+    
+    ;M1002 gcode_claim_action : 73 ; Build plate alignment detection
+    M972 S34 P0 T5000; Plate offset detection
+M623
+
+M1028 S0
+M562 P1 E1 B1
+M17 D
+
+M1002 gcode_claim_action : 75 ;  Detect obstacles at the botton of the heated bed
+G150.3
+M104 S220 ; rise temp in advance
+G3811 Z230  ; Detect obstacles at the bottom of the heated bed
+
+;===== detection end =====
+
+M400
+;M73 P99
+
+;===== prepare print temperature and material ==========
+M400
+M211 X0 Y0 Z0 ;turn off soft endstop
+M975 S1 ; turn on input shaping
+
+G29.2 S0 ; avoid invalid abl data
+
+M620.10 A0 F498.898266 H0.4 T240 P220 S1
+M620.10 A1 F498.898266 H0.4 T240 P220 S1
+
+M620.11 P0 I0 E0
+
+M620 S0A   ; switch material if AMS exist
+M1002 gcode_claim_action : 4
+M1002 set_filament_type:UNKNOWN
+M400
+T0
+M400
+M628 S0
+M629
+M400
+M1002 set_filament_type:PLA
+M621 S0A
+
+M104 S220
+M400
+M106 P1 S0
+
+G29.2 S1
+;===== prepare print temperature and material ==========
+
+M400
+;M73 P99
+
+;===== auto extrude cali start =========================
+M975 S1
+M1002 judge_flag extrude_cali_flag
+
+M622 J0
+    M983.3 F10.416667 A0.4 ; cali dynamic extrusion compensation
+M623
+
+M622 J1
+    M1002 set_filament_type:PLA
+    M1002 gcode_claim_action : 8
+
+    M109 S220
+
+    G90
+    M83
+    M983.3 F10.416667 A0.4 ; cali dynamic extrusion compensation
+
+    M400
+    M106 P1 S255
+    M400 S5
+    M106 P1 S0
+    G150.3
+M623
+
+M622 J2
+    M1002 set_filament_type:PLA
+    M1002 gcode_claim_action : 8
+
+    M109 S220
+
+    G90
+    M83
+    M983.3 F10.416667 A0.4 ; cali dynamic extrusion compensation
+
+    M400
+    M106 P1 S255
+    M400 S5
+    M106 P1 S0
+    G150.3
+M623
+
+;===== auto extrude cali end =========================
+
+    M106 P1 S0
+    M400 S2
+    M109 S220 ; wait tmpr to extrude
+    M83
+    
+        G1 E45 F623.622833
+    
+    G1 E-3 F1800
+    M400 P500
+    G150.2
+    G150.1
+
+G91
+G1 Y-16 F12000 ; move away from the trash bin
+G90
+
+M400
+;M73 P99
+
+;===== wipe right nozzle start =====
+
+M1002 gcode_claim_action : 14
+    G150 T220
+    
+M106 S255 ; turn on fan to cool the nozzle
+
+;===== wipe left nozzle end =====
+
+M400
+;M73 P99
+
+M400
+;M73 P99
+
+;===== bed leveling ==================================
+
+M1002 judge_flag g29_before_print_flag
+
+M190 S55; ensure bed temp
+M109 S140
+M106 S0 ; turn off fan , too noisy
+
+G91
+G1 Z5 F1200
+G90
+G1 X275 Y300 F30000
+
+M622 J1
+    M1002 gcode_claim_action : 1
+    G29.20 A3
+    G29 A1 O X46.75 Y36.75 I246.5 J246.5
+    M400
+M623
+    
+M622 J2
+    M1002 gcode_claim_action : 1
+    
+        G29.20 A4
+        G29 A2 O X46.75 Y36.75 I246.5 J246.5
+    
+    M400
+M623
+
+M622 J0
+    G28
+M623
+
+;===== bed leveling end ================================
+
+G390.1 Z; cali nozzle wrapped detection pos
+
+G90
+G1 Z5 F1200
+G1 X270 Y-0.5 F60000
+G28.140 S0 ; cali pre-extrude z pos
+
+M141 S0
+M104 S220
+
+;===== mech mode sweep start =====
+    M1002 gcode_claim_action : 3
+
+    G90
+    G1 Z5 F1200
+    G1 X187 Y160 F20000
+    T1000
+    M400 P200
+
+    M970.3 Q1 A5 K0 O1
+    M974 Q1 S2 P0
+
+    M970.3 Q0 A5 K0 O1
+    M974 Q0 S2 P0
+
+    M970.2 Q2 K0 W38 Z0.01
+    M974 Q2 S2 P0
+
+    M975 S1
+;===== mech mode sweep end =====
+
+M400
+;M73 P99
+
+G150.3 ; move to garbage can to wait for temp
+M1026
+G29.9
+
+M1002 gcode_claim_action : 0
+M400
+;M73 P99
+
+;===== wait temperature reaching the reference value =======
+
+M104 S220 ; rise to print tmpr
+
+M140 S55 
+M190 S55 
+
+    ;========turn off light and fans =============
+    M960 S1 P0 ; turn off laser
+    M960 S2 P0 ; turn off laser
+    M106 S0 ; turn off fan
+    M106 P2 S0 ; turn off big fan
+
+    ;============set motor current==================
+    M400 S1
+
+;===== wait temperature reaching the reference value =======
+
+M400
+;M73 P99
+
+;===== for Textured PEI Plate , lower the nozzle as the nozzle was touching topmost of the texture when homing ==
+    
+        G29.1 Z-0.01 ; for Textured PEI Plate
+
+G150.1
+
+M975 S1 ; turn on mech mode supression
+M983.4 S1 ; turn on deformation compensation 
+G29.2 S1 ; turn on pos comp
+G29.7 S1
+
+G90
+G1 Z5 F1200
+G1 Y295 F30000
+G1 Y265 F18000
+
+;===== nozzle load line ===============================
+    G29.2 S1 ; ensure z comp turn on
+    G90
+    M83
+    G1 Z5 F1200
+    G1 X270 Y-0.5 F60000
+    G28.14 R0
+    G29.2 S0
+    G91
+    G1 Z0.8 F1200
+    G90
+    G1 X250 F60000
+    M400 P50
+    M500 D1
+    M400 S3
+    M109 S220
+    M83
+    G1 E5 F311.811416
+    G1 X290 E20 F311.811416
+    G91
+    G3 Z0.4 I1.217 J0 P1 F60000
+    G90
+    M83
+    G29.2 S1 ; ensure z comp turn on
+;===== noozle load line end ===========================
+
+M400
+;M73 P99
+
+M993 A0 B0 C0 ; nozzle cam detection kept off for woven toolpath
+
+M1015.4 S0 K0 H0.4 ;air printing detect kept off for woven toolpath
+
+M620.6 I0 W1 ;enable ams air printing detect
+
+M211 Z1
+G29.99
+
+M1015.3 S0;disable tpu clog detect
+
+
 G90
 M83
 G92 E0
-M106 P1 S0
-G1 Z5 F1200
-G1 X110.0 Y12.0 F9000
-G1 Z0.30 F600
-G1 X230.0 Y12.0 E14 F1200 ; purge line
-G1 Y12.6 F1200
-G1 X110.0 Y12.6 E10 F1200
-G1 Z1 F600
-
+G91
+G1 Z2 F600
+G90
 ; brim
 G1 X290.925 Y160.000 F6000
 G1 Z0.300 F600
@@ -123303,10 +123705,99 @@ G1 X168.507 Y189.963 Z229.999 E0.02702 F1800
 G1 X168.107 Y189.940 Z230.000 E0.02702 F1800
 G1 X167.708 Y189.912 Z230.000 E0.02702 F1800
 ; ---- end
-G1 Z245.0 F600
-M104 S0
-M140 S0
-M106 P1 S0
-G1 X170.0 Y310.0 F6000
-M84
+; ---- Bambu Lab H2S machine end G-code (official template)
+;========== H2S end ==========
+;===== date: 2026/03/13 =====
+
+G392 S0 ;turn off nozzle clog detect
+M993 A0 B0 C0 ; nozzle cam detection not allowed.
+
+M400 ; wait for buffer to clear
+G92 E0 ; zero the extruder
+M211 Z1
+
+G90
+G1 Z230.4 F900 ; lower z a little
+M1002 judge_flag timelapse_record_flag
+M622 J1
+    G150.3
+    M400 ; wait all motion done
+    M991 S0 P-1 ;end smooth timelapse at safe pos
+    M400 S5 ;wait for last picture to be taken
+M623  ;end of "timelapse_record_flag"
+
+G90
+G1 Z240 F900 ; lower z a little
+
+M141 S0 ; turn off chamber heating
+M140 S0 ; turn off bed
+M106 S0 ; turn off fan
+M106 P2 S0 ; turn off remote part cooling fan
+M106 P3 S0 ; turn off chamber cooling fan
+
+; pull back filament to AMS
+M620 S65535
+T65535
+G150.2
+M621 S65535
+
+G150.3
+
+M104 S0; turn off hotend
+
+M400 ; wait all motion done
+M17 S
+M17 Z0.4 ; lower z motor current to reduce impact if there is something in the bottom
+
+        G1 Z234 F600
+        G1 Z232
+
+M400 P100
+M17 R ; restore z current
+
+M220 S100  ; Reset feedrate magnitude
+M201.2 K1.0 ; Reset acc magnitude
+M73.2   R1.0 ;Reset left time magnitude
+
+M1015.4 S0 K0 ;disable air printing detect
+
+;=====printer finish air purification=========
+M622.1 S0
+M1002 judge_flag print_finish_air_filt_flag
+
+M622 J1
+M1002 gcode_claim_action : 66
+M145 P1
+M106 P6 S255
+M400 S180
+M106 P6 S0
+M623
+
+M622 J2
+M1002 gcode_claim_action : 66
+M145 P0
+M106 P3 S127
+M400 S180
+M106 P3 S0
+M623
+;=====printer finish air purification=========
+
+;=====printer finish  sound=========
+M17
+M400 S1
+M1006 S1
+M1006 A53 B10 L99 C53 D10 M99 E53 F10 N99 
+M1006 A57 B10 L99 C57 D10 M99 E57 F10 N99 
+M1006 A0 B15 L0 C0 D15 M0 E0 F15 N0 
+M1006 A53 B10 L99 C53 D10 M99 E53 F10 N99 
+M1006 A57 B10 L99 C57 D10 M99 E57 F10 N99 
+M1006 A0 B15 L0 C0 D15 M0 E0 F15 N0 
+M1006 A48 B10 L99 C48 D10 M99 E48 F10 N99 
+M1006 A0 B15 L0 C0 D15 M0 E0 F15 N0 
+M1006 A60 B10 L99 C60 D10 M99 E60 F10 N99 
+M1006 W
+;=====printer finish  sound=========
+M400
+M18
+
 

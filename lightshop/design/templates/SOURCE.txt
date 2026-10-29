@@ -1,0 +1,2 @@
+
+Source of templates/: Bambu Studio (github.com/bambulab/BambuStudio, AGPL-3.0), resources/profiles/BBL/machine.

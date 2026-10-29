@@ -131,8 +131,17 @@ def write(a):
     L = [f"; Schichtlicht KORB woven pendant '{a.name}' (korb.py)",
          f"; scale {a.scale}, H {sh.H:.0f} mm, foot Ø{2 * sh.r0:.0f}, belly Ø{2 * sh.rb:.0f}, collar Ø{2 * sh.rc:.0f}",
          f"; cell {a.cell} mm, amp {a.amp * a.scale:.2f} mm, strand {a.width} x {a.strand_h} mm, layer {a.layer}, {a.temp} C, PLA 1.75"]
-    L.append(open(custom, encoding="utf-8").read() if os.path.exists(custom) else
-             weave.START.format(bed=a.bed, nozzle=a.temp, px0=cx - 60, px1=cx + 60, py=12.0, py2=12.6, z=a.first))
+    r_foot = sh.r(0) + a.brim * a.width + 2
+    if a.printer == "h2s" and not a.generic_start:
+        import bambu_gcode
+        bambu_start, bambu_end = bambu_gcode.h2s(bed_min=(cx - r_foot, cy - r_foot), bed_size=(2 * r_foot, 2 * r_foot), max_z=sh.H)
+        L.append("; ---- Bambu Lab H2S machine start G-code (official template, filled by bambu_gcode.py)")
+        L.append(bambu_start)
+        L.append("G90\nM83\nG92 E0\nG91\nG1 Z2 F600\nG90")
+    else:
+        bambu_end = None
+        L.append(open(custom, encoding="utf-8").read() if os.path.exists(custom) else
+                 weave.START.format(bed=a.bed, nozzle=a.temp, px0=cx - 60, px1=cx + 60, py=12.0, py2=12.6, z=a.first))
     e_rate = a.width / FIL_AREA
     length = fil = 0.0
     # brim around the foot
@@ -172,7 +181,11 @@ def write(a):
         L.append(f"G1 X{cx + x:.3f} Y{cy + y:.3f} Z{z:.3f} E{e:.5f} F{v * 60:.0f}")
         prev = (x, y, z)
         zmax = max(zmax, z)
-    L.append(weave.END.format(zup=zmax + 15, cx=cx, yaway=pr["size"][1] - 10))
+    if bambu_end:
+        L.append("; ---- end\n; ---- Bambu Lab H2S machine end G-code (official template)")
+        L.append(bambu_end)
+    else:
+        L.append(weave.END.format(zup=zmax + 15, cx=cx, yaway=pr["size"][1] - 10))
     with open(path, "w", encoding="utf-8") as f:
         f.write("\n".join(L) + "\n")
     fits = 2 * rmax + 2 * a.brim * a.width + 10 < min(pr["size"][:2]) and zmax + 15 < pr["size"][2]
@@ -244,6 +257,7 @@ def main():
     ap.add_argument("--speed-band", type=float, default=30)
     ap.add_argument("--speed-first", type=float, default=18)
     ap.add_argument("--brim", type=int, default=5)
+    ap.add_argument("--generic-start", action="store_true", help="use the simple generic start instead of Bambu's H2S sequence")
     ap.add_argument("--mount", action="store_true", help="also write the PETG hanging disc STL")
     ap.add_argument("--tubes", help="also write the toolpath as a tube STL to this path (for renders)")
     a = ap.parse_args()
