@@ -106,3 +106,14 @@ python3 korb.py --cell 7                       # denser lattice
 ```
 
 Ready files and a render: `../samples/korb/`.
+
+### Into Bambu Studio and onto the printer
+
+`make_3mf.py` packs a toolpath into what Bambu Studio and the printer expect. A raw woven file crashes Studio's preview: without layer tags it starts a new layer at every Z change (about 30,000 for the test KORB). The script adds the tags (one layer per 0.25 mm of height), a Bambu header and config block, progress (M73), and the `.gcode.3mf` structure. The moves are unchanged (checked line by line).
+
+```bash
+python3 make_3mf.py out/korb/korb-test.gcode --render ../samples/korb/korb-render.jpg
+# -> korb-test.bambu.gcode  (preview in Studio)   korb-test.gcode.3mf  (print)
+```
+
+Print: copy the `.gcode.3mf` to a USB stick, plug it into the H2S, pick it on the touchscreen, PLA in slot 1, textured PEI plate. Or open the `.gcode.3mf` in Bambu Studio and click *Print plate*.

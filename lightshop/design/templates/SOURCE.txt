@@ -1,2 +1,4 @@
 
 Source of templates/: Bambu Studio (github.com/bambulab/BambuStudio, AGPL-3.0), resources/profiles/BBL/machine.
+h2s_pla_profiles.json: "Bambu Lab H2S 0.4 nozzle", "0.20mm Standard @BBL H2S" and "Bambu PLA Basic @BBL H2S"
+from the same repository (resources/profiles/BBL), with every "inherits" and "include" resolved. Used by make_3mf.py.
