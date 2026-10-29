@@ -83,3 +83,14 @@ The constants at the top of `parts.py` (hole sizes, groove width, USB-C opening)
 - **Bergwald**: tree-ring Voronoi, cells growing in size towards the top.
 - **Raureif**: hoarfrost, fine reaction-diffusion pattern from a seed.
 - **Personal skyline**: the profile of a mountain panorama chosen by the customer (from a Swisstopo elevation line) wrapped around the lamp. A strong one-off product.
+
+## Woven nets (direct G-code, no slicer)
+
+`weave.py` writes G-code directly: a continuous spiral where each lap waves up and down (non-planar) in anti-phase to the lap below. Laps fuse only at the wave tips and bridge open cells in between, giving a real see-through net that no slicer can produce. Solid bands at foot and rim hold it together and fit the base groove.
+
+```bash
+python3 weave.py                                   # 100 mm test, ~40 min, ~7 g
+python3 weave.py --name gewebe-lampe --height 220 --radius 70 --belly 18 --waves 46.5 --band 8 --rim 6
+```
+
+Key knobs: `--amp` (cell height = 2 × amp), `--waves` (must end in .5), `--flat` (longer fused contacts), `--strand-h`, `--speed` (keep 12–18 mm/s in the net), `--radial` (adds an in/out wave for texture). Ready files and previews are in `../samples/weave/`.
