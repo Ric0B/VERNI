@@ -94,3 +94,15 @@ python3 weave.py --name gewebe-lampe --height 220 --radius 70 --belly 18 --waves
 ```
 
 Key knobs: `--amp` (cell height = 2 × amp), `--waves` (must end in .5), `--flat` (longer fused contacts), `--strand-h`, `--speed` (keep 12–18 mm/s in the net), `--radial` (adds an in/out wave for texture). Ready files and previews are in `../samples/weave/`.
+
+### KORB: woven rattan-style pendant
+
+`korb.py` writes a woven ceiling pendant (onion bulb, Ø280 × 230 mm) as direct G-code: each lap zig-zags at about 60° in anti-phase to the lap below, so the strands cross like a rattan lattice, with solid hoops at the foot, two belly rings and a top collar. Radii follow each point's own height, so crossings meet even where the shape leans. `python3 korb.py --mount` also writes the PETG hanging disc (`mount-korb.stl`) for an E27 socket with shade ring.
+
+```bash
+python3 korb.py --scale 0.5 --name korb-test   # half size test, Ø140 × 115 mm, under 1 h
+python3 korb.py --mount                        # full pendant + hanging disc
+python3 korb.py --cell 7                       # denser lattice
+```
+
+Ready files and a render: `../samples/korb/`.
