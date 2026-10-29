@@ -12,6 +12,7 @@ Overnight work from 28–29 Oct 2026. Working brand name **Schichtlicht** ("laye
 | 3b | Bases, mounts and couplers (PETG), sized from each shade | `design/parts.py` |
 | 3c | One-offs and numbered editions with registry and certificate PDF | `design/edition.py`, `samples/certificate-example.pdf` |
 | 3d | **Formlabor**: in-browser configurator with live 3D (private page) | `design/formlabor.html` · https://claude.ai/artifact/9G4yVFCJJCnMvVcZBLtnwQ |
+| 3e | **Concepts**: 43 more designs in new lines (WERK industrial, GRENZE experimental, TOTEM stackable modules, DUO double wall), catalogue page | `concepts/` · https://claude.ai/artifact/M2QpZT4NgEakgd8wVrW1G2 |
 | 4 | Draft website, German + English, renders, Atelier series, one-off page, 13 articles, SEO | `site/` · preview https://claude.ai/artifact/9HEDNLgLsuSYMm6TYPxPck |
 | 4b | Keyword map, article plan, link building | `site/seo/keywords.md` |
 | 4c | **Shopify theme** (Online Store 2.0, 0 Theme Check issues) + product CSV with metafields | `shopify-theme/`, `site/shopify/`, `site/SHOPIFY.md` |
